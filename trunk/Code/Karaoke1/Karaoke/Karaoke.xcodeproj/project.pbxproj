@@ -18,6 +18,10 @@
 		3442C7CD18642F1300BD13F3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3442C7CC18642F1300BD13F3 /* Default.png */; };
 		3442C7CF18642F1300BD13F3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3442C7CE18642F1300BD13F3 /* Default@2x.png */; };
 		3442C7D118642F1300BD13F3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3442C7D018642F1300BD13F3 /* Default-568h@2x.png */; };
+		346A5F4A186487620071D955 /* Lib.m in Sources */ = {isa = PBXBuildFile; fileRef = 346A5F49186487620071D955 /* Lib.m */; };
+		346A5F4E18648A770071D955 /* NavibarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 346A5F4D18648A770071D955 /* NavibarViewController.m */; };
+		34BC53DE18648D0900CFFE9B /* NavibarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34BC53DD18648D0900CFFE9B /* NavibarView.xib */; };
+		34BC53E118648D6A00CFFE9B /* NavibarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BC53E018648D6A00CFFE9B /* NavibarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,13 @@
 		3442C7CC18642F1300BD13F3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3442C7CE18642F1300BD13F3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3442C7D018642F1300BD13F3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		346A5F48186487620071D955 /* Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lib.h; sourceTree = "<group>"; };
+		346A5F49186487620071D955 /* Lib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lib.m; sourceTree = "<group>"; };
+		346A5F4C18648A770071D955 /* NavibarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavibarViewController.h; sourceTree = "<group>"; };
+		346A5F4D18648A770071D955 /* NavibarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavibarViewController.m; sourceTree = "<group>"; };
+		34BC53DD18648D0900CFFE9B /* NavibarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavibarView.xib; sourceTree = "<group>"; };
+		34BC53DF18648D6A00CFFE9B /* NavibarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavibarView.h; sourceTree = "<group>"; };
+		34BC53E018648D6A00CFFE9B /* NavibarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavibarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +83,7 @@
 		34061F0A18645895009FD9B2 /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				346A5F4B18648A530071D955 /* NavibarController */,
 				34061F0C186458B5009FD9B2 /* RootViewcontroller */,
 			);
 			name = Viewcontrollers;
@@ -80,6 +92,8 @@
 		34061F0B186458A0009FD9B2 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				346A5F48186487620071D955 /* Lib.h */,
+				346A5F49186487620071D955 /* Lib.m */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
@@ -147,6 +161,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		346A5F4B18648A530071D955 /* NavibarController */ = {
+			isa = PBXGroup;
+			children = (
+				346A5F4F18648A940071D955 /* NaviBar */,
+				346A5F4C18648A770071D955 /* NavibarViewController.h */,
+				346A5F4D18648A770071D955 /* NavibarViewController.m */,
+			);
+			name = NavibarController;
+			sourceTree = "<group>";
+		};
+		346A5F4F18648A940071D955 /* NaviBar */ = {
+			isa = PBXGroup;
+			children = (
+				34BC53DD18648D0900CFFE9B /* NavibarView.xib */,
+				34BC53DF18648D6A00CFFE9B /* NavibarView.h */,
+				34BC53E018648D6A00CFFE9B /* NavibarView.m */,
+			);
+			name = NaviBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -202,6 +236,7 @@
 				3442C7CD18642F1300BD13F3 /* Default.png in Resources */,
 				3442C7CF18642F1300BD13F3 /* Default@2x.png in Resources */,
 				3442C7D118642F1300BD13F3 /* Default-568h@2x.png in Resources */,
+				34BC53DE18648D0900CFFE9B /* NavibarView.xib in Resources */,
 				34061F11186458CC009FD9B2 /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,7 +250,10 @@
 			files = (
 				3442C7C718642F1300BD13F3 /* main.m in Sources */,
 				3442C7CB18642F1300BD13F3 /* AppDelegate.m in Sources */,
+				34BC53E118648D6A00CFFE9B /* NavibarView.m in Sources */,
 				34061F10186458CC009FD9B2 /* RootViewController.m in Sources */,
+				346A5F4A186487620071D955 /* Lib.m in Sources */,
+				346A5F4E18648A770071D955 /* NavibarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
