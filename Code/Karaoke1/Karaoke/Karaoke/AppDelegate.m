@@ -10,6 +10,15 @@
 
 @implementation AppDelegate
 
+static AppDelegate*     m_shareApplication;
+
+- (id)init
+{
+    self = [super init];
+    m_shareApplication = self;
+    return self;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -44,6 +53,11 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
++ (AppDelegate*)shareApplication
+{
+    return m_shareApplication;
 }
 
 @end
