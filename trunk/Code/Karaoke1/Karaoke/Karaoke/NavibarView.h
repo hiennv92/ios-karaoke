@@ -14,4 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
+
++ (NavibarView*)viewFromNib;
++ (NavibarView*)createWithTitle:(NSString*)title backgroundImage:(NSString*)backgroundImgae leftNormal:(NSString*)leftNormal leftHightlight:(NSString*)leftHightlight rightNormal:(NSString*)rightNormal rightHightlight:(NSString*)rightHightlight target:(NSObject*)target leftSelector:(SEL)leftSelector rightSelector:(SEL)rightSelector;
 @end

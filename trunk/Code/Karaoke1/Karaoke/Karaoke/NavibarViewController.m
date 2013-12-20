@@ -41,13 +41,23 @@
 
 - (void)createNavigationBarWithTitle:(NSString *)title backgroundImage:(NSString *)bgImage leftButton:(NSString *)leftButton leftButtonPress:(NSString *)leftPress rightButton:(NSString *)rightButton rightButtonPress:(NSString *)rightPress
 {
-    _navibarView = [[[NSBundle mainBundle] loadNibNamed:@"NavibarView" owner:self options:nil] objectAtIndex:0];
-    _navibarView.titleLabel.text = title;
-    _navibarView.backgroundImage.image = [UIImage imageNamed:bgImage];
-    [_navibarView.leftButton setBackgroundImage:[UIImage imageNamed:leftButton] forState:UIControlStateNormal];
-    [_navibarView.leftButton setBackgroundImage:[UIImage imageNamed:leftPress] forState:UIControlStateHighlighted];
-    
-    [_navibarView.rightButton setBackgroundImage:[UIImage imageNamed:rightButton] forState:UIControlStateNormal];
-    [_navibarView.rightButton setBackgroundImage:[UIImage imageNamed:rightPress] forState:UIControlStateHighlighted];
+    self.navibarView = [NavibarView createWithTitle:title backgroundImage:bgImage leftNormal:leftButton leftHightlight:leftPress rightNormal:rightButton rightHightlight:rightPress target:self leftSelector:@selector(leftButtonBarPress:) rightSelector:@selector(rightButtonBarPress:)];
+    [self.view addSubview:_navibarView];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
+
+
+- (void)leftButtonBarPress:(id)button
+{
+    NSLog(@"should override this method");
+}
+
+- (void)rightButtonBarPress:(id)button
+{
+    NSLog(@"should override this method");
+}
+
+
+                        
+
 @end
