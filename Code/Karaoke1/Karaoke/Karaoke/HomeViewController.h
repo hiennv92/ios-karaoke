@@ -1,5 +1,5 @@
 //
-//  RootViewController.h
+//  HomeViewController.h
 //  Karaoke
 //
 //  Created by papo on 12/20/13.
@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JASidePanelController.h"
-
-
-@interface RootViewController : JASidePanelController
+#import "NavibarViewController.h"
+@interface HomeViewController : NavibarViewController
 
 @end

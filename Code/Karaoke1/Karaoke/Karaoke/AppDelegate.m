@@ -7,17 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "MenuSlideControllerViewController.h"
+#import "HomeViewController.h"
+
 
 @implementation AppDelegate
 
-static AppDelegate*     m_shareApplication;
-
-- (id)init
-{
-    self = [super init];
-    m_shareApplication = self;
-    return self;
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -27,7 +22,11 @@ static AppDelegate*     m_shareApplication;
     [self.window makeKeyAndVisible];
     
     // init root view controller
-    self.viewController = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
+    self.viewController = [[RootViewController alloc] init];
+    
+    self.viewController.leftPanel = [[MenuSlideControllerViewController alloc] initWithNibName:@"MenuSlideControllerViewController" bundle:Nil];
+    self.viewController.centerPanel = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:Nil];
+    
     self.window.rootViewController = self.viewController;
     
     return YES;
@@ -62,7 +61,7 @@ static AppDelegate*     m_shareApplication;
 
 + (AppDelegate*)shareApplication
 {
-    return m_shareApplication;
+    return (AppDelegate*)[UIApplication sharedApplication].delegate;
 }
 
 @end
