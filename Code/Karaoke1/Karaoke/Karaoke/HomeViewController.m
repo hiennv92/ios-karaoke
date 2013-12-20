@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self createNavigationBarWithTitle:@"Home" backgroundImage:Nil leftButton:Nil leftButtonPress:Nil rightButton:Nil rightButtonPress:Nil];
+    [self createNavigationBarWithTitle:@"Home" backgroundImage:@"bg-top-home.png" leftButton:Nil leftButtonPress:Nil rightButton:Nil rightButtonPress:Nil];
     [self.view setBackgroundColor:[UIColor lightGrayColor]];
 }
 
