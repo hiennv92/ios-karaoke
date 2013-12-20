@@ -25,6 +25,11 @@ static AppDelegate*     m_shareApplication;
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    // init root view controller
+    self.viewController = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
+    self.window.rootViewController = self.viewController;
+    
     return YES;
 }
 
