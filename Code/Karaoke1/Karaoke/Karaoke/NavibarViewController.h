@@ -16,4 +16,7 @@
 - (void)createNavigationBarWithTitle: (NSString*)title backgroundImage:(NSString*)bgImage leftButton:(NSString*)leftButton leftButtonPress:(NSString*)leftPress rightButton:(NSString*)rightButton rightButtonPress:(NSString*)rightPress;
 
 
+- (void)leftButtonBarPress:(id)button;
+- (void)rightButtonBarPress:(id)button;
+
 @end
