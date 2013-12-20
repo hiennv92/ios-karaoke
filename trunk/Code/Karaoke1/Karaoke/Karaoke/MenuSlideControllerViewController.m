@@ -1,34 +1,24 @@
 //
-//  RootViewController.m
+//  MenuSlideControllerViewController.m
 //  Karaoke
 //
 //  Created by papo on 12/20/13.
 //  Copyright (c) 2013 banana. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "MenuSlideControllerViewController.h"
 
-@interface RootViewController ()
+@interface MenuSlideControllerViewController ()
 
 @end
 
-@implementation RootViewController
+@implementation MenuSlideControllerViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
-    }
-    return self;
-}
-
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        
     }
     return self;
 }

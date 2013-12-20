@@ -1,5 +1,5 @@
 //
-//  RootViewController.h
+//  MenuSlideControllerViewController.h
 //  Karaoke
 //
 //  Created by papo on 12/20/13.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JASidePanelController.h"
+#import "NavibarViewController.h"
 
-
-@interface RootViewController : JASidePanelController
+@interface MenuSlideControllerViewController : UIViewController
 
 @end
