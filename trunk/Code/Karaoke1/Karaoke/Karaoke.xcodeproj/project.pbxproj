@@ -29,6 +29,107 @@
 		34BC53F01864AB8E00CFFE9B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34BC53EF1864AB8E00CFFE9B /* QuartzCore.framework */; };
 		34BC53F61864AD8A00CFFE9B /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BC53F41864AD8A00CFFE9B /* HomeViewController.m */; };
 		34BC53F71864AD8A00CFFE9B /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34BC53F51864AD8A00CFFE9B /* HomeViewController.xib */; };
+		34BC54161864B46F00CFFE9B /* ca-khuc-da-ghi-am.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC53FA1864B46F00CFFE9B /* ca-khuc-da-ghi-am.png */; };
+		34BC54171864B46F00CFFE9B /* ca-khuc-noi-bat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC53FB1864B46F00CFFE9B /* ca-khuc-noi-bat.png */; };
+		34BC54181864B46F00CFFE9B /* ca-si.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC53FC1864B46F00CFFE9B /* ca-si.png */; };
+		34BC54191864B46F00CFFE9B /* cai-dat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC53FD1864B46F00CFFE9B /* cai-dat.png */; };
+		34BC541A1864B46F00CFFE9B /* camera360.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC53FE1864B46F00CFFE9B /* camera360.png */; };
+		34BC541B1864B46F00CFFE9B /* clip-gay-bao.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC53FF1864B46F00CFFE9B /* clip-gay-bao.png */; };
+		34BC541C1864B46F00CFFE9B /* dich-vu.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54001864B46F00CFFE9B /* dich-vu.png */; };
+		34BC541D1864B46F00CFFE9B /* hot-nhat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54011864B46F00CFFE9B /* hot-nhat.png */; };
+		34BC541E1864B46F00CFFE9B /* huong-dan.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54021864B46F00CFFE9B /* huong-dan.png */; };
+		34BC541F1864B46F00CFFE9B /* icon-profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54031864B46F00CFFE9B /* icon-profile.png */; };
+		34BC54201864B46F00CFFE9B /* karaoke-clip.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54041864B46F00CFFE9B /* karaoke-clip.png */; };
+		34BC54211864B46F00CFFE9B /* karaoke-hit.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54051864B46F00CFFE9B /* karaoke-hit.png */; };
+		34BC54221864B46F00CFFE9B /* karaoke-moi-nhat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54061864B46F00CFFE9B /* karaoke-moi-nhat.png */; };
+		34BC54231864B46F00CFFE9B /* karaoke-yeuthich.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54071864B46F00CFFE9B /* karaoke-yeuthich.png */; };
+		34BC54241864B46F00CFFE9B /* moi-nhat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54081864B46F00CFFE9B /* moi-nhat.png */; };
+		34BC54251864B46F00CFFE9B /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54091864B46F00CFFE9B /* search.png */; };
+		34BC54261864B46F00CFFE9B /* secsion-danh-muc.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC540A1864B46F00CFFE9B /* secsion-danh-muc.png */; };
+		34BC54271864B46F00CFFE9B /* secsion-nhacDJ.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC540B1864B46F00CFFE9B /* secsion-nhacDJ.png */; };
+		34BC54281864B46F00CFFE9B /* secsion-them.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC540C1864B46F00CFFE9B /* secsion-them.png */; };
+		34BC54291864B46F00CFFE9B /* secsion-tin-tuc-video.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC540D1864B46F00CFFE9B /* secsion-tin-tuc-video.png */; };
+		34BC542A1864B46F00CFFE9B /* su-kien-noi-bat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC540E1864B46F00CFFE9B /* su-kien-noi-bat.png */; };
+		34BC542B1864B46F00CFFE9B /* tai-khoan.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC540F1864B46F00CFFE9B /* tai-khoan.png */; };
+		34BC542C1864B46F00CFFE9B /* the-loai.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54101864B46F00CFFE9B /* the-loai.png */; };
+		34BC542D1864B46F00CFFE9B /* thong-tin.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54111864B46F00CFFE9B /* thong-tin.png */; };
+		34BC542E1864B46F00CFFE9B /* thu-am-binh-chon-nhieu-nhat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54121864B46F00CFFE9B /* thu-am-binh-chon-nhieu-nhat.png */; };
+		34BC542F1864B46F00CFFE9B /* top-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54131864B46F00CFFE9B /* top-bar.png */; };
+		34BC54301864B46F00CFFE9B /* trang-chu.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54141864B46F00CFFE9B /* trang-chu.png */; };
+		34BC54311864B46F00CFFE9B /* wap-kara.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54151864B46F00CFFE9B /* wap-kara.png */; };
+		34BC54871864B5BA00CFFE9B /* btn-dangky.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54331864B5BA00CFFE9B /* btn-dangky.png */; };
+		34BC54881864B5BA00CFFE9B /* round-check.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54341864B5BA00CFFE9B /* round-check.png */; };
+		34BC54891864B5BA00CFFE9B /* text-filed-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54351864B5BA00CFFE9B /* text-filed-bg.png */; };
+		34BC548A1864B5BA00CFFE9B /* bg-text-field.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54371864B5BA00CFFE9B /* bg-text-field.png */; };
+		34BC548B1864B5BA00CFFE9B /* btn-dang-nhap-tro-lai.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54381864B5BA00CFFE9B /* btn-dang-nhap-tro-lai.png */; };
+		34BC548C1864B5BA00CFFE9B /* btn-dang-nhap.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54391864B5BA00CFFE9B /* btn-dang-nhap.png */; };
+		34BC548D1864B5BA00CFFE9B /* text-field.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC543B1864B5BA00CFFE9B /* text-field.png */; };
+		34BC548E1864B5BA00CFFE9B /* goi-ngay.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC543D1864B5BA00CFFE9B /* goi-ngay.png */; };
+		34BC548F1864B5BA00CFFE9B /* goi-thang.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC543E1864B5BA00CFFE9B /* goi-thang.png */; };
+		34BC54901864B5BA00CFFE9B /* goi-tuan.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC543F1864B5BA00CFFE9B /* goi-tuan.png */; };
+		34BC54911864B5BA00CFFE9B /* 1-bai-moi-select.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54411864B5BA00CFFE9B /* 1-bai-moi-select.png */; };
+		34BC54921864B5BA00CFFE9B /* 1-bai-moi.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54421864B5BA00CFFE9B /* 1-bai-moi.png */; };
+		34BC54931864B5BA00CFFE9B /* 2-bai-hits-select.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54431864B5BA00CFFE9B /* 2-bai-hits-select.png */; };
+		34BC54941864B5BA00CFFE9B /* 2-bai-hits.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54441864B5BA00CFFE9B /* 2-bai-hits.png */; };
+		34BC54951864B5BA00CFFE9B /* 3-tat-ca-select.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54451864B5BA00CFFE9B /* 3-tat-ca-select.png */; };
+		34BC54961864B5BA00CFFE9B /* 3-tat-ca.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54461864B5BA00CFFE9B /* 3-tat-ca.png */; };
+		34BC54971864B5BA00CFFE9B /* 4-karaoke-clip-select.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54471864B5BA00CFFE9B /* 4-karaoke-clip-select.png */; };
+		34BC54981864B5BA00CFFE9B /* 4-karaoke-clip.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54481864B5BA00CFFE9B /* 4-karaoke-clip.png */; };
+		34BC54991864B5BA00CFFE9B /* bg-filter.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54491864B5BA00CFFE9B /* bg-filter.png */; };
+		34BC549A1864B5BA00CFFE9B /* bg-banner-player.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC544B1864B5BA00CFFE9B /* bg-banner-player.png */; };
+		34BC549B1864B5BA00CFFE9B /* btn-trai-tim.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC544C1864B5BA00CFFE9B /* btn-trai-tim.png */; };
+		34BC549C1864B5BA00CFFE9B /* phong-to-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC544D1864B5BA00CFFE9B /* phong-to-btn.png */; };
+		34BC549D1864B5BA00CFFE9B /* thu-am1.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC544E1864B5BA00CFFE9B /* thu-am1.png */; };
+		34BC549E1864B5BA00CFFE9B /* thu-am2.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC544F1864B5BA00CFFE9B /* thu-am2.png */; };
+		34BC549F1864B5BA00CFFE9B /* bg-share.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54511864B5BA00CFFE9B /* bg-share.png */; };
+		34BC54A01864B5BA00CFFE9B /* huy-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54521864B5BA00CFFE9B /* huy-btn.png */; };
+		34BC54A11864B5BA00CFFE9B /* phat-lai-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54531864B5BA00CFFE9B /* phat-lai-btn.png */; };
+		34BC54A21864B5BA00CFFE9B /* share-email.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54541864B5BA00CFFE9B /* share-email.png */; };
+		34BC54A31864B5BA00CFFE9B /* share-fb.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54551864B5BA00CFFE9B /* share-fb.png */; };
+		34BC54A41864B5BA00CFFE9B /* share-mkara.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54561864B5BA00CFFE9B /* share-mkara.png */; };
+		34BC54A51864B5BA00CFFE9B /* share-sms.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54571864B5BA00CFFE9B /* share-sms.png */; };
+		34BC54A61864B5BA00CFFE9B /* bg-comment.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54591864B5BA00CFFE9B /* bg-comment.png */; };
+		34BC54A71864B5BA00CFFE9B /* bg-text-field-comment.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC545A1864B5BA00CFFE9B /* bg-text-field-comment.png */; };
+		34BC54A81864B5BA00CFFE9B /* icon-emotion.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC545B1864B5BA00CFFE9B /* icon-emotion.png */; };
+		34BC54A91864B5BA00CFFE9B /* play-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC545C1864B5BA00CFFE9B /* play-btn.png */; };
+		34BC54AA1864B5BA00CFFE9B /* post-comment-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC545D1864B5BA00CFFE9B /* post-comment-btn.png */; };
+		34BC54AB1864B5BA00CFFE9B /* bg-cell-the-loai.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC545F1864B5BA00CFFE9B /* bg-cell-the-loai.png */; };
+		34BC54AC1864B5BA00CFFE9B /* bg-cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54611864B5BA00CFFE9B /* bg-cell.png */; };
+		34BC54AD1864B5BA00CFFE9B /* disc.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54621864B5BA00CFFE9B /* disc.png */; };
+		34BC54AE1864B5BA00CFFE9B /* hot-nhat-select.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54631864B5BA00CFFE9B /* hot-nhat-select.png */; };
+		34BC54AF1864B5BA00CFFE9B /* hot-nhat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54641864B5BA00CFFE9B /* hot-nhat.png */; };
+		34BC54B01864B5BA00CFFE9B /* moi-nhat-select.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54651864B5BA00CFFE9B /* moi-nhat-select.png */; };
+		34BC54B11864B5BA00CFFE9B /* moi-nhat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54661864B5BA00CFFE9B /* moi-nhat.png */; };
+		34BC54B21864B5BA00CFFE9B /* noi-bat-select.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54671864B5BA00CFFE9B /* noi-bat-select.png */; };
+		34BC54B31864B5BA00CFFE9B /* noi-bat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54681864B5BA00CFFE9B /* noi-bat.png */; };
+		34BC54B41864B5BA00CFFE9B /* top-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54691864B5BA00CFFE9B /* top-bg.png */; };
+		34BC54B51864B5BA00CFFE9B /* bg-anh-album.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC546B1864B5BA00CFFE9B /* bg-anh-album.png */; };
+		34BC54B61864B5BA00CFFE9B /* bg-anh-thu-am.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC546C1864B5BA00CFFE9B /* bg-anh-thu-am.png */; };
+		34BC54B71864B5BA00CFFE9B /* bg-cell-bai-hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC546D1864B5BA00CFFE9B /* bg-cell-bai-hat.png */; };
+		34BC54B81864B5BA00CFFE9B /* bg-top-home.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC546E1864B5BA00CFFE9B /* bg-top-home.png */; };
+		34BC54B91864B5BA00CFFE9B /* bottom-bai-hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC546F1864B5BA00CFFE9B /* bottom-bai-hat.png */; };
+		34BC54BA1864B5BA00CFFE9B /* bottom-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54701864B5BA00CFFE9B /* bottom-bg.png */; };
+		34BC54BB1864B5BA00CFFE9B /* bottom-ca-si.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54711864B5BA00CFFE9B /* bottom-ca-si.png */; };
+		34BC54BC1864B5BA00CFFE9B /* bottom-the-loai.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54721864B5BA00CFFE9B /* bottom-the-loai.png */; };
+		34BC54BD1864B5BA00CFFE9B /* bottom-thu-am.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54731864B5BA00CFFE9B /* bottom-thu-am.png */; };
+		34BC54BE1864B5BA00CFFE9B /* bottom-yeu-thich.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54741864B5BA00CFFE9B /* bottom-yeu-thich.png */; };
+		34BC54BF1864B5BA00CFFE9B /* khung-tron-ca-si.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54751864B5BA00CFFE9B /* khung-tron-ca-si.png */; };
+		34BC54C01864B5BA00CFFE9B /* logo-album.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54761864B5BA00CFFE9B /* logo-album.png */; };
+		34BC54C11864B5BA00CFFE9B /* logo-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54771864B5BA00CFFE9B /* logo-banner.png */; };
+		34BC54C21864B5BA00CFFE9B /* logo-ca-si.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54781864B5BA00CFFE9B /* logo-ca-si.png */; };
+		34BC54C31864B5BA00CFFE9B /* logo-note-nhac.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54791864B5BA00CFFE9B /* logo-note-nhac.png */; };
+		34BC54C41864B5BA00CFFE9B /* logo-trai-tim.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC547A1864B5BA00CFFE9B /* logo-trai-tim.png */; };
+		34BC54C51864B5BA00CFFE9B /* secsion-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC547B1864B5BA00CFFE9B /* secsion-bg.png */; };
+		34BC54C61864B5BA00CFFE9B /* back-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC547D1864B5BA00CFFE9B /* back-btn.png */; };
+		34BC54C71864B5BA00CFFE9B /* btn-close-search.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC547E1864B5BA00CFFE9B /* btn-close-search.png */; };
+		34BC54C81864B5BA00CFFE9B /* btn-search-top.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC547F1864B5BA00CFFE9B /* btn-search-top.png */; };
+		34BC54C91864B5BA00CFFE9B /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54801864B5BA00CFFE9B /* menu.png */; };
+		34BC54CA1864B5BA00CFFE9B /* search-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54811864B5BA00CFFE9B /* search-btn.png */; };
+		34BC54CB1864B5BA00CFFE9B /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54821864B5BA00CFFE9B /* setting.png */; };
+		34BC54CC1864B5BA00CFFE9B /* star-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54831864B5BA00CFFE9B /* star-blue.png */; };
+		34BC54CD1864B5BA00CFFE9B /* star-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54841864B5BA00CFFE9B /* star-yellow.png */; };
+		34BC54CE1864B5BA00CFFE9B /* top-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54851864B5BA00CFFE9B /* top-banner.png */; };
+		34BC54CF1864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54861864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +167,107 @@
 		34BC53F31864AD8A00CFFE9B /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		34BC53F41864AD8A00CFFE9B /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		34BC53F51864AD8A00CFFE9B /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		34BC53FA1864B46F00CFFE9B /* ca-khuc-da-ghi-am.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ca-khuc-da-ghi-am.png"; sourceTree = "<group>"; };
+		34BC53FB1864B46F00CFFE9B /* ca-khuc-noi-bat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ca-khuc-noi-bat.png"; sourceTree = "<group>"; };
+		34BC53FC1864B46F00CFFE9B /* ca-si.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ca-si.png"; sourceTree = "<group>"; };
+		34BC53FD1864B46F00CFFE9B /* cai-dat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cai-dat.png"; sourceTree = "<group>"; };
+		34BC53FE1864B46F00CFFE9B /* camera360.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera360.png; sourceTree = "<group>"; };
+		34BC53FF1864B46F00CFFE9B /* clip-gay-bao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clip-gay-bao.png"; sourceTree = "<group>"; };
+		34BC54001864B46F00CFFE9B /* dich-vu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dich-vu.png"; sourceTree = "<group>"; };
+		34BC54011864B46F00CFFE9B /* hot-nhat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hot-nhat.png"; sourceTree = "<group>"; };
+		34BC54021864B46F00CFFE9B /* huong-dan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "huong-dan.png"; sourceTree = "<group>"; };
+		34BC54031864B46F00CFFE9B /* icon-profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-profile.png"; sourceTree = "<group>"; };
+		34BC54041864B46F00CFFE9B /* karaoke-clip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "karaoke-clip.png"; sourceTree = "<group>"; };
+		34BC54051864B46F00CFFE9B /* karaoke-hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "karaoke-hit.png"; sourceTree = "<group>"; };
+		34BC54061864B46F00CFFE9B /* karaoke-moi-nhat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "karaoke-moi-nhat.png"; sourceTree = "<group>"; };
+		34BC54071864B46F00CFFE9B /* karaoke-yeuthich.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "karaoke-yeuthich.png"; sourceTree = "<group>"; };
+		34BC54081864B46F00CFFE9B /* moi-nhat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moi-nhat.png"; sourceTree = "<group>"; };
+		34BC54091864B46F00CFFE9B /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		34BC540A1864B46F00CFFE9B /* secsion-danh-muc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "secsion-danh-muc.png"; sourceTree = "<group>"; };
+		34BC540B1864B46F00CFFE9B /* secsion-nhacDJ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "secsion-nhacDJ.png"; sourceTree = "<group>"; };
+		34BC540C1864B46F00CFFE9B /* secsion-them.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "secsion-them.png"; sourceTree = "<group>"; };
+		34BC540D1864B46F00CFFE9B /* secsion-tin-tuc-video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "secsion-tin-tuc-video.png"; sourceTree = "<group>"; };
+		34BC540E1864B46F00CFFE9B /* su-kien-noi-bat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "su-kien-noi-bat.png"; sourceTree = "<group>"; };
+		34BC540F1864B46F00CFFE9B /* tai-khoan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tai-khoan.png"; sourceTree = "<group>"; };
+		34BC54101864B46F00CFFE9B /* the-loai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-loai.png"; sourceTree = "<group>"; };
+		34BC54111864B46F00CFFE9B /* thong-tin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thong-tin.png"; sourceTree = "<group>"; };
+		34BC54121864B46F00CFFE9B /* thu-am-binh-chon-nhieu-nhat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thu-am-binh-chon-nhieu-nhat.png"; sourceTree = "<group>"; };
+		34BC54131864B46F00CFFE9B /* top-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-bar.png"; sourceTree = "<group>"; };
+		34BC54141864B46F00CFFE9B /* trang-chu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trang-chu.png"; sourceTree = "<group>"; };
+		34BC54151864B46F00CFFE9B /* wap-kara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wap-kara.png"; sourceTree = "<group>"; };
+		34BC54331864B5BA00CFFE9B /* btn-dangky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-dangky.png"; sourceTree = "<group>"; };
+		34BC54341864B5BA00CFFE9B /* round-check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-check.png"; sourceTree = "<group>"; };
+		34BC54351864B5BA00CFFE9B /* text-filed-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-filed-bg.png"; sourceTree = "<group>"; };
+		34BC54371864B5BA00CFFE9B /* bg-text-field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-text-field.png"; sourceTree = "<group>"; };
+		34BC54381864B5BA00CFFE9B /* btn-dang-nhap-tro-lai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-dang-nhap-tro-lai.png"; sourceTree = "<group>"; };
+		34BC54391864B5BA00CFFE9B /* btn-dang-nhap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-dang-nhap.png"; sourceTree = "<group>"; };
+		34BC543B1864B5BA00CFFE9B /* text-field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-field.png"; sourceTree = "<group>"; };
+		34BC543D1864B5BA00CFFE9B /* goi-ngay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "goi-ngay.png"; sourceTree = "<group>"; };
+		34BC543E1864B5BA00CFFE9B /* goi-thang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "goi-thang.png"; sourceTree = "<group>"; };
+		34BC543F1864B5BA00CFFE9B /* goi-tuan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "goi-tuan.png"; sourceTree = "<group>"; };
+		34BC54411864B5BA00CFFE9B /* 1-bai-moi-select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-bai-moi-select.png"; sourceTree = "<group>"; };
+		34BC54421864B5BA00CFFE9B /* 1-bai-moi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-bai-moi.png"; sourceTree = "<group>"; };
+		34BC54431864B5BA00CFFE9B /* 2-bai-hits-select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-bai-hits-select.png"; sourceTree = "<group>"; };
+		34BC54441864B5BA00CFFE9B /* 2-bai-hits.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-bai-hits.png"; sourceTree = "<group>"; };
+		34BC54451864B5BA00CFFE9B /* 3-tat-ca-select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-tat-ca-select.png"; sourceTree = "<group>"; };
+		34BC54461864B5BA00CFFE9B /* 3-tat-ca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-tat-ca.png"; sourceTree = "<group>"; };
+		34BC54471864B5BA00CFFE9B /* 4-karaoke-clip-select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-karaoke-clip-select.png"; sourceTree = "<group>"; };
+		34BC54481864B5BA00CFFE9B /* 4-karaoke-clip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-karaoke-clip.png"; sourceTree = "<group>"; };
+		34BC54491864B5BA00CFFE9B /* bg-filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-filter.png"; sourceTree = "<group>"; };
+		34BC544B1864B5BA00CFFE9B /* bg-banner-player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-banner-player.png"; sourceTree = "<group>"; };
+		34BC544C1864B5BA00CFFE9B /* btn-trai-tim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-trai-tim.png"; sourceTree = "<group>"; };
+		34BC544D1864B5BA00CFFE9B /* phong-to-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phong-to-btn.png"; sourceTree = "<group>"; };
+		34BC544E1864B5BA00CFFE9B /* thu-am1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thu-am1.png"; sourceTree = "<group>"; };
+		34BC544F1864B5BA00CFFE9B /* thu-am2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thu-am2.png"; sourceTree = "<group>"; };
+		34BC54511864B5BA00CFFE9B /* bg-share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-share.png"; sourceTree = "<group>"; };
+		34BC54521864B5BA00CFFE9B /* huy-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "huy-btn.png"; sourceTree = "<group>"; };
+		34BC54531864B5BA00CFFE9B /* phat-lai-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phat-lai-btn.png"; sourceTree = "<group>"; };
+		34BC54541864B5BA00CFFE9B /* share-email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-email.png"; sourceTree = "<group>"; };
+		34BC54551864B5BA00CFFE9B /* share-fb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-fb.png"; sourceTree = "<group>"; };
+		34BC54561864B5BA00CFFE9B /* share-mkara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-mkara.png"; sourceTree = "<group>"; };
+		34BC54571864B5BA00CFFE9B /* share-sms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-sms.png"; sourceTree = "<group>"; };
+		34BC54591864B5BA00CFFE9B /* bg-comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-comment.png"; sourceTree = "<group>"; };
+		34BC545A1864B5BA00CFFE9B /* bg-text-field-comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-text-field-comment.png"; sourceTree = "<group>"; };
+		34BC545B1864B5BA00CFFE9B /* icon-emotion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-emotion.png"; sourceTree = "<group>"; };
+		34BC545C1864B5BA00CFFE9B /* play-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-btn.png"; sourceTree = "<group>"; };
+		34BC545D1864B5BA00CFFE9B /* post-comment-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "post-comment-btn.png"; sourceTree = "<group>"; };
+		34BC545F1864B5BA00CFFE9B /* bg-cell-the-loai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-cell-the-loai.png"; sourceTree = "<group>"; };
+		34BC54611864B5BA00CFFE9B /* bg-cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-cell.png"; sourceTree = "<group>"; };
+		34BC54621864B5BA00CFFE9B /* disc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disc.png; sourceTree = "<group>"; };
+		34BC54631864B5BA00CFFE9B /* hot-nhat-select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hot-nhat-select.png"; sourceTree = "<group>"; };
+		34BC54641864B5BA00CFFE9B /* hot-nhat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hot-nhat.png"; sourceTree = "<group>"; };
+		34BC54651864B5BA00CFFE9B /* moi-nhat-select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moi-nhat-select.png"; sourceTree = "<group>"; };
+		34BC54661864B5BA00CFFE9B /* moi-nhat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moi-nhat.png"; sourceTree = "<group>"; };
+		34BC54671864B5BA00CFFE9B /* noi-bat-select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noi-bat-select.png"; sourceTree = "<group>"; };
+		34BC54681864B5BA00CFFE9B /* noi-bat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noi-bat.png"; sourceTree = "<group>"; };
+		34BC54691864B5BA00CFFE9B /* top-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-bg.png"; sourceTree = "<group>"; };
+		34BC546B1864B5BA00CFFE9B /* bg-anh-album.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-anh-album.png"; sourceTree = "<group>"; };
+		34BC546C1864B5BA00CFFE9B /* bg-anh-thu-am.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-anh-thu-am.png"; sourceTree = "<group>"; };
+		34BC546D1864B5BA00CFFE9B /* bg-cell-bai-hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-cell-bai-hat.png"; sourceTree = "<group>"; };
+		34BC546E1864B5BA00CFFE9B /* bg-top-home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-top-home.png"; sourceTree = "<group>"; };
+		34BC546F1864B5BA00CFFE9B /* bottom-bai-hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-bai-hat.png"; sourceTree = "<group>"; };
+		34BC54701864B5BA00CFFE9B /* bottom-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-bg.png"; sourceTree = "<group>"; };
+		34BC54711864B5BA00CFFE9B /* bottom-ca-si.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-ca-si.png"; sourceTree = "<group>"; };
+		34BC54721864B5BA00CFFE9B /* bottom-the-loai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-the-loai.png"; sourceTree = "<group>"; };
+		34BC54731864B5BA00CFFE9B /* bottom-thu-am.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-thu-am.png"; sourceTree = "<group>"; };
+		34BC54741864B5BA00CFFE9B /* bottom-yeu-thich.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-yeu-thich.png"; sourceTree = "<group>"; };
+		34BC54751864B5BA00CFFE9B /* khung-tron-ca-si.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "khung-tron-ca-si.png"; sourceTree = "<group>"; };
+		34BC54761864B5BA00CFFE9B /* logo-album.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-album.png"; sourceTree = "<group>"; };
+		34BC54771864B5BA00CFFE9B /* logo-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-banner.png"; sourceTree = "<group>"; };
+		34BC54781864B5BA00CFFE9B /* logo-ca-si.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-ca-si.png"; sourceTree = "<group>"; };
+		34BC54791864B5BA00CFFE9B /* logo-note-nhac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-note-nhac.png"; sourceTree = "<group>"; };
+		34BC547A1864B5BA00CFFE9B /* logo-trai-tim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-trai-tim.png"; sourceTree = "<group>"; };
+		34BC547B1864B5BA00CFFE9B /* secsion-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "secsion-bg.png"; sourceTree = "<group>"; };
+		34BC547D1864B5BA00CFFE9B /* back-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-btn.png"; sourceTree = "<group>"; };
+		34BC547E1864B5BA00CFFE9B /* btn-close-search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-close-search.png"; sourceTree = "<group>"; };
+		34BC547F1864B5BA00CFFE9B /* btn-search-top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-search-top.png"; sourceTree = "<group>"; };
+		34BC54801864B5BA00CFFE9B /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		34BC54811864B5BA00CFFE9B /* search-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-btn.png"; sourceTree = "<group>"; };
+		34BC54821864B5BA00CFFE9B /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		34BC54831864B5BA00CFFE9B /* star-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-blue.png"; sourceTree = "<group>"; };
+		34BC54841864B5BA00CFFE9B /* star-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-yellow.png"; sourceTree = "<group>"; };
+		34BC54851864B5BA00CFFE9B /* top-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-banner.png"; sourceTree = "<group>"; };
+		34BC54861864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tro-lai-bai-hat-dang-phat.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +288,7 @@
 		34061F0818645874009FD9B2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				34BC53F81864B3F500CFFE9B /* images */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -235,6 +438,218 @@
 			name = HomeViewController;
 			sourceTree = "<group>";
 		};
+		34BC53F81864B3F500CFFE9B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				34BC54321864B5BA00CFFE9B /* 1 */,
+				34BC54361864B5BA00CFFE9B /* 1.1 */,
+				34BC543A1864B5BA00CFFE9B /* 1.2 */,
+				34BC543C1864B5BA00CFFE9B /* 2 */,
+				34BC54401864B5BA00CFFE9B /* 4 */,
+				34BC544A1864B5BA00CFFE9B /* 4.1 */,
+				34BC54501864B5BA00CFFE9B /* 5 */,
+				34BC54581864B5BA00CFFE9B /* 8.1 */,
+				34BC545E1864B5BA00CFFE9B /* 10 */,
+				34BC54601864B5BA00CFFE9B /* 11.1 */,
+				34BC546A1864B5BA00CFFE9B /* home */,
+				34BC547C1864B5BA00CFFE9B /* icon chung */,
+				34BC53F91864B40800CFFE9B /* menu-chinh */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		34BC53F91864B40800CFFE9B /* menu-chinh */ = {
+			isa = PBXGroup;
+			children = (
+				34BC53FA1864B46F00CFFE9B /* ca-khuc-da-ghi-am.png */,
+				34BC53FB1864B46F00CFFE9B /* ca-khuc-noi-bat.png */,
+				34BC53FC1864B46F00CFFE9B /* ca-si.png */,
+				34BC53FD1864B46F00CFFE9B /* cai-dat.png */,
+				34BC53FE1864B46F00CFFE9B /* camera360.png */,
+				34BC53FF1864B46F00CFFE9B /* clip-gay-bao.png */,
+				34BC54001864B46F00CFFE9B /* dich-vu.png */,
+				34BC54011864B46F00CFFE9B /* hot-nhat.png */,
+				34BC54021864B46F00CFFE9B /* huong-dan.png */,
+				34BC54031864B46F00CFFE9B /* icon-profile.png */,
+				34BC54041864B46F00CFFE9B /* karaoke-clip.png */,
+				34BC54051864B46F00CFFE9B /* karaoke-hit.png */,
+				34BC54061864B46F00CFFE9B /* karaoke-moi-nhat.png */,
+				34BC54071864B46F00CFFE9B /* karaoke-yeuthich.png */,
+				34BC54081864B46F00CFFE9B /* moi-nhat.png */,
+				34BC54091864B46F00CFFE9B /* search.png */,
+				34BC540A1864B46F00CFFE9B /* secsion-danh-muc.png */,
+				34BC540B1864B46F00CFFE9B /* secsion-nhacDJ.png */,
+				34BC540C1864B46F00CFFE9B /* secsion-them.png */,
+				34BC540D1864B46F00CFFE9B /* secsion-tin-tuc-video.png */,
+				34BC540E1864B46F00CFFE9B /* su-kien-noi-bat.png */,
+				34BC540F1864B46F00CFFE9B /* tai-khoan.png */,
+				34BC54101864B46F00CFFE9B /* the-loai.png */,
+				34BC54111864B46F00CFFE9B /* thong-tin.png */,
+				34BC54121864B46F00CFFE9B /* thu-am-binh-chon-nhieu-nhat.png */,
+				34BC54131864B46F00CFFE9B /* top-bar.png */,
+				34BC54141864B46F00CFFE9B /* trang-chu.png */,
+				34BC54151864B46F00CFFE9B /* wap-kara.png */,
+			);
+			name = "menu-chinh";
+			sourceTree = "<group>";
+		};
+		34BC54321864B5BA00CFFE9B /* 1 */ = {
+			isa = PBXGroup;
+			children = (
+				34BC54331864B5BA00CFFE9B /* btn-dangky.png */,
+				34BC54341864B5BA00CFFE9B /* round-check.png */,
+				34BC54351864B5BA00CFFE9B /* text-filed-bg.png */,
+			);
+			path = 1;
+			sourceTree = "<group>";
+		};
+		34BC54361864B5BA00CFFE9B /* 1.1 */ = {
+			isa = PBXGroup;
+			children = (
+				34BC54371864B5BA00CFFE9B /* bg-text-field.png */,
+				34BC54381864B5BA00CFFE9B /* btn-dang-nhap-tro-lai.png */,
+				34BC54391864B5BA00CFFE9B /* btn-dang-nhap.png */,
+			);
+			path = 1.1;
+			sourceTree = "<group>";
+		};
+		34BC543A1864B5BA00CFFE9B /* 1.2 */ = {
+			isa = PBXGroup;
+			children = (
+				34BC543B1864B5BA00CFFE9B /* text-field.png */,
+			);
+			path = 1.2;
+			sourceTree = "<group>";
+		};
+		34BC543C1864B5BA00CFFE9B /* 2 */ = {
+			isa = PBXGroup;
+			children = (
+				34BC543D1864B5BA00CFFE9B /* goi-ngay.png */,
+				34BC543E1864B5BA00CFFE9B /* goi-thang.png */,
+				34BC543F1864B5BA00CFFE9B /* goi-tuan.png */,
+			);
+			path = 2;
+			sourceTree = "<group>";
+		};
+		34BC54401864B5BA00CFFE9B /* 4 */ = {
+			isa = PBXGroup;
+			children = (
+				34BC54411864B5BA00CFFE9B /* 1-bai-moi-select.png */,
+				34BC54421864B5BA00CFFE9B /* 1-bai-moi.png */,
+				34BC54431864B5BA00CFFE9B /* 2-bai-hits-select.png */,
+				34BC54441864B5BA00CFFE9B /* 2-bai-hits.png */,
+				34BC54451864B5BA00CFFE9B /* 3-tat-ca-select.png */,
+				34BC54461864B5BA00CFFE9B /* 3-tat-ca.png */,
+				34BC54471864B5BA00CFFE9B /* 4-karaoke-clip-select.png */,
+				34BC54481864B5BA00CFFE9B /* 4-karaoke-clip.png */,
+				34BC54491864B5BA00CFFE9B /* bg-filter.png */,
+			);
+			path = 4;
+			sourceTree = "<group>";
+		};
+		34BC544A1864B5BA00CFFE9B /* 4.1 */ = {
+			isa = PBXGroup;
+			children = (
+				34BC544B1864B5BA00CFFE9B /* bg-banner-player.png */,
+				34BC544C1864B5BA00CFFE9B /* btn-trai-tim.png */,
+				34BC544D1864B5BA00CFFE9B /* phong-to-btn.png */,
+				34BC544E1864B5BA00CFFE9B /* thu-am1.png */,
+				34BC544F1864B5BA00CFFE9B /* thu-am2.png */,
+			);
+			path = 4.1;
+			sourceTree = "<group>";
+		};
+		34BC54501864B5BA00CFFE9B /* 5 */ = {
+			isa = PBXGroup;
+			children = (
+				34BC54511864B5BA00CFFE9B /* bg-share.png */,
+				34BC54521864B5BA00CFFE9B /* huy-btn.png */,
+				34BC54531864B5BA00CFFE9B /* phat-lai-btn.png */,
+				34BC54541864B5BA00CFFE9B /* share-email.png */,
+				34BC54551864B5BA00CFFE9B /* share-fb.png */,
+				34BC54561864B5BA00CFFE9B /* share-mkara.png */,
+				34BC54571864B5BA00CFFE9B /* share-sms.png */,
+			);
+			path = 5;
+			sourceTree = "<group>";
+		};
+		34BC54581864B5BA00CFFE9B /* 8.1 */ = {
+			isa = PBXGroup;
+			children = (
+				34BC54591864B5BA00CFFE9B /* bg-comment.png */,
+				34BC545A1864B5BA00CFFE9B /* bg-text-field-comment.png */,
+				34BC545B1864B5BA00CFFE9B /* icon-emotion.png */,
+				34BC545C1864B5BA00CFFE9B /* play-btn.png */,
+				34BC545D1864B5BA00CFFE9B /* post-comment-btn.png */,
+			);
+			path = 8.1;
+			sourceTree = "<group>";
+		};
+		34BC545E1864B5BA00CFFE9B /* 10 */ = {
+			isa = PBXGroup;
+			children = (
+				34BC545F1864B5BA00CFFE9B /* bg-cell-the-loai.png */,
+			);
+			path = 10;
+			sourceTree = "<group>";
+		};
+		34BC54601864B5BA00CFFE9B /* 11.1 */ = {
+			isa = PBXGroup;
+			children = (
+				34BC54611864B5BA00CFFE9B /* bg-cell.png */,
+				34BC54621864B5BA00CFFE9B /* disc.png */,
+				34BC54631864B5BA00CFFE9B /* hot-nhat-select.png */,
+				34BC54641864B5BA00CFFE9B /* hot-nhat.png */,
+				34BC54651864B5BA00CFFE9B /* moi-nhat-select.png */,
+				34BC54661864B5BA00CFFE9B /* moi-nhat.png */,
+				34BC54671864B5BA00CFFE9B /* noi-bat-select.png */,
+				34BC54681864B5BA00CFFE9B /* noi-bat.png */,
+				34BC54691864B5BA00CFFE9B /* top-bg.png */,
+			);
+			path = 11.1;
+			sourceTree = "<group>";
+		};
+		34BC546A1864B5BA00CFFE9B /* home */ = {
+			isa = PBXGroup;
+			children = (
+				34BC546B1864B5BA00CFFE9B /* bg-anh-album.png */,
+				34BC546C1864B5BA00CFFE9B /* bg-anh-thu-am.png */,
+				34BC546D1864B5BA00CFFE9B /* bg-cell-bai-hat.png */,
+				34BC546E1864B5BA00CFFE9B /* bg-top-home.png */,
+				34BC546F1864B5BA00CFFE9B /* bottom-bai-hat.png */,
+				34BC54701864B5BA00CFFE9B /* bottom-bg.png */,
+				34BC54711864B5BA00CFFE9B /* bottom-ca-si.png */,
+				34BC54721864B5BA00CFFE9B /* bottom-the-loai.png */,
+				34BC54731864B5BA00CFFE9B /* bottom-thu-am.png */,
+				34BC54741864B5BA00CFFE9B /* bottom-yeu-thich.png */,
+				34BC54751864B5BA00CFFE9B /* khung-tron-ca-si.png */,
+				34BC54761864B5BA00CFFE9B /* logo-album.png */,
+				34BC54771864B5BA00CFFE9B /* logo-banner.png */,
+				34BC54781864B5BA00CFFE9B /* logo-ca-si.png */,
+				34BC54791864B5BA00CFFE9B /* logo-note-nhac.png */,
+				34BC547A1864B5BA00CFFE9B /* logo-trai-tim.png */,
+				34BC547B1864B5BA00CFFE9B /* secsion-bg.png */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		34BC547C1864B5BA00CFFE9B /* icon chung */ = {
+			isa = PBXGroup;
+			children = (
+				34BC547D1864B5BA00CFFE9B /* back-btn.png */,
+				34BC547E1864B5BA00CFFE9B /* btn-close-search.png */,
+				34BC547F1864B5BA00CFFE9B /* btn-search-top.png */,
+				34BC54801864B5BA00CFFE9B /* menu.png */,
+				34BC54811864B5BA00CFFE9B /* search-btn.png */,
+				34BC54821864B5BA00CFFE9B /* setting.png */,
+				34BC54831864B5BA00CFFE9B /* star-blue.png */,
+				34BC54841864B5BA00CFFE9B /* star-yellow.png */,
+				34BC54851864B5BA00CFFE9B /* top-banner.png */,
+				34BC54861864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png */,
+			);
+			path = "icon chung";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,14 +701,115 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34BC54C01864B5BA00CFFE9B /* logo-album.png in Resources */,
 				3442C7C518642F1300BD13F3 /* InfoPlist.strings in Resources */,
+				34BC54961864B5BA00CFFE9B /* 3-tat-ca.png in Resources */,
+				34BC54231864B46F00CFFE9B /* karaoke-yeuthich.png in Resources */,
 				3442C7CD18642F1300BD13F3 /* Default.png in Resources */,
+				34BC54211864B46F00CFFE9B /* karaoke-hit.png in Resources */,
+				34BC541D1864B46F00CFFE9B /* hot-nhat.png in Resources */,
+				34BC54881864B5BA00CFFE9B /* round-check.png in Resources */,
+				34BC54201864B46F00CFFE9B /* karaoke-clip.png in Resources */,
+				34BC54161864B46F00CFFE9B /* ca-khuc-da-ghi-am.png in Resources */,
 				3442C7CF18642F1300BD13F3 /* Default@2x.png in Resources */,
+				34BC54AE1864B5BA00CFFE9B /* hot-nhat-select.png in Resources */,
+				34BC54A21864B5BA00CFFE9B /* share-email.png in Resources */,
+				34BC54BB1864B5BA00CFFE9B /* bottom-ca-si.png in Resources */,
+				34BC54BC1864B5BA00CFFE9B /* bottom-the-loai.png in Resources */,
+				34BC54CD1864B5BA00CFFE9B /* star-yellow.png in Resources */,
+				34BC54951864B5BA00CFFE9B /* 3-tat-ca-select.png in Resources */,
+				34BC542B1864B46F00CFFE9B /* tai-khoan.png in Resources */,
 				3442C7D118642F1300BD13F3 /* Default-568h@2x.png in Resources */,
+				34BC54A51864B5BA00CFFE9B /* share-sms.png in Resources */,
+				34BC541E1864B46F00CFFE9B /* huong-dan.png in Resources */,
+				34BC54191864B46F00CFFE9B /* cai-dat.png in Resources */,
+				34BC54B41864B5BA00CFFE9B /* top-bg.png in Resources */,
+				34BC541F1864B46F00CFFE9B /* icon-profile.png in Resources */,
+				34BC54891864B5BA00CFFE9B /* text-filed-bg.png in Resources */,
+				34BC54CA1864B5BA00CFFE9B /* search-btn.png in Resources */,
+				34BC54A71864B5BA00CFFE9B /* bg-text-field-comment.png in Resources */,
+				34BC54AF1864B5BA00CFFE9B /* hot-nhat.png in Resources */,
+				34BC54971864B5BA00CFFE9B /* 4-karaoke-clip-select.png in Resources */,
+				34BC54C11864B5BA00CFFE9B /* logo-banner.png in Resources */,
+				34BC54271864B46F00CFFE9B /* secsion-nhacDJ.png in Resources */,
+				34BC548A1864B5BA00CFFE9B /* bg-text-field.png in Resources */,
+				34BC54B61864B5BA00CFFE9B /* bg-anh-thu-am.png in Resources */,
+				34BC549E1864B5BA00CFFE9B /* thu-am2.png in Resources */,
+				34BC541A1864B46F00CFFE9B /* camera360.png in Resources */,
+				34BC549B1864B5BA00CFFE9B /* btn-trai-tim.png in Resources */,
+				34BC549A1864B5BA00CFFE9B /* bg-banner-player.png in Resources */,
+				34BC54BE1864B5BA00CFFE9B /* bottom-yeu-thich.png in Resources */,
+				34BC54A31864B5BA00CFFE9B /* share-fb.png in Resources */,
+				34BC54CB1864B5BA00CFFE9B /* setting.png in Resources */,
+				34BC54A91864B5BA00CFFE9B /* play-btn.png in Resources */,
+				34BC542F1864B46F00CFFE9B /* top-bar.png in Resources */,
 				34BC53DE18648D0900CFFE9B /* NavibarView.xib in Resources */,
+				34BC548F1864B5BA00CFFE9B /* goi-thang.png in Resources */,
+				34BC54911864B5BA00CFFE9B /* 1-bai-moi-select.png in Resources */,
+				34BC541B1864B46F00CFFE9B /* clip-gay-bao.png in Resources */,
+				34BC54B91864B5BA00CFFE9B /* bottom-bai-hat.png in Resources */,
+				34BC54C21864B5BA00CFFE9B /* logo-ca-si.png in Resources */,
+				34BC549C1864B5BA00CFFE9B /* phong-to-btn.png in Resources */,
+				34BC541C1864B46F00CFFE9B /* dich-vu.png in Resources */,
+				34BC54291864B46F00CFFE9B /* secsion-tin-tuc-video.png in Resources */,
+				34BC54181864B46F00CFFE9B /* ca-si.png in Resources */,
+				34BC54B31864B5BA00CFFE9B /* noi-bat.png in Resources */,
+				34BC54871864B5BA00CFFE9B /* btn-dangky.png in Resources */,
+				34BC54B51864B5BA00CFFE9B /* bg-anh-album.png in Resources */,
+				34BC54C81864B5BA00CFFE9B /* btn-search-top.png in Resources */,
+				34BC542A1864B46F00CFFE9B /* su-kien-noi-bat.png in Resources */,
 				34BC53EE1864A9C100CFFE9B /* MenuSlideControllerViewController.xib in Resources */,
+				34BC54311864B46F00CFFE9B /* wap-kara.png in Resources */,
+				34BC54221864B46F00CFFE9B /* karaoke-moi-nhat.png in Resources */,
+				34BC54931864B5BA00CFFE9B /* 2-bai-hits-select.png in Resources */,
+				34BC54BD1864B5BA00CFFE9B /* bottom-thu-am.png in Resources */,
+				34BC54AC1864B5BA00CFFE9B /* bg-cell.png in Resources */,
+				34BC54251864B46F00CFFE9B /* search.png in Resources */,
+				34BC548E1864B5BA00CFFE9B /* goi-ngay.png in Resources */,
+				34BC54BF1864B5BA00CFFE9B /* khung-tron-ca-si.png in Resources */,
+				34BC54B81864B5BA00CFFE9B /* bg-top-home.png in Resources */,
+				34BC548D1864B5BA00CFFE9B /* text-field.png in Resources */,
+				34BC54A81864B5BA00CFFE9B /* icon-emotion.png in Resources */,
+				34BC54C31864B5BA00CFFE9B /* logo-note-nhac.png in Resources */,
+				34BC542D1864B46F00CFFE9B /* thong-tin.png in Resources */,
+				34BC54A61864B5BA00CFFE9B /* bg-comment.png in Resources */,
+				34BC548C1864B5BA00CFFE9B /* btn-dang-nhap.png in Resources */,
+				34BC549F1864B5BA00CFFE9B /* bg-share.png in Resources */,
+				34BC549D1864B5BA00CFFE9B /* thu-am1.png in Resources */,
+				34BC54B01864B5BA00CFFE9B /* moi-nhat-select.png in Resources */,
+				34BC54B71864B5BA00CFFE9B /* bg-cell-bai-hat.png in Resources */,
+				34BC54241864B46F00CFFE9B /* moi-nhat.png in Resources */,
+				34BC54AA1864B5BA00CFFE9B /* post-comment-btn.png in Resources */,
+				34BC54CE1864B5BA00CFFE9B /* top-banner.png in Resources */,
+				34BC54AD1864B5BA00CFFE9B /* disc.png in Resources */,
+				34BC54B21864B5BA00CFFE9B /* noi-bat-select.png in Resources */,
+				34BC54281864B46F00CFFE9B /* secsion-them.png in Resources */,
+				34BC54901864B5BA00CFFE9B /* goi-tuan.png in Resources */,
+				34BC54CF1864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png in Resources */,
 				34061F11186458CC009FD9B2 /* RootViewController.xib in Resources */,
+				34BC54941864B5BA00CFFE9B /* 2-bai-hits.png in Resources */,
+				34BC54A11864B5BA00CFFE9B /* phat-lai-btn.png in Resources */,
 				34BC53F71864AD8A00CFFE9B /* HomeViewController.xib in Resources */,
+				34BC542C1864B46F00CFFE9B /* the-loai.png in Resources */,
+				34BC54C71864B5BA00CFFE9B /* btn-close-search.png in Resources */,
+				34BC54BA1864B5BA00CFFE9B /* bottom-bg.png in Resources */,
+				34BC54CC1864B5BA00CFFE9B /* star-blue.png in Resources */,
+				34BC54C91864B5BA00CFFE9B /* menu.png in Resources */,
+				34BC54C61864B5BA00CFFE9B /* back-btn.png in Resources */,
+				34BC54C41864B5BA00CFFE9B /* logo-trai-tim.png in Resources */,
+				34BC548B1864B5BA00CFFE9B /* btn-dang-nhap-tro-lai.png in Resources */,
+				34BC54B11864B5BA00CFFE9B /* moi-nhat.png in Resources */,
+				34BC54C51864B5BA00CFFE9B /* secsion-bg.png in Resources */,
+				34BC54AB1864B5BA00CFFE9B /* bg-cell-the-loai.png in Resources */,
+				34BC54301864B46F00CFFE9B /* trang-chu.png in Resources */,
+				34BC54991864B5BA00CFFE9B /* bg-filter.png in Resources */,
+				34BC54921864B5BA00CFFE9B /* 1-bai-moi.png in Resources */,
+				34BC54171864B46F00CFFE9B /* ca-khuc-noi-bat.png in Resources */,
+				34BC54981864B5BA00CFFE9B /* 4-karaoke-clip.png in Resources */,
+				34BC54261864B46F00CFFE9B /* secsion-danh-muc.png in Resources */,
+				34BC542E1864B46F00CFFE9B /* thu-am-binh-chon-nhieu-nhat.png in Resources */,
+				34BC54A41864B5BA00CFFE9B /* share-mkara.png in Resources */,
+				34BC54A01864B5BA00CFFE9B /* huy-btn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
