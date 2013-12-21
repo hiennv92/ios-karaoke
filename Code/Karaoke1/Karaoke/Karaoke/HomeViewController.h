@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "NavibarViewController.h"
-@interface HomeViewController : NavibarViewController
+@interface HomeViewController : NavibarViewController{
+    
+}
 
+@property (strong, nonatomic) IBOutlet UIView *__bottomBarView;
+@property (strong, nonatomic) IBOutlet UIScrollView *__scrollViewContent;
+
+- (IBAction)singerButtonController:(id)sender;
+- (IBAction)songButtonController:(id)sender;
+- (IBAction)kindMusicButtonController:(id)sender;
+- (IBAction)favoriteButtonController:(id)sender;
+- (IBAction)recordButtonController:(id)sender;
 @end
