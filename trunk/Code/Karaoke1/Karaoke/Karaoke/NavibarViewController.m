@@ -42,8 +42,19 @@
 - (void)createNavigationBarWithTitle:(NSString *)title backgroundImage:(NSString *)bgImage leftButton:(NSString *)leftButton leftButtonPress:(NSString *)leftPress rightButton:(NSString *)rightButton rightButtonPress:(NSString *)rightPress
 {
     self.navibarView = [NavibarView createWithTitle:title backgroundImage:bgImage leftNormal:leftButton leftHightlight:leftPress rightNormal:rightButton rightHightlight:rightPress target:self leftSelector:@selector(leftButtonBarPress:) rightSelector:@selector(rightButtonBarPress:)];
+    self.navibarView.frame = CGRectMake(0, 0, 320, 44);
     [self.view addSubview:_navibarView];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
+//Set title image for navigationbar
+-(void)addImageTitle:(NSString *)imageTitleName{
+    UIImage *img = [UIImage imageNamed:imageTitleName];
+    UIImageView *titleImg = [[UIImageView alloc] initWithImage:img];
+    titleImg.contentMode = UIViewContentModeCenter;
+    titleImg.contentMode = UIViewContentModeScaleAspectFit;
+    titleImg.frame = CGRectMake(0, 0, 320, 44);
+    [self.view addSubview:titleImg];
 }
 
 

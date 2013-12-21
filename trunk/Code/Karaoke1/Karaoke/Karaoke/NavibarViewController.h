@@ -18,5 +18,6 @@
 
 - (void)leftButtonBarPress:(id)button;
 - (void)rightButtonBarPress:(id)button;
+- (void)addImageTitle:(NSString*)imageTitleName;
 
 @end
