@@ -18,6 +18,7 @@
                 <outlet property="__scrollViewTopRecords" destination="nR5-CW-iYd" id="YLs-8H-WLA"/>
                 <outlet property="__singersView" destination="kLV-CU-9LE" id="jG3-Mv-Y6p"/>
                 <outlet property="__songsView" destination="khc-aW-8ec" id="UOv-xd-gVz"/>
+                <outlet property="__tableViewSongs" destination="tka-qu-Yry" id="yEX-We-0CZ"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -97,7 +98,7 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>
         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="COH-4y-Nq0" userLabel="Scroll View main">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="1300"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="982"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" id="Ek7-YO-umQ" userLabel="View banner">
@@ -115,12 +116,26 @@
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" id="WC1-px-a4A" userLabel=" View introduction">
-                    <rect key="frame" x="0.0" y="44" width="320" height="279"/>
+                    <rect key="frame" x="0.0" y="44" width="320" height="190"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageDemoIntroduction.png" id="OIn-ZT-Ldt">
+                            <rect key="frame" x="0.0" y="0.0" width="211" height="190"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageRecordDemo.png" id="4eu-85-YK3">
+                            <rect key="frame" x="210" y="0.0" width="110" height="95"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageKaraokeClipDemo.png" id="rDH-8d-BpF">
+                            <rect key="frame" x="210" y="95" width="110" height="95"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
                     <color key="backgroundColor" red="0.027450982481241226" green="0.83529418706893921" blue="0.95686280727386475" alpha="1" colorSpace="deviceRGB"/>
                 </view>
                 <view contentMode="scaleToFill" id="Lw9-34-z19" userLabel="View karaoke clips">
-                    <rect key="frame" x="0.0" y="322" width="320" height="150"/>
+                    <rect key="frame" x="0.0" y="234" width="320" height="150"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secsion-bg.png" id="Wkg-g6-t3c">
@@ -150,6 +165,9 @@
                                 <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="showAllKaraokeClipController:" destination="-1" eventType="touchUpInside" id="Xcl-7e-7Sp"/>
+                            </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBgKaraokeClipsView.png" id="L3k-UV-Yc3">
                             <rect key="frame" x="0.0" y="30" width="320" height="120"/>
@@ -159,7 +177,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="kLV-CU-9LE" userLabel="View singers">
-                    <rect key="frame" x="0.0" y="471" width="320" height="150"/>
+                    <rect key="frame" x="0.0" y="384" width="320" height="150"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secsion-bg.png" id="414-wg-zmm">
@@ -189,12 +207,15 @@
                                 <color key="titleColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="showAllSingersButtonController:" destination="-1" eventType="touchUpInside" id="xE4-Bm-pXH"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" id="khc-aW-8ec" userLabel="View songs">
-                    <rect key="frame" x="0.0" y="620" width="320" height="550"/>
+                    <rect key="frame" x="0.0" y="534" width="320" height="318"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secsion-bg.png" id="CD2-Ia-dfs">
@@ -224,12 +245,25 @@
                                 <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="showAllSongsButtonController:" destination="-1" eventType="touchUpInside" id="Sbu-bA-ynh"/>
+                            </connections>
                         </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="tka-qu-Yry">
+                            <rect key="frame" x="0.0" y="30" width="320" height="288"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="g9u-Zt-cfz"/>
+                                <outlet property="delegate" destination="-1" id="DyK-C6-9Q7"/>
+                            </connections>
+                        </tableView>
                     </subviews>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="kiC-1Y-xZ3" userLabel="top hits">
-                    <rect key="frame" x="0.0" y="1170" width="320" height="130"/>
+                    <rect key="frame" x="0.0" y="852" width="320" height="130"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secsion-bg.png" id="Dl1-Iv-nYh">
@@ -259,6 +293,9 @@
                                 <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="showAllRecordsButtonController:" destination="-1" eventType="touchUpInside" id="7Hk-Z9-hRA"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.80000001192092896" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -704,22 +741,7 @@
     </objects>
     <resources>
         <image name="BaseNameSingers.png" width="284" height="49"/>
-        <image name="BaseNameSingers.png" width="284" height="49"/>
-        <image name="BaseNameSingers.png" width="284" height="49"/>
-        <image name="BaseNameSingers.png" width="284" height="49"/>
-        <image name="BaseNameSingers.png" width="284" height="49"/>
-        <image name="BaseNameSingers.png" width="284" height="49"/>
         <image name="bg-anh-album.png" width="348" height="342"/>
-        <image name="bg-anh-album.png" width="348" height="342"/>
-        <image name="bg-anh-album.png" width="348" height="342"/>
-        <image name="bg-anh-album.png" width="348" height="342"/>
-        <image name="bg-anh-album.png" width="348" height="342"/>
-        <image name="bg-anh-album.png" width="348" height="342"/>
-        <image name="bg-anh-thu-am.png" width="340" height="248"/>
-        <image name="bg-anh-thu-am.png" width="340" height="248"/>
-        <image name="bg-anh-thu-am.png" width="340" height="248"/>
-        <image name="bg-anh-thu-am.png" width="340" height="248"/>
-        <image name="bg-anh-thu-am.png" width="340" height="248"/>
         <image name="bg-anh-thu-am.png" width="340" height="248"/>
         <image name="bottom-bai-hat.png" width="98" height="112"/>
         <image name="bottom-bg.png" width="1068" height="149"/>
@@ -728,49 +750,17 @@
         <image name="bottom-thu-am.png" width="58" height="97"/>
         <image name="bottom-yeu-thich.png" width="100" height="100"/>
         <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
-        <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
-        <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
-        <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
-        <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
-        <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
-        <image name="imageBaseNameRecord.png" width="325" height="42"/>
-        <image name="imageBaseNameRecord.png" width="325" height="42"/>
-        <image name="imageBaseNameRecord.png" width="325" height="42"/>
-        <image name="imageBaseNameRecord.png" width="325" height="42"/>
-        <image name="imageBaseNameRecord.png" width="325" height="42"/>
         <image name="imageBaseNameRecord.png" width="325" height="42"/>
         <image name="imageBgKaraokeClipsView.png" width="1089" height="386"/>
-        <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
-        <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
-        <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
-        <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
-        <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
+        <image name="imageDemoIntroduction.png" width="861" height="560"/>
         <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
         <image name="imageRecordDemo.png" width="352" height="250"/>
-        <image name="imageRecordDemo.png" width="352" height="250"/>
-        <image name="imageRecordDemo.png" width="352" height="250"/>
-        <image name="imageRecordDemo.png" width="352" height="250"/>
-        <image name="imageRecordDemo.png" width="352" height="250"/>
-        <image name="imageRecordDemo.png" width="352" height="250"/>
         <image name="imageSingerDemo.png" width="326" height="325"/>
-        <image name="imageSingerDemo.png" width="326" height="325"/>
-        <image name="imageSingerDemo.png" width="326" height="325"/>
-        <image name="imageSingerDemo.png" width="326" height="325"/>
-        <image name="imageSingerDemo.png" width="326" height="325"/>
-        <image name="imageSingerDemo.png" width="326" height="325"/>
-        <image name="khung-tron-ca-si.png" width="344" height="344"/>
-        <image name="khung-tron-ca-si.png" width="344" height="344"/>
-        <image name="khung-tron-ca-si.png" width="344" height="344"/>
-        <image name="khung-tron-ca-si.png" width="344" height="344"/>
-        <image name="khung-tron-ca-si.png" width="344" height="344"/>
         <image name="khung-tron-ca-si.png" width="344" height="344"/>
         <image name="logo-album.png" width="77" height="77"/>
         <image name="logo-ca-si.png" width="77" height="77"/>
         <image name="logo-note-nhac.png" width="77" height="77"/>
         <image name="logo-trai-tim.png" width="77" height="77"/>
-        <image name="secsion-bg.png" width="1068" height="80"/>
-        <image name="secsion-bg.png" width="1068" height="80"/>
-        <image name="secsion-bg.png" width="1068" height="80"/>
         <image name="secsion-bg.png" width="1068" height="80"/>
     </resources>
 </document>
