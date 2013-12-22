@@ -130,6 +130,10 @@
 		34BC54CD1864B5BA00CFFE9B /* star-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54841864B5BA00CFFE9B /* star-yellow.png */; };
 		34BC54CE1864B5BA00CFFE9B /* top-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54851864B5BA00CFFE9B /* top-banner.png */; };
 		34BC54CF1864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54861864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png */; };
+		4BEAEAB31867B226000E3CD1 /* dangkyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEAEAB11867B226000E3CD1 /* dangkyViewController.m */; };
+		4BEAEAB41867B226000E3CD1 /* dangkyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEAEAB21867B226000E3CD1 /* dangkyViewController.xib */; };
+		4BEAEAB81867B6E5000E3CD1 /* dangnhapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEAEAB61867B6E5000E3CD1 /* dangnhapViewController.m */; };
+		4BEAEAB91867B6E5000E3CD1 /* dangnhapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEAEAB71867B6E5000E3CD1 /* dangnhapViewController.xib */; };
 		51A688791866D886000BEBD3 /* BaseNameSingers.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A688771866D886000BEBD3 /* BaseNameSingers.png */; };
 		51A6887A1866D886000BEBD3 /* imageSingerDemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A688781866D886000BEBD3 /* imageSingerDemo.png */; };
 		51A6887E1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A6887B1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png */; };
@@ -137,10 +141,6 @@
 		51A688821866E7AE000BEBD3 /* imageBgKaraokeClipsView.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A688811866E7AE000BEBD3 /* imageBgKaraokeClipsView.png */; };
 		51A68885186714AF000BEBD3 /* imageBaseNameRecord.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A68883186714AF000BEBD3 /* imageBaseNameRecord.png */; };
 		51A68886186714AF000BEBD3 /* imageRecordDemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A68884186714AF000BEBD3 /* imageRecordDemo.png */; };
-		51A6888918672C9C000BEBD3 /* imageBaseIntroduction.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A6888718672C9C000BEBD3 /* imageBaseIntroduction.png */; };
-		51A6888A18672C9C000BEBD3 /* imageDemoIntroduction.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A6888818672C9C000BEBD3 /* imageDemoIntroduction.png */; };
-		51A6888D1867301B000BEBD3 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A6888C1867301B000BEBD3 /* Cell.m */; };
-		51A6888F18673154000BEBD3 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51A6888E18673154000BEBD3 /* Cell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -279,6 +279,12 @@
 		34BC54841864B5BA00CFFE9B /* star-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-yellow.png"; sourceTree = "<group>"; };
 		34BC54851864B5BA00CFFE9B /* top-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-banner.png"; sourceTree = "<group>"; };
 		34BC54861864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tro-lai-bai-hat-dang-phat.png"; sourceTree = "<group>"; };
+		4BEAEAB01867B226000E3CD1 /* dangkyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dangkyViewController.h; sourceTree = "<group>"; };
+		4BEAEAB11867B226000E3CD1 /* dangkyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dangkyViewController.m; sourceTree = "<group>"; };
+		4BEAEAB21867B226000E3CD1 /* dangkyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dangkyViewController.xib; sourceTree = "<group>"; };
+		4BEAEAB51867B6E5000E3CD1 /* dangnhapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dangnhapViewController.h; sourceTree = "<group>"; };
+		4BEAEAB61867B6E5000E3CD1 /* dangnhapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dangnhapViewController.m; sourceTree = "<group>"; };
+		4BEAEAB71867B6E5000E3CD1 /* dangnhapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dangnhapViewController.xib; sourceTree = "<group>"; };
 		51A688771866D886000BEBD3 /* BaseNameSingers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BaseNameSingers.png; sourceTree = "<group>"; };
 		51A688781866D886000BEBD3 /* imageSingerDemo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageSingerDemo.png; sourceTree = "<group>"; };
 		51A6887B1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBaseNameKaraokeClips.png; sourceTree = "<group>"; };
@@ -286,11 +292,6 @@
 		51A688811866E7AE000BEBD3 /* imageBgKaraokeClipsView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBgKaraokeClipsView.png; sourceTree = "<group>"; };
 		51A68883186714AF000BEBD3 /* imageBaseNameRecord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBaseNameRecord.png; sourceTree = "<group>"; };
 		51A68884186714AF000BEBD3 /* imageRecordDemo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageRecordDemo.png; sourceTree = "<group>"; };
-		51A6888718672C9C000BEBD3 /* imageBaseIntroduction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBaseIntroduction.png; sourceTree = "<group>"; };
-		51A6888818672C9C000BEBD3 /* imageDemoIntroduction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageDemoIntroduction.png; sourceTree = "<group>"; };
-		51A6888B1867301B000BEBD3 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
-		51A6888C1867301B000BEBD3 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
-		51A6888E18673154000BEBD3 /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +333,7 @@
 				34BC53E91864A9A900CFFE9B /* MenuSlide */,
 				346A5F4B18648A530071D955 /* NavibarController */,
 				34061F0C186458B5009FD9B2 /* RootViewcontroller */,
+				4BEAEAAF1867B16D000E3CD1 /* Dangky- dang nhap- quen mk */,
 			);
 			name = Viewcontrollers;
 			sourceTree = "<group>";
@@ -457,9 +459,6 @@
 				34BC53F31864AD8A00CFFE9B /* HomeViewController.h */,
 				34BC53F41864AD8A00CFFE9B /* HomeViewController.m */,
 				34BC53F51864AD8A00CFFE9B /* HomeViewController.xib */,
-				51A6888B1867301B000BEBD3 /* Cell.h */,
-				51A6888E18673154000BEBD3 /* Cell.xib */,
-				51A6888C1867301B000BEBD3 /* Cell.m */,
 			);
 			name = HomeViewController;
 			sourceTree = "<group>";
@@ -638,8 +637,6 @@
 		34BC546A1864B5BA00CFFE9B /* home */ = {
 			isa = PBXGroup;
 			children = (
-				51A6888718672C9C000BEBD3 /* imageBaseIntroduction.png */,
-				51A6888818672C9C000BEBD3 /* imageDemoIntroduction.png */,
 				51A68883186714AF000BEBD3 /* imageBaseNameRecord.png */,
 				51A68884186714AF000BEBD3 /* imageRecordDemo.png */,
 				51A688811866E7AE000BEBD3 /* imageBgKaraokeClipsView.png */,
@@ -683,6 +680,19 @@
 				34BC54861864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png */,
 			);
 			path = "icon chung";
+			sourceTree = "<group>";
+		};
+		4BEAEAAF1867B16D000E3CD1 /* Dangky- dang nhap- quen mk */ = {
+			isa = PBXGroup;
+			children = (
+				4BEAEAB01867B226000E3CD1 /* dangkyViewController.h */,
+				4BEAEAB11867B226000E3CD1 /* dangkyViewController.m */,
+				4BEAEAB21867B226000E3CD1 /* dangkyViewController.xib */,
+				4BEAEAB51867B6E5000E3CD1 /* dangnhapViewController.h */,
+				4BEAEAB61867B6E5000E3CD1 /* dangnhapViewController.m */,
+				4BEAEAB71867B6E5000E3CD1 /* dangnhapViewController.xib */,
+			);
+			name = "Dangky- dang nhap- quen mk";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -738,12 +748,14 @@
 			files = (
 				34BC54C01864B5BA00CFFE9B /* logo-album.png in Resources */,
 				3442C7C518642F1300BD13F3 /* InfoPlist.strings in Resources */,
+				4BEAEAB41867B226000E3CD1 /* dangkyViewController.xib in Resources */,
 				34BC54961864B5BA00CFFE9B /* 3-tat-ca.png in Resources */,
 				34BC54231864B46F00CFFE9B /* karaoke-yeuthich.png in Resources */,
 				3442C7CD18642F1300BD13F3 /* Default.png in Resources */,
 				34BC54211864B46F00CFFE9B /* karaoke-hit.png in Resources */,
 				34BC541D1864B46F00CFFE9B /* hot-nhat.png in Resources */,
 				34BC54881864B5BA00CFFE9B /* round-check.png in Resources */,
+				4BEAEAB91867B6E5000E3CD1 /* dangnhapViewController.xib in Resources */,
 				34BC54201864B46F00CFFE9B /* karaoke-clip.png in Resources */,
 				34BC54161864B46F00CFFE9B /* ca-khuc-da-ghi-am.png in Resources */,
 				3442C7CF18642F1300BD13F3 /* Default@2x.png in Resources */,
@@ -778,7 +790,6 @@
 				34BC54BE1864B5BA00CFFE9B /* bottom-yeu-thich.png in Resources */,
 				34BC54A31864B5BA00CFFE9B /* share-fb.png in Resources */,
 				34BC54CB1864B5BA00CFFE9B /* setting.png in Resources */,
-				51A6888F18673154000BEBD3 /* Cell.xib in Resources */,
 				34BC54A91864B5BA00CFFE9B /* play-btn.png in Resources */,
 				34BC542F1864B46F00CFFE9B /* top-bar.png in Resources */,
 				34BC53DE18648D0900CFFE9B /* NavibarView.xib in Resources */,
@@ -795,9 +806,7 @@
 				34BC54B31864B5BA00CFFE9B /* noi-bat.png in Resources */,
 				34BC54871864B5BA00CFFE9B /* btn-dangky.png in Resources */,
 				34BC54B51864B5BA00CFFE9B /* bg-anh-album.png in Resources */,
-				51A6888A18672C9C000BEBD3 /* imageDemoIntroduction.png in Resources */,
 				51A68885186714AF000BEBD3 /* imageBaseNameRecord.png in Resources */,
-				51A6888918672C9C000BEBD3 /* imageBaseIntroduction.png in Resources */,
 				34BC54C81864B5BA00CFFE9B /* btn-search-top.png in Resources */,
 				51A6887E1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png in Resources */,
 				34BC542A1864B46F00CFFE9B /* su-kien-noi-bat.png in Resources */,
@@ -865,7 +874,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51A6888D1867301B000BEBD3 /* Cell.m in Sources */,
 				3442C7C718642F1300BD13F3 /* main.m in Sources */,
 				34BC53E81864A8F500CFFE9B /* UIViewController+JASidePanel.m in Sources */,
 				3442C7CB18642F1300BD13F3 /* AppDelegate.m in Sources */,
@@ -873,8 +881,10 @@
 				34BC53E118648D6A00CFFE9B /* NavibarView.m in Sources */,
 				34061F10186458CC009FD9B2 /* RootViewController.m in Sources */,
 				346A5F4A186487620071D955 /* Lib.m in Sources */,
+				4BEAEAB81867B6E5000E3CD1 /* dangnhapViewController.m in Sources */,
 				34BC53E71864A8F500CFFE9B /* JASidePanelController.m in Sources */,
 				346A5F4E18648A770071D955 /* NavibarViewController.m in Sources */,
+				4BEAEAB31867B226000E3CD1 /* dangkyViewController.m in Sources */,
 				34BC53ED1864A9C100CFFE9B /* MenuSlideControllerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -958,7 +968,7 @@
 		3442C7D518642F1300BD13F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: SunNet Information Technology and Communication Solution JSC (W87V6JJFTA)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Karaoke/Karaoke-Prefix.pch";
 				INFOPLIST_FILE = "Karaoke/Karaoke-Info.plist";
@@ -972,7 +982,7 @@
 		3442C7D618642F1300BD13F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: SunNet Information Technology and Communication Solution JSC (W87V6JJFTA)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Karaoke/Karaoke-Prefix.pch";
 				INFOPLIST_FILE = "Karaoke/Karaoke-Info.plist";
