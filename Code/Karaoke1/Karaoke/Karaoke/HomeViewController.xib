@@ -7,8 +7,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
+                <outlet property="__bannerView" destination="Ek7-YO-umQ" id="le4-A2-tbQ"/>
                 <outlet property="__bottomBarView" destination="T7l-nz-8uW" id="eNo-Uw-ORt"/>
+                <outlet property="__introductionVIew" destination="WC1-px-a4A" id="DhS-1f-JqW"/>
+                <outlet property="__karaokeClipsView" destination="Lw9-34-z19" id="db9-cR-mJg"/>
+                <outlet property="__recordsView" destination="kiC-1Y-xZ3" id="eRR-YP-Alo"/>
                 <outlet property="__scrollViewContent" destination="COH-4y-Nq0" id="o0c-Y0-eqU"/>
+                <outlet property="__scrollViewKaraokeClips" destination="bAx-1t-iJx" id="30z-xr-tJ5"/>
+                <outlet property="__scrollViewSingers" destination="vYp-7r-ZnM" id="6yq-cC-vrW"/>
+                <outlet property="__singersView" destination="kLV-CU-9LE" id="jG3-Mv-Y6p"/>
+                <outlet property="__songsView" destination="khc-aW-8ec" id="UOv-xd-gVz"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -87,7 +95,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>
-        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="COH-4y-Nq0">
+        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="COH-4y-Nq0" userLabel="Scroll View main">
             <rect key="frame" x="0.0" y="0.0" width="320" height="1300"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
             <subviews>
@@ -111,15 +119,15 @@
                     <color key="backgroundColor" red="0.027450982481241226" green="0.83529418706893921" blue="0.95686280727386475" alpha="1" colorSpace="deviceRGB"/>
                 </view>
                 <view contentMode="scaleToFill" id="Lw9-34-z19" userLabel="View karaoke clips">
-                    <rect key="frame" x="0.0" y="258" width="320" height="230"/>
+                    <rect key="frame" x="0.0" y="258" width="320" height="150"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secsion-bg.png" id="Wkg-g6-t3c">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rqI-r9-f0M" userLabel="Button karaoke clip">
-                            <rect key="frame" x="10" y="3" width="30" height="30"/>
+                            <rect key="frame" x="20" y="3" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" image="logo-album.png">
@@ -127,24 +135,38 @@
                             </state>
                         </button>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KARAOKE CLIP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dOb-tk-KM2">
-                            <rect key="frame" x="48" y="7" width="115" height="21"/>
+                            <rect key="frame" x="53" y="5" width="115" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cGb-hF-VHf" userLabel="Button - view all karaoke clip">
+                            <rect key="frame" x="234" y="1" width="85" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <state key="normal" title="Xem tất cả >>">
+                                <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBgKaraokeClipsView.png" id="L3k-UV-Yc3">
+                            <rect key="frame" x="0.0" y="30" width="320" height="120"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="kLV-CU-9LE" userLabel="View singers">
-                    <rect key="frame" x="0.0" y="488" width="320" height="156"/>
+                    <rect key="frame" x="0.0" y="408" width="320" height="150"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secsion-bg.png" id="414-wg-zmm">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nqY-WY-wAt" userLabel="Button singer">
-                            <rect key="frame" x="10" y="3" width="30" height="30"/>
+                            <rect key="frame" x="20" y="2" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" image="logo-ca-si.png">
@@ -152,48 +174,34 @@
                             </state>
                         </button>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CA SỸ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6GB-jA-9YB">
-                            <rect key="frame" x="48" y="7" width="54" height="21"/>
+                            <rect key="frame" x="53" y="4" width="54" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PS5-92-z5g">
-                            <rect key="frame" x="4" y="46" width="100" height="100"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gnj-0k-5CJ" userLabel="Button - view all singers">
+                            <rect key="frame" x="232" y="0.0" width="87" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" image="khung-tron-ca-si.png">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CEn-r8-J8Z">
-                            <rect key="frame" x="110" y="46" width="100" height="100"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" image="khung-tron-ca-si.png">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XHg-TA-JsX">
-                            <rect key="frame" x="216" y="43" width="100" height="100"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" image="khung-tron-ca-si.png">
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <state key="normal" title="Xem tất cả >>">
+                                <color key="titleColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" id="khc-aW-8ec" userLabel="View songs">
-                    <rect key="frame" x="0.0" y="644" width="320" height="383"/>
+                    <rect key="frame" x="0.0" y="558" width="320" height="544"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secsion-bg.png" id="CD2-Ia-dfs">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QOQ-iH-qpF" userLabel="Button songs">
-                            <rect key="frame" x="10" y="3" width="30" height="30"/>
+                            <rect key="frame" x="20" y="2" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" image="logo-note-nhac.png">
@@ -201,24 +209,34 @@
                             </state>
                         </button>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CA KHÚC NỔI BẬT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m5O-qc-aBF">
-                            <rect key="frame" x="48" y="7" width="134" height="21"/>
+                            <rect key="frame" x="53" y="4" width="134" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mA6-qW-el2" userLabel="Button - view all hit songs">
+                            <rect key="frame" x="236" y="0.0" width="81" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <state key="normal" title="Xem tất cả >>">
+                                <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="kiC-1Y-xZ3" userLabel="top hits">
-                    <rect key="frame" x="0.0" y="1027" width="320" height="200"/>
+                    <rect key="frame" x="0.0" y="1100" width="320" height="200"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secsion-bg.png" id="Dl1-Iv-nYh">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Qsr-5W-f4u" userLabel="Button top records">
-                            <rect key="frame" x="10" y="3" width="30" height="30"/>
+                            <rect key="frame" x="20" y="3" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" image="logo-trai-tim.png">
@@ -226,30 +244,369 @@
                             </state>
                         </button>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THU ÂM VÀ BÌNH CHỌN NHIỀU NHẤT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="quP-a5-xev">
-                            <rect key="frame" x="48" y="7" width="188" height="21"/>
+                            <rect key="frame" x="53" y="4" width="191" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Jgk-uT-twm" userLabel="Button - View all records">
+                            <rect key="frame" x="237" y="1" width="82" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <state key="normal" title="Xem tất cả >>">
+                                <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.80000001192092896" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
             </subviews>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </scrollView>
+        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" id="vYp-7r-ZnM" userLabel="Scroll View singers">
+            <rect key="frame" x="0.0" y="0.0" width="640" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageSingerDemo.png" id="E8t-N8-p7A">
+                    <rect key="frame" x="216" y="12" width="99" height="99"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageSingerDemo.png" id="3EI-e1-JD8">
+                    <rect key="frame" x="324" y="12" width="99" height="99"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageSingerDemo.png" id="0gh-WG-nkS">
+                    <rect key="frame" x="110" y="12" width="99" height="99"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageSingerDemo.png" id="mbO-tR-fT8">
+                    <rect key="frame" x="430" y="12" width="99" height="99"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageSingerDemo.png" id="num-gg-97y">
+                    <rect key="frame" x="536" y="12" width="99" height="99"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageSingerDemo.png" id="g99-Sm-ta5">
+                    <rect key="frame" x="5" y="12" width="99" height="99"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BaseNameSingers.png" id="jmk-ti-aop">
+                    <rect key="frame" x="5" y="80" width="97" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BaseNameSingers.png" id="kA5-uW-cgz">
+                    <rect key="frame" x="113" y="80" width="97" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BaseNameSingers.png" id="r9t-pv-hfs">
+                    <rect key="frame" x="432" y="80" width="97" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BaseNameSingers.png" id="O8U-nJ-iMa">
+                    <rect key="frame" x="217" y="80" width="97" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BaseNameSingers.png" id="daE-Qq-dwC">
+                    <rect key="frame" x="325" y="80" width="97" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BaseNameSingers.png" id="H4c-zI-vkd">
+                    <rect key="frame" x="537" y="80" width="97" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CEn-r8-J8Z">
+                    <rect key="frame" x="110" y="11" width="100" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="khung-tron-ca-si.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PS5-92-z5g">
+                    <rect key="frame" x="5" y="11" width="100" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="khung-tron-ca-si.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iCr-Im-lOu">
+                    <rect key="frame" x="324" y="11" width="100" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="khung-tron-ca-si.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bAJ-BY-nz3">
+                    <rect key="frame" x="430" y="11" width="100" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="khung-tron-ca-si.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="I4y-Vt-2U8">
+                    <rect key="frame" x="536" y="11" width="100" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="khung-tron-ca-si.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XHg-TA-JsX">
+                    <rect key="frame" x="216" y="11" width="100" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="khung-tron-ca-si.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lady gaga" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="24H-Wv-8l3">
+                    <rect key="frame" x="33" y="77" width="46" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lady gaga" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cEF-gN-xhv">
+                    <rect key="frame" x="134" y="77" width="57" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lady gaga" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="79X-3I-js1">
+                    <rect key="frame" x="245" y="77" width="46" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lady gaga" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fnJ-uQ-dTD">
+                    <rect key="frame" x="353" y="77" width="46" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lady gaga" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JGU-10-4Ja">
+                    <rect key="frame" x="459" y="77" width="46" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lady gaga" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X9S-W7-ITP">
+                    <rect key="frame" x="565" y="77" width="46" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </scrollView>
+        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" id="bAx-1t-iJx" userLabel="Scroll View karaoke clips">
+            <rect key="frame" x="0.0" y="0.0" width="640" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U5O-PX-clG">
+                    <rect key="frame" x="5" y="7" width="105" height="108"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button" image="bg-anh-album.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mim-Nj-v2f">
+                    <rect key="frame" x="112" y="7" width="105" height="108"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button" image="bg-anh-album.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DjB-Dg-7pQ">
+                    <rect key="frame" x="218" y="7" width="105" height="108"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button" image="bg-anh-album.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wkz-Rh-cLg">
+                    <rect key="frame" x="324" y="7" width="105" height="108"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button" image="bg-anh-album.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0E2-a5-Ost">
+                    <rect key="frame" x="429" y="7" width="105" height="108"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button" image="bg-anh-album.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="t9N-b0-RnK">
+                    <rect key="frame" x="534" y="7" width="105" height="108"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button" image="bg-anh-album.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageKaraokeClipDemo.png" id="9Qc-yk-Wqb">
+                    <rect key="frame" x="8" y="7" width="95" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageKaraokeClipDemo.png" id="ga1-NM-SrM">
+                    <rect key="frame" x="115" y="7" width="95" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBaseNameKaraokeClips.png" id="kuU-qV-AFQ">
+                    <rect key="frame" x="115" y="89" width="95" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stand by me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PuM-1F-c0r">
+                    <rect key="frame" x="115" y="89" width="95" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageKaraokeClipDemo.png" id="vnh-Dk-ljo">
+                    <rect key="frame" x="221" y="7" width="95" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBaseNameKaraokeClips.png" id="PCr-qE-NF1">
+                    <rect key="frame" x="221" y="89" width="95" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stand by me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3yl-S9-ha4">
+                    <rect key="frame" x="221" y="89" width="95" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageKaraokeClipDemo.png" id="Jfh-zn-mjj">
+                    <rect key="frame" x="327" y="7" width="95" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBaseNameKaraokeClips.png" id="VBF-oQ-NEb">
+                    <rect key="frame" x="327" y="89" width="95" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stand by me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EZX-oB-d3f">
+                    <rect key="frame" x="327" y="89" width="95" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageKaraokeClipDemo.png" id="FG0-aw-hPs">
+                    <rect key="frame" x="432" y="7" width="95" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBaseNameKaraokeClips.png" id="NA3-16-mVU">
+                    <rect key="frame" x="432" y="89" width="95" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stand by me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Url-pt-1eO">
+                    <rect key="frame" x="432" y="89" width="95" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageKaraokeClipDemo.png" id="uI9-Y8-yzJ">
+                    <rect key="frame" x="537" y="7" width="95" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBaseNameKaraokeClips.png" id="Ttj-Kt-gsg">
+                    <rect key="frame" x="537" y="89" width="95" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stand by me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mI9-vA-qv0">
+                    <rect key="frame" x="539" y="89" width="95" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBaseNameKaraokeClips.png" id="AnK-tf-P8e">
+                    <rect key="frame" x="8" y="89" width="95" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stand by me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3rr-eQ-y6c">
+                    <rect key="frame" x="8" y="89" width="95" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </scrollView>
     </objects>
     <resources>
+        <image name="BaseNameSingers.png" width="284" height="49"/>
+        <image name="BaseNameSingers.png" width="284" height="49"/>
+        <image name="BaseNameSingers.png" width="284" height="49"/>
+        <image name="BaseNameSingers.png" width="284" height="49"/>
+        <image name="BaseNameSingers.png" width="284" height="49"/>
+        <image name="BaseNameSingers.png" width="284" height="49"/>
+        <image name="bg-anh-album.png" width="348" height="342"/>
+        <image name="bg-anh-album.png" width="348" height="342"/>
+        <image name="bg-anh-album.png" width="348" height="342"/>
+        <image name="bg-anh-album.png" width="348" height="342"/>
+        <image name="bg-anh-album.png" width="348" height="342"/>
+        <image name="bg-anh-album.png" width="348" height="342"/>
         <image name="bottom-bai-hat.png" width="98" height="112"/>
         <image name="bottom-bg.png" width="1068" height="149"/>
         <image name="bottom-ca-si.png" width="90" height="110"/>
         <image name="bottom-the-loai.png" width="99" height="94"/>
         <image name="bottom-thu-am.png" width="58" height="97"/>
         <image name="bottom-yeu-thich.png" width="100" height="100"/>
+        <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
+        <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
+        <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
+        <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
+        <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
+        <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
+        <image name="imageBgKaraokeClipsView.png" width="1089" height="386"/>
+        <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
+        <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
+        <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
+        <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
+        <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
+        <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
+        <image name="imageSingerDemo.png" width="326" height="325"/>
+        <image name="imageSingerDemo.png" width="326" height="325"/>
+        <image name="imageSingerDemo.png" width="326" height="325"/>
+        <image name="imageSingerDemo.png" width="326" height="325"/>
+        <image name="imageSingerDemo.png" width="326" height="325"/>
+        <image name="imageSingerDemo.png" width="326" height="325"/>
+        <image name="khung-tron-ca-si.png" width="344" height="344"/>
+        <image name="khung-tron-ca-si.png" width="344" height="344"/>
+        <image name="khung-tron-ca-si.png" width="344" height="344"/>
+        <image name="khung-tron-ca-si.png" width="344" height="344"/>
+        <image name="khung-tron-ca-si.png" width="344" height="344"/>
         <image name="khung-tron-ca-si.png" width="344" height="344"/>
         <image name="logo-album.png" width="77" height="77"/>
         <image name="logo-ca-si.png" width="77" height="77"/>
         <image name="logo-note-nhac.png" width="77" height="77"/>
         <image name="logo-trai-tim.png" width="77" height="77"/>
+        <image name="secsion-bg.png" width="1068" height="80"/>
+        <image name="secsion-bg.png" width="1068" height="80"/>
+        <image name="secsion-bg.png" width="1068" height="80"/>
         <image name="secsion-bg.png" width="1068" height="80"/>
     </resources>
 </document>
