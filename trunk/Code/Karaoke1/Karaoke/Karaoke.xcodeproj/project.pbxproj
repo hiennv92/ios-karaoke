@@ -135,6 +135,8 @@
 		51A6887E1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A6887B1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png */; };
 		51A688801866E4DD000BEBD3 /* imageKaraokeClipDemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A6887D1866E4DD000BEBD3 /* imageKaraokeClipDemo.png */; };
 		51A688821866E7AE000BEBD3 /* imageBgKaraokeClipsView.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A688811866E7AE000BEBD3 /* imageBgKaraokeClipsView.png */; };
+		51A68885186714AF000BEBD3 /* imageBaseNameRecord.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A68883186714AF000BEBD3 /* imageBaseNameRecord.png */; };
+		51A68886186714AF000BEBD3 /* imageRecordDemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A68884186714AF000BEBD3 /* imageRecordDemo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -278,6 +280,8 @@
 		51A6887B1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBaseNameKaraokeClips.png; sourceTree = "<group>"; };
 		51A6887D1866E4DD000BEBD3 /* imageKaraokeClipDemo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageKaraokeClipDemo.png; sourceTree = "<group>"; };
 		51A688811866E7AE000BEBD3 /* imageBgKaraokeClipsView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBgKaraokeClipsView.png; sourceTree = "<group>"; };
+		51A68883186714AF000BEBD3 /* imageBaseNameRecord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBaseNameRecord.png; sourceTree = "<group>"; };
+		51A68884186714AF000BEBD3 /* imageRecordDemo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageRecordDemo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -622,6 +626,8 @@
 		34BC546A1864B5BA00CFFE9B /* home */ = {
 			isa = PBXGroup;
 			children = (
+				51A68883186714AF000BEBD3 /* imageBaseNameRecord.png */,
+				51A68884186714AF000BEBD3 /* imageRecordDemo.png */,
 				51A688811866E7AE000BEBD3 /* imageBgKaraokeClipsView.png */,
 				51A6887B1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png */,
 				51A6887D1866E4DD000BEBD3 /* imageKaraokeClipDemo.png */,
@@ -753,6 +759,7 @@
 				34BC549E1864B5BA00CFFE9B /* thu-am2.png in Resources */,
 				34BC541A1864B46F00CFFE9B /* camera360.png in Resources */,
 				34BC549B1864B5BA00CFFE9B /* btn-trai-tim.png in Resources */,
+				51A68886186714AF000BEBD3 /* imageRecordDemo.png in Resources */,
 				34BC549A1864B5BA00CFFE9B /* bg-banner-player.png in Resources */,
 				34BC54BE1864B5BA00CFFE9B /* bottom-yeu-thich.png in Resources */,
 				34BC54A31864B5BA00CFFE9B /* share-fb.png in Resources */,
@@ -773,6 +780,7 @@
 				34BC54B31864B5BA00CFFE9B /* noi-bat.png in Resources */,
 				34BC54871864B5BA00CFFE9B /* btn-dangky.png in Resources */,
 				34BC54B51864B5BA00CFFE9B /* bg-anh-album.png in Resources */,
+				51A68885186714AF000BEBD3 /* imageBaseNameRecord.png in Resources */,
 				34BC54C81864B5BA00CFFE9B /* btn-search-top.png in Resources */,
 				51A6887E1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png in Resources */,
 				34BC542A1864B46F00CFFE9B /* su-kien-noi-bat.png in Resources */,

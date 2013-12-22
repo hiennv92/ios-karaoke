@@ -25,6 +25,7 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *__scrollViewContent;
 @property (strong, nonatomic) IBOutlet UIScrollView *__scrollViewSingers;
 @property (strong, nonatomic) IBOutlet UIScrollView *__scrollViewKaraokeClips;
+@property (strong, nonatomic) IBOutlet UIScrollView *__scrollViewTopRecords;
 
 - (IBAction)singerButtonController:(id)sender;
 - (IBAction)songButtonController:(id)sender;

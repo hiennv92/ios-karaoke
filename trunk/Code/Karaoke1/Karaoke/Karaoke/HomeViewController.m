@@ -48,7 +48,10 @@
     [self.__scrollViewContent setFrame:CGRectMake(0, 44, 320, self.view.frame.size.height- 2*44)];
     [self.__scrollViewContent setContentSize:CGSizeMake(320, 1300)];
     [self.view addSubview:self.__scrollViewContent];
-
+    
+    //Ads view
+    [self.__bannerView setBackgroundColor:[UIColor clearColor]];
+    
     //Karaoke clips view
     [self.__scrollViewKaraokeClips setFrame:CGRectMake(0, 30, 320, 120)];
     [self.__scrollViewKaraokeClips setContentSize:CGSizeMake(640, 120)];
@@ -60,6 +63,15 @@
     [self.__scrollViewSingers setContentSize:CGSizeMake(640, 120)];
     [self.__singersView addSubview:self.__scrollViewSingers];
     [self.__singersView setBackgroundColor:[UIColor clearColor]];
+    
+    //Songs View
+    
+    
+    //Records View
+    [self.__scrollViewTopRecords setFrame:CGRectMake(0, 30, 320, 100)];
+    [self.__scrollViewTopRecords setContentSize:CGSizeMake(635, 100)];
+    [self.__recordsView addSubview:self.__scrollViewTopRecords];
+    [self.__recordsView setBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)didReceiveMemoryWarning
