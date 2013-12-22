@@ -15,6 +15,13 @@
 @implementation HomeViewController
 @synthesize __bottomBarView;
 @synthesize __scrollViewContent;
+@synthesize __bannerView;
+@synthesize __introductionVIew;
+@synthesize __karaokeClipsView;
+@synthesize __recordsView;
+@synthesize __scrollViewSingers;
+@synthesize __singersView;
+@synthesize __songsView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,6 +48,18 @@
     [self.__scrollViewContent setFrame:CGRectMake(0, 44, 320, self.view.frame.size.height- 2*44)];
     [self.__scrollViewContent setContentSize:CGSizeMake(320, 1300)];
     [self.view addSubview:self.__scrollViewContent];
+
+    //Karaoke clips view
+    [self.__scrollViewKaraokeClips setFrame:CGRectMake(0, 30, 320, 120)];
+    [self.__scrollViewKaraokeClips setContentSize:CGSizeMake(640, 120)];
+    [self.__karaokeClipsView addSubview:self.__scrollViewKaraokeClips];
+    [self.__karaokeClipsView setBackgroundColor:[UIColor clearColor]];
+    
+    //Singers View
+    [self.__scrollViewSingers setFrame:CGRectMake(0,30, 320, 120)];
+    [self.__scrollViewSingers setContentSize:CGSizeMake(640, 120)];
+    [self.__singersView addSubview:self.__scrollViewSingers];
+    [self.__singersView setBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)didReceiveMemoryWarning
