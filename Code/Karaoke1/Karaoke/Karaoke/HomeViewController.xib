@@ -15,6 +15,7 @@
                 <outlet property="__scrollViewContent" destination="COH-4y-Nq0" id="o0c-Y0-eqU"/>
                 <outlet property="__scrollViewKaraokeClips" destination="bAx-1t-iJx" id="30z-xr-tJ5"/>
                 <outlet property="__scrollViewSingers" destination="vYp-7r-ZnM" id="6yq-cC-vrW"/>
+                <outlet property="__scrollViewTopRecords" destination="nR5-CW-iYd" id="YLs-8H-WLA"/>
                 <outlet property="__singersView" destination="kLV-CU-9LE" id="jG3-Mv-Y6p"/>
                 <outlet property="__songsView" destination="khc-aW-8ec" id="UOv-xd-gVz"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -103,23 +104,23 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dang ky su dung dich vu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QU5-I1-5aP">
-                            <rect key="frame" x="0.0" y="11" width="320" height="21"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mời quí khách đăng ký dịch vụ tại đây.        Để thoả thích 1500 bài hát trong mKaraoke" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7KX-45-UM7">
+                            <rect key="frame" x="31" y="0.0" width="258" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" id="WC1-px-a4A" userLabel=" View introduction">
-                    <rect key="frame" x="0.0" y="44" width="320" height="214"/>
+                    <rect key="frame" x="0.0" y="44" width="320" height="279"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.027450982481241226" green="0.83529418706893921" blue="0.95686280727386475" alpha="1" colorSpace="deviceRGB"/>
                 </view>
                 <view contentMode="scaleToFill" id="Lw9-34-z19" userLabel="View karaoke clips">
-                    <rect key="frame" x="0.0" y="258" width="320" height="150"/>
+                    <rect key="frame" x="0.0" y="322" width="320" height="150"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secsion-bg.png" id="Wkg-g6-t3c">
@@ -158,7 +159,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="kLV-CU-9LE" userLabel="View singers">
-                    <rect key="frame" x="0.0" y="408" width="320" height="150"/>
+                    <rect key="frame" x="0.0" y="471" width="320" height="150"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secsion-bg.png" id="414-wg-zmm">
@@ -193,7 +194,7 @@
                     <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" id="khc-aW-8ec" userLabel="View songs">
-                    <rect key="frame" x="0.0" y="558" width="320" height="544"/>
+                    <rect key="frame" x="0.0" y="620" width="320" height="550"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secsion-bg.png" id="CD2-Ia-dfs">
@@ -228,7 +229,7 @@
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="kiC-1Y-xZ3" userLabel="top hits">
-                    <rect key="frame" x="0.0" y="1100" width="320" height="200"/>
+                    <rect key="frame" x="0.0" y="1170" width="320" height="130"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secsion-bg.png" id="Dl1-Iv-nYh">
@@ -555,6 +556,151 @@
             </subviews>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </scrollView>
+        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" id="nR5-CW-iYd" userLabel="Scroll View top records">
+            <rect key="frame" x="0.0" y="0.0" width="635" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fRc-wC-f4z">
+                    <rect key="frame" x="7" y="9" width="100" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button" image="bg-anh-thu-am.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="272-ly-UNf">
+                    <rect key="frame" x="111" y="9" width="100" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button" image="bg-anh-thu-am.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageRecordDemo.png" id="lM4-gr-l9X">
+                    <rect key="frame" x="111" y="9" width="93" height="75"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBaseNameRecord.png" id="Q8a-S8-wyv">
+                    <rect key="frame" x="108" y="70" width="100" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anh không đòi quà" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FfT-cz-TJW">
+                    <rect key="frame" x="111" y="68" width="93" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7IC-kv-DqQ">
+                    <rect key="frame" x="216" y="9" width="100" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button" image="bg-anh-thu-am.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageRecordDemo.png" id="AcA-eH-CiY">
+                    <rect key="frame" x="216" y="9" width="93" height="75"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBaseNameRecord.png" id="hG9-uD-pNY">
+                    <rect key="frame" x="213" y="70" width="100" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anh không đòi quà" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e0A-Ly-EQk">
+                    <rect key="frame" x="216" y="68" width="93" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ow3-2N-sLw">
+                    <rect key="frame" x="320" y="9" width="100" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button" image="bg-anh-thu-am.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageRecordDemo.png" id="nM9-Mz-qKQ">
+                    <rect key="frame" x="320" y="9" width="93" height="75"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBaseNameRecord.png" id="yUl-8Y-l6N">
+                    <rect key="frame" x="317" y="70" width="100" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anh không đòi quà" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L91-ah-Y9T">
+                    <rect key="frame" x="320" y="68" width="93" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9J0-Cc-U0k">
+                    <rect key="frame" x="425" y="9" width="100" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button" image="bg-anh-thu-am.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageRecordDemo.png" id="UK0-EZ-tMO">
+                    <rect key="frame" x="425" y="9" width="93" height="75"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBaseNameRecord.png" id="J1Y-tz-jEt">
+                    <rect key="frame" x="422" y="70" width="100" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anh không đòi quà" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a9x-Cr-ouo">
+                    <rect key="frame" x="425" y="68" width="93" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bDd-4y-DWI">
+                    <rect key="frame" x="530" y="9" width="100" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button" image="bg-anh-thu-am.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageRecordDemo.png" id="4b2-AG-Thx">
+                    <rect key="frame" x="530" y="9" width="93" height="75"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBaseNameRecord.png" id="AHb-ma-1G6">
+                    <rect key="frame" x="527" y="70" width="100" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anh không đòi quà" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jFb-by-Uko">
+                    <rect key="frame" x="530" y="68" width="93" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageRecordDemo.png" id="kjn-Ct-nSb">
+                    <rect key="frame" x="7" y="9" width="93" height="75"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBaseNameRecord.png" id="AwN-FF-0e7">
+                    <rect key="frame" x="3" y="70" width="100" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anh không đòi quà" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uia-IR-qFc">
+                    <rect key="frame" x="7" y="68" width="93" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </scrollView>
     </objects>
     <resources>
         <image name="BaseNameSingers.png" width="284" height="49"/>
@@ -569,6 +715,12 @@
         <image name="bg-anh-album.png" width="348" height="342"/>
         <image name="bg-anh-album.png" width="348" height="342"/>
         <image name="bg-anh-album.png" width="348" height="342"/>
+        <image name="bg-anh-thu-am.png" width="340" height="248"/>
+        <image name="bg-anh-thu-am.png" width="340" height="248"/>
+        <image name="bg-anh-thu-am.png" width="340" height="248"/>
+        <image name="bg-anh-thu-am.png" width="340" height="248"/>
+        <image name="bg-anh-thu-am.png" width="340" height="248"/>
+        <image name="bg-anh-thu-am.png" width="340" height="248"/>
         <image name="bottom-bai-hat.png" width="98" height="112"/>
         <image name="bottom-bg.png" width="1068" height="149"/>
         <image name="bottom-ca-si.png" width="90" height="110"/>
@@ -581,6 +733,12 @@
         <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
         <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
         <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
+        <image name="imageBaseNameRecord.png" width="325" height="42"/>
+        <image name="imageBaseNameRecord.png" width="325" height="42"/>
+        <image name="imageBaseNameRecord.png" width="325" height="42"/>
+        <image name="imageBaseNameRecord.png" width="325" height="42"/>
+        <image name="imageBaseNameRecord.png" width="325" height="42"/>
+        <image name="imageBaseNameRecord.png" width="325" height="42"/>
         <image name="imageBgKaraokeClipsView.png" width="1089" height="386"/>
         <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
         <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
@@ -588,6 +746,12 @@
         <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
         <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
         <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
+        <image name="imageRecordDemo.png" width="352" height="250"/>
+        <image name="imageRecordDemo.png" width="352" height="250"/>
+        <image name="imageRecordDemo.png" width="352" height="250"/>
+        <image name="imageRecordDemo.png" width="352" height="250"/>
+        <image name="imageRecordDemo.png" width="352" height="250"/>
+        <image name="imageRecordDemo.png" width="352" height="250"/>
         <image name="imageSingerDemo.png" width="326" height="325"/>
         <image name="imageSingerDemo.png" width="326" height="325"/>
         <image name="imageSingerDemo.png" width="326" height="325"/>
