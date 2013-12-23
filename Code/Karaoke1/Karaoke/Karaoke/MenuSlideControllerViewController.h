@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "NavibarViewController.h"
 
-@interface MenuSlideControllerViewController : UIViewController
+@interface MenuSlideControllerViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+- (IBAction)loginFacebook:(id)sender;
 
 @end
