@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "Cell.h"
 
 @interface HomeViewController ()
 
@@ -46,7 +47,7 @@
 
 -(void)loadViewContent{
     [self.__scrollViewContent setFrame:CGRectMake(0, 44, 320, self.view.frame.size.height- 2*44)];
-    [self.__scrollViewContent setContentSize:CGSizeMake(320, 1300)];
+    [self.__scrollViewContent setContentSize:CGSizeMake(320, 975)];
     [self.view addSubview:self.__scrollViewContent];
     
     //Ads view
@@ -65,6 +66,7 @@
     [self.__singersView setBackgroundColor:[UIColor clearColor]];
     
     //Songs View
+    [self.__tableSongView registerNib:[UINib nibWithNibName:@"Cell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"Cell"];
     
     
     //Records View
@@ -79,6 +81,48 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark - Table view data source
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cell setBackgroundColor:[UIColor clearColor]];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    Cell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[Cell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    }
+    
+    
+    return cell;
+}
+
+
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
 
 
 - (void)leftButtonBarPress:(id)button
