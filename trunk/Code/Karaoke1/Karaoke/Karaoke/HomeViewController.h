@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UIView *__singersView;
 @property (strong, nonatomic) IBOutlet UIView *__songsView;
 @property (strong, nonatomic) IBOutlet UIView *__recordsView;
+@property (strong, nonatomic) IBOutlet UITableView *__tableSongView;
 
 
 
