@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>76091D34-BC7C-4A9A-A7F4-9053276A7F19</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Karaoke</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>55CF74D9-3D60-4BBA-934F-7B0C1A43054C</key>
+		<string>https://ios-karaoke.googlecode.com/svn/trunk</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Code/Karaoke1/Karaoke/Karaoke.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>55CF74D9-3D60-4BBA-934F-7B0C1A43054C</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>55CF74D9-3D60-4BBA-934F-7B0C1A43054C</key>
+		<string>https://gmail.com@ios-karaoke.googlecode.com/svn</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://gmail.com@ios-karaoke.googlecode.com/svn/trunk/Code/Karaoke1/Karaoke/Karaoke.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>55CF74D9-3D60-4BBA-934F-7B0C1A43054C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>55CF74D9-3D60-4BBA-934F-7B0C1A43054C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>trunk</string>
+		</dict>
+	</array>
+</dict>
+</plist>

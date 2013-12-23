@@ -113,6 +113,14 @@
     return view;
 }
 
+- (float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 0;
+    }
+    return 20;
+}
+
 - (IBAction)loginFacebook:(id)sender {
 }
 @end
