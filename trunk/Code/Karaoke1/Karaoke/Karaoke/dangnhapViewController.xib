@@ -126,7 +126,6 @@
         <image name="btn-dang-nhap.png" width="1012" height="124"/>
         <image name="btn-dangky.png" width="297" height="115"/>
         <image name="round-check.png" width="7" height="7"/>
-        <image name="round-check.png" width="7" height="7"/>
         <image name="text-filed-bg.png" width="1041" height="384"/>
     </resources>
 </document>

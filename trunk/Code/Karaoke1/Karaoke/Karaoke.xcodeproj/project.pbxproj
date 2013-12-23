@@ -132,6 +132,10 @@
 		34BC54CD1864B5BA00CFFE9B /* star-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54841864B5BA00CFFE9B /* star-yellow.png */; };
 		34BC54CE1864B5BA00CFFE9B /* top-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54851864B5BA00CFFE9B /* top-banner.png */; };
 		34BC54CF1864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54861864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png */; };
+		4BE7D73D186872AA00F7438B /* karaokeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7D73B186872AA00F7438B /* karaokeListViewController.m */; };
+		4BE7D73E186872AA00F7438B /* karaokeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BE7D73C186872AA00F7438B /* karaokeListViewController.xib */; };
+		4BE7D7421868740100F7438B /* karaokeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7D7411868740100F7438B /* karaokeListCell.m */; };
+		4BE7D7441868741F00F7438B /* karaokeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BE7D7431868741F00F7438B /* karaokeListCell.xib */; };
 		4BEAEAB31867B226000E3CD1 /* dangkyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEAEAB11867B226000E3CD1 /* dangkyViewController.m */; };
 		4BEAEAB41867B226000E3CD1 /* dangkyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEAEAB21867B226000E3CD1 /* dangkyViewController.xib */; };
 		4BEAEAB81867B6E5000E3CD1 /* dangnhapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEAEAB61867B6E5000E3CD1 /* dangnhapViewController.m */; };
@@ -284,6 +288,12 @@
 		34BC54841864B5BA00CFFE9B /* star-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-yellow.png"; sourceTree = "<group>"; };
 		34BC54851864B5BA00CFFE9B /* top-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-banner.png"; sourceTree = "<group>"; };
 		34BC54861864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tro-lai-bai-hat-dang-phat.png"; sourceTree = "<group>"; };
+		4BE7D73A186872AA00F7438B /* karaokeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = karaokeListViewController.h; sourceTree = "<group>"; };
+		4BE7D73B186872AA00F7438B /* karaokeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = karaokeListViewController.m; sourceTree = "<group>"; };
+		4BE7D73C186872AA00F7438B /* karaokeListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = karaokeListViewController.xib; sourceTree = "<group>"; };
+		4BE7D7401868740100F7438B /* karaokeListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = karaokeListCell.h; sourceTree = "<group>"; };
+		4BE7D7411868740100F7438B /* karaokeListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = karaokeListCell.m; sourceTree = "<group>"; };
+		4BE7D7431868741F00F7438B /* karaokeListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = karaokeListCell.xib; sourceTree = "<group>"; };
 		4BEAEAB01867B226000E3CD1 /* dangkyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dangkyViewController.h; sourceTree = "<group>"; };
 		4BEAEAB11867B226000E3CD1 /* dangkyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dangkyViewController.m; sourceTree = "<group>"; };
 		4BEAEAB21867B226000E3CD1 /* dangkyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dangkyViewController.xib; sourceTree = "<group>"; };
@@ -339,6 +349,7 @@
 				346A5F4B18648A530071D955 /* NavibarController */,
 				34061F0C186458B5009FD9B2 /* RootViewcontroller */,
 				4BEAEAAF1867B16D000E3CD1 /* Dangky- dang nhap- quen mk */,
+				4BE7D73F186873D300F7438B /* list kara */,
 			);
 			name = Viewcontrollers;
 			sourceTree = "<group>";
@@ -698,6 +709,19 @@
 			path = "icon chung";
 			sourceTree = "<group>";
 		};
+		4BE7D73F186873D300F7438B /* list kara */ = {
+			isa = PBXGroup;
+			children = (
+				4BE7D73A186872AA00F7438B /* karaokeListViewController.h */,
+				4BE7D73B186872AA00F7438B /* karaokeListViewController.m */,
+				4BE7D73C186872AA00F7438B /* karaokeListViewController.xib */,
+				4BE7D7401868740100F7438B /* karaokeListCell.h */,
+				4BE7D7411868740100F7438B /* karaokeListCell.m */,
+				4BE7D7431868741F00F7438B /* karaokeListCell.xib */,
+			);
+			name = "list kara";
+			sourceTree = "<group>";
+		};
 		4BEAEAAF1867B16D000E3CD1 /* Dangky- dang nhap- quen mk */ = {
 			isa = PBXGroup;
 			children = (
@@ -818,12 +842,14 @@
 				34BC54C21864B5BA00CFFE9B /* logo-ca-si.png in Resources */,
 				34BC549C1864B5BA00CFFE9B /* phong-to-btn.png in Resources */,
 				34BC541C1864B46F00CFFE9B /* dich-vu.png in Resources */,
+				4BE7D73E186872AA00F7438B /* karaokeListViewController.xib in Resources */,
 				34BC54291864B46F00CFFE9B /* secsion-tin-tuc-video.png in Resources */,
 				34BC54181864B46F00CFFE9B /* ca-si.png in Resources */,
 				34BC54B31864B5BA00CFFE9B /* noi-bat.png in Resources */,
 				34BC54871864B5BA00CFFE9B /* btn-dangky.png in Resources */,
 				34BC54B51864B5BA00CFFE9B /* bg-anh-album.png in Resources */,
 				51A68885186714AF000BEBD3 /* imageBaseNameRecord.png in Resources */,
+				4BE7D7441868741F00F7438B /* karaokeListCell.xib in Resources */,
 				34BC54C81864B5BA00CFFE9B /* btn-search-top.png in Resources */,
 				51A6887E1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png in Resources */,
 				34BC542A1864B46F00CFFE9B /* su-kien-noi-bat.png in Resources */,
@@ -904,6 +930,8 @@
 				346A5F4E18648A770071D955 /* NavibarViewController.m in Sources */,
 				4BEAEAB31867B226000E3CD1 /* dangkyViewController.m in Sources */,
 				34BC53ED1864A9C100CFFE9B /* MenuSlideControllerViewController.m in Sources */,
+				4BE7D7421868740100F7438B /* karaokeListCell.m in Sources */,
+				4BE7D73D186872AA00F7438B /* karaokeListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
