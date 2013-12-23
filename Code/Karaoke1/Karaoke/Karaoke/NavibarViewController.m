@@ -27,6 +27,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    // create bottom bar
+    self.bottomBarView = [NavibarView bottomBarWithTarget:self singerAction:@selector(singerButtonPress:) recordAction:@selector(recordButtonPress:) songAction:@selector(songButtonPress:) kindMusicAction:@selector(kindMusicButtonPress:) favoriteAction:@selector(favoriteButtonPress:)];
+    [self.bottomBarView setFrame:CGRectMake(0, self.view.frame.size.height - self.bottomBarView.frame.size.height, self.bottomBarView.frame.size.width, self.bottomBarView.frame.size.height)];
+    [self.bottomBarView setHidden:YES];
+    [self.view addSubview:_bottomBarView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,6 +51,12 @@
     self.navibarView.frame = CGRectMake(0, 0, 320, 44);
     [self.view addSubview:_navibarView];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
+//
+- (void)setBottomBarViewHidden:(BOOL)hidden
+{
+    self.bottomBarView.hidden = hidden;
 }
 
 //Set title image for navigationbar
@@ -68,4 +80,28 @@
     NSLog(@"should override this method");
 }
 
+- (void)singerButtonPress:(id)button
+{
+    NSLog(@"singer button press");
+}
+
+- (void)recordButtonPress:(id)button
+{
+    
+}
+
+- (void)kindMusicButtonPress:(id)button
+{
+    
+}
+
+- (void)songButtonPress:(id)button
+{
+    
+}
+
+- (void)favoriteButtonPress:(id)button
+{
+    
+}
 @end

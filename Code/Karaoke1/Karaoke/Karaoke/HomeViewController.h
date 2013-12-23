@@ -20,9 +20,6 @@
 @property (strong, nonatomic) IBOutlet UITableView *__tableSongView;
 
 
-
-@property (strong, nonatomic) IBOutlet UIView *__bottomBarView;
-
 @property (strong, nonatomic) IBOutlet UIScrollView *__scrollViewContent;
 @property (strong, nonatomic) IBOutlet UIScrollView *__scrollViewSingers;
 @property (strong, nonatomic) IBOutlet UIScrollView *__scrollViewKaraokeClips;
