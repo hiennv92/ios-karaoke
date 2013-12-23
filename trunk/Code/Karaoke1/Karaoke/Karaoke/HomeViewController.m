@@ -14,7 +14,6 @@
 @end
 
 @implementation HomeViewController
-@synthesize __bottomBarView;
 @synthesize __scrollViewContent;
 @synthesize __bannerView;
 @synthesize __introductionVIew;
@@ -39,7 +38,8 @@
     // Do any additional setup after loading the view from its nib.
     [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"menu.png" leftButtonPress:Nil rightButton:@"setting.png" rightButtonPress:Nil];
     [self addImageTitle:@"logo-banner.png"];
-    self.__bottomBarView.frame = CGRectMake(0, self.view.frame.size.height-44, 320, 44);
+    
+    [self setBottomBarViewHidden:NO];
 //    [self.view setBackgroundColor:[UIColor lightGrayColor]];
     
     [self loadViewContent];

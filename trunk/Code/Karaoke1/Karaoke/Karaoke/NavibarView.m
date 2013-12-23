@@ -73,4 +73,17 @@
     return navi;
 }
 
++ (NavibarView*)bottomBarWithTarget:(id)target singerAction:(SEL)singerSelector recordAction:(SEL)recordSelector songAction:(SEL)songSelector kindMusicAction:(SEL)kindMusicSelector favoriteAction:(SEL)favoriteSelector
+{
+    NavibarView* bottom = (NavibarView*)[[[NSBundle mainBundle] loadNibNamed:@"NavibarView" owner:self options:Nil] objectAtIndex:1];
+    [bottom.singerButton addTarget:target action:singerSelector forControlEvents:UIControlEventTouchUpInside];
+    [bottom.recordButton addTarget:target action:recordSelector forControlEvents:UIControlEventTouchUpInside];
+    [bottom.songButton addTarget:target action:songSelector forControlEvents:UIControlEventTouchUpInside];
+    [bottom.kindMusicButton addTarget:target action:kindMusicSelector forControlEvents:UIControlEventTouchUpInside];
+    [bottom.favoriteButton addTarget:target action:favoriteSelector forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    return bottom;
+}
+
 @end
