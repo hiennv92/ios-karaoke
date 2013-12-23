@@ -37,7 +37,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:Nil leftButtonPress:Nil rightButton:Nil rightButtonPress:Nil];
+    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"menu.png" leftButtonPress:Nil rightButton:@"setting.png" rightButtonPress:Nil];
     [self addImageTitle:@"logo-banner.png"];
     self.__bottomBarView.frame = CGRectMake(0, self.view.frame.size.height-44, 320, 44);
 //    [self.view setBackgroundColor:[UIColor lightGrayColor]];
@@ -127,7 +127,7 @@
 
 - (void)leftButtonBarPress:(id)button
 {
-    
+    [[AppDelegate shareApplication] showLeftPanelWithAnimated:YES];
 }
 
 - (void)rightButtonBarPress:(id)button

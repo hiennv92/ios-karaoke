@@ -728,22 +728,7 @@
     </objects>
     <resources>
         <image name="BaseNameSingers.png" width="284" height="49"/>
-        <image name="BaseNameSingers.png" width="284" height="49"/>
-        <image name="BaseNameSingers.png" width="284" height="49"/>
-        <image name="BaseNameSingers.png" width="284" height="49"/>
-        <image name="BaseNameSingers.png" width="284" height="49"/>
-        <image name="BaseNameSingers.png" width="284" height="49"/>
         <image name="bg-anh-album.png" width="348" height="342"/>
-        <image name="bg-anh-album.png" width="348" height="342"/>
-        <image name="bg-anh-album.png" width="348" height="342"/>
-        <image name="bg-anh-album.png" width="348" height="342"/>
-        <image name="bg-anh-album.png" width="348" height="342"/>
-        <image name="bg-anh-album.png" width="348" height="342"/>
-        <image name="bg-anh-thu-am.png" width="340" height="248"/>
-        <image name="bg-anh-thu-am.png" width="340" height="248"/>
-        <image name="bg-anh-thu-am.png" width="340" height="248"/>
-        <image name="bg-anh-thu-am.png" width="340" height="248"/>
-        <image name="bg-anh-thu-am.png" width="340" height="248"/>
         <image name="bg-anh-thu-am.png" width="340" height="248"/>
         <image name="bottom-bai-hat.png" width="98" height="112"/>
         <image name="bottom-bg.png" width="1068" height="149"/>
@@ -752,52 +737,19 @@
         <image name="bottom-thu-am.png" width="58" height="97"/>
         <image name="bottom-yeu-thich.png" width="100" height="100"/>
         <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
-        <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
-        <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
-        <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
-        <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
-        <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
-        <image name="imageBaseNameRecord.png" width="325" height="42"/>
-        <image name="imageBaseNameRecord.png" width="325" height="42"/>
-        <image name="imageBaseNameRecord.png" width="325" height="42"/>
-        <image name="imageBaseNameRecord.png" width="325" height="42"/>
-        <image name="imageBaseNameRecord.png" width="325" height="42"/>
         <image name="imageBaseNameRecord.png" width="325" height="42"/>
         <image name="imageBgKaraokeClipsView.png" width="1089" height="386"/>
         <image name="imageDemoIntroduction.png" width="861" height="560"/>
         <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
         <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
-        <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
-        <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
-        <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
-        <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
-        <image name="imageKaraokeClipDemo.png" width="334" height="340"/>
-        <image name="imageRecordDemo.png" width="352" height="250"/>
-        <image name="imageRecordDemo.png" width="352" height="250"/>
-        <image name="imageRecordDemo.png" width="352" height="250"/>
-        <image name="imageRecordDemo.png" width="352" height="250"/>
-        <image name="imageRecordDemo.png" width="352" height="250"/>
         <image name="imageRecordDemo.png" width="352" height="250"/>
         <image name="imageRecordDemo.png" width="352" height="250"/>
         <image name="imageSingerDemo.png" width="326" height="325"/>
-        <image name="imageSingerDemo.png" width="326" height="325"/>
-        <image name="imageSingerDemo.png" width="326" height="325"/>
-        <image name="imageSingerDemo.png" width="326" height="325"/>
-        <image name="imageSingerDemo.png" width="326" height="325"/>
-        <image name="imageSingerDemo.png" width="326" height="325"/>
-        <image name="khung-tron-ca-si.png" width="344" height="344"/>
-        <image name="khung-tron-ca-si.png" width="344" height="344"/>
-        <image name="khung-tron-ca-si.png" width="344" height="344"/>
-        <image name="khung-tron-ca-si.png" width="344" height="344"/>
-        <image name="khung-tron-ca-si.png" width="344" height="344"/>
         <image name="khung-tron-ca-si.png" width="344" height="344"/>
         <image name="logo-album.png" width="77" height="77"/>
         <image name="logo-ca-si.png" width="77" height="77"/>
         <image name="logo-note-nhac.png" width="77" height="77"/>
         <image name="logo-trai-tim.png" width="77" height="77"/>
-        <image name="secsion-bg.png" width="1068" height="80"/>
-        <image name="secsion-bg.png" width="1068" height="80"/>
-        <image name="secsion-bg.png" width="1068" height="80"/>
         <image name="secsion-bg.png" width="1068" height="80"/>
     </resources>
 </document>

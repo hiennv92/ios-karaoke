@@ -16,5 +16,7 @@
 
 
 + (AppDelegate*)shareApplication;
+- (void)showLeftPanelWithAnimated:(BOOL)animated;
+- (void)showRightPanelWithAnimated:(BOOL)animated;
 
 @end
