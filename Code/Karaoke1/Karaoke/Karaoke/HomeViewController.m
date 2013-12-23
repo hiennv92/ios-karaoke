@@ -123,8 +123,6 @@
     
 }
 
-
-
 - (void)leftButtonBarPress:(id)button
 {
     [[AppDelegate shareApplication] showLeftPanelWithAnimated:YES];
