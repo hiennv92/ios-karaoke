@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
 @interface NavibarView : UIView
 @property (weak, nonatomic) IBOutlet UIButton *leftButton;

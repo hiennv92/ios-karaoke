@@ -64,4 +64,14 @@
     return (AppDelegate*)[UIApplication sharedApplication].delegate;
 }
 
+- (void)showLeftPanelWithAnimated:(BOOL)animated
+{
+    [self.viewController showLeftPanelAnimated:animated];
+}
+
+- (void)showRightPanelWithAnimated:(BOOL)animated
+{
+    [self.viewController showRightPanelAnimated:animated];
+}
+
 @end
