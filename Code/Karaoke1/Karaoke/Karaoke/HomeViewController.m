@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "KindOfMusicViewController.h"
 #import "Cell.h"
 
 @interface HomeViewController ()
@@ -39,9 +40,7 @@
     [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"menu.png" leftButtonPress:Nil rightButton:@"setting.png" rightButtonPress:Nil];
     [self addImageTitle:@"logo-banner.png"];
     
-    [self setBottomBarViewHidden:NO];
-//    [self.view setBackgroundColor:[UIColor lightGrayColor]];
-    
+    [self setBottomBarViewHidden:NO];    
     [self loadViewContent];
 }
 
@@ -133,18 +132,12 @@
 {
     
 }
-- (IBAction)singerButtonController:(id)sender {
+
+- (void)kindMusicButtonPress:(id)button{
+    KindOfMusicViewController *kindMusic = [[KindOfMusicViewController alloc] initWithNibName:@"KindOfMusicViewController" bundle:Nil];
+    [self.navigationController pushViewController:kindMusic animated:YES];
 }
 
-- (IBAction)songButtonController:(id)sender {
-}
 
-- (IBAction)kindMusicButtonController:(id)sender {
-}
 
-- (IBAction)favoriteButtonController:(id)sender {
-}
-
-- (IBAction)recordButtonController:(id)sender {
-}
 @end

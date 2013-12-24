@@ -30,9 +30,16 @@
     
     // create bottom bar
     self.bottomBarView = [NavibarView bottomBarWithTarget:self singerAction:@selector(singerButtonPress:) recordAction:@selector(recordButtonPress:) songAction:@selector(songButtonPress:) kindMusicAction:@selector(kindMusicButtonPress:) favoriteAction:@selector(favoriteButtonPress:)];
+    
     [self.bottomBarView setFrame:CGRectMake(0, self.view.frame.size.height - self.bottomBarView.frame.size.height, self.bottomBarView.frame.size.width, self.bottomBarView.frame.size.height)];
     [self.bottomBarView setHidden:YES];
     [self.view addSubview:_bottomBarView];
+   
+    //Create search bar
+    self.searchBarView = [NavibarView searchBarWithTarget:self closeBarAction:@selector(closeSearchBarPress:)];
+    [self.searchBarView setFrame:CGRectMake(320,0,320,44)];
+    [self.searchBarView setHidden: YES];
+    [self.view addSubview:self.searchBarView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,6 +66,11 @@
     self.bottomBarView.hidden = hidden;
 }
 
+//
+- (void)setSearchBarViewHidden:(BOOL)hidden{
+    self.searchBarView.hidden = hidden;
+}
+
 //Set title image for navigationbar
 -(void)addImageTitle:(NSString *)imageTitleName{
     UIImage *img = [UIImage imageNamed:imageTitleName];
@@ -71,13 +83,10 @@
 
 //Set title text for navigationbar
 -(void)addTitleNavibar:(NSString*)stringTitle andSize:(int)size{
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-    label.text = stringTitle;
-    label.textAlignment = UITextAlignmentCenter;
-    label.textColor = [UIColor whiteColor];
-    [label setFont:[UIFont systemFontOfSize:size]];
-
-    [self.view addSubview:label];
+    self.navibarView.titleLabel.text = stringTitle;
+    self.navibarView.titleLabel.textAlignment = UITextAlignmentCenter;
+    self.navibarView.titleLabel.textColor = [UIColor whiteColor];
+    [self.navibarView.titleLabel setFont:[UIFont boldSystemFontOfSize:size]];
 }
 
 
@@ -98,21 +107,25 @@
 
 - (void)recordButtonPress:(id)button
 {
-    
+    NSLog(@"Record");
 }
 
 - (void)kindMusicButtonPress:(id)button
 {
-    
+    NSLog(@"Kind music");
 }
 
 - (void)songButtonPress:(id)button
 {
-    
+    NSLog(@"List song");
 }
 
 - (void)favoriteButtonPress:(id)button
 {
-    
+    NSLog(@"Favorite");
+}
+
+- (void)closeSearchBarPress:(id)button{
+    NSLog(@"Close search bar");
 }
 @end

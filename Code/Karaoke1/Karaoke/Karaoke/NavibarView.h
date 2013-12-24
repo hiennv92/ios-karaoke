@@ -22,10 +22,15 @@
 @property (weak, nonatomic) IBOutlet UIButton*  songButton;
 @property (weak, nonatomic) IBOutlet UIButton*  kindMusicButton;
 @property (weak, nonatomic) IBOutlet UIButton*  favoriteButton;
+//Search bar
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
 
 
 + (NavibarView*)viewFromNib;
 + (NavibarView*)createWithTitle:(NSString*)title backgroundImage:(NSString*)backgroundImgae leftNormal:(NSString*)leftNormal leftHightlight:(NSString*)leftHightlight rightNormal:(NSString*)rightNormal rightHightlight:(NSString*)rightHightlight target:(NSObject*)target leftSelector:(SEL)leftSelector rightSelector:(SEL)rightSelector;
 
 + (NavibarView*)bottomBarWithTarget:(id)target singerAction:(SEL)singerSelector recordAction:(SEL)recordSelector songAction:(SEL)songSelector kindMusicAction:(SEL)kindMusicSelector favoriteAction:(SEL)favoriteSelector;
++(NavibarView *)searchBarWithTarget:(id)target closeBarAction:(SEL)closeSelector;
+
+
 @end
