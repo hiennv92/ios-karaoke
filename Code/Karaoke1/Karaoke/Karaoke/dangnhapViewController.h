@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NavibarViewController.h"
 
-@interface dangnhapViewController : UIViewController
-- (IBAction)back:(id)sender;
+@interface dangnhapViewController : NavibarViewController{
+    
+}
 @property (weak, nonatomic) IBOutlet UITextField *sdt;
 @property (weak, nonatomic) IBOutlet UITextField *matkhau;
 - (IBAction)luuMk:(id)sender;

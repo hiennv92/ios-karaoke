@@ -18,12 +18,12 @@
 
 
 - (void)setBottomBarViewHidden:(BOOL)hidden;
-
+- (void)addImageTitle:(NSString*)imageTitleName;
+-(void)addTitleNavibar:(NSString*)stringTitle andSize:(int)size;
 
 // action
 - (void)leftButtonBarPress:(id)button;
 - (void)rightButtonBarPress:(id)button;
-- (void)addImageTitle:(NSString*)imageTitleName;
 
 // bottom action
 - (void)singerButtonPress:(id)button;

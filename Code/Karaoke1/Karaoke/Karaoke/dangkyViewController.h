@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NavibarViewController.h"
 
-@interface dangkyViewController : UIViewController
+@interface dangkyViewController : NavibarViewController{
+    
+}
 @property (weak, nonatomic) IBOutlet UITextField *sdt;
 @property (weak, nonatomic) IBOutlet UITextField *matkhau;
 @property (weak, nonatomic) IBOutlet UITextField *matkhauRE;

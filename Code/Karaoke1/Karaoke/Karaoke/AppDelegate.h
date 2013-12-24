@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) RootViewController* viewController;
-
+@property (strong,nonatomic) UINavigationController *navController;
 
 + (AppDelegate*)shareApplication;
 - (void)showLeftPanelWithAnimated:(BOOL)animated;

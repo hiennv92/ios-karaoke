@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "NavibarViewController.h"
+#import "dangnhapViewController.h"
+
 
 @interface MenuSlideControllerViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

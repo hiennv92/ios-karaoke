@@ -9,7 +9,6 @@
 #import "MenuSlideControllerViewController.h"
 #import "MenuCell.h"
 
-
 @interface MenuSlideControllerViewController ()
 {
     NSArray* _headerArray;
@@ -51,12 +50,18 @@
                   @[@"newest.png", @"hot-nhat-icon.png", @"su-kien-noi-bat.png"],
                   @[@"camera360.png", @"clip-gay-bao.png"],
                   @[@"cai-dat.png", @"huong-dan.png", @"thong-tin.png", @"wap-kara.png"]];
+
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 }
 
 
@@ -121,6 +126,35 @@
     return 20;
 }
 
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+    //Section 01 account
+    if([indexPath item] == 0){
+        NSLog(@"Dang nhap");
+        dangnhapViewController *loginView = [[dangnhapViewController alloc] initWithNibName:@"dangnhapViewController" bundle:Nil];
+        NSLog(@"%@",self.navigationController);
+
+        [self.navigationController pushViewController:loginView animated:YES];
+    }
+    else{
+        NSLog(@"Dich vu");
+    }
+    
+    //Section 02 category
+    
+    //Section 03 DJ music
+    
+    //Section 04 Videos
+    
+    //Section 05 extension
+}
+
+
 - (IBAction)loginFacebook:(id)sender {
+    
 }
 @end

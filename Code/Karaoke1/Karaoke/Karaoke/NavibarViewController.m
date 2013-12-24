@@ -69,6 +69,17 @@
     [self.view addSubview:titleImg];
 }
 
+//Set title text for navigationbar
+-(void)addTitleNavibar:(NSString*)stringTitle andSize:(int)size{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    label.text = stringTitle;
+    label.textAlignment = UITextAlignmentCenter;
+    label.textColor = [UIColor whiteColor];
+    [label setFont:[UIFont systemFontOfSize:size]];
+
+    [self.view addSubview:label];
+}
+
 
 - (void)leftButtonBarPress:(id)button
 {
