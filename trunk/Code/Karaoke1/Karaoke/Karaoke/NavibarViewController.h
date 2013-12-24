@@ -13,11 +13,13 @@
 @interface NavibarViewController : UIViewController
 @property (nonatomic, strong) NavibarView* navibarView;
 @property (nonatomic, strong) UIView*       bottomBarView;
+@property (nonatomic, strong) UIView*   searchBarView;
 
 - (void)createNavigationBarWithTitle: (NSString*)title backgroundImage:(NSString*)bgImage leftButton:(NSString*)leftButton leftButtonPress:(NSString*)leftPress rightButton:(NSString*)rightButton rightButtonPress:(NSString*)rightPress;
 
 
 - (void)setBottomBarViewHidden:(BOOL)hidden;
+- (void)setSearchBarViewHidden:(BOOL)hidden;
 - (void)addImageTitle:(NSString*)imageTitleName;
 -(void)addTitleNavibar:(NSString*)stringTitle andSize:(int)size;
 
@@ -31,5 +33,5 @@
 - (void)songButtonPress:(id)button;
 - (void)kindMusicButtonPress:(id)button;
 - (void)favoriteButtonPress:(id)button;
-
+- (void)closeSearchBarPress:(id)button;
 @end

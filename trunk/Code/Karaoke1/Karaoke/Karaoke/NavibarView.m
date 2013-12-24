@@ -86,4 +86,10 @@
     return bottom;
 }
 
++ (NavibarView*)searchBarWithTarget:(id)target closeBarAction:(SEL)closeSelector{
+    NavibarView* search= (NavibarView*)[[[NSBundle mainBundle] loadNibNamed:@"NavibarView" owner:self options:Nil] objectAtIndex:2];
+    [search.searchButton addTarget:target action:closeSelector forControlEvents:UIControlEventTouchUpInside];
+    return  search;
+}
+
 @end

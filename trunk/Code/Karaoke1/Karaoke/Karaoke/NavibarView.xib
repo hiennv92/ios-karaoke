@@ -32,7 +32,7 @@
                     </state>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CAm-I7-6Th">
-                    <rect key="frame" x="54" y="11" width="210" height="21"/>
+                    <rect key="frame" x="54" y="0.0" width="210" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -101,10 +101,44 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="favoriteButton" destination="cgS-7X-CY0" id="vuY-SY-SBw"/>
-                <outlet property="kindMusicButton" destination="2sb-Ec-Iry" id="Zao-Ot-1t8"/>
-                <outlet property="recordButton" destination="mwQ-Xu-syM" id="fcY-9r-7Zm"/>
+                <outlet property="kindMusicButton" destination="2sb-Ec-Iry" id="tN7-lI-n6K"/>
+                <outlet property="recordButton" destination="mwQ-Xu-syM" id="8Xx-54-y7n"/>
                 <outlet property="singerButton" destination="t56-Om-TIn" id="17n-dG-omi"/>
                 <outlet property="songButton" destination="Qcw-UZ-ruD" id="Gky-nl-SbH"/>
+            </connections>
+        </view>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="u3o-Xa-SW7" customClass="NavibarView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-top-home.png" id="m1D-OB-6Vd">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <searchBar clipsSubviews="YES" contentMode="redraw" text="Nhap ten bai hat can tim" backgroundImage="bg-top-home.png" id="BeU-aw-vln">
+                    <rect key="frame" x="0.0" y="0.0" width="279" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="-2" vertical="0.0"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <scopeButtonTitles>
+                        <string>Title</string>
+                        <string>Title</string>
+                    </scopeButtonTitles>
+                </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UNZ-sJ-Uyr">
+                    <rect key="frame" x="279" y="9" width="37" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="btn-close-search.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="searchButton" destination="UNZ-sJ-Uyr" id="4gX-uH-kjB"/>
             </connections>
         </view>
     </objects>
@@ -116,5 +150,6 @@
         <image name="bottom-the-loai.png" width="103" height="97"/>
         <image name="bottom-thu-am.png" width="58" height="97"/>
         <image name="bottom-yeu-thich.png" width="100" height="100"/>
+        <image name="btn-close-search.png" width="83" height="63"/>
     </resources>
 </document>

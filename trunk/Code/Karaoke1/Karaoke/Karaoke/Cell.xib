@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -64,6 +64,10 @@
             </tableViewCellContentView>
             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="_lyricExample" destination="vjI-wr-qhv" id="FK6-BO-MkH"/>
+                <outlet property="_nameSong" destination="5Hl-1m-jqQ" id="iRc-Z7-bj9"/>
+                <outlet property="_numberLikes" destination="Zui-9O-vHk" id="iGz-eu-xCH"/>
+                <outlet property="_numberPlay" destination="1nq-d8-eTA" id="05l-p7-gCG"/>
                 <outlet property="buttonLike" destination="hhe-L8-o2G" id="S1N-Xe-E1F"/>
             </connections>
         </tableViewCell>

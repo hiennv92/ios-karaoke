@@ -16,5 +16,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *buttonLike;
 
 -(IBAction)likeButtonController:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *_nameSong;
+@property (strong, nonatomic) IBOutlet UILabel *_lyricExample;
+@property (strong, nonatomic) IBOutlet UILabel *_numberLikes;
+@property (strong, nonatomic) IBOutlet UILabel *_numberPlay;
 
 @end
