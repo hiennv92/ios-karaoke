@@ -27,18 +27,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"back-btn.png" leftButtonPress:Nil rightButton:Nil rightButtonPress:Nil];
+    [self addTitleNavibar:@"Đăng nhập" andSize:22];
+    [self setBottomBarViewHidden:YES];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
-- (IBAction)back:(id)sender {
+
+//Back to menu
+-(void)leftButtonBarPress:(id)button{
+    [self.navigationController popViewControllerAnimated:YES];
 }
+
 - (IBAction)luuMk:(id)sender {
 }
 

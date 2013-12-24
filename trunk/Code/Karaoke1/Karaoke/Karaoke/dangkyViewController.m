@@ -22,19 +22,16 @@
     }
     return self;
 }
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    [self.view endEditing:YES];
-}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"menu.png" leftButtonPress:Nil rightButton:@"setting.png" rightButtonPress:Nil];
+    [self addImageTitle:@"logo-banner.png"];
+    
+    [self setBottomBarViewHidden:NO];
+    //    [self.view setBackgroundColor:[UIColor lightGrayColor]];    
 }
 
 - (IBAction)dangky:(id)sender {

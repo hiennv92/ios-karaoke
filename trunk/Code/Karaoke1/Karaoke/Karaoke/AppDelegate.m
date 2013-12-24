@@ -10,7 +10,6 @@
 #import "MenuSlideControllerViewController.h"
 #import "HomeViewController.h"
 
-
 @implementation AppDelegate
 
 
@@ -19,15 +18,18 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
     
     // init root view controller
     self.viewController = [[RootViewController alloc] init];
     
     self.viewController.leftPanel = [[MenuSlideControllerViewController alloc] initWithNibName:@"MenuSlideControllerViewController" bundle:Nil];
     self.viewController.centerPanel = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:Nil];
-    
     self.window.rootViewController = self.viewController;
+
+    self.navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    [self.window addSubview:self.navController.view];
+    self.navController.navigationBar.hidden = YES;
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

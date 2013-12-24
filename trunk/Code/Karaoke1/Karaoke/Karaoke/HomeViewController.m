@@ -74,6 +74,7 @@
     [self.__scrollViewTopRecords setContentSize:CGSizeMake(635, 100)];
     [self.__recordsView addSubview:self.__scrollViewTopRecords];
     [self.__recordsView setBackgroundColor:[UIColor clearColor]];
+    
 }
 
 - (void)didReceiveMemoryWarning
