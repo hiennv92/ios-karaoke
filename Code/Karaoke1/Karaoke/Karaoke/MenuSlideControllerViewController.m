@@ -133,24 +133,64 @@
     
     
     //Section 01 account
-    if([indexPath item] == 0){
+    if(indexPath.row == 0 && indexPath.section == 0){
         NSLog(@"Dang nhap");
         dangnhapViewController *loginView = [[dangnhapViewController alloc] initWithNibName:@"dangnhapViewController" bundle:Nil];
-        NSLog(@"%@",self.navigationController);
-
         [self.navigationController pushViewController:loginView animated:YES];
     }
-    else{
+    else if(indexPath.row == 1 && indexPath.section == 0){
         NSLog(@"Dich vu");
     }
     
     //Section 02 category
+    if(indexPath.row == 0 && indexPath.section == 1){
+        NSLog(@"Trang chu");
+        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+        [app.viewController showCenterPanelAnimated:YES];
+    }
+    else if(indexPath.row == 1 && indexPath.section == 1){
+    }
+    else if(indexPath.row == 2 && indexPath.section == 1){
+    }
+    else if(indexPath.row == 3 && indexPath.section == 1){
+    }
+    else if(indexPath.row == 4 && indexPath.section == 1){
+    }
+    else if(indexPath.row == 5 && indexPath.section == 1){
+    }
+    else if(indexPath.row == 6 && indexPath.section == 1){
+    }
+    else if(indexPath.row == 7 && indexPath.section == 1){
+    }
+    else if(indexPath.row == 8 && indexPath.section == 1){
+    }
+    else if(indexPath.row == 9 && indexPath.section == 1){
+    }
     
     //Section 03 DJ music
-    
+    if(indexPath.row == 0 && indexPath.section == 2){
+        
+    }
+    else if(indexPath.row == 1 && indexPath.section == 2){
+    }
+    else if(indexPath.row == 2 && indexPath.section == 2){
+    }
     //Section 04 Videos
-    
+    if(indexPath.row == 0 && indexPath.section == 3){
+        
+    }
+    else if(indexPath.row == 1 && indexPath.section == 3){
+    }
     //Section 05 extension
+    if(indexPath.row == 0 && indexPath.section == 4){
+        
+    }
+    else if(indexPath.row == 1 && indexPath.section == 4){
+    }
+    else if(indexPath.row == 2 && indexPath.section == 4){
+    }
+    else if(indexPath.row == 3 && indexPath.section == 4){
+    }
 }
 
 
