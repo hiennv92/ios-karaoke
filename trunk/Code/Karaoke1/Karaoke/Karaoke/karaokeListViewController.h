@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "karaokeListCell.h"
+#import "NavibarViewController.h"
 
-@interface karaokeListViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+@interface karaokeListViewController : NavibarViewController <UITableViewDelegate,UITableViewDataSource>
 {
     
 }
