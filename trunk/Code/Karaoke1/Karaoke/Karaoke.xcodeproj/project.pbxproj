@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		34061F10186458CC009FD9B2 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34061F0E186458CC009FD9B2 /* RootViewController.m */; };
 		34061F11186458CC009FD9B2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34061F0F186458CC009FD9B2 /* RootViewController.xib */; };
+		340DDAB7186AC6CF00204A05 /* 10_nam_tinh_cu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 340DDAB5186AC6CF00204A05 /* 10_nam_tinh_cu.mp3 */; };
+		340DDAB8186AC6CF00204A05 /* 10_nam_tinh_cu.xml in Resources */ = {isa = PBXBuildFile; fileRef = 340DDAB6186AC6CF00204A05 /* 10_nam_tinh_cu.xml */; };
 		3442C7BB18642F1300BD13F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3442C7BA18642F1300BD13F3 /* UIKit.framework */; };
 		3442C7BD18642F1300BD13F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3442C7BC18642F1300BD13F3 /* Foundation.framework */; };
 		3442C7BF18642F1300BD13F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3442C7BE18642F1300BD13F3 /* CoreGraphics.framework */; };
@@ -163,6 +165,8 @@
 		34061F0D186458CC009FD9B2 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		34061F0E186458CC009FD9B2 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		34061F0F186458CC009FD9B2 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		340DDAB5186AC6CF00204A05 /* 10_nam_tinh_cu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 10_nam_tinh_cu.mp3; sourceTree = "<group>"; };
+		340DDAB6186AC6CF00204A05 /* 10_nam_tinh_cu.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 10_nam_tinh_cu.xml; sourceTree = "<group>"; };
 		3442C7B718642F1300BD13F3 /* Karaoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Karaoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3442C7BA18642F1300BD13F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3442C7BC18642F1300BD13F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -351,6 +355,7 @@
 		34061F0818645874009FD9B2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				340DDAB4186AC69500204A05 /* Sound */,
 				34BC53F81864B3F500CFFE9B /* images */,
 			);
 			name = Resources;
@@ -395,6 +400,15 @@
 				34061F0F186458CC009FD9B2 /* RootViewController.xib */,
 			);
 			name = RootViewcontroller;
+			sourceTree = "<group>";
+		};
+		340DDAB4186AC69500204A05 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				340DDAB5186AC6CF00204A05 /* 10_nam_tinh_cu.mp3 */,
+				340DDAB6186AC6CF00204A05 /* 10_nam_tinh_cu.xml */,
+			);
+			name = Sound;
 			sourceTree = "<group>";
 		};
 		3442C7AE18642F1300BD13F3 = {
@@ -916,6 +930,8 @@
 				34BC54B51864B5BA00CFFE9B /* bg-anh-album.png in Resources */,
 				51A68885186714AF000BEBD3 /* imageBaseNameRecord.png in Resources */,
 				4BE7D7441868741F00F7438B /* karaokeListCell.xib in Resources */,
+				340DDAB7186AC6CF00204A05 /* 10_nam_tinh_cu.mp3 in Resources */,
+				340DDAB8186AC6CF00204A05 /* 10_nam_tinh_cu.xml in Resources */,
 				34BC54C81864B5BA00CFFE9B /* btn-search-top.png in Resources */,
 				51A6887E1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png in Resources */,
 				34BC542A1864B46F00CFFE9B /* su-kien-noi-bat.png in Resources */,
