@@ -17,6 +17,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *matkhauRE;
 - (IBAction)dangky:(id)sender;
 - (IBAction)dangnhaptrolai:(id)sender;
-- (IBAction)back:(id)sender;
 
 @end

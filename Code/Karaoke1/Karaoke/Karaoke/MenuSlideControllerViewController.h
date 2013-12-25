@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NavibarViewController.h"
 #import "dangnhapViewController.h"
+#import "karaokeListViewController.h"
 
 
 @interface MenuSlideControllerViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>

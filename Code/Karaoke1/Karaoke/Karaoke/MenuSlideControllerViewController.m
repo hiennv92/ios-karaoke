@@ -130,6 +130,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     //Section 01 account
     if(indexPath.row == 0 && indexPath.section == 0){
         NSLog(@"Dang nhap");
@@ -151,6 +152,10 @@
     else if(indexPath.row == 2 && indexPath.section == 1){
     }
     else if(indexPath.row == 3 && indexPath.section == 1){
+        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+        [app.viewController showCenterPanelAnimated:YES];
+        karaokeListViewController *listKaraView =[[karaokeListViewController alloc] initWithNibName:@"karaokeListViewController" bundle:nil];
+        [self.navigationController pushViewController:listKaraView animated:YES];
     }
     else if(indexPath.row == 4 && indexPath.section == 1){
     }
