@@ -134,6 +134,29 @@
 		34BC54CD1864B5BA00CFFE9B /* star-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54841864B5BA00CFFE9B /* star-yellow.png */; };
 		34BC54CE1864B5BA00CFFE9B /* top-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54851864B5BA00CFFE9B /* top-banner.png */; };
 		34BC54CF1864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54861864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png */; };
+		4B743431186B9B5200BE95BF /* FLSearchBarBorder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B74341F186B9B5200BE95BF /* FLSearchBarBorder@2x.png */; };
+		4B743432186B9B5200BE95BF /* GraySearchBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B743420186B9B5200BE95BF /* GraySearchBar.png */; };
+		4B743433186B9B5200BE95BF /* KTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B743422186B9B5200BE95BF /* KTSearchBar.m */; };
+		4B743434186B9B5200BE95BF /* MagnifyingGlass.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B743423186B9B5200BE95BF /* MagnifyingGlass.png */; };
+		4B743435186B9B5200BE95BF /* MagnifyingGlass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B743424186B9B5200BE95BF /* MagnifyingGlass@2x.png */; };
+		4B743436186B9B5200BE95BF /* MagnifyingGlassDark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B743425186B9B5200BE95BF /* MagnifyingGlassDark.png */; };
+		4B743437186B9B5200BE95BF /* MagnifyingGlassDark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B743426186B9B5200BE95BF /* MagnifyingGlassDark@2x.png */; };
+		4B743438186B9B5200BE95BF /* MyriadPro-It.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B743427186B9B5200BE95BF /* MyriadPro-It.otf */; };
+		4B743439186B9B5200BE95BF /* navSearchbarFieldBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B743428186B9B5200BE95BF /* navSearchbarFieldBackground@2x.png */; };
+		4B74343A186B9B5200BE95BF /* search-bg-all-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B743429186B9B5200BE95BF /* search-bg-all-dark.png */; };
+		4B74343B186B9B5200BE95BF /* search-bg-all-dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B74342A186B9B5200BE95BF /* search-bg-all-dark@2x.png */; };
+		4B74343C186B9B5200BE95BF /* search-bg-all.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B74342B186B9B5200BE95BF /* search-bg-all.png */; };
+		4B74343D186B9B5200BE95BF /* search-bg-all@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B74342C186B9B5200BE95BF /* search-bg-all@2x.png */; };
+		4B74343E186B9B5200BE95BF /* search1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B74342D186B9B5200BE95BF /* search1.png */; };
+		4B74343F186B9B5200BE95BF /* search2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B74342E186B9B5200BE95BF /* search2.png */; };
+		4B743440186B9B5200BE95BF /* searchBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B74342F186B9B5200BE95BF /* searchBar@2x.png */; };
+		4B743441186B9B5200BE95BF /* searchBarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B743430186B9B5200BE95BF /* searchBarBackground@2x.png */; };
+		4B74344B186B9E1900BE95BF /* SearchKara5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B743449186B9E1900BE95BF /* SearchKara5ViewController.m */; };
+		4B74344C186B9E1900BE95BF /* SearchKara5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B74344A186B9E1900BE95BF /* SearchKara5ViewController.xib */; };
+		4B743450186BA05600BE95BF /* PlayKaraClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B74344E186BA05600BE95BF /* PlayKaraClipViewController.m */; };
+		4B743451186BA05600BE95BF /* PlayKaraClipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B74344F186BA05600BE95BF /* PlayKaraClipViewController.xib */; };
+		4B74345B186BA3B400BE95BF /* FavouriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B743459186BA3B400BE95BF /* FavouriteViewController.m */; };
+		4B74345C186BA3B400BE95BF /* FavouriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B74345A186BA3B400BE95BF /* FavouriteViewController.xib */; };
 		4BE7D73D186872AA00F7438B /* karaokeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7D73B186872AA00F7438B /* karaokeListViewController.m */; };
 		4BE7D73E186872AA00F7438B /* karaokeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BE7D73C186872AA00F7438B /* karaokeListViewController.xib */; };
 		4BE7D7421868740100F7438B /* karaokeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7D7411868740100F7438B /* karaokeListCell.m */; };
@@ -304,6 +327,33 @@
 		34BC54841864B5BA00CFFE9B /* star-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-yellow.png"; sourceTree = "<group>"; };
 		34BC54851864B5BA00CFFE9B /* top-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-banner.png"; sourceTree = "<group>"; };
 		34BC54861864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tro-lai-bai-hat-dang-phat.png"; sourceTree = "<group>"; };
+		4B74341F186B9B5200BE95BF /* FLSearchBarBorder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FLSearchBarBorder@2x.png"; sourceTree = "<group>"; };
+		4B743420186B9B5200BE95BF /* GraySearchBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GraySearchBar.png; sourceTree = "<group>"; };
+		4B743421186B9B5200BE95BF /* KTSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSearchBar.h; sourceTree = "<group>"; };
+		4B743422186B9B5200BE95BF /* KTSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTSearchBar.m; sourceTree = "<group>"; };
+		4B743423186B9B5200BE95BF /* MagnifyingGlass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MagnifyingGlass.png; sourceTree = "<group>"; };
+		4B743424186B9B5200BE95BF /* MagnifyingGlass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MagnifyingGlass@2x.png"; sourceTree = "<group>"; };
+		4B743425186B9B5200BE95BF /* MagnifyingGlassDark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MagnifyingGlassDark.png; sourceTree = "<group>"; };
+		4B743426186B9B5200BE95BF /* MagnifyingGlassDark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MagnifyingGlassDark@2x.png"; sourceTree = "<group>"; };
+		4B743427186B9B5200BE95BF /* MyriadPro-It.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-It.otf"; sourceTree = "<group>"; };
+		4B743428186B9B5200BE95BF /* navSearchbarFieldBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navSearchbarFieldBackground@2x.png"; sourceTree = "<group>"; };
+		4B743429186B9B5200BE95BF /* search-bg-all-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-bg-all-dark.png"; sourceTree = "<group>"; };
+		4B74342A186B9B5200BE95BF /* search-bg-all-dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-bg-all-dark@2x.png"; sourceTree = "<group>"; };
+		4B74342B186B9B5200BE95BF /* search-bg-all.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-bg-all.png"; sourceTree = "<group>"; };
+		4B74342C186B9B5200BE95BF /* search-bg-all@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-bg-all@2x.png"; sourceTree = "<group>"; };
+		4B74342D186B9B5200BE95BF /* search1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search1.png; sourceTree = "<group>"; };
+		4B74342E186B9B5200BE95BF /* search2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search2.png; sourceTree = "<group>"; };
+		4B74342F186B9B5200BE95BF /* searchBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchBar@2x.png"; sourceTree = "<group>"; };
+		4B743430186B9B5200BE95BF /* searchBarBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchBarBackground@2x.png"; sourceTree = "<group>"; };
+		4B743448186B9E1900BE95BF /* SearchKara5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchKara5ViewController.h; sourceTree = "<group>"; };
+		4B743449186B9E1900BE95BF /* SearchKara5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchKara5ViewController.m; sourceTree = "<group>"; };
+		4B74344A186B9E1900BE95BF /* SearchKara5ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchKara5ViewController.xib; sourceTree = "<group>"; };
+		4B74344D186BA05600BE95BF /* PlayKaraClipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayKaraClipViewController.h; sourceTree = "<group>"; };
+		4B74344E186BA05600BE95BF /* PlayKaraClipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayKaraClipViewController.m; sourceTree = "<group>"; };
+		4B74344F186BA05600BE95BF /* PlayKaraClipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayKaraClipViewController.xib; sourceTree = "<group>"; };
+		4B743458186BA3B400BE95BF /* FavouriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouriteViewController.h; sourceTree = "<group>"; };
+		4B743459186BA3B400BE95BF /* FavouriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouriteViewController.m; sourceTree = "<group>"; };
+		4B74345A186BA3B400BE95BF /* FavouriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavouriteViewController.xib; sourceTree = "<group>"; };
 		4BE7D73A186872AA00F7438B /* karaokeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = karaokeListViewController.h; sourceTree = "<group>"; };
 		4BE7D73B186872AA00F7438B /* karaokeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = karaokeListViewController.m; sourceTree = "<group>"; };
 		4BE7D73C186872AA00F7438B /* karaokeListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = karaokeListViewController.xib; sourceTree = "<group>"; };
@@ -382,7 +432,9 @@
 				346A5F4B18648A530071D955 /* NavibarController */,
 				34061F0C186458B5009FD9B2 /* RootViewcontroller */,
 				4BEAEAAF1867B16D000E3CD1 /* Dangky- dang nhap- quen mk */,
-				4BE7D73F186873D300F7438B /* list kara */,
+				4BE7D73F186873D300F7438B /* list kara clip-tat ca-baimoi-bai hot */,
+				4B743452186BA09500BE95BF /* kara yeuthich */,
+				4B743442186B9DD800BE95BF /* search kara 5 */,
 			);
 			name = Viewcontrollers;
 			sourceTree = "<group>";
@@ -446,6 +498,7 @@
 		3442C7C018642F1300BD13F3 /* Karaoke */ = {
 			isa = PBXGroup;
 			children = (
+				4B74341E186B9B5200BE95BF /* custom searchbar */,
 				34BC53E21864A8E000CFFE9B /* SlidePanelController */,
 				34061F0B186458A0009FD9B2 /* Libs */,
 				34061F0A18645895009FD9B2 /* Viewcontrollers */,
@@ -758,7 +811,52 @@
 			path = "icon chung";
 			sourceTree = "<group>";
 		};
-		4BE7D73F186873D300F7438B /* list kara */ = {
+		4B74341E186B9B5200BE95BF /* custom searchbar */ = {
+			isa = PBXGroup;
+			children = (
+				4B74341F186B9B5200BE95BF /* FLSearchBarBorder@2x.png */,
+				4B743420186B9B5200BE95BF /* GraySearchBar.png */,
+				4B743421186B9B5200BE95BF /* KTSearchBar.h */,
+				4B743422186B9B5200BE95BF /* KTSearchBar.m */,
+				4B743423186B9B5200BE95BF /* MagnifyingGlass.png */,
+				4B743424186B9B5200BE95BF /* MagnifyingGlass@2x.png */,
+				4B743425186B9B5200BE95BF /* MagnifyingGlassDark.png */,
+				4B743426186B9B5200BE95BF /* MagnifyingGlassDark@2x.png */,
+				4B743427186B9B5200BE95BF /* MyriadPro-It.otf */,
+				4B743428186B9B5200BE95BF /* navSearchbarFieldBackground@2x.png */,
+				4B743429186B9B5200BE95BF /* search-bg-all-dark.png */,
+				4B74342A186B9B5200BE95BF /* search-bg-all-dark@2x.png */,
+				4B74342B186B9B5200BE95BF /* search-bg-all.png */,
+				4B74342C186B9B5200BE95BF /* search-bg-all@2x.png */,
+				4B74342D186B9B5200BE95BF /* search1.png */,
+				4B74342E186B9B5200BE95BF /* search2.png */,
+				4B74342F186B9B5200BE95BF /* searchBar@2x.png */,
+				4B743430186B9B5200BE95BF /* searchBarBackground@2x.png */,
+			);
+			path = "custom searchbar";
+			sourceTree = "<group>";
+		};
+		4B743442186B9DD800BE95BF /* search kara 5 */ = {
+			isa = PBXGroup;
+			children = (
+				4B743448186B9E1900BE95BF /* SearchKara5ViewController.h */,
+				4B743449186B9E1900BE95BF /* SearchKara5ViewController.m */,
+				4B74344A186B9E1900BE95BF /* SearchKara5ViewController.xib */,
+			);
+			name = "search kara 5";
+			sourceTree = "<group>";
+		};
+		4B743452186BA09500BE95BF /* kara yeuthich */ = {
+			isa = PBXGroup;
+			children = (
+				4B743458186BA3B400BE95BF /* FavouriteViewController.h */,
+				4B743459186BA3B400BE95BF /* FavouriteViewController.m */,
+				4B74345A186BA3B400BE95BF /* FavouriteViewController.xib */,
+			);
+			name = "kara yeuthich";
+			sourceTree = "<group>";
+		};
+		4BE7D73F186873D300F7438B /* list kara clip-tat ca-baimoi-bai hot */ = {
 			isa = PBXGroup;
 			children = (
 				4BE7D73A186872AA00F7438B /* karaokeListViewController.h */,
@@ -767,8 +865,11 @@
 				4BE7D7401868740100F7438B /* karaokeListCell.h */,
 				4BE7D7411868740100F7438B /* karaokeListCell.m */,
 				4BE7D7431868741F00F7438B /* karaokeListCell.xib */,
+				4B74344D186BA05600BE95BF /* PlayKaraClipViewController.h */,
+				4B74344E186BA05600BE95BF /* PlayKaraClipViewController.m */,
+				4B74344F186BA05600BE95BF /* PlayKaraClipViewController.xib */,
 			);
-			name = "list kara";
+			name = "list kara clip-tat ca-baimoi-bai hot";
 			sourceTree = "<group>";
 		};
 		4BEAEAAF1867B16D000E3CD1 /* Dangky- dang nhap- quen mk */ = {
@@ -883,11 +984,14 @@
 				34BC54161864B46F00CFFE9B /* ca-khuc-da-ghi-am.png in Resources */,
 				3442C7CF18642F1300BD13F3 /* Default@2x.png in Resources */,
 				34BC54AE1864B5BA00CFFE9B /* hot-nhat-select.png in Resources */,
+				4B743437186B9B5200BE95BF /* MagnifyingGlassDark@2x.png in Resources */,
 				34BC54A21864B5BA00CFFE9B /* share-email.png in Resources */,
 				34BC54BB1864B5BA00CFFE9B /* bottom-ca-si.png in Resources */,
 				34BC54BC1864B5BA00CFFE9B /* bottom-the-loai.png in Resources */,
 				34BC54CD1864B5BA00CFFE9B /* star-yellow.png in Resources */,
 				34BC54951864B5BA00CFFE9B /* 3-tat-ca-select.png in Resources */,
+				4B743439186B9B5200BE95BF /* navSearchbarFieldBackground@2x.png in Resources */,
+				4B74343E186B9B5200BE95BF /* search1.png in Resources */,
 				51ADC8011869E73700CDB62B /* KindOfMusicViewController.xib in Resources */,
 				34BC542B1864B46F00CFFE9B /* tai-khoan.png in Resources */,
 				3442C7D118642F1300BD13F3 /* Default-568h@2x.png in Resources */,
@@ -910,8 +1014,10 @@
 				347E9DF918680DD500E7A342 /* MenuCell.xib in Resources */,
 				34BC54B61864B5BA00CFFE9B /* bg-anh-thu-am.png in Resources */,
 				34BC549E1864B5BA00CFFE9B /* thu-am2.png in Resources */,
+				4B743438186B9B5200BE95BF /* MyriadPro-It.otf in Resources */,
 				34BC541A1864B46F00CFFE9B /* camera360.png in Resources */,
 				34BC549B1864B5BA00CFFE9B /* btn-trai-tim.png in Resources */,
+				4B74344C186B9E1900BE95BF /* SearchKara5ViewController.xib in Resources */,
 				51A68886186714AF000BEBD3 /* imageRecordDemo.png in Resources */,
 				34BC549A1864B5BA00CFFE9B /* bg-banner-player.png in Resources */,
 				34BC54BE1864B5BA00CFFE9B /* bottom-yeu-thich.png in Resources */,
@@ -923,9 +1029,11 @@
 				51A688821866E7AE000BEBD3 /* imageBgKaraokeClipsView.png in Resources */,
 				51178265186885E700F73C17 /* Cell.xib in Resources */,
 				34BC548F1864B5BA00CFFE9B /* goi-thang.png in Resources */,
+				4B743440186B9B5200BE95BF /* searchBar@2x.png in Resources */,
 				34BC54911864B5BA00CFFE9B /* 1-bai-moi-select.png in Resources */,
 				34BC541B1864B46F00CFFE9B /* clip-gay-bao.png in Resources */,
 				34BC54B91864B5BA00CFFE9B /* bottom-bai-hat.png in Resources */,
+				4B743451186BA05600BE95BF /* PlayKaraClipViewController.xib in Resources */,
 				34BC54C21864B5BA00CFFE9B /* logo-ca-si.png in Resources */,
 				34BC549C1864B5BA00CFFE9B /* phong-to-btn.png in Resources */,
 				34BC541C1864B46F00CFFE9B /* dich-vu.png in Resources */,
@@ -934,6 +1042,7 @@
 				34BC54181864B46F00CFFE9B /* ca-si.png in Resources */,
 				34BC54B31864B5BA00CFFE9B /* noi-bat.png in Resources */,
 				34BC54871864B5BA00CFFE9B /* btn-dangky.png in Resources */,
+				4B74343F186B9B5200BE95BF /* search2.png in Resources */,
 				51C824AF1868895600A65A2B /* imageBaseIntroduction.png in Resources */,
 				51A52B51186AC31B00A7990A /* search2.png in Resources */,
 				34BC54B51864B5BA00CFFE9B /* bg-anh-album.png in Resources */,
@@ -945,6 +1054,8 @@
 				51A6887E1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png in Resources */,
 				34BC542A1864B46F00CFFE9B /* su-kien-noi-bat.png in Resources */,
 				34BC53EE1864A9C100CFFE9B /* MenuSlideControllerViewController.xib in Resources */,
+				4B743431186B9B5200BE95BF /* FLSearchBarBorder@2x.png in Resources */,
+				4B743432186B9B5200BE95BF /* GraySearchBar.png in Resources */,
 				34BC54311864B46F00CFFE9B /* wap-kara.png in Resources */,
 				34BC54221864B46F00CFFE9B /* karaoke-moi-nhat.png in Resources */,
 				34BC54931864B5BA00CFFE9B /* 2-bai-hits-select.png in Resources */,
@@ -973,18 +1084,24 @@
 				34BC54281864B46F00CFFE9B /* secsion-them.png in Resources */,
 				34BC54901864B5BA00CFFE9B /* goi-tuan.png in Resources */,
 				34BC54CF1864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png in Resources */,
+				4B74345C186BA3B400BE95BF /* FavouriteViewController.xib in Resources */,
+				4B743441186B9B5200BE95BF /* searchBarBackground@2x.png in Resources */,
 				34061F11186458CC009FD9B2 /* RootViewController.xib in Resources */,
 				34BC54941864B5BA00CFFE9B /* 2-bai-hits.png in Resources */,
 				34BC54A11864B5BA00CFFE9B /* phat-lai-btn.png in Resources */,
 				34BC53F71864AD8A00CFFE9B /* HomeViewController.xib in Resources */,
+				4B743435186B9B5200BE95BF /* MagnifyingGlass@2x.png in Resources */,
 				51A688791866D886000BEBD3 /* BaseNameSingers.png in Resources */,
+				4B74343D186B9B5200BE95BF /* search-bg-all@2x.png in Resources */,
 				34BC542C1864B46F00CFFE9B /* the-loai.png in Resources */,
 				34BC54C71864B5BA00CFFE9B /* btn-close-search.png in Resources */,
 				34BC54BA1864B5BA00CFFE9B /* bottom-bg.png in Resources */,
 				34BC54CC1864B5BA00CFFE9B /* star-blue.png in Resources */,
 				34BC54C91864B5BA00CFFE9B /* menu.png in Resources */,
+				4B74343B186B9B5200BE95BF /* search-bg-all-dark@2x.png in Resources */,
 				51A6887A1866D886000BEBD3 /* imageSingerDemo.png in Resources */,
 				34BC54C61864B5BA00CFFE9B /* back-btn.png in Resources */,
+				4B743436186B9B5200BE95BF /* MagnifyingGlassDark.png in Resources */,
 				34BC54C41864B5BA00CFFE9B /* logo-trai-tim.png in Resources */,
 				51580E4F1869F42B00C837F9 /* CellOfKind.xib in Resources */,
 				34BC548B1864B5BA00CFFE9B /* btn-dang-nhap-tro-lai.png in Resources */,
@@ -999,7 +1116,10 @@
 				34BC54261864B46F00CFFE9B /* secsion-danh-muc.png in Resources */,
 				34BC542E1864B46F00CFFE9B /* thu-am-binh-chon-nhieu-nhat.png in Resources */,
 				34BC54A41864B5BA00CFFE9B /* share-mkara.png in Resources */,
+				4B74343C186B9B5200BE95BF /* search-bg-all.png in Resources */,
 				34BC54A01864B5BA00CFFE9B /* huy-btn.png in Resources */,
+				4B74343A186B9B5200BE95BF /* search-bg-all-dark.png in Resources */,
+				4B743434186B9B5200BE95BF /* MagnifyingGlass.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1012,17 +1132,21 @@
 			files = (
 				3442C7C718642F1300BD13F3 /* main.m in Sources */,
 				51178264186885E700F73C17 /* Cell.m in Sources */,
+				4B743433186B9B5200BE95BF /* KTSearchBar.m in Sources */,
 				34BC53E81864A8F500CFFE9B /* UIViewController+JASidePanel.m in Sources */,
 				3442C7CB18642F1300BD13F3 /* AppDelegate.m in Sources */,
 				34BC53F61864AD8A00CFFE9B /* HomeViewController.m in Sources */,
 				34BC53E118648D6A00CFFE9B /* NavibarView.m in Sources */,
+				4B74345B186BA3B400BE95BF /* FavouriteViewController.m in Sources */,
 				51ADC8001869E73700CDB62B /* KindOfMusicViewController.m in Sources */,
 				34061F10186458CC009FD9B2 /* RootViewController.m in Sources */,
+				4B74344B186B9E1900BE95BF /* SearchKara5ViewController.m in Sources */,
 				346A5F4A186487620071D955 /* Lib.m in Sources */,
 				4BEAEAB81867B6E5000E3CD1 /* dangnhapViewController.m in Sources */,
 				347E9DF818680DD500E7A342 /* MenuCell.m in Sources */,
 				34BC53E71864A8F500CFFE9B /* JASidePanelController.m in Sources */,
 				51580E5A186A00C800C837F9 /* ListSongsOfKindViewController.m in Sources */,
+				4B743450186BA05600BE95BF /* PlayKaraClipViewController.m in Sources */,
 				346A5F4E18648A770071D955 /* NavibarViewController.m in Sources */,
 				4BEAEAB31867B226000E3CD1 /* dangkyViewController.m in Sources */,
 				51580E4D1869F40900C837F9 /* CellOfKind.m in Sources */,
