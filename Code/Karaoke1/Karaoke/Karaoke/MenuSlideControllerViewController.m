@@ -130,8 +130,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
     //Section 01 account
     if(indexPath.row == 0 && indexPath.section == 0){
         NSLog(@"Dang nhap");
