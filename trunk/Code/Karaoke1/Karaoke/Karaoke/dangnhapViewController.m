@@ -7,6 +7,7 @@
 //
 
 #import "dangnhapViewController.h"
+#import "dangkyViewController.h"
 
 @interface dangnhapViewController ()
 
@@ -51,6 +52,7 @@
 }
 
 - (IBAction)dangky:(id)sender {
-    
+    dangkyViewController *dk=[[dangkyViewController alloc] init];
+    [self.navigationController pushViewController:dk animated:YES];
 }
 @end

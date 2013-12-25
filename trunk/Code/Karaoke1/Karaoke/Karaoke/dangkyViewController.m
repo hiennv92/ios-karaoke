@@ -27,8 +27,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"menu.png" leftButtonPress:Nil rightButton:@"setting.png" rightButtonPress:Nil];
-    [self addImageTitle:@"logo-banner.png"];
+    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"back-btn.png" leftButtonPress:Nil rightButton:nil rightButtonPress:Nil];
+  
+    [self addTitleNavibar:@"Đăng ký" andSize:22];
     
     [self setBottomBarViewHidden:NO];
     //    [self.view setBackgroundColor:[UIColor lightGrayColor]];    
@@ -40,6 +41,7 @@
 - (IBAction)dangnhaptrolai:(id)sender {
 }
 
-- (IBAction)back:(id)sender {
+-(void)leftButtonBarPress:(id)button{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end
