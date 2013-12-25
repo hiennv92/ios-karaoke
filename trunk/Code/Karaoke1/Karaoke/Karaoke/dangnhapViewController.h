@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "NavibarViewController.h"
 
-@interface dangnhapViewController : NavibarViewController{
+@interface dangnhapViewController : NavibarViewController<UITextFieldDelegate>{
     
 }
-@property (weak, nonatomic) IBOutlet UITextField *sdt;
-@property (weak, nonatomic) IBOutlet UITextField *matkhau;
+@property (strong, nonatomic) IBOutlet UILabel *_labelNumberPhone;
+@property (strong, nonatomic) IBOutlet UILabel *_labelPass;
+
+@property (strong, nonatomic) IBOutlet UITextField *_fieldSDT;
+@property (strong, nonatomic) IBOutlet UITextField *_fieldPassword;
+
 - (IBAction)luuMk:(id)sender;
 - (IBAction)quenMk:(id)sender;
 - (IBAction)dangNhap:(id)sender;

@@ -8,6 +8,7 @@
 
 #import "dangnhapViewController.h"
 #import "dangkyViewController.h"
+#import "ForgetPasswordViewController.h"
 
 @interface dangnhapViewController ()
 
@@ -31,11 +32,37 @@
     [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"back-btn.png" leftButtonPress:Nil rightButton:Nil rightButtonPress:Nil];
     [self addTitleNavibar:@"Đăng nhập" andSize:22];
     [self setBottomBarViewHidden:YES];
+    
+    [self._fieldSDT setTag:0];
+    [self._fieldPassword setTag:1];
+    [self._fieldPassword setSecureTextEntry:YES];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
+
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    if(textField.tag == 0){
+        self._labelNumberPhone.hidden = YES;
+    }
+    else if(textField.tag == 1){
+        self._labelPass.hidden = YES;
+    }
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    if(textField.tag == 0){
+        if([textField.text isEqualToString:@""])
+            self._labelNumberPhone.hidden = NO;
+    }
+    else if(textField.tag == 1){
+        if([textField.text isEqualToString:@""])
+            self._labelPass.hidden = NO;
+    }
+}
+
 
 //Back to menu
 -(void)leftButtonBarPress:(id)button{
@@ -46,6 +73,8 @@
 }
 
 - (IBAction)quenMk:(id)sender {
+    ForgetPasswordViewController *forgetPasswordView = [[ForgetPasswordViewController alloc] initWithNibName:@"ForgetPasswordViewController" bundle:nil];
+    [self.navigationController pushViewController:forgetPasswordView animated:YES];
 }
 
 - (IBAction)dangNhap:(id)sender {

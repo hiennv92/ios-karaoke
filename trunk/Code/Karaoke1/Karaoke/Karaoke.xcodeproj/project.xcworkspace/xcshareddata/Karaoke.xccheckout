@@ -16,7 +16,7 @@
 		<string>http://10.0.0.6:9880/ios/Projects/dovui/custom%20searchbar</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Code/Karaoke1/Karaoke/Karaoke.xcodeproj/project.xcworkspace</string>
+	<string>trunk/Code/Karaoke1/Karaoke/Karaoke.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0D719808-AE07-4A7C-A038-47EEB48CF0A0</key>
