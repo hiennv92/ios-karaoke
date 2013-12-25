@@ -99,32 +99,12 @@
 }
 
 -(void)rightButtonBarPress:(id)button{
-    [self setSearchBarViewHidden:NO];
-    [UIView animateWithDuration:0.5 animations:^{
-        CGRect frame = self.navibarView.frame;
-        frame.origin.x = -320;
-        [self.navibarView setFrame: frame];
-        frame = self.searchBarView.frame;
-        frame.origin.x = 0;
-        [self.searchBarView setFrame:frame];
-    } completion:^(BOOL finished) {
-        self.navibarView.hidden = YES;
-    }];
+    [self showSearchBar:NO];
 }
 
 //Close search bar
 -(void)closeSearchBarPress:(id)button{
-    self.navibarView.hidden = NO;
-    [UIView animateWithDuration:0.5 animations:^{
-        CGRect frame = self.navibarView.frame;
-        frame.origin.x = 0;
-        [self.navibarView setFrame: frame];
-        frame = self.searchBarView.frame;
-        frame.origin.x = 320;
-        [self.searchBarView setFrame:frame];
-    } completion:^(BOOL finished) {
-        [self setSearchBarViewHidden:YES];
-    }];
+    [self showSearchBar:YES];
 }
 
 @end

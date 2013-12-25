@@ -89,6 +89,36 @@
     [self.navibarView.titleLabel setFont:[UIFont boldSystemFontOfSize:size]];
 }
 
+//Show search bar
+-(void)showSearchBar:(BOOL)hidden{
+    if(hidden){
+        self.navibarView.hidden = !hidden;
+        [UIView animateWithDuration:0.5 animations:^{
+            CGRect frame = self.navibarView.frame;
+            frame.origin.x = 0;
+            [self.navibarView setFrame: frame];
+            frame = self.searchBarView.frame;
+            frame.origin.x = 320;
+            [self.searchBarView setFrame:frame];
+        } completion:^(BOOL finished) {
+            [self setSearchBarViewHidden:hidden];
+        }];
+    }
+    else{
+        [self setSearchBarViewHidden:hidden];
+        [UIView animateWithDuration:0.5 animations:^{
+            CGRect frame = self.navibarView.frame;
+            frame.origin.x = -320;
+            [self.navibarView setFrame: frame];
+            frame = self.searchBarView.frame;
+            frame.origin.x = 0;
+            [self.searchBarView setFrame:frame];
+        } completion:^(BOOL finished) {
+            self.navibarView.hidden = !hidden;
+        }];
+    }
+   
+}
 
 - (void)leftButtonBarPress:(id)button
 {

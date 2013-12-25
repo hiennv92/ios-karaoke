@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "NavibarViewController.h"
+#define TIME_CHANGE_SMALL_VIEW 1.5
 @interface HomeViewController : NavibarViewController{
-    
+    NSString *_stringImageBigBanner;
+    NSTimer* _timerChangeIntroSmallView, *_timerChangeIntroBigView;
+    BOOL _changeBigView;
+    int _changeSmallView;
 }
 @property (strong, nonatomic) IBOutlet UIView *__bannerView;
 @property (strong, nonatomic) IBOutlet UIView *__introductionVIew;
@@ -25,4 +29,14 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *__scrollViewKaraokeClips;
 @property (strong, nonatomic) IBOutlet UIScrollView *__scrollViewTopRecords;
 
+
+@property (strong, nonatomic) IBOutlet UIView *_bigViewIntroduction1;
+@property (strong, nonatomic) IBOutlet UIView *_bigViewIntroduction2;
+
+@property (strong, nonatomic) IBOutlet UIImageView *_imageBigBanner1;
+@property (strong, nonatomic) IBOutlet UIImageView *_imageBigBanner2;
+@property (strong, nonatomic) IBOutlet UIImageView *_imageSmallBanner1;
+@property (strong, nonatomic) IBOutlet UIImageView *_imageSmallBanner2;
+@property (strong, nonatomic) IBOutlet UIImageView *_imageSmallBanner3;
+@property (strong, nonatomic) IBOutlet UIImageView *_imageSmallBanner4;
 @end

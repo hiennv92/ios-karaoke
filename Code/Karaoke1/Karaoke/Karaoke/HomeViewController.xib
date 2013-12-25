@@ -18,6 +18,14 @@
                 <outlet property="__singersView" destination="kLV-CU-9LE" id="jG3-Mv-Y6p"/>
                 <outlet property="__songsView" destination="khc-aW-8ec" id="UOv-xd-gVz"/>
                 <outlet property="__tableSongView" destination="K9W-2O-YVV" id="fAN-IJ-372"/>
+                <outlet property="_bigViewIntroduction1" destination="VIE-pA-HFB" id="DCO-Fy-hcb"/>
+                <outlet property="_bigViewIntroduction2" destination="Naf-VB-upp" id="kGF-pB-us9"/>
+                <outlet property="_imageBigBanner1" destination="4oW-5o-560" id="O3S-52-dSr"/>
+                <outlet property="_imageBigBanner2" destination="Gg6-CN-3sg" id="iRE-lD-1of"/>
+                <outlet property="_imageSmallBanner1" destination="6Tx-Rc-nq9" id="2oN-rj-OXd"/>
+                <outlet property="_imageSmallBanner2" destination="c65-uV-6oD" id="PG4-77-3hs"/>
+                <outlet property="_imageSmallBanner3" destination="gbt-ej-Lmy" id="0on-QR-qL7"/>
+                <outlet property="_imageSmallBanner4" destination="B49-Er-yOK" id="2yr-6z-rvn"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -46,22 +54,77 @@
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <view contentMode="scaleToFill" id="WC1-px-a4A" userLabel=" View introduction">
+                <view contentMode="scaleToFill" id="WC1-px-a4A" userLabel="View introduction">
                     <rect key="frame" x="0.0" y="44" width="320" height="180"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageDemoIntroduction.png" id="4oW-5o-560">
-                            <rect key="frame" x="0.0" y="0.0" width="216" height="180"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageRecordDemo.png" id="6Tx-Rc-nq9">
-                            <rect key="frame" x="214" y="1" width="106" height="90"/>
+                        <view contentMode="scaleToFill" id="Naf-VB-upp" userLabel="View bigIntroduction 2 ">
+                            <rect key="frame" x="0.0" y="0.0" width="220" height="180"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageKaraokeClipDemo.png" id="c65-uV-6oD">
-                            <rect key="frame" x="214" y="90" width="106" height="90"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageRecordDemo.png" id="Gg6-CN-3sg" userLabel="Image bigView 2">
+                                    <rect key="frame" x="0.0" y="0.0" width="220" height="180"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBaseIntroduction.png" id="0CT-4f-vLN">
+                                    <rect key="frame" x="69" y="154" width="151" height="26"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Một lần và mãi mãi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IDQ-vc-pbN">
+                                    <rect key="frame" x="69" y="156" width="151" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" id="VIE-pA-HFB" userLabel="View bigIntroduction 1">
+                            <rect key="frame" x="0.0" y="0.0" width="220" height="180"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageDemoIntroduction.png" id="4oW-5o-560" userLabel="Image bigView 1">
+                                    <rect key="frame" x="0.0" y="0.0" width="220" height="180"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBaseIntroduction.png" id="2uW-vI-lw9">
+                                    <rect key="frame" x="69" y="154" width="151" height="26"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Một lần và mãi mãi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7qG-rS-lUV">
+                                    <rect key="frame" x="69" y="156" width="151" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </view>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="qB3-ai-Lnh">
+                            <rect key="frame" x="220" y="0.0" width="100" height="180"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageRecordDemo.png" id="6Tx-Rc-nq9" userLabel="image smallView1">
+                                    <rect key="frame" x="0.0" y="90" width="100" height="90"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageKaraokeClipDemo.png" id="c65-uV-6oD" userLabel="image smallView2">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="90"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageKaraokeClipDemo.png" id="gbt-ej-Lmy" userLabel="image smallView3">
+                                    <rect key="frame" x="0.0" y="200" width="100" height="90"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageDemoIntroduction.png" id="B49-Er-yOK" userLabel="image smallView4">
+                                    <rect key="frame" x="0.0" y="290" width="100" height="90"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </subviews>
+                            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                        </scrollView>
                     </subviews>
                     <color key="backgroundColor" red="0.027450982481241226" green="0.83529418706893921" blue="0.95686280727386475" alpha="1" colorSpace="deviceRGB"/>
                 </view>
@@ -661,6 +724,7 @@
         <image name="BaseNameSingers.png" width="284" height="49"/>
         <image name="bg-anh-album.png" width="348" height="342"/>
         <image name="bg-anh-thu-am.png" width="340" height="248"/>
+        <image name="imageBaseIntroduction.png" width="424" height="68"/>
         <image name="imageBaseNameKaraokeClips.png" width="333" height="55"/>
         <image name="imageBaseNameRecord.png" width="325" height="42"/>
         <image name="imageBgKaraokeClipsView.png" width="1089" height="386"/>
