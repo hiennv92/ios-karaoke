@@ -104,6 +104,7 @@
 
 -(void)leftButtonBarPress:(id)button{
     [self.navigationController popToRootViewControllerAnimated:YES];
+    [((AppDelegate*)[[UIApplication sharedApplication]delegate]).viewController showCenterPanelAnimated:NO];
 }
 
 @end

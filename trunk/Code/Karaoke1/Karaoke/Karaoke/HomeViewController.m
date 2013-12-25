@@ -52,6 +52,39 @@
     //Ads view
     [self.__bannerView setBackgroundColor:[UIColor clearColor]];
     
+    /*Introdution view*/
+    _timerChangeIntroBigView = [NSTimer scheduledTimerWithTimeInterval: 8.0f target: self
+                                                      selector: @selector(runViewIntroduction:) userInfo: nil repeats: YES];
+//    _timerChangeIntroSmallView = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(runViewIntroductionSmall:) userInfo:nil repeats:YES];
+    
+    //Set bigView
+    CGRect frame = self._bigViewIntroduction2.frame;
+    frame.origin.x = 220;
+    [self._bigViewIntroduction2 setFrame:frame];
+
+    self._imageBigBanner1.image = self._imageSmallBanner3.image;
+    self._imageBigBanner2.image = self._imageSmallBanner4.image;
+
+    _changeBigView = YES;
+    _changeSmallView = 0;
+    
+    [self performSelector:@selector(runViewIntroduction:) withObject:_timerChangeIntroBigView afterDelay:3.0f];
+//    [self performSelector:@selector(runViewIntroductionSmall:) withObject:_timerChangeIntroSmallView afterDelay:3.0f];
+
+    //Set smallView
+    frame = self._imageSmallBanner1.frame;
+    frame.origin.y = -180;
+    self._imageSmallBanner1.frame = frame;
+    frame = self._imageSmallBanner2.frame;
+    frame.origin.y = -90;
+    self._imageSmallBanner2.frame = frame;
+    frame = self._imageSmallBanner3.frame;
+    frame.origin.y = 0;
+    self._imageSmallBanner3.frame = frame;
+    frame = self._imageSmallBanner4.frame;
+    frame.origin.y = 90;
+    self._imageSmallBanner4.frame = frame;
+    
     //Karaoke clips view
     [self.__scrollViewKaraokeClips setFrame:CGRectMake(0, 30, 320, 120)];
     [self.__scrollViewKaraokeClips setContentSize:CGSizeMake(640, 120)];
@@ -75,6 +108,140 @@
     [self.__recordsView setBackgroundColor:[UIColor clearColor]];
     
 }
+
+//Move views in Introduction view
+- (void) runViewIntroduction:(NSTimer*) t{
+//    NSLog(@"Change big view");
+    if(_changeBigView){
+        [UIView animateWithDuration:2.5f animations:^{
+            CGRect frame = self._bigViewIntroduction1.frame;
+            frame.origin.x = -220;
+            [self._bigViewIntroduction1 setFrame: frame];
+            frame = self._bigViewIntroduction2.frame;
+            frame.origin.x = 0;
+            [self._bigViewIntroduction2 setFrame:frame];
+        } completion:^(BOOL finished) {
+            CGRect frame = self._bigViewIntroduction1.frame;
+            frame.origin.x = 220;
+            [self._bigViewIntroduction1 setFrame:frame];
+            self._imageBigBanner1.image = [self setImageForBigViewIntro];
+            _changeBigView = NO;
+            [self runViewIntroductionSmall];
+        }];
+    }
+    else{
+        [UIView animateWithDuration:2.5f animations:^{
+            CGRect frame = self._bigViewIntroduction2.frame;
+            frame.origin.x = -220;
+            [self._bigViewIntroduction2 setFrame: frame];
+            frame = self._bigViewIntroduction1.frame;
+            frame.origin.x = 0;
+            [self._bigViewIntroduction1 setFrame:frame];
+        } completion:^(BOOL finished) {
+            CGRect frame = self._bigViewIntroduction2.frame;
+            frame.origin.x = 220;
+            [self._bigViewIntroduction2 setFrame:frame];
+            self._imageBigBanner2.image = [self setImageForBigViewIntro];
+            _changeBigView = YES;
+            [self runViewIntroductionSmall];
+        }];
+    }
+}
+
+-(void) runViewIntroductionSmall{
+//    NSLog(@"Change view small");
+    if(_changeSmallView == 0){
+        [UIView animateWithDuration:TIME_CHANGE_SMALL_VIEW animations:^{
+            CGRect frame = self._imageSmallBanner1.frame;
+            frame.origin.y = -90;
+            [self._imageSmallBanner1 setFrame: frame];
+            frame = self._imageSmallBanner2.frame;
+            frame.origin.y = 0;
+            [self._imageSmallBanner2 setFrame:frame];
+            frame = self._imageSmallBanner3.frame;
+            frame.origin.y = 90;
+            [self._imageSmallBanner3 setFrame:frame];
+            frame = self._imageSmallBanner4.frame;
+            frame.origin.y = 180;
+            [self._imageSmallBanner4 setFrame:frame];
+        } completion:^(BOOL finished) {
+            _changeSmallView = 1;
+        }];
+    }
+    else if(_changeSmallView == 1) {
+        [UIView animateWithDuration:TIME_CHANGE_SMALL_VIEW animations:^{
+            CGRect frame = self._imageSmallBanner1.frame;
+            frame.origin.y = 0;
+            [self._imageSmallBanner1 setFrame: frame];
+            frame = self._imageSmallBanner2.frame;
+            frame.origin.y = 90;
+            [self._imageSmallBanner2 setFrame:frame];
+            frame = self._imageSmallBanner3.frame;
+            frame.origin.y = 180;
+            [self._imageSmallBanner3 setFrame:frame];
+            frame = self._imageSmallBanner4.frame;
+            frame.origin.y = 270;
+            [self._imageSmallBanner4 setFrame:frame];
+        } completion:^(BOOL finished) {
+            _changeSmallView = 2;
+        }];
+    }
+    else if(_changeSmallView == 2) {
+        [UIView animateWithDuration:TIME_CHANGE_SMALL_VIEW animations:^{
+            CGRect frame = self._imageSmallBanner1.frame;
+            frame.origin.y = -90;
+            [self._imageSmallBanner1 setFrame: frame];
+            frame = self._imageSmallBanner2.frame;
+            frame.origin.y = 0;
+            [self._imageSmallBanner2 setFrame:frame];
+            frame = self._imageSmallBanner3.frame;
+            frame.origin.y = 90;
+            [self._imageSmallBanner3 setFrame:frame];
+            frame = self._imageSmallBanner4.frame;
+            frame.origin.y = 180;
+            [self._imageSmallBanner4 setFrame:frame];
+        } completion:^(BOOL finished) {
+            _changeSmallView = 3;
+        }];
+    }
+    else if(_changeSmallView == 3) {
+        [UIView animateWithDuration:TIME_CHANGE_SMALL_VIEW animations:^{
+            CGRect frame = self._imageSmallBanner1.frame;
+            frame.origin.y = -180;
+            [self._imageSmallBanner1 setFrame: frame];
+            frame = self._imageSmallBanner2.frame;
+            frame.origin.y = -90;
+            [self._imageSmallBanner2 setFrame:frame];
+            frame = self._imageSmallBanner3.frame;
+            frame.origin.y = 0;
+            [self._imageSmallBanner3 setFrame:frame];
+            frame = self._imageSmallBanner4.frame;
+            frame.origin.y = 90;
+            [self._imageSmallBanner4 setFrame:frame];
+        } completion:^(BOOL finished) {
+            _changeSmallView = 0;
+        }];
+    }
+}
+
+-(UIImage *) setImageForBigViewIntro{
+    UIImage *imageView;
+    if(_changeSmallView == 0){
+        imageView = self._imageSmallBanner2.image;
+    }
+    else if(_changeSmallView == 1){
+        imageView = self._imageSmallBanner1.image;
+    }
+    else if(_changeSmallView == 2){
+        imageView = self._imageSmallBanner3.image;
+    }
+    else if(_changeSmallView == 3){
+        imageView = self._imageSmallBanner4.image;
+    }
+    return imageView;
+}
+
+////////////////////////////
 
 - (void)didReceiveMemoryWarning
 {
@@ -134,6 +301,7 @@
 }
 
 - (void)kindMusicButtonPress:(id)button{
+//    [_timerChangeIntroView invalidate];
     KindOfMusicViewController *kindMusic = [[KindOfMusicViewController alloc] initWithNibName:@"KindOfMusicViewController" bundle:Nil];
     [self.navigationController pushViewController:kindMusic animated:YES];
 }

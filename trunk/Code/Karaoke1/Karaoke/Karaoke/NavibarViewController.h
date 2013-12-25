@@ -22,7 +22,7 @@
 - (void)setSearchBarViewHidden:(BOOL)hidden;
 - (void)addImageTitle:(NSString*)imageTitleName;
 -(void)addTitleNavibar:(NSString*)stringTitle andSize:(int)size;
-
+-(void)showSearchBar:(BOOL)hidden;
 // action
 - (void)leftButtonBarPress:(id)button;
 - (void)rightButtonBarPress:(id)button;

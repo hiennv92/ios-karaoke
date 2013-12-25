@@ -148,6 +148,8 @@
 		51580E4F1869F42B00C837F9 /* CellOfKind.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51580E4E1869F42B00C837F9 /* CellOfKind.xib */; };
 		51580E5A186A00C800C837F9 /* ListSongsOfKindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51580E58186A00C800C837F9 /* ListSongsOfKindViewController.m */; };
 		51580E5B186A00C800C837F9 /* ListSongsOfKindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51580E59186A00C800C837F9 /* ListSongsOfKindViewController.xib */; };
+		51A52B50186AC31B00A7990A /* search1.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A52B4E186AC31B00A7990A /* search1.png */; };
+		51A52B51186AC31B00A7990A /* search2.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A52B4F186AC31B00A7990A /* search2.png */; };
 		51A688791866D886000BEBD3 /* BaseNameSingers.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A688771866D886000BEBD3 /* BaseNameSingers.png */; };
 		51A6887A1866D886000BEBD3 /* imageSingerDemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A688781866D886000BEBD3 /* imageSingerDemo.png */; };
 		51A6887E1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A6887B1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png */; };
@@ -323,6 +325,8 @@
 		51580E57186A00C800C837F9 /* ListSongsOfKindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListSongsOfKindViewController.h; sourceTree = "<group>"; };
 		51580E58186A00C800C837F9 /* ListSongsOfKindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListSongsOfKindViewController.m; sourceTree = "<group>"; };
 		51580E59186A00C800C837F9 /* ListSongsOfKindViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListSongsOfKindViewController.xib; sourceTree = "<group>"; };
+		51A52B4E186AC31B00A7990A /* search1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search1.png; sourceTree = "<group>"; };
+		51A52B4F186AC31B00A7990A /* search2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search2.png; sourceTree = "<group>"; };
 		51A688771866D886000BEBD3 /* BaseNameSingers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BaseNameSingers.png; sourceTree = "<group>"; };
 		51A688781866D886000BEBD3 /* imageSingerDemo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageSingerDemo.png; sourceTree = "<group>"; };
 		51A6887B1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBaseNameKaraokeClips.png; sourceTree = "<group>"; };
@@ -541,7 +545,7 @@
 				34BC544A1864B5BA00CFFE9B /* 4.1 */,
 				34BC54501864B5BA00CFFE9B /* 5 */,
 				34BC54581864B5BA00CFFE9B /* 8.1 */,
-				34BC545E1864B5BA00CFFE9B /* 10 */,
+				34BC545E1864B5BA00CFFE9B /* Kind Song */,
 				34BC54601864B5BA00CFFE9B /* 11.1 */,
 				34BC546A1864B5BA00CFFE9B /* home */,
 				34BC547C1864B5BA00CFFE9B /* icon chung */,
@@ -677,11 +681,14 @@
 			path = 8.1;
 			sourceTree = "<group>";
 		};
-		34BC545E1864B5BA00CFFE9B /* 10 */ = {
+		34BC545E1864B5BA00CFFE9B /* Kind Song */ = {
 			isa = PBXGroup;
 			children = (
+				51A52B4E186AC31B00A7990A /* search1.png */,
+				51A52B4F186AC31B00A7990A /* search2.png */,
 				34BC545F1864B5BA00CFFE9B /* bg-cell-the-loai.png */,
 			);
+			name = "Kind Song";
 			path = 10;
 			sourceTree = "<group>";
 		};
@@ -899,6 +906,7 @@
 				34BC54C11864B5BA00CFFE9B /* logo-banner.png in Resources */,
 				34BC54271864B46F00CFFE9B /* secsion-nhacDJ.png in Resources */,
 				34BC548A1864B5BA00CFFE9B /* bg-text-field.png in Resources */,
+				51A52B50186AC31B00A7990A /* search1.png in Resources */,
 				347E9DF918680DD500E7A342 /* MenuCell.xib in Resources */,
 				34BC54B61864B5BA00CFFE9B /* bg-anh-thu-am.png in Resources */,
 				34BC549E1864B5BA00CFFE9B /* thu-am2.png in Resources */,
@@ -927,6 +935,7 @@
 				34BC54B31864B5BA00CFFE9B /* noi-bat.png in Resources */,
 				34BC54871864B5BA00CFFE9B /* btn-dangky.png in Resources */,
 				51C824AF1868895600A65A2B /* imageBaseIntroduction.png in Resources */,
+				51A52B51186AC31B00A7990A /* search2.png in Resources */,
 				34BC54B51864B5BA00CFFE9B /* bg-anh-album.png in Resources */,
 				51A68885186714AF000BEBD3 /* imageBaseNameRecord.png in Resources */,
 				4BE7D7441868741F00F7438B /* karaokeListCell.xib in Resources */,

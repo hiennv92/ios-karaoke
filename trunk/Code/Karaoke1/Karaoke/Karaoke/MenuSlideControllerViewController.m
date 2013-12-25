@@ -7,6 +7,7 @@
 //
 
 #import "MenuSlideControllerViewController.h"
+#import "KindOfMusicViewController.h"
 #import "MenuCell.h"
 
 @interface MenuSlideControllerViewController ()
@@ -168,6 +169,11 @@
     else if(indexPath.row == 8 && indexPath.section == 1){
     }
     else if(indexPath.row == 9 && indexPath.section == 1){
+    }
+    else if(indexPath.row == 10 && indexPath.section == 1){
+        NSLog(@"The loai");
+        KindOfMusicViewController *kindMusic = [[KindOfMusicViewController alloc] initWithNibName:@"KindOfMusicViewController" bundle:Nil];
+        [self.navigationController pushViewController:kindMusic animated:YES];
     }
     
     //Section 03 DJ music
