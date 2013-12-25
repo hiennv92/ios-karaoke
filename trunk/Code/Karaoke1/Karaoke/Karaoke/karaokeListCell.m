@@ -26,4 +26,12 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)like:(id)sender {
+    if (self.likeBtn.imageView.image==[UIImage imageNamed:@"star-blue.png"]) {
+        [self.likeBtn setImage:[UIImage imageNamed:@"star-yellow.png"] forState:UIControlStateNormal];
+    }
+    else
+        [self.likeBtn setImage:[UIImage imageNamed:@"star-blue.png"] forState:UIControlStateNormal];
+    
+}
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -7,6 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="karaokeListViewController">
             <connections>
+                <outlet property="kind1" destination="ufj-G0-llR" id="mfi-zO-ybc"/>
+                <outlet property="kind2" destination="ghZ-cG-s4K" id="lXV-wn-dPi"/>
+                <outlet property="kind3" destination="5kc-Oz-6TV" id="6F1-ni-CLW"/>
+                <outlet property="kind4" destination="G77-8U-X8c" id="C9J-yU-8Mv"/>
                 <outlet property="searchDisplayController" destination="mjq-cw-7SR" id="hvV-yH-dCD"/>
                 <outlet property="searchView" destination="CMZ-wp-Rup" id="Ijr-i3-R6i"/>
                 <outlet property="tableList" destination="h2k-R1-lMa" id="E4k-7T-x45"/>
@@ -63,12 +67,12 @@
                     <rect key="frame" x="320" y="0.0" width="320" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <searchBar contentMode="redraw" id="cD5-Au-Gfi">
+                        <searchBar tag="112" contentMode="redraw" id="cD5-Au-Gfi" customClass="KTSearchBar">
                             <rect key="frame" x="0.0" y="0.0" width="270" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="-1" id="T7T-Df-5IS"/>
+                                <outlet property="delegate" destination="-1" id="vGw-3e-vKX"/>
                             </connections>
                         </searchBar>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="STw-SK-5r1">
@@ -93,6 +97,9 @@
                     <state key="normal" image="1-bai-moi-select.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="changeSegment1:" destination="-1" eventType="touchUpInside" id="UYu-EQ-AMC"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ghZ-cG-s4K">
                     <rect key="frame" x="91" y="52" width="69" height="26"/>
@@ -102,6 +109,9 @@
                     <state key="normal" image="2-bai-hits.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="changeSegment2:" destination="-1" eventType="touchUpInside" id="2bi-zE-DMB"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5kc-Oz-6TV">
                     <rect key="frame" x="160" y="52" width="69" height="26"/>
@@ -111,6 +121,9 @@
                     <state key="normal" image="3-tat-ca.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="changeSegment3:" destination="-1" eventType="touchUpInside" id="5sF-en-1yF"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="G77-8U-X8c">
                     <rect key="frame" x="228" y="52" width="69" height="26"/>
@@ -120,6 +133,9 @@
                     <state key="normal" image="4-karaoke-clip.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="changeSegment4:" destination="-1" eventType="touchUpInside" id="XY5-lf-jef"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -128,7 +144,6 @@
         <searchDisplayController id="mjq-cw-7SR">
             <connections>
                 <outlet property="delegate" destination="-1" id="v3e-c1-Jb9"/>
-                <outlet property="searchBar" destination="cD5-Au-Gfi" id="BgR-Yn-Wrs"/>
                 <outlet property="searchContentsController" destination="-1" id="M50-7o-DDJ"/>
                 <outlet property="searchResultsDataSource" destination="-1" id="MPM-lG-GHw"/>
                 <outlet property="searchResultsDelegate" destination="-1" id="8VK-oI-HBc"/>

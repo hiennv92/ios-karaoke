@@ -14,5 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *loiBaiHat;
 @property (weak, nonatomic) IBOutlet UILabel *ngThich;
 @property (weak, nonatomic) IBOutlet UILabel *ngHat;
+- (IBAction)like:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *likeBtn;
 
 @end

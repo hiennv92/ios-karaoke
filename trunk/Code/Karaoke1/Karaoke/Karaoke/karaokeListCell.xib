@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -49,6 +49,9 @@
                         <state key="normal" image="star-blue.png">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="like:" destination="uq7-bX-Hqc" eventType="touchUpInside" id="eVO-gK-RP0"/>
+                        </connections>
                     </button>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2387 lượt thích" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IkT-tg-r3F">
                         <rect key="frame" x="91" y="64" width="117" height="21"/>
@@ -68,6 +71,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="imgAvata" destination="uwd-3d-Pj6" id="Lfy-6A-A12"/>
+                <outlet property="likeBtn" destination="xxh-yq-8Oo" id="kwO-Pj-QqH"/>
                 <outlet property="loiBaiHat" destination="Sff-eJ-aBF" id="ank-fv-h0X"/>
                 <outlet property="ngHat" destination="m9e-iT-b22" id="ako-V7-x0O"/>
                 <outlet property="ngThich" destination="IkT-tg-r3F" id="r67-8y-0hf"/>
