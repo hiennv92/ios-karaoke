@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NavibarViewController.h"
 
-@interface dangkyViewController : NavibarViewController{
+@interface dangkyViewController : NavibarViewController<UITextFieldDelegate>{
     
 }
 @property (weak, nonatomic) IBOutlet UITextField *sdt;
@@ -18,4 +18,6 @@
 - (IBAction)dangky:(id)sender;
 - (IBAction)dangnhaptrolai:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UILabel *_labelPassword;
+@property (strong, nonatomic) IBOutlet UILabel *_labelRepassword;
 @end
