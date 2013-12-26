@@ -34,5 +34,22 @@
 {
     return [[UIDevice currentDevice] systemVersion];
 }
+
++ (float)widthForLabel:(UILabel *)label
+{
+    CGFloat strikeWidth;
+    if ([Lib isIos7]) {
+        CGSize textSize = [[label text] sizeWithAttributes:@{NSFontAttributeName:[label font]}];
+        
+        strikeWidth  = textSize.width;
+    }
+    else
+    {
+        CGSize textSize = [[label text] sizeWithFont:[label font]];
+        
+        strikeWidth = textSize.width;
+    }
+    return strikeWidth;
+}
 @end
 

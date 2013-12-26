@@ -48,4 +48,12 @@
     
     return NO;
 }
+
+- (Sentence*)sentenceAtIndex:(int)index
+{
+    if (index < 0 || index >= self.sentencesArray.count) {
+        return nil;
+    }
+    return self.sentencesArray[index];
+}
 @end

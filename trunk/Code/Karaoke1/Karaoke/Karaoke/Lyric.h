@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class Sentence;
+
 @interface Lyric : NSObject
 
 @property (nonatomic, retain) NSString* songName;
@@ -16,4 +18,5 @@
 
 + (Lyric*)lyricWithFile: (NSString*) fileName;
 - (BOOL)initWithFile:(NSString*) fileName;
+- (Sentence*)sentenceAtIndex:(int)index;
 @end
