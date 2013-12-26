@@ -19,4 +19,5 @@
 
 + (Word*)wordWithData:(GDataXMLElement*)data;
 - (BOOL)initWithData:(GDataXMLElement*)data;
+- (BOOL)isWordInTime:(float)time;
 @end

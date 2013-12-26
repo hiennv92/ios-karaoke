@@ -36,6 +36,34 @@
             [self.wordsArray addObject:w];
         }
     }
+    
+    self.timeLength = ((Word*)self.wordsArray.lastObject).time - ((Word*)self.wordsArray[0]).time;
     return YES;
+}
+
+- (float)firstTime
+{
+    return ((Word*)self.wordsArray[0]).time;
+}
+
+- (float)lastTime
+{
+    return ((Word*)self.wordsArray.lastObject).time;
+}
+
+- (BOOL)isTimeInSentence:(float)currTime
+{
+    return [self compareWithTime:currTime] == CompareResultSame;
+}
+
+- (int)compareWithTime:(float)time
+{
+    if (time > [self lastTime]) {
+        return CompareResultAcc;
+    }
+    if (time < [self firstTime]) {
+        return CompareResultDecc;
+    }
+    return CompareResultSame;
 }
 @end

@@ -10,6 +10,7 @@
 #import "KindOfMusicViewController.h"
 #import "Cell.h"
 #import "SingerListViewController.h"
+#import "PlayMP3ViewController.h"
 
 @interface HomeViewController ()
 
@@ -298,7 +299,8 @@
 
 - (void)rightButtonBarPress:(id)button
 {
-    
+    PlayMP3ViewController* vc = [[PlayMP3ViewController alloc] initWithNibName:@"PlayMP3ViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)kindMusicButtonPress:(id)button{

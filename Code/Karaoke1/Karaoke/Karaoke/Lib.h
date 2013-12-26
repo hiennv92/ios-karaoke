@@ -15,4 +15,5 @@
 + (BOOL)isIos7;
 + (float)getIosVersion;
 + (NSString*)getIosVersionString;
++ (CGFloat)widthForLabel:(UILabel*)label;
 @end

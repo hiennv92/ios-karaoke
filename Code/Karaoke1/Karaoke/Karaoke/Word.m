@@ -9,6 +9,8 @@
 #import "Word.h"
 #import "GDataXMLNode.h"
 
+#define timeDelta   0.01
+
 @implementation Word
 
 + (Word*)wordWithData:(GDataXMLElement *)data
@@ -24,10 +26,19 @@
 - (BOOL)initWithData:(GDataXMLElement *)data
 {
     NSString* time = [data attributeForName:@"va"].stringValue;
+    NSArray* array = [time componentsSeparatedByString:@":"];
+    float totalTime = [array[0] floatValue] * 60 + [array[1] floatValue] + [array[2] floatValue] / 1000;
+    self.time = totalTime;
     self.value = [data stringValue];
     
-    NSLog(@"word: %@ time: %@", _value, time);
-    
     return YES;
+}
+
+- (BOOL)isWordInTime:(float)time
+{
+    if (time <= self.time + timeDelta && time >= self.time - timeDelta) {
+        return YES;
+    }
+    return NO;
 }
 @end
