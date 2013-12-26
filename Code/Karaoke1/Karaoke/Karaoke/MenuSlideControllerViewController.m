@@ -107,6 +107,7 @@
             [title setText:_headerArray[section]];
             [title setFont:[UIFont systemFontOfSize:13]];
             [title setTextColor:[UIColor blueColor]];
+            [title setBackgroundColor:[UIColor clearColor]];
             [view addSubview:title];
             
             UIImage* image = [UIImage imageNamed:_headerImages[section]];

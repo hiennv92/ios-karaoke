@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "KindOfMusicViewController.h"
 #import "Cell.h"
+#import "SingerListViewController.h"
 
 @interface HomeViewController ()
 
@@ -306,6 +307,11 @@
     [self.navigationController pushViewController:kindMusic animated:YES];
 }
 
+- (void)singerButtonPress:(id)button
+{
+    SingerListViewController* vc = [[SingerListViewController alloc] initWithNibName:@"SingerListViewController" bundle:Nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 
 @end
