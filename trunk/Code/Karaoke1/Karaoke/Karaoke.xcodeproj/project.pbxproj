@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		340091F3186B577900C6C655 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 340091F2186B577900C6C655 /* libxml2.2.dylib */; };
+		340091F8186B5A2300C6C655 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 340091F7186B5A2300C6C655 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		34061F10186458CC009FD9B2 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34061F0E186458CC009FD9B2 /* RootViewController.m */; };
 		34061F11186458CC009FD9B2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34061F0F186458CC009FD9B2 /* RootViewController.xib */; };
 		340DDAB7186AC6CF00204A05 /* 10_nam_tinh_cu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 340DDAB5186AC6CF00204A05 /* 10_nam_tinh_cu.mp3 */; };
 		340DDAB8186AC6CF00204A05 /* 10_nam_tinh_cu.xml in Resources */ = {isa = PBXBuildFile; fileRef = 340DDAB6186AC6CF00204A05 /* 10_nam_tinh_cu.xml */; };
+		340DDAC0186B522B00204A05 /* Lyric.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DDABF186B522B00204A05 /* Lyric.m */; };
+		340DDAC3186B523600204A05 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DDAC2186B523600204A05 /* Word.m */; };
+		340DDAC6186B524700204A05 /* Sentence.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DDAC5186B524700204A05 /* Sentence.m */; };
+		3426408B186C66B5001C47C1 /* SingerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34264089186C66B5001C47C1 /* SingerListViewController.m */; };
+		3426408C186C66B5001C47C1 /* SingerListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3426408A186C66B5001C47C1 /* SingerListViewController.xib */; };
+		34264091186C6A26001C47C1 /* SingerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34264090186C6A26001C47C1 /* SingerCell.m */; };
+		34264093186C6A35001C47C1 /* SingerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34264092186C6A35001C47C1 /* SingerCell.xib */; };
 		3442C7BB18642F1300BD13F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3442C7BA18642F1300BD13F3 /* UIKit.framework */; };
 		3442C7BD18642F1300BD13F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3442C7BC18642F1300BD13F3 /* Foundation.framework */; };
 		3442C7BF18642F1300BD13F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3442C7BE18642F1300BD13F3 /* CoreGraphics.framework */; };
@@ -189,11 +198,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		340091F2186B577900C6C655 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		340091F6186B5A2300C6C655 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		340091F7186B5A2300C6C655 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		34061F0D186458CC009FD9B2 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		34061F0E186458CC009FD9B2 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		34061F0F186458CC009FD9B2 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		340DDAB5186AC6CF00204A05 /* 10_nam_tinh_cu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 10_nam_tinh_cu.mp3; sourceTree = "<group>"; };
 		340DDAB6186AC6CF00204A05 /* 10_nam_tinh_cu.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 10_nam_tinh_cu.xml; sourceTree = "<group>"; };
+		340DDABE186B522B00204A05 /* Lyric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lyric.h; sourceTree = "<group>"; };
+		340DDABF186B522B00204A05 /* Lyric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lyric.m; sourceTree = "<group>"; };
+		340DDAC1186B523600204A05 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		340DDAC2186B523600204A05 /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
+		340DDAC4186B524700204A05 /* Sentence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sentence.h; sourceTree = "<group>"; };
+		340DDAC5186B524700204A05 /* Sentence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sentence.m; sourceTree = "<group>"; };
+		34264088186C66B5001C47C1 /* SingerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingerListViewController.h; sourceTree = "<group>"; };
+		34264089186C66B5001C47C1 /* SingerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingerListViewController.m; sourceTree = "<group>"; };
+		3426408A186C66B5001C47C1 /* SingerListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingerListViewController.xib; sourceTree = "<group>"; };
+		3426408F186C6A26001C47C1 /* SingerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingerCell.h; sourceTree = "<group>"; };
+		34264090186C6A26001C47C1 /* SingerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingerCell.m; sourceTree = "<group>"; };
+		34264092186C6A35001C47C1 /* SingerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingerCell.xib; sourceTree = "<group>"; };
 		3442C7B718642F1300BD13F3 /* Karaoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Karaoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3442C7BA18642F1300BD13F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3442C7BC18642F1300BD13F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -401,6 +425,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				340091F3186B577900C6C655 /* libxml2.2.dylib in Frameworks */,
 				34BC53F01864AB8E00CFFE9B /* QuartzCore.framework in Frameworks */,
 				3442C7BB18642F1300BD13F3 /* UIKit.framework in Frameworks */,
 				3442C7BD18642F1300BD13F3 /* Foundation.framework in Frameworks */,
@@ -411,6 +436,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		340091F5186B5A0500C6C655 /* XMLSupport */ = {
+			isa = PBXGroup;
+			children = (
+				340091F6186B5A2300C6C655 /* GDataXMLNode.h */,
+				340091F7186B5A2300C6C655 /* GDataXMLNode.m */,
+			);
+			name = XMLSupport;
+			sourceTree = "<group>";
+		};
 		34061F0818645874009FD9B2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +466,7 @@
 		34061F0A18645895009FD9B2 /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				34264086186C6698001C47C1 /* Singer Tab */,
 				34BC53F21864AD7900CFFE9B /* HomeViewController */,
 				34BC53E91864A9A900CFFE9B /* MenuSlide */,
 				346A5F4B18648A530071D955 /* NavibarController */,
@@ -447,6 +482,7 @@
 		34061F0B186458A0009FD9B2 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				340091F5186B5A0500C6C655 /* XMLSupport */,
 				346A5F48186487620071D955 /* Lib.h */,
 				346A5F49186487620071D955 /* Lib.m */,
 			);
@@ -472,6 +508,48 @@
 			name = Sound;
 			sourceTree = "<group>";
 		};
+		340DDABD186B521A00204A05 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				340DDABE186B522B00204A05 /* Lyric.h */,
+				340DDABF186B522B00204A05 /* Lyric.m */,
+				340DDAC1186B523600204A05 /* Word.h */,
+				340DDAC2186B523600204A05 /* Word.m */,
+				340DDAC4186B524700204A05 /* Sentence.h */,
+				340DDAC5186B524700204A05 /* Sentence.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		34264086186C6698001C47C1 /* Singer Tab */ = {
+			isa = PBXGroup;
+			children = (
+				3426408E186C6A09001C47C1 /* SingerCell */,
+				34264087186C669F001C47C1 /* Singer List */,
+			);
+			name = "Singer Tab";
+			sourceTree = "<group>";
+		};
+		34264087186C669F001C47C1 /* Singer List */ = {
+			isa = PBXGroup;
+			children = (
+				34264088186C66B5001C47C1 /* SingerListViewController.h */,
+				34264089186C66B5001C47C1 /* SingerListViewController.m */,
+				3426408A186C66B5001C47C1 /* SingerListViewController.xib */,
+			);
+			name = "Singer List";
+			sourceTree = "<group>";
+		};
+		3426408E186C6A09001C47C1 /* SingerCell */ = {
+			isa = PBXGroup;
+			children = (
+				3426408F186C6A26001C47C1 /* SingerCell.h */,
+				34264090186C6A26001C47C1 /* SingerCell.m */,
+				34264092186C6A35001C47C1 /* SingerCell.xib */,
+			);
+			name = SingerCell;
+			sourceTree = "<group>";
+		};
 		3442C7AE18642F1300BD13F3 = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +570,7 @@
 		3442C7B918642F1300BD13F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				340091F2186B577900C6C655 /* libxml2.2.dylib */,
 				34BC53EF1864AB8E00CFFE9B /* QuartzCore.framework */,
 				3442C7BA18642F1300BD13F3 /* UIKit.framework */,
 				3442C7BC18642F1300BD13F3 /* Foundation.framework */,
@@ -503,6 +582,7 @@
 		3442C7C018642F1300BD13F3 /* Karaoke */ = {
 			isa = PBXGroup;
 			children = (
+				340DDABD186B521A00204A05 /* model */,
 				4B74341E186B9B5200BE95BF /* custom searchbar */,
 				34BC53E21864A8E000CFFE9B /* SlidePanelController */,
 				34061F0B186458A0009FD9B2 /* Libs */,
@@ -994,6 +1074,7 @@
 				34BC54AE1864B5BA00CFFE9B /* hot-nhat-select.png in Resources */,
 				4B743437186B9B5200BE95BF /* MagnifyingGlassDark@2x.png in Resources */,
 				34BC54A21864B5BA00CFFE9B /* share-email.png in Resources */,
+				3426408C186C66B5001C47C1 /* SingerListViewController.xib in Resources */,
 				34BC54BB1864B5BA00CFFE9B /* bottom-ca-si.png in Resources */,
 				34BC54BC1864B5BA00CFFE9B /* bottom-the-loai.png in Resources */,
 				34BC54CD1864B5BA00CFFE9B /* star-yellow.png in Resources */,
@@ -1016,6 +1097,7 @@
 				34BC54AF1864B5BA00CFFE9B /* hot-nhat.png in Resources */,
 				34BC54971864B5BA00CFFE9B /* 4-karaoke-clip-select.png in Resources */,
 				34BC54C11864B5BA00CFFE9B /* logo-banner.png in Resources */,
+				34264093186C6A35001C47C1 /* SingerCell.xib in Resources */,
 				34BC54271864B46F00CFFE9B /* secsion-nhacDJ.png in Resources */,
 				34BC548A1864B5BA00CFFE9B /* bg-text-field.png in Resources */,
 				51A52B50186AC31B00A7990A /* search1.png in Resources */,
@@ -1140,6 +1222,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3442C7C718642F1300BD13F3 /* main.m in Sources */,
+				34264091186C6A26001C47C1 /* SingerCell.m in Sources */,
+				340091F8186B5A2300C6C655 /* GDataXMLNode.m in Sources */,
 				51178264186885E700F73C17 /* Cell.m in Sources */,
 				51B145A9186B4D5A00063FB9 /* ForgetPasswordViewController.m in Sources */,
 				4B743433186B9B5200BE95BF /* KTSearchBar.m in Sources */,
@@ -1152,6 +1236,7 @@
 				34061F10186458CC009FD9B2 /* RootViewController.m in Sources */,
 				4B74344B186B9E1900BE95BF /* SearchKara5ViewController.m in Sources */,
 				346A5F4A186487620071D955 /* Lib.m in Sources */,
+				340DDAC3186B523600204A05 /* Word.m in Sources */,
 				4BEAEAB81867B6E5000E3CD1 /* dangnhapViewController.m in Sources */,
 				347E9DF818680DD500E7A342 /* MenuCell.m in Sources */,
 				34BC53E71864A8F500CFFE9B /* JASidePanelController.m in Sources */,
@@ -1161,7 +1246,10 @@
 				4BEAEAB31867B226000E3CD1 /* dangkyViewController.m in Sources */,
 				51580E4D1869F40900C837F9 /* CellOfKind.m in Sources */,
 				34BC53ED1864A9C100CFFE9B /* MenuSlideControllerViewController.m in Sources */,
+				340DDAC6186B524700204A05 /* Sentence.m in Sources */,
+				3426408B186C66B5001C47C1 /* SingerListViewController.m in Sources */,
 				4BE7D7421868740100F7438B /* karaokeListCell.m in Sources */,
+				340DDAC0186B522B00204A05 /* Lyric.m in Sources */,
 				4BE7D73D186872AA00F7438B /* karaokeListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1206,8 +1294,13 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"${SRCROOT}\"",
+					"\"/usr/include/libxml2\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lxml2";
 				PROVISIONING_PROFILE = "DE90913D-018C-47BA-B8CF-B4D98ACB761E";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1233,8 +1326,13 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"${SRCROOT}\"",
+					"\"/usr/include/libxml2\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-lxml2";
 				PROVISIONING_PROFILE = "DE90913D-018C-47BA-B8CF-B4D98ACB761E";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DE90913D-018C-47BA-B8CF-B4D98ACB761E";
 				SDKROOT = iphoneos;
@@ -1250,7 +1348,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Karaoke/Karaoke-Prefix.pch";
 				INFOPLIST_FILE = "Karaoke/Karaoke-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "DE90913D-018C-47BA-B8CF-B4D98ACB761E";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1265,7 +1363,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Karaoke/Karaoke-Prefix.pch";
 				INFOPLIST_FILE = "Karaoke/Karaoke-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "DE90913D-018C-47BA-B8CF-B4D98ACB761E";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DE90913D-018C-47BA-B8CF-B4D98ACB761E";
