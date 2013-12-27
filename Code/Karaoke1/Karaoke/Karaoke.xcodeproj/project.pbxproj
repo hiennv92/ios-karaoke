@@ -190,6 +190,8 @@
 		51178265186885E700F73C17 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51178263186885E700F73C17 /* Cell.xib */; };
 		511EB734186DAE6C00AB20D0 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511EB732186DAE6C00AB20D0 /* RecordViewController.m */; };
 		511EB735186DAE6C00AB20D0 /* RecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511EB733186DAE6C00AB20D0 /* RecordViewController.xib */; };
+		511EB737186DE88A00AB20D0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342640AA186C9CD5001C47C1 /* MediaPlayer.framework */; };
+		511EB739186DEBBC00AB20D0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 511EB738186DEBBC00AB20D0 /* AudioToolbox.framework */; };
 		51580E4D1869F40900C837F9 /* CellOfKind.m in Sources */ = {isa = PBXBuildFile; fileRef = 51580E4C1869F40900C837F9 /* CellOfKind.m */; };
 		51580E4F1869F42B00C837F9 /* CellOfKind.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51580E4E1869F42B00C837F9 /* CellOfKind.xib */; };
 		51580E5A186A00C800C837F9 /* ListSongsOfKindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51580E58186A00C800C837F9 /* ListSongsOfKindViewController.m */; };
@@ -428,6 +430,7 @@
 		511EB731186DAE6C00AB20D0 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
 		511EB732186DAE6C00AB20D0 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
 		511EB733186DAE6C00AB20D0 /* RecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordViewController.xib; sourceTree = "<group>"; };
+		511EB738186DEBBC00AB20D0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		51580E4B1869F40900C837F9 /* CellOfKind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellOfKind.h; sourceTree = "<group>"; };
 		51580E4C1869F40900C837F9 /* CellOfKind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellOfKind.m; sourceTree = "<group>"; };
 		51580E4E1869F42B00C837F9 /* CellOfKind.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellOfKind.xib; sourceTree = "<group>"; };
@@ -458,6 +461,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				511EB739186DEBBC00AB20D0 /* AudioToolbox.framework in Frameworks */,
+				511EB737186DE88A00AB20D0 /* MediaPlayer.framework in Frameworks */,
 				342640AD186C9CFA001C47C1 /* AVFoundation.framework in Frameworks */,
 				340091F3186B577900C6C655 /* libxml2.2.dylib in Frameworks */,
 				34BC53F01864AB8E00CFFE9B /* QuartzCore.framework in Frameworks */,
@@ -658,6 +663,7 @@
 		3442C7B918642F1300BD13F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				511EB738186DEBBC00AB20D0 /* AudioToolbox.framework */,
 				342640AC186C9CFA001C47C1 /* AVFoundation.framework */,
 				342640AA186C9CD5001C47C1 /* MediaPlayer.framework */,
 				340091F2186B577900C6C655 /* libxml2.2.dylib */,

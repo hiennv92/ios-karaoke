@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface RecordViewController : UIViewController{
-    
+@interface RecordViewController : UIViewController<AVAudioPlayerDelegate,AVAudioRecorderDelegate,AVAudioSessionDelegate>{
+    AVAudioRecorder *recorder;
+    AVAudioPlayer *player;
+    NSURL *outputFileURL;
+    NSURL *mixFileURL;
 }
+
 @property (nonatomic, assign) BOOL isPlay;
 @property (nonatomic, assign) BOOL isRecording;
 @property (strong, nonatomic) IBOutlet UIButton *_buttonPlay;
@@ -23,4 +29,5 @@
 - (IBAction)sameSongController:(id)sender;
 - (IBAction)likeController:(id)sender;
 - (IBAction)backController:(id)sender;
+
 @end
