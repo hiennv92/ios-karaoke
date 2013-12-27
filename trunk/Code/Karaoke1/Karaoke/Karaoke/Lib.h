@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface Lib : NSObject
 
@@ -16,4 +17,5 @@
 + (float)getIosVersion;
 + (NSString*)getIosVersionString;
 + (CGFloat)widthForLabel:(UILabel*)label;
++(BOOL)isHeadsetPluggedIn;
 @end
