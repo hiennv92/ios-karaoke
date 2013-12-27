@@ -188,6 +188,8 @@
 		4BEAEAB91867B6E5000E3CD1 /* dangnhapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEAEAB71867B6E5000E3CD1 /* dangnhapViewController.xib */; };
 		51178264186885E700F73C17 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51178262186885E700F73C17 /* Cell.m */; };
 		51178265186885E700F73C17 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51178263186885E700F73C17 /* Cell.xib */; };
+		511EB734186DAE6C00AB20D0 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511EB732186DAE6C00AB20D0 /* RecordViewController.m */; };
+		511EB735186DAE6C00AB20D0 /* RecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511EB733186DAE6C00AB20D0 /* RecordViewController.xib */; };
 		51580E4D1869F40900C837F9 /* CellOfKind.m in Sources */ = {isa = PBXBuildFile; fileRef = 51580E4C1869F40900C837F9 /* CellOfKind.m */; };
 		51580E4F1869F42B00C837F9 /* CellOfKind.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51580E4E1869F42B00C837F9 /* CellOfKind.xib */; };
 		51580E5A186A00C800C837F9 /* ListSongsOfKindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51580E58186A00C800C837F9 /* ListSongsOfKindViewController.m */; };
@@ -423,6 +425,9 @@
 		51178261186885E700F73C17 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
 		51178262186885E700F73C17 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
 		51178263186885E700F73C17 /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
+		511EB731186DAE6C00AB20D0 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		511EB732186DAE6C00AB20D0 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		511EB733186DAE6C00AB20D0 /* RecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordViewController.xib; sourceTree = "<group>"; };
 		51580E4B1869F40900C837F9 /* CellOfKind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellOfKind.h; sourceTree = "<group>"; };
 		51580E4C1869F40900C837F9 /* CellOfKind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellOfKind.m; sourceTree = "<group>"; };
 		51580E4E1869F42B00C837F9 /* CellOfKind.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellOfKind.xib; sourceTree = "<group>"; };
@@ -495,6 +500,7 @@
 		34061F0A18645895009FD9B2 /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				511EB736186DAE8500AB20D0 /* RecordViewController */,
 				34264094186C7E90001C47C1 /* PlayMusicViewController */,
 				34264086186C6698001C47C1 /* Singer Tab */,
 				34BC53F21864AD7900CFFE9B /* HomeViewController */,
@@ -1058,6 +1064,16 @@
 			name = "Dangky- dang nhap- quen mk";
 			sourceTree = "<group>";
 		};
+		511EB736186DAE8500AB20D0 /* RecordViewController */ = {
+			isa = PBXGroup;
+			children = (
+				511EB731186DAE6C00AB20D0 /* RecordViewController.h */,
+				511EB732186DAE6C00AB20D0 /* RecordViewController.m */,
+				511EB733186DAE6C00AB20D0 /* RecordViewController.xib */,
+			);
+			name = RecordViewController;
+			sourceTree = "<group>";
+		};
 		51580E551869FE9500C837F9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -1280,6 +1296,7 @@
 				34BC54BA1864B5BA00CFFE9B /* bottom-bg.png in Resources */,
 				34BC54CC1864B5BA00CFFE9B /* star-blue.png in Resources */,
 				34BC54C91864B5BA00CFFE9B /* menu.png in Resources */,
+				511EB735186DAE6C00AB20D0 /* RecordViewController.xib in Resources */,
 				4B74343B186B9B5200BE95BF /* search-bg-all-dark@2x.png in Resources */,
 				51A6887A1866D886000BEBD3 /* imageSingerDemo.png in Resources */,
 				34BC54C61864B5BA00CFFE9B /* back-btn.png in Resources */,
@@ -1333,6 +1350,7 @@
 				4B74344B186B9E1900BE95BF /* SearchKara5ViewController.m in Sources */,
 				346A5F4A186487620071D955 /* Lib.m in Sources */,
 				340DDAC3186B523600204A05 /* Word.m in Sources */,
+				511EB734186DAE6C00AB20D0 /* RecordViewController.m in Sources */,
 				4BEAEAB81867B6E5000E3CD1 /* dangnhapViewController.m in Sources */,
 				347E9DF818680DD500E7A342 /* MenuCell.m in Sources */,
 				34BC53E71864A8F500CFFE9B /* JASidePanelController.m in Sources */,
@@ -1377,7 +1395,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Mai Trung (3PK39257VK)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Tran Quoc Dung (QAM545579E)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1415,8 +1433,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mai Trung (3PK39257VK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tran Quoc Dung (QAM545579E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tran Quoc Dung (QAM545579E)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1440,7 +1458,7 @@
 		3442C7D518642F1300BD13F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mai Trung (3PK39257VK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tran Quoc Dung (QAM545579E)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Karaoke/Karaoke-Prefix.pch";
 				INFOPLIST_FILE = "Karaoke/Karaoke-Info.plist";
@@ -1455,7 +1473,7 @@
 		3442C7D618642F1300BD13F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mai Trung (3PK39257VK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tran Quoc Dung (QAM545579E)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Karaoke/Karaoke-Prefix.pch";
 				INFOPLIST_FILE = "Karaoke/Karaoke-Info.plist";
