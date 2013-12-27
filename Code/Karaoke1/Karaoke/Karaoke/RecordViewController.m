@@ -7,6 +7,7 @@
 //
 
 #import "RecordViewController.h"
+#import "Lib.h"
 
 @interface RecordViewController ()
 
@@ -42,8 +43,11 @@
     AVAudioSession *session = [AVAudioSession sharedInstance];
     [session setCategory:AVAudioSessionCategoryPlayAndRecord error:NULL];
     
-    UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
+//    UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
+  
+    UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_None;
     AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,sizeof (audioRouteOverride),&audioRouteOverride);
+    
     
     // Define the recorder setting
     NSMutableDictionary *recordSetting = [[NSMutableDictionary alloc] init];
@@ -60,12 +64,11 @@
     [self setIsPlay:NO];
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    //
-    //
 }
 
 - (IBAction)recordController:(id)sender {
@@ -79,6 +82,8 @@
             [alert show];
         }
         else{
+            [Lib isHeadsetPluggedIn];
+
             AVAudioSession *session = [AVAudioSession sharedInstance];
             [session setActive:YES error:nil];
             
@@ -96,29 +101,48 @@
         [self._buttonRecord setImage:[UIImage imageNamed:@"ghi-am.png"] forState:UIControlStateNormal];
         self._recordStatusLabel.text = @"Ghi âm";
         [self._buttonPlay setEnabled:YES];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Chú ý"
+                                                        message: @"Bạn có muốn lưu lại bản thu âm không?"
+                                                       delegate: nil
+                                              cancelButtonTitle:@"Có"
+                                              otherButtonTitles:@"Không",nil];
+        [alert show];
     }
 }
 
 - (IBAction)playController:(id)sender {
     if(!recorder.recording){
+        [Lib isHeadsetPluggedIn];
+
         [self._buttonPlay setImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
-        player = [[AVAudioPlayer alloc] initWithContentsOfURL:recorder.url error:nil];
+ 
+        NSString *destinationString = [[self documentsPath] stringByAppendingPathComponent:@"MyAudioMemo.m4a"];
+        NSURL* url = [NSURL fileURLWithPath:destinationString];
+        player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
         [player setDelegate:self];
         [player prepareToPlay];
         [self setIsPlay:YES];
-//        float maxVolume = 1.0;
-//      float currentVolume=[MPMusicPlayerController applicationMusicPlayer].volume;
-//        [[MPMusicPlayerController applicationMusicPlayer] setVolume:maxVolume];
+        
+//        NSLog(@"URL RECORD: %@",recorder.url);
+//        NSLog(@"URL OUPUTFILE: %@",outputFileURL);
         [player play];
-        //set up timer to wait until audioAlert is finished playing,
-        // and then call the line below to set the volume back to it's original setting
-//        [[MPMusicPlayerController applicationMusicPlayer]setVolume:currentVolume];
     }
     else{
         [player stop];
         [self._buttonPlay setImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
         [self setIsPlay:NO];
     }
+}
+
+
+- (NSString*) documentsPath
+{
+	NSArray *searchPaths =
+	NSSearchPathForDirectoriesInDomains
+	(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString* _documentsPath = [searchPaths objectAtIndex: 0];	
+	return _documentsPath;
 }
 
 - (IBAction)sameSongController:(id)sender {
@@ -130,6 +154,8 @@
 }
 
 - (IBAction)backController:(id)sender {
+    [player stop];
+    [recorder stop];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -139,6 +165,9 @@
     [self._buttonRecord setImage:[UIImage imageNamed:@"ghi-am.png"] forState:UIControlStateNormal];
     self._recordStatusLabel.text = @"Ghi âm";
     [self._buttonPlay setEnabled:YES];
+
+    //Mix file after record with a headphone
+    [self mixWithFileBeat];
 }
 
 #pragma mark - AVAudioPlayerDelegate
@@ -149,7 +178,7 @@
     [self setIsPlay:NO];
 }
 
-////Dat mix file/////
+////Dat mixs file/////
 - (void)mixWithFileBeat{
     //URL file record dat trong bien: recordURL;
     

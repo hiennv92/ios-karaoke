@@ -51,5 +51,34 @@
     }
     return strikeWidth;
 }
+
++(BOOL)isHeadsetPluggedIn {
+    UInt32 routeSize = sizeof (CFStringRef); CFStringRef route;
+    AudioSessionGetProperty (kAudioSessionProperty_AudioRoute, &routeSize, &route);
+    
+    NSString* routeStr = (NSString*)CFBridgingRelease(route);
+    
+    NSRange headsetRange = [routeStr rangeOfString : @"Headset"]; NSRange receiverRange = [routeStr rangeOfString : @"Receiver"];
+    
+    if(headsetRange.location != NSNotFound) {
+        // Don't change the route if the headset is plugged in.
+        NSLog(@"headphone is plugged in ");
+        return YES;
+    }
+    else if (receiverRange.location != NSNotFound) {
+        // Change to play on the speaker
+        NSLog(@"play on the speaker");
+        
+        UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
+        AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,sizeof (audioRouteOverride),&audioRouteOverride);
+        return NO;
+    } else {
+        NSLog(@"Unknown audio route.");
+        UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
+        AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,sizeof (audioRouteOverride),&audioRouteOverride);
+        return NO;
+    }
+}
+
 @end
 
