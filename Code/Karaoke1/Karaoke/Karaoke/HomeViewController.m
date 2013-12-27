@@ -11,6 +11,7 @@
 #import "Cell.h"
 #import "SingerListViewController.h"
 #import "PlayMP3ViewController.h"
+#import "RecordViewController.h"
 
 @interface HomeViewController ()
 
@@ -315,5 +316,9 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (void)recordButtonPress:(id)button{
+    RecordViewController *rc = [[RecordViewController alloc] initWithNibName:@"RecordViewController" bundle:Nil];
+    [self.navigationController pushViewController:rc animated:YES];
+}
 
 @end
