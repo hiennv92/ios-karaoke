@@ -11,7 +11,14 @@
 
 @interface SentenceView : UIView
 
+
+@property (nonatomic, assign, getter = isSetUp, setter = setUp:) BOOL isSetUp;
+
 - (id)initWithSentence:(Sentence*)sentence atPos:(CGPoint)position;
 
 - (void)selectWord:(int)index;
+
+- (void)setSentence:(Sentence*)sentence;
+
+- (void)clearAllText;
 @end

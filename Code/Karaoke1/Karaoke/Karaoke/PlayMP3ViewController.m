@@ -7,18 +7,14 @@
 //
 
 #import "PlayMP3ViewController.h"
-#import "Lyric.h"
-#import "Sentence.h"
-#import "Word.h"
-#import "SentenceView.h"
+#import "LyricView.h"
 
 @interface PlayMP3ViewController ()
 {
     NSTimer* _timer;
-    Lyric*    _lyric;
     int         _currentIndex;
     int         _currentWord;
-    SentenceView*   _sentenceView;
+    LyricView*   _lyricView;
 }
 
 @end
@@ -38,7 +34,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    _lyric = [Lyric lyricWithFile:@"10_nam_tinh_cu"];
+    _lyricView = [[LyricView alloc] initWithFrame:CGRectMake(50, 200, 220, 100)];
+    [self.view addSubview:_lyricView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,37 +58,13 @@
     
     // start timer
     _timer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(timerDelay) userInfo:nil repeats:YES];
-    _currentIndex = 0;
-    _currentWord = 0;
+    [_lyricView setLyricFile:@"10_nam_tinh_cu"];
 }
 
 - (void)timerDelay
 {
 //    NSLog(@"audio time: %f", _player.currentTime);
-    Sentence* sentence = [_lyric sentenceAtIndex:_currentIndex];
-    int compare = [sentence compareWithTime:_player.currentTime];
-    if (compare == CompareResultSame) {
-        if (!_sentenceView) {
-            _sentenceView = [[SentenceView alloc] initWithSentence:sentence atPos:CGPointMake(50, 100)];
-            [self.view addSubview:_sentenceView];
-        }
-        for (int i = _currentWord; i < sentence.wordsArray.count; i++) {
-            Word* w = sentence.wordsArray[i];
-            if ([w isWordInTime:_player.currentTime]) {
-                NSLog(@"word: %@", w.value);
-                ++_currentWord;
-                [_sentenceView selectWord:i];
-                break;
-            }
-        }
-    }
-    else if (compare == CompareResultAcc)
-    {
-        ++_currentIndex;
-        _currentWord = 0;
-        [_sentenceView removeFromSuperview];
-        _sentenceView = nil;
-    }
+    [_lyricView step:_player.currentTime];
 }
 
 - (IBAction)backButtonClicked:(id)sender {
@@ -127,5 +100,6 @@
 {
     NSLog(@"audio player finish with flag: %d", flag);
     [_timer invalidate];
+//    [sender setBackgroundImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
 }
 @end

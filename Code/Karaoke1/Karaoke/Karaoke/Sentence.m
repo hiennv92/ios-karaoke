@@ -10,6 +10,8 @@
 #import "GDataXMLNode.h"
 #import "Word.h"
 
+#define kComingTime     3.0
+
 @implementation Sentence
 
 + (Sentence*)sentenceWithData:(GDataXMLElement *)data
@@ -59,11 +61,16 @@
 - (int)compareWithTime:(float)time
 {
     if (time > [self lastTime]) {
-        return CompareResultAcc;
+        return CompareResultAsc;
     }
     if (time < [self firstTime]) {
-        return CompareResultDecc;
+        return CompareResultDesc;
     }
     return CompareResultSame;
+}
+
+- (BOOL)isComing:(float)currentTime
+{
+    return (currentTime >= ([self firstTime] - kComingTime));
 }
 @end

@@ -11,8 +11,8 @@
 @class GDataXMLElement;
 
 enum CompareResult {
-    CompareResultDecc = 1,
-    CompareResultAcc = 2,
+    CompareResultDesc = 1,
+    CompareResultAsc = 2,
     CompareResultSame
     };
 
@@ -28,4 +28,5 @@ enum CompareResult {
 - (float)lastTime;
 - (BOOL)isTimeInSentence:(float)currTime;
 - (int)compareWithTime:(float)time;
+- (BOOL)isComing:(float)currentTime;
 @end
