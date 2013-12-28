@@ -28,12 +28,13 @@
     if (self) {
         self.text = text;
         self.backgroundColor = [UIColor clearColor];
-//        self.textColor = [UIColor blueColor];
         CGFloat width = [Lib widthForLabel:self];
         [self setFrame:CGRectMake(0, 0, width, kWordDefaultHeight)];
     }
     return self;
 }
+
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

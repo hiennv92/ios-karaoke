@@ -21,6 +21,7 @@ enum CompareResult {
 @property (nonatomic, retain) NSString* type;
 @property (nonatomic, retain) NSMutableArray*   wordsArray;
 @property (nonatomic, assign) float   timeLength;
+@property (nonatomic, assign, getter = isSelected) BOOL selected;
 
 + (Sentence*)sentenceWithData:(GDataXMLElement*)data;
 - (BOOL)initWithData:(GDataXMLElement*)data;

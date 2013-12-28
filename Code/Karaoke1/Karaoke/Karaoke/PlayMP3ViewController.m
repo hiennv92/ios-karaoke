@@ -12,8 +12,6 @@
 @interface PlayMP3ViewController ()
 {
     NSTimer* _timer;
-    int         _currentIndex;
-    int         _currentWord;
     LyricView*   _lyricView;
 }
 
@@ -59,11 +57,11 @@
     // start timer
     _timer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(timerDelay) userInfo:nil repeats:YES];
     [_lyricView setLyricFile:@"10_nam_tinh_cu"];
+    [_lyricView start];
 }
 
 - (void)timerDelay
 {
-//    NSLog(@"audio time: %f", _player.currentTime);
     [_lyricView step:_player.currentTime];
 }
 
@@ -86,6 +84,7 @@
     {
         [_player stop];
         [sender setBackgroundImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
+        [_lyricView stop];
     }
 }
 

@@ -16,12 +16,9 @@
 
 @interface LyricView(){
     int         _currentSentence;
-    int         _currentWord;
+    
     SentenceView*   _senView1;
     SentenceView*   _senView2;
-    
-    float       _lastTime;
-    int         _senIndex;
 }
 
 @end
@@ -54,9 +51,6 @@
 - (void)start
 {
     _currentSentence = 0;
-    _currentWord = 0;
-    _lastTime = 0.0f;
-    _senIndex = 0;
 }
 
 - (void)step:(float)currentTime
@@ -64,37 +58,23 @@
     if (!_lyric) {
         return;
     }
-    if (_lastTime > 3.0) {
-        _senIndex = 0;
-        [_senView1 clearAllText];
-        [_senView2 clearAllText];
-    }
     
     Sentence* sentence = [_lyric sentenceAtIndex:_currentSentence];
-    int compare = [sentence compareWithTime:currentTime];
-    if (!_senView1.isSetUp && [sentence isComing:currentTime]) {
-        [_senView1 setSentence:sentence];
-        _senView1.isSetUp = YES;
-        _lastTime = 0;
-        _senIndex = 1 - _senIndex;
-    }
-    if (compare == CompareResultSame) {
-        for (int i = _currentWord; i < sentence.wordsArray.count; i++) {
-            Word* w = sentence.wordsArray[i];
-            if ([w isWordInTime:currentTime]) {
-                ++_currentWord;
-                [_senView1 selectWord:i];
-                break;
-            }
+    
+    if ([sentence isComing:currentTime]) {
+        if (!_senView1.isSetUp && (_currentSentence % 2) == 0) {
+            [_senView1 setSentence:sentence];
+            _senView1.isSetUp = YES;
+            ++_currentSentence;
+        }else if (!_senView2.isSetUp && (_currentSentence % 2) == 1)
+        {
+            [_senView2 setSentence:sentence];
+            _senView2.isSetUp = YES;
+            _currentSentence++;
         }
     }
-    else if (compare == CompareResultAsc)
-    {
-        _lastTime = currentTime;
-        ++_currentSentence;
-        _currentWord = 0;
-        [_senView1 setUp:NO];
-    }
+    [_senView1 step:currentTime];
+    [_senView2 step:currentTime];
 }
 
 
@@ -103,4 +83,16 @@
     _lyric = [Lyric lyricWithFile:fileName];
 }
 
+- (void)stop
+{
+    [self clearAllText];
+    [_senView1 setUp:NO];
+    [_senView2 setUp:NO];
+}
+
+- (void)clearAllText
+{
+    [_senView1 clearAllText];
+    [_senView2 clearAllText];
+}
 @end

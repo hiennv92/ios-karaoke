@@ -37,35 +37,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - UICollection Source
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    return 1;
-}
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return 0;
-    return self.singerList.count;
-}
-
-- (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    SingerCell* cell = (SingerCell*)[collectionView dequeueReusableSupplementaryViewOfKind:@"SingerCell" withReuseIdentifier:@"SingerCell" forIndexPath:indexPath];
-                                     
-    if (!cell) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"SingerCell" owner:self options:Nil] objectAtIndex:0];
-    }
-//    cell.icon.image = [UIImage imageNamed:@"abc"];
-//    cell.name.text = @"name";
-    
-    return cell;
-}
-
-#pragma mark - UICollection Delegate
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-}
 
 
 - (void)leftButtonBarPress:(id)button
