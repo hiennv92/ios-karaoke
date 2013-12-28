@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "NavibarViewController.h"
 
-@interface SingerListViewController : NavibarViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface SingerListViewController : NavibarViewController
 
 
 @property (nonatomic, retain) NSArray*  singerList;
-@property (nonatomic, weak) IBOutlet UICollectionView* singerCollection;
+
 @end

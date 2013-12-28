@@ -9,7 +9,7 @@
 #import "Word.h"
 #import "GDataXMLNode.h"
 
-#define timeDelta   0.01
+#define timeDelta   0.1f
 
 @implementation Word
 

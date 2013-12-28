@@ -15,4 +15,7 @@
 - (void)start;
 - (void)setLyricFile:(NSString*)fileName;
 - (void)step:(float)currentTime;
+
+- (void)stop;
+- (void)clearAllText;
 @end

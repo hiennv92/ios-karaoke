@@ -98,6 +98,7 @@
         [recorder stop];
         AVAudioSession *audioSession = [AVAudioSession sharedInstance];
         [audioSession setActive:NO error:nil];
+        
         [self._buttonRecord setImage:[UIImage imageNamed:@"ghi-am.png"] forState:UIControlStateNormal];
         self._recordStatusLabel.text = @"Ghi âm";
         [self._buttonPlay setEnabled:YES];

@@ -21,4 +21,6 @@
 - (void)setSentence:(Sentence*)sentence;
 
 - (void)clearAllText;
+
+- (void)step: (float)currentTime;
 @end

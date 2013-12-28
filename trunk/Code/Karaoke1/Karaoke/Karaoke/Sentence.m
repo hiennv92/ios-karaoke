@@ -12,6 +12,11 @@
 
 #define kComingTime     3.0
 
+@interface Sentence(){
+}
+
+@end
+
 @implementation Sentence
 
 + (Sentence*)sentenceWithData:(GDataXMLElement *)data
@@ -71,6 +76,9 @@
 
 - (BOOL)isComing:(float)currentTime
 {
+    if ([self isSelected]) {
+        return NO;
+    }
     return (currentTime >= ([self firstTime] - kComingTime));
 }
 @end
