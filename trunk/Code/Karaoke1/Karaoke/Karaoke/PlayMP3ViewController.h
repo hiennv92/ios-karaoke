@@ -13,6 +13,7 @@
 @interface PlayMP3ViewController : UIViewController <AVAudioPlayerDelegate>
 {
     AVAudioPlayer*      _player;
+    __weak IBOutlet UIButton *playButton;
 }
 
 

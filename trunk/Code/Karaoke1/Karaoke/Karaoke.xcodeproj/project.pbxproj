@@ -45,6 +45,7 @@
 		346A5F4E18648A770071D955 /* NavibarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 346A5F4D18648A770071D955 /* NavibarViewController.m */; };
 		347E9DF818680DD500E7A342 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 347E9DF618680DD500E7A342 /* MenuCell.m */; };
 		347E9DF918680DD500E7A342 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 347E9DF718680DD500E7A342 /* MenuCell.xib */; };
+		34A25550186E96C0008B736E /* LyricView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A2554F186E96C0008B736E /* LyricView.m */; };
 		34BC53DE18648D0900CFFE9B /* NavibarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34BC53DD18648D0900CFFE9B /* NavibarView.xib */; };
 		34BC53E118648D6A00CFFE9B /* NavibarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BC53E018648D6A00CFFE9B /* NavibarView.m */; };
 		34BC53E71864A8F500CFFE9B /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BC53E41864A8F500CFFE9B /* JASidePanelController.m */; };
@@ -270,6 +271,8 @@
 		347E9DF518680DD500E7A342 /* MenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCell.h; sourceTree = "<group>"; };
 		347E9DF618680DD500E7A342 /* MenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCell.m; sourceTree = "<group>"; };
 		347E9DF718680DD500E7A342 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		34A2554E186E96C0008B736E /* LyricView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyricView.h; sourceTree = "<group>"; };
+		34A2554F186E96C0008B736E /* LyricView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyricView.m; sourceTree = "<group>"; };
 		34BC53DD18648D0900CFFE9B /* NavibarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavibarView.xib; sourceTree = "<group>"; };
 		34BC53DF18648D6A00CFFE9B /* NavibarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavibarView.h; sourceTree = "<group>"; };
 		34BC53E018648D6A00CFFE9B /* NavibarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavibarView.m; sourceTree = "<group>"; };
@@ -594,6 +597,7 @@
 		34264094186C7E90001C47C1 /* PlayMusicViewController */ = {
 			isa = PBXGroup;
 			children = (
+				34A2554D186E96AE008B736E /* LyricView */,
 				342640B2186CAFBE001C47C1 /* SentenceView */,
 				342640AE186CAEEB001C47C1 /* WordLabel */,
 				34264095186C7E9F001C47C1 /* PlayMP3 */,
@@ -732,6 +736,15 @@
 				347E9DF718680DD500E7A342 /* MenuCell.xib */,
 			);
 			name = MenuSlideCell;
+			sourceTree = "<group>";
+		};
+		34A2554D186E96AE008B736E /* LyricView */ = {
+			isa = PBXGroup;
+			children = (
+				34A2554E186E96C0008B736E /* LyricView.h */,
+				34A2554F186E96C0008B736E /* LyricView.m */,
+			);
+			name = LyricView;
 			sourceTree = "<group>";
 		};
 		34BC53E21864A8E000CFFE9B /* SlidePanelController */ = {
@@ -1365,6 +1378,7 @@
 				346A5F4E18648A770071D955 /* NavibarViewController.m in Sources */,
 				4BEAEAB31867B226000E3CD1 /* dangkyViewController.m in Sources */,
 				51580E4D1869F40900C837F9 /* CellOfKind.m in Sources */,
+				34A25550186E96C0008B736E /* LyricView.m in Sources */,
 				34BC53ED1864A9C100CFFE9B /* MenuSlideControllerViewController.m in Sources */,
 				340DDAC6186B524700204A05 /* Sentence.m in Sources */,
 				3426408B186C66B5001C47C1 /* SingerListViewController.m in Sources */,

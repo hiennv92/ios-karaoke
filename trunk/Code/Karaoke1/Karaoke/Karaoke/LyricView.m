@@ -61,6 +61,9 @@
 
 - (void)step:(float)currentTime
 {
+    if (!_lyric) {
+        return;
+    }
     if (_lastTime > 3.0) {
         _senIndex = 0;
         [_senView1 clearAllText];

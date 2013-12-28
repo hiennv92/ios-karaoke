@@ -100,6 +100,6 @@
 {
     NSLog(@"audio player finish with flag: %d", flag);
     [_timer invalidate];
-//    [sender setBackgroundImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
+    [playButton setBackgroundImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
 }
 @end
