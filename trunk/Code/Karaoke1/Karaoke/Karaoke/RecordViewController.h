@@ -9,14 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
-
+#include "lame.h"
 @interface RecordViewController : UIViewController<AVAudioPlayerDelegate,AVAudioRecorderDelegate,AVAudioSessionDelegate>{
     AVAudioRecorder *recorder;
     AVAudioPlayer *player;
     NSURL *outputFileURL;
     NSURL *mixFileURL;
 }
-
+@property (nonatomic, retain) UIAlertView *alert;
+@property (nonatomic, retain) NSDate *startDate;
 @property (nonatomic, assign) BOOL isPlay;
 @property (nonatomic, assign) BOOL isRecording;
 @property (strong, nonatomic) IBOutlet UIButton *_buttonPlay;
