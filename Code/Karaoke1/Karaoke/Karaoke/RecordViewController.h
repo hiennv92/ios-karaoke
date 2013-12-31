@@ -10,7 +10,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 #include "lame.h"
-@interface RecordViewController : UIViewController<AVAudioPlayerDelegate,AVAudioRecorderDelegate,AVAudioSessionDelegate>{
+
+@interface RecordViewController : UIViewController<AVAudioPlayerDelegate,AVAudioRecorderDelegate,AVAudioSessionDelegate, UIAlertViewDelegate>{
     AVAudioRecorder *recorder;
     AVAudioPlayer *player;
     NSURL *outputFileURL;
