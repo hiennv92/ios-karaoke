@@ -16,6 +16,10 @@
 		340DDAC0186B522B00204A05 /* Lyric.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DDABF186B522B00204A05 /* Lyric.m */; };
 		340DDAC3186B523600204A05 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DDAC2186B523600204A05 /* Word.m */; };
 		340DDAC6186B524700204A05 /* Sentence.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DDAC5186B524700204A05 /* Sentence.m */; };
+		3423D99C1871D84B00BED047 /* BJIConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3423D95C1871D84A00BED047 /* BJIConverter.m */; };
+		3423D9D31871D84B00BED047 /* PCMMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3423D99B1871D84A00BED047 /* PCMMixer.m */; };
+		3423D9DA1871DA4300BED047 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3423D9D91871DA4300BED047 /* libmp3lame.a */; };
+		3423D9DD1871DE0900BED047 /* SoundMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 3423D9DC1871DE0900BED047 /* SoundMix.m */; };
 		3426408B186C66B5001C47C1 /* SingerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34264089186C66B5001C47C1 /* SingerListViewController.m */; };
 		3426408C186C66B5001C47C1 /* SingerListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3426408A186C66B5001C47C1 /* SingerListViewController.xib */; };
 		34264091186C6A26001C47C1 /* SingerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34264090186C6A26001C47C1 /* SingerCell.m */; };
@@ -229,6 +233,14 @@
 		340DDAC2186B523600204A05 /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
 		340DDAC4186B524700204A05 /* Sentence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sentence.h; sourceTree = "<group>"; };
 		340DDAC5186B524700204A05 /* Sentence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sentence.m; sourceTree = "<group>"; };
+		3423D95B1871D84A00BED047 /* BJIConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJIConverter.h; sourceTree = "<group>"; };
+		3423D95C1871D84A00BED047 /* BJIConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJIConverter.m; sourceTree = "<group>"; };
+		3423D9991871D84A00BED047 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		3423D99A1871D84A00BED047 /* PCMMixer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMMixer.h; sourceTree = "<group>"; };
+		3423D99B1871D84A00BED047 /* PCMMixer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMMixer.m; sourceTree = "<group>"; };
+		3423D9D91871DA4300BED047 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmp3lame.a; path = Karaoke/libmp3lame.a; sourceTree = "<group>"; };
+		3423D9DB1871DE0900BED047 /* SoundMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundMix.h; sourceTree = "<group>"; };
+		3423D9DC1871DE0900BED047 /* SoundMix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundMix.m; sourceTree = "<group>"; };
 		34264088186C66B5001C47C1 /* SingerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingerListViewController.h; sourceTree = "<group>"; };
 		34264089186C66B5001C47C1 /* SingerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingerListViewController.m; sourceTree = "<group>"; };
 		3426408A186C66B5001C47C1 /* SingerListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingerListViewController.xib; sourceTree = "<group>"; };
@@ -464,6 +476,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3423D9DA1871DA4300BED047 /* libmp3lame.a in Frameworks */,
 				511EB739186DEBBC00AB20D0 /* AudioToolbox.framework in Frameworks */,
 				511EB737186DE88A00AB20D0 /* MediaPlayer.framework in Frameworks */,
 				342640AD186C9CFA001C47C1 /* AVFoundation.framework in Frameworks */,
@@ -526,6 +539,7 @@
 		34061F0B186458A0009FD9B2 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				3423D9D41871D85F00BED047 /* SoundMix */,
 				340091F5186B5A0500C6C655 /* XMLSupport */,
 				346A5F48186487620071D955 /* Lib.h */,
 				346A5F49186487620071D955 /* Lib.m */,
@@ -563,6 +577,20 @@
 				340DDAC5186B524700204A05 /* Sentence.m */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		3423D9D41871D85F00BED047 /* SoundMix */ = {
+			isa = PBXGroup;
+			children = (
+				3423D95B1871D84A00BED047 /* BJIConverter.h */,
+				3423D95C1871D84A00BED047 /* BJIConverter.m */,
+				3423D9991871D84A00BED047 /* lame.h */,
+				3423D99A1871D84A00BED047 /* PCMMixer.h */,
+				3423D99B1871D84A00BED047 /* PCMMixer.m */,
+				3423D9DB1871DE0900BED047 /* SoundMix.h */,
+				3423D9DC1871DE0900BED047 /* SoundMix.m */,
+			);
+			name = SoundMix;
 			sourceTree = "<group>";
 		};
 		34264086186C6698001C47C1 /* Singer Tab */ = {
@@ -667,6 +695,7 @@
 		3442C7B918642F1300BD13F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3423D9D91871DA4300BED047 /* libmp3lame.a */,
 				511EB738186DEBBC00AB20D0 /* AudioToolbox.framework */,
 				342640AC186C9CFA001C47C1 /* AVFoundation.framework */,
 				342640AA186C9CD5001C47C1 /* MediaPlayer.framework */,
@@ -1370,16 +1399,19 @@
 				346A5F4A186487620071D955 /* Lib.m in Sources */,
 				340DDAC3186B523600204A05 /* Word.m in Sources */,
 				511EB734186DAE6C00AB20D0 /* RecordViewController.m in Sources */,
+				3423D9DD1871DE0900BED047 /* SoundMix.m in Sources */,
 				4BEAEAB81867B6E5000E3CD1 /* dangnhapViewController.m in Sources */,
 				347E9DF818680DD500E7A342 /* MenuCell.m in Sources */,
 				34BC53E71864A8F500CFFE9B /* JASidePanelController.m in Sources */,
 				51580E5A186A00C800C837F9 /* ListSongsOfKindViewController.m in Sources */,
 				4B743450186BA05600BE95BF /* PlayKaraClipViewController.m in Sources */,
 				346A5F4E18648A770071D955 /* NavibarViewController.m in Sources */,
+				3423D99C1871D84B00BED047 /* BJIConverter.m in Sources */,
 				4BEAEAB31867B226000E3CD1 /* dangkyViewController.m in Sources */,
 				51580E4D1869F40900C837F9 /* CellOfKind.m in Sources */,
 				34A25550186E96C0008B736E /* LyricView.m in Sources */,
 				34BC53ED1864A9C100CFFE9B /* MenuSlideControllerViewController.m in Sources */,
+				3423D9D31871D84B00BED047 /* PCMMixer.m in Sources */,
 				340DDAC6186B524700204A05 /* Sentence.m in Sources */,
 				3426408B186C66B5001C47C1 /* SingerListViewController.m in Sources */,
 				4BE7D7421868740100F7438B /* karaokeListCell.m in Sources */,
@@ -1484,6 +1516,10 @@
 				GCC_PREFIX_HEADER = "Karaoke/Karaoke-Prefix.pch";
 				INFOPLIST_FILE = "Karaoke/Karaoke-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/papo/Documents/Projects/IOS_Projects/KaraokeProject/trunk/trunk/Code/Karaoke1/Karaoke/Karaoke,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1500,6 +1536,10 @@
 				GCC_PREFIX_HEADER = "Karaoke/Karaoke-Prefix.pch";
 				INFOPLIST_FILE = "Karaoke/Karaoke-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/papo/Documents/Projects/IOS_Projects/KaraokeProject/trunk/trunk/Code/Karaoke1/Karaoke/Karaoke,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";

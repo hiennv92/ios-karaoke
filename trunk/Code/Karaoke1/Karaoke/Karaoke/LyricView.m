@@ -35,8 +35,15 @@
         
         _senView2 = [[SentenceView alloc] initWithFrame:CGRectMake(50, 50, self.frame.size.width - 50, 30)];
         [self addSubview:_senView2];
+        
+        [self setBackgroundColor:[UIColor colorWithRed:255 green:255 blue:255 alpha:0.5]];
     }
     return self;
+}
+
+- (id)init
+{
+    return [self initWithFrame:CGRectZero];
 }
 
 /*

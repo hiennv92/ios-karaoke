@@ -10,8 +10,13 @@
 #import "Lib.h"
 #import "PCMMixer.h"
 #import "BJIConverter.h"
+#import "LyricView.h"
 
 @interface RecordViewController ()
+{
+    NSTimer*    _timer;
+    LyricView*  _lyricView;
+}
 
 @end
 
@@ -65,6 +70,10 @@
     recorder.meteringEnabled = YES;
     [recorder prepareToRecord];
     [self setIsPlay:NO];
+    
+    //
+    _lyricView = [[LyricView alloc] initWithFrame:CGRectMake(50, 150, 220, 90)];
+    [self.view addSubview:_lyricView];
 }
 
 
@@ -116,12 +125,19 @@
 }
 
 - (IBAction)playController:(id)sender {
-    if(!recorder.recording){
-        [Lib isHeadsetPluggedIn];
+    if(!player.isPlaying){
+        
+        // recording..
+        AVAudioSession *session = [AVAudioSession sharedInstance];
+        [session setActive:YES error:nil];
+        
+        // Start recording
+        [recorder record];
+        
 
         [self._buttonPlay setImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
  
-        NSString *destinationString = [[self documentsPath] stringByAppendingPathComponent:@"MyAudioMemo.m4a"];
+        NSString *destinationString = [[NSBundle mainBundle] pathForResource:@"10_nam_tinh_cu" ofType:@"mp3"];
         NSURL* url = [NSURL fileURLWithPath:destinationString];
         
         player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
@@ -129,12 +145,29 @@
         [player prepareToPlay];
         [self setIsPlay:YES];
         
+        [self._buttonRecord setImage:[UIImage imageNamed:@"dang-ghi-am.png"] forState:UIControlStateNormal];
+        self._recordStatusLabel.text = @"Đang ghi âm";
+        
+        [_lyricView setLyricFile:@"10_nam_tinh_cu"];
+        
 //        NSLog(@"URL RECORD: %@",recorder.url);
 //        NSLog(@"URL OUPUTFILE: %@",outputFileURL);
         [player play];
+        
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(step) userInfo:nil repeats:YES];
     }
     else{
+        [_lyricView clearAllText];
         [player stop];
+        if ([recorder isRecording]) {
+            [recorder stop];
+            AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+            [audioSession setActive:NO error:nil];
+        }
+        if (_timer) {
+            [_timer invalidate];
+            _timer = nil;
+        }
         [self._buttonPlay setImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
         [self setIsPlay:NO];
     }
@@ -160,8 +193,22 @@
 
 - (IBAction)backController:(id)sender {
     [player stop];
-    [recorder stop];
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+    if ([recorder isRecording]) {
+        [recorder stop];
+        return;
+    }
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+// timer
+- (void)step
+{
+    [_lyricView step:player.currentTime];
 }
 
 #pragma mark - AVAudioRecorderDelegate
@@ -172,7 +219,29 @@
     [self._buttonPlay setEnabled:YES];
 
     //Mix file after record with a headphone
-    [self mixWithFileBeat];
+//    [self mixWithFileBeat];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    _alert = [[UIAlertView alloc] init];
+    [_alert setTitle:@"Waiting.."];
+    
+    UIActivityIndicatorView* activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    activity.frame = CGRectMake(140,
+                                80,
+                                CGRectGetWidth(_alert.frame),
+                                CGRectGetHeight(_alert.frame));
+    [_alert addSubview:activity];
+    [activity startAnimating];
+    
+    [_alert show];
+    
+    if ([Lib isHeadsetPluggedIn]) {
+        [NSThread detachNewThreadSelector:@selector(mixWithFileBeat) toTarget:self withObject:nil];
+    }
+    else
+    {
+        [NSThread detachNewThreadSelector:@selector(convertM4aToMp3) toTarget:self withObject:nil];
+    }
+//    [self mixWithFileBeat];
 }
 
 #pragma mark - AVAudioPlayerDelegate
@@ -181,12 +250,52 @@
     [self._buttonPlay setImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
     [self._buttonRecord setEnabled:YES];
     [self setIsPlay:NO];
+    
+    // stop recording
+    [recorder stop];
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [audioSession setActive:NO error:nil];
+    
+    [self._buttonRecord setImage:[UIImage imageNamed:@"ghi-am.png"] forState:UIControlStateNormal];
+    self._recordStatusLabel.text = @"Ghi âm";
+    [self._buttonPlay setEnabled:YES];
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+}
+
+- (void)convertM4aToMp3
+{
+    _startDate = [NSDate date] ;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docPath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    //    NSFileManager *fm = [NSFileManager defaultManager];
+    //    NSArray *dirContents = [fm contentsOfDirectoryAtPath:bundleRoot error:nil];
+    //    NSPredicate *fltr = [NSPredicate predicateWithFormat:@"self ENDSWITH '.mp3'"];
+        //  Convert mp3's to their full paths
+    NSMutableArray *fullmp3s = [[NSMutableArray alloc] initWithCapacity:1];
+    
+    NSString *recordOutput=[docPath stringByAppendingPathComponent:@"MyAudioMemo.m4a"];
+    [fullmp3s addObject: recordOutput];
+    
+    NSArray* cafs = [self getCAFs:fullmp3s];
+    if (cafs && cafs.count > 0) {
+        NSLog(@"get cafs: %@", cafs);
+        NSString* mp3Url = cafs[0];
+        [self toMp3:mp3Url];
+    }
+    else
+    {
+        NSLog(@"convert to cafs error");
+    }
 }
 
 ////Dat mixs file/////
 #pragma mark - Dat Mix audio
 
 - (void)mixWithFileBeat{
+    _startDate = [NSDate date] ;
     NSLog(@"mix file beat");
     //URL file record dat trong bien: recordURL;
     NSArray *mp3s = [self getMP3s];
@@ -205,28 +314,14 @@
 	} else {
 		NSLog(@"mix thanh cong. url file : %@",mixURL);
 	}
-    NSLog(@"%d",(int)status);
-    [self playMix:mixURL withStatus:status];
+    NSLog(@"status: %d",(int)status);
+//    [self playMix:mixURL withStatus:status];
 //    [BJIConverter convertFile:mixURL toFile:[mixURL stringByReplacingOccurrencesOfString:@".caf" withString:@".aiff"]];
     
     
-    
-    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    _alert = [[UIAlertView alloc] init];
-    [_alert setTitle:@"Waiting.."];
-    
-    UIActivityIndicatorView* activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    activity.frame = CGRectMake(140,
-                                80,
-                                CGRectGetWidth(_alert.frame),
-                                CGRectGetHeight(_alert.frame));
-    [_alert addSubview:activity];
-    [activity startAnimating];
-    
-    [_alert show];
     _startDate = [NSDate date] ;
-    [NSThread detachNewThreadSelector:@selector(toMp3:) toTarget:self withObject:mixURL ];
-    
+//    [NSThread detachNewThreadSelector:@selector(toMp3:) toTarget:self withObject:mixURL ];
+    [self toMp3:mixURL];
     
     
 //    [self toMp3:mixURL];
@@ -314,7 +409,7 @@
     NSString *mp3FilePath = Nil;
     mp3FilePath = [cafFilePath stringByAppendingString:@".mp3"];
 //    NSString *mp3FilePath = [[NSHomeDirectory() stringByAppendingFormat:@"/Documents/"] stringByAppendingPathComponent:mp3FileName];
-    
+    NSLog(@"to mp3: %@", mp3FilePath);
     @try {
         int read, write;
         
@@ -348,7 +443,7 @@
         fclose(pcm);
     }
     @catch (NSException *exception) {
-        NSLog(@"%@",[exception description]);
+        NSLog(@"exception: %@",[exception description]);
     }
     @finally {
         [self performSelectorOnMainThread:@selector(convertMp3Finish)
@@ -358,6 +453,7 @@
 }
 - (void) convertMp3Finish
 {
+    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
     [_alert dismissWithClickedButtonIndex:0 animated:YES];
     
     _alert = [[UIAlertView alloc] init];
@@ -366,12 +462,37 @@
 
     [_alert addButtonWithTitle:@"OK"];
     [_alert setCancelButtonIndex: 0];
+    [_alert setTag:123];
+    [_alert setDelegate:self];
     [_alert show];
     
 //    _hasMp3File = YES;
 //    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
 //    NSInteger fileSize =  [self getFileSize:[NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@", @"Mp3File.mp3"]];
 //    _mp3FileSize.text = [NSString stringWithFormat:@"%d kb", fileSize/1024];
+}
+
+#pragma mark - UIAlertView delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == 123) {
+        [self._buttonPlay setImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
+        
+        NSString* mixURL = [self getMixURL];
+        mixURL = [mixURL stringByAppendingString:@".mp3"];
+        NSURL *url = [NSURL fileURLWithPath:mixURL];
+        
+		NSData *urlData = [NSData dataWithContentsOfURL:url];
+        
+		NSLog(@"wrote mix file of size %d : %@", [urlData length], mixURL);
+        
+		AVAudioPlayer *avAudioObj = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+        
+        player = avAudioObj;
+        
+		[avAudioObj prepareToPlay];
+		[avAudioObj play];
+    }
 }
 
 
