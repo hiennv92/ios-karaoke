@@ -11,11 +11,13 @@
 #import "PCMMixer.h"
 #import "BJIConverter.h"
 #import "LyricView.h"
+#import "SoundMix.h"
 
 @interface RecordViewController ()
 {
     NSTimer*    _timer;
     LyricView*  _lyricView;
+    NSString*   _mp3LastUrl;
 }
 
 @end
@@ -42,7 +44,7 @@
     // Set the audio file
     NSArray *pathComponents = [NSArray arrayWithObjects:
                                [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
-                               @"MyAudioMemo.m4a",
+                               @"MyAudioMemo.caf",
                                nil];
     outputFileURL = [NSURL fileURLWithPathComponents:pathComponents];
     NSLog(@"url record: %@", outputFileURL);
@@ -60,7 +62,7 @@
     // Define the recorder setting
     NSMutableDictionary *recordSetting = [[NSMutableDictionary alloc] init];
     
-    [recordSetting setValue:[NSNumber numberWithInt:kAudioFormatMPEG4AAC] forKey:AVFormatIDKey];
+    [recordSetting setValue:[NSNumber numberWithInt:kAudioFormatLinearPCM] forKey:AVFormatIDKey];
     [recordSetting setValue:[NSNumber numberWithFloat:44100.0] forKey:AVSampleRateKey];
     [recordSetting setValue:[NSNumber numberWithInt: 2] forKey:AVNumberOfChannelsKey];
     
@@ -126,6 +128,8 @@
 
 - (IBAction)playController:(id)sender {
     if(!player.isPlaying){
+        // disable auto lock screen
+        [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
         
         // recording..
         AVAudioSession *session = [AVAudioSession sharedInstance];
@@ -201,6 +205,7 @@
         [recorder stop];
         return;
     }
+    [[UIApplication sharedApplication]setIdleTimerDisabled:NO];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -222,7 +227,7 @@
 //    [self mixWithFileBeat];
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     _alert = [[UIAlertView alloc] init];
-    [_alert setTitle:@"Waiting.."];
+    [_alert setTitle:@"Chờ chút xíu.."];
     
     UIActivityIndicatorView* activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     activity.frame = CGRectMake(140,
@@ -234,7 +239,8 @@
     
     [_alert show];
     
-    if ([Lib isHeadsetPluggedIn]) {
+    if ([Lib isHeadsetPluggedIn])
+    {
         [NSThread detachNewThreadSelector:@selector(mixWithFileBeat) toTarget:self withObject:nil];
     }
     else
@@ -252,9 +258,11 @@
     [self setIsPlay:NO];
     
     // stop recording
-    [recorder stop];
-    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-    [audioSession setActive:NO error:nil];
+    if ([recorder isRecording]) {
+        [recorder stop];
+        AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+        [audioSession setActive:NO error:nil];
+    }
     
     [self._buttonRecord setImage:[UIImage imageNamed:@"ghi-am.png"] forState:UIControlStateNormal];
     self._recordStatusLabel.text = @"Ghi âm";
@@ -263,6 +271,7 @@
         [_timer invalidate];
         _timer = nil;
     }
+    [[UIApplication sharedApplication]setIdleTimerDisabled:NO];
 }
 
 - (void)convertM4aToMp3
@@ -274,36 +283,48 @@
     //    NSArray *dirContents = [fm contentsOfDirectoryAtPath:bundleRoot error:nil];
     //    NSPredicate *fltr = [NSPredicate predicateWithFormat:@"self ENDSWITH '.mp3'"];
         //  Convert mp3's to their full paths
-    NSMutableArray *fullmp3s = [[NSMutableArray alloc] initWithCapacity:1];
+
     
-    NSString *recordOutput=[docPath stringByAppendingPathComponent:@"MyAudioMemo.m4a"];
-    [fullmp3s addObject: recordOutput];
+    NSString *recordOutput=[docPath stringByAppendingPathComponent:@"MyAudioMemo.caf"];
+//    NSString* cafOutPut = [recordOutput stringByAppendingString:@".caf"];
     
-    NSArray* cafs = [self getCAFs:fullmp3s];
-    if (cafs && cafs.count > 0) {
-        NSLog(@"get cafs: %@", cafs);
-        NSString* mp3Url = cafs[0];
-        [self toMp3:mp3Url];
-    }
-    else
-    {
-        NSLog(@"convert to cafs error");
-    }
+//    [BJIConverter convertFile:recordOutput toFile:cafOutPut];
+
+    [self toMp3:recordOutput];
 }
 
 ////Dat mixs file/////
 #pragma mark - Dat Mix audio
 
 - (void)mixWithFileBeat{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docPath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    NSString *bundleRoot = [[NSBundle mainBundle] bundlePath];
     _startDate = [NSDate date] ;
     NSLog(@"mix file beat");
     //URL file record dat trong bien: recordURL;
     NSArray *mp3s = [self getMP3s];
     NSArray *cafs = [self getCAFs:mp3s];
-    //  Convert all mp3's to cafs
-    [BJIConverter convertFiles:mp3s toFiles:cafs];
     
-    NSArray *files = cafs;
+    NSString* mp3file = [bundleRoot stringByAppendingPathComponent:@"10_nam_tinh_cu.mp3"];
+    NSString* cafFile = [docPath stringByAppendingPathComponent:@"10_nam_tinh_cu.caf"];
+    NSString* recordCaf = [docPath stringByAppendingPathComponent:@"MyAudioMemo.caf"];
+    //  Convert all mp3's to cafs
+//    [BJIConverter convertFiles:mp3s toFiles:cafs];
+    [BJIConverter convertFile:mp3file toFile:cafFile];
+    
+    // Trim sound file
+    double recordTime = [SoundMix getSoundLength:recordCaf];
+    double beatTime = [SoundMix getSoundLength:cafFile];
+    NSLog(@"record time: %lf beat time: %lf ", recordTime, beatTime);
+    
+//    if (recordTime < beatTime) {
+//        [SoundMix trimSoundFile:cafFile withTime:recordTime];
+//        cafFile = [docPath stringByAppendingPathComponent:@"trim.caf"];
+//    }
+    
+//    NSArray *files = cafs;
+    NSArray* files = @[cafFile, recordCaf];
     NSArray *times = [self getTimes];
     NSString *mixURL = [self getMixURL];
     
@@ -344,11 +365,13 @@
 		AVAudioPlayer *avAudioObj = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
         
         player = avAudioObj;
+        [player setDelegate:self];
         
 		[avAudioObj prepareToPlay];
 		[avAudioObj play];
 	}
 }
+
 
 - (NSArray*)getMP3s {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -410,6 +433,7 @@
     mp3FilePath = [cafFilePath stringByAppendingString:@".mp3"];
 //    NSString *mp3FilePath = [[NSHomeDirectory() stringByAppendingFormat:@"/Documents/"] stringByAppendingPathComponent:mp3FileName];
     NSLog(@"to mp3: %@", mp3FilePath);
+    _mp3LastUrl = mp3FilePath;
     @try {
         int read, write;
         
@@ -458,7 +482,7 @@
     
     _alert = [[UIAlertView alloc] init];
     [_alert setTitle:@"Finish"];
-    [_alert setMessage:[NSString stringWithFormat:@"Conversion takes %fs", [[NSDate date] timeIntervalSinceDate:_startDate]]];
+    [_alert setMessage:[NSString stringWithFormat:@"Lưu thành công! Phát lại!"]];
 
     [_alert addButtonWithTitle:@"OK"];
     [_alert setCancelButtonIndex: 0];
@@ -478,8 +502,7 @@
     if (alertView.tag == 123) {
         [self._buttonPlay setImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
         
-        NSString* mixURL = [self getMixURL];
-        mixURL = [mixURL stringByAppendingString:@".mp3"];
+        NSString* mixURL = _mp3LastUrl;
         NSURL *url = [NSURL fileURLWithPath:mixURL];
         
 		NSData *urlData = [NSData dataWithContentsOfURL:url];
@@ -489,6 +512,7 @@
 		AVAudioPlayer *avAudioObj = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
         
         player = avAudioObj;
+        [player setDelegate:self];
         
 		[avAudioObj prepareToPlay];
 		[avAudioObj play];
