@@ -9,6 +9,7 @@
 #import "NavibarView.h"
 
 @implementation NavibarView
+@synthesize _searchBar;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -88,7 +89,13 @@
 
 + (NavibarView*)searchBarWithTarget:(id)target closeBarAction:(SEL)closeSelector{
     NavibarView* search= (NavibarView*)[[[NSBundle mainBundle] loadNibNamed:@"NavibarView" owner:self options:Nil] objectAtIndex:2];
-    [search.searchButton addTarget:target action:closeSelector forControlEvents:UIControlEventTouchUpInside];
+//    [search.searchButton addTarget:target action:closeSelector forControlEvents:UIControlEventTouchUpInside];
+    
+    [search._searchBar setBackgroundColor:[UIColor blackColor]];
+    [search._searchBar setText:@"Blablalba"];
+    [search._searchBar setShowsCancelButton:NO];
+    search._searchBar.barTintColor = [UIColor redColor];
+    search._searchBar.hidden = YES;
     return  search;
 }
 

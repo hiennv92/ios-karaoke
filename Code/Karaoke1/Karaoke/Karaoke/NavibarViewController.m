@@ -40,6 +40,10 @@
     [self.searchBarView setFrame:CGRectMake(320,0,320,44)];
     [self.searchBarView setHidden: YES];
     [self.view addSubview:self.searchBarView];
+    
+    [[UISearchBar appearance] setSearchFieldBackgroundImage:[UIImage imageNamed:@"text_box"] forState:UIControlStateNormal];
+    
+    [[UISearchBar appearance] setImage:[UIImage imageNamed:@"MagnifyingGlassDark.png"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
