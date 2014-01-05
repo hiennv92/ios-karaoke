@@ -10,11 +10,12 @@
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import "NavibarViewController.h"
+#import "Lib.h"
 
 @interface RecordManagerViewController : NavibarViewController<UITableViewDataSource,UITableViewDelegate,AVAudioPlayerDelegate>{
     NSMutableArray* _dataRecords;
     NSURL *_pathFileRecord;
-    AVAudioPlayer *player;
+    AVAudioPlayer *_player;
 }
 @property (strong, nonatomic) IBOutlet UITableView *_tableView;
 

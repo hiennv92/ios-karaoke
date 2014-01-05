@@ -58,7 +58,8 @@
     
     NSString* routeStr = (NSString*)CFBridgingRelease(route);
     
-    NSRange headsetRange = [routeStr rangeOfString : @"Headset"]; NSRange receiverRange = [routeStr rangeOfString : @"Receiver"];
+    NSRange headsetRange = [routeStr rangeOfString : @"Headset"];
+    NSRange receiverRange = [routeStr rangeOfString : @"Receiver"];
     
     if(headsetRange.location != NSNotFound) {
         // Don't change the route if the headset is plugged in.

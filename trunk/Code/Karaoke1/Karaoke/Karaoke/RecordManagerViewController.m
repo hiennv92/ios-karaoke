@@ -93,6 +93,7 @@
 }
 
 -(void)leftButtonBarPress:(id)button{
+    [_player stop];
     [self.navigationController popToRootViewControllerAnimated:YES];
     [((AppDelegate*)[[UIApplication sharedApplication]delegate]).viewController showCenterPanelAnimated:NO];
 }
@@ -124,17 +125,17 @@
 
 - (IBAction)playRecordController:(id)sender {
 //    NSLog(@"%@",_pathFileRecord);
-    if(!player.isPlaying){
+    if(!_player.isPlaying){
         AVAudioPlayer *avAudioObj = [[AVAudioPlayer alloc] initWithContentsOfURL:_pathFileRecord error:nil];
-        player = avAudioObj;
-        [player setDelegate:self];
+        _player = avAudioObj;
+        [_player setDelegate:self];
         [avAudioObj prepareToPlay];
         [avAudioObj play];
     }
 }
 
 - (IBAction)stopPlayRecordController:(id)sender {
-    [player stop];
+    [_player stop];
 }
 
 - (IBAction)shareFaceBookController:(id)sender {
