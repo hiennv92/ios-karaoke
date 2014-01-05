@@ -8,6 +8,7 @@
 
 #import "MenuSlideControllerViewController.h"
 #import "KindOfMusicViewController.h"
+#import "RecordManagerViewController.h"
 #import "MenuCell.h"
 
 @interface MenuSlideControllerViewController ()
@@ -162,6 +163,11 @@
     else if(indexPath.row == 4 && indexPath.section == 1){
     }
     else if(indexPath.row == 5 && indexPath.section == 1){
+        NSLog(@"Record manager");
+        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+        [app.viewController showCenterPanelAnimated:YES];
+        RecordManagerViewController *recordManagerView =[[RecordManagerViewController alloc] initWithNibName:@"RecordManagerViewController" bundle:nil];
+        [self.navigationController pushViewController:recordManagerView animated:YES];
     }
     else if(indexPath.row == 6 && indexPath.section == 1){
     }

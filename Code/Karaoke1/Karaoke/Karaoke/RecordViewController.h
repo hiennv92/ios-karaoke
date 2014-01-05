@@ -11,10 +11,10 @@
 #import <MediaPlayer/MediaPlayer.h>
 #include "lame.h"
 
-@interface RecordViewController : UIViewController<AVAudioPlayerDelegate,AVAudioRecorderDelegate,AVAudioSessionDelegate, UIAlertViewDelegate>{
+@interface RecordViewController : UIViewController<AVAudioPlayerDelegate,AVAudioRecorderDelegate,AVAudioSessionDelegate, UIAlertViewDelegate,UITextFieldDelegate>{
     AVAudioRecorder *recorder;
     AVAudioPlayer *player;
-    NSURL *outputFileURL;
+    NSURL *outputFileCafURL;
     NSURL *mixFileURL;
 }
 @property (nonatomic, retain) UIAlertView *alert;
