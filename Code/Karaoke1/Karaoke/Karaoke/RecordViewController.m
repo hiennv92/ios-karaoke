@@ -118,12 +118,12 @@
             [player setDelegate:self];
             [player prepareToPlay];
             [self setIsPlay:YES];
-            
+            [player play];
+
             [self._buttonRecord setImage:[UIImage imageNamed:@"dang-ghi-am.png"] forState:UIControlStateNormal];
             self._recordStatusLabel.text = @"Đang ghi âm";
             
             [_lyricView setLyricFile:@"10_nam_tinh_cu"];
-            [player play];
             
             _timer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(step) userInfo:nil repeats:YES];
         }
@@ -529,10 +529,6 @@
     if ([fileMgr moveItemAtPath:_mp3LastUrl toPath:saveDataPath error:&error] != YES)
         NSLog(@"Unable to move file: %@", [error localizedDescription]);
     
-// Show contents of Documents directory
-//    NSLog(@"Documents directory: %@",
-//          [fileMgr contentsOfDirectoryAtPath:documentsDirectory error:&error]);
- 
     return  saveDataPath;
 }
 
