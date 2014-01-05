@@ -39,6 +39,7 @@
     // Do any additional setup after loading the view from its nib.
     [self setIsPlay:NO];
     [self setIsRecording:NO];
+    [self._buttonPlay setEnabled:FALSE];
     
     //Setup audio record
     // Set the audio file
@@ -47,7 +48,7 @@
                                @"MyAudioMemo.caf",
                                nil];
     outputFileURL = [NSURL fileURLWithPathComponents:pathComponents];
-    NSLog(@"url record: %@", outputFileURL);
+//    NSLog(@"url record: %@", outputFileURL);
     
     // Setup audio session
     AVAudioSession *session = [AVAudioSession sharedInstance];
@@ -57,7 +58,6 @@
   
     UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_None;
     AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,sizeof (audioRouteOverride),&audioRouteOverride);
-    
     
     // Define the recorder setting
     NSMutableDictionary *recordSetting = [[NSMutableDictionary alloc] init];
@@ -74,7 +74,7 @@
     [self setIsPlay:NO];
     
     //
-    _lyricView = [[LyricView alloc] initWithFrame:CGRectMake(50, 150, 220, 90)];
+    _lyricView = [[LyricView alloc] initWithFrame:CGRectMake(10, 150, 300, 300)];
     [self.view addSubview:_lyricView];
 }
 
@@ -98,6 +98,9 @@
         else{
             [Lib isHeadsetPluggedIn];
 
+            // disable auto lock screen
+            [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+            
             AVAudioSession *session = [AVAudioSession sharedInstance];
             [session setActive:YES error:nil];
             
@@ -106,8 +109,29 @@
             [self._buttonRecord setImage:[UIImage imageNamed:@"dang-ghi-am.png"] forState:UIControlStateNormal];
             self._recordStatusLabel.text = @"Đang ghi âm";
             [self._buttonPlay setEnabled:NO];
+            
+            
+            NSString *destinationString = [[NSBundle mainBundle] pathForResource:@"10_nam_tinh_cu" ofType:@"mp3"];
+            
+            mixFileURL = [NSURL fileURLWithPath:destinationString];
+            
+            player = [[AVAudioPlayer alloc] initWithContentsOfURL:mixFileURL error:nil];
+            [player setDelegate:self];
+            [player prepareToPlay];
+            [self setIsPlay:YES];
+            
+            [self._buttonRecord setImage:[UIImage imageNamed:@"dang-ghi-am.png"] forState:UIControlStateNormal];
+            self._recordStatusLabel.text = @"Đang ghi âm";
+            
+            [_lyricView setLyricFile:@"10_nam_tinh_cu"];
+            [player play];
+            
+            _timer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(step) userInfo:nil repeats:YES];
         }
     } else {
+        [_lyricView clearAllText];
+        [player stop];
+      
         //Stop record
         [recorder stop];
         AVAudioSession *audioSession = [AVAudioSession sharedInstance];
@@ -117,61 +141,32 @@
         self._recordStatusLabel.text = @"Ghi âm";
         [self._buttonPlay setEnabled:YES];
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Chú ý"
-                                                        message: @"Bạn có muốn lưu lại bản thu âm không?"
-                                                       delegate: nil
-                                              cancelButtonTitle:@"Có"
-                                              otherButtonTitles:@"Không",nil];
-        [alert show];
+        if (_timer) {
+            [_timer invalidate];
+            _timer = nil;
+        }
     }
 }
 
 - (IBAction)playController:(id)sender {
     if(!player.isPlaying){
-        // disable auto lock screen
-        [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
-        
-        // recording..
-        AVAudioSession *session = [AVAudioSession sharedInstance];
-        [session setActive:YES error:nil];
-        
-        // Start recording
-        [recorder record];
-        
-
         [self._buttonPlay setImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
- 
-        NSString *destinationString = [[NSBundle mainBundle] pathForResource:@"10_nam_tinh_cu" ofType:@"mp3"];
-        NSURL* url = [NSURL fileURLWithPath:destinationString];
         
-        player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+        NSString* mixURL = _mp3LastUrl;
+        NSURL *url = [NSURL fileURLWithPath:mixURL];
+        
+//		NSData *urlData = [NSData dataWithContentsOfURL:url];
+//		NSLog(@"wrote mix file of size %d : %@", [urlData length], mixURL);
+        
+		AVAudioPlayer *avAudioObj = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+        
+        player = avAudioObj;
         [player setDelegate:self];
-        [player prepareToPlay];
-        [self setIsPlay:YES];
         
-        [self._buttonRecord setImage:[UIImage imageNamed:@"dang-ghi-am.png"] forState:UIControlStateNormal];
-        self._recordStatusLabel.text = @"Đang ghi âm";
-        
-        [_lyricView setLyricFile:@"10_nam_tinh_cu"];
-        
-//        NSLog(@"URL RECORD: %@",recorder.url);
-//        NSLog(@"URL OUPUTFILE: %@",outputFileURL);
-        [player play];
-        
-        _timer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(step) userInfo:nil repeats:YES];
+		[avAudioObj prepareToPlay];
+		[avAudioObj play];
     }
     else{
-        [_lyricView clearAllText];
-        [player stop];
-        if ([recorder isRecording]) {
-            [recorder stop];
-            AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-            [audioSession setActive:NO error:nil];
-        }
-        if (_timer) {
-            [_timer invalidate];
-            _timer = nil;
-        }
         [self._buttonPlay setImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
         [self setIsPlay:NO];
     }
@@ -223,8 +218,6 @@
     self._recordStatusLabel.text = @"Ghi âm";
     [self._buttonPlay setEnabled:YES];
 
-    //Mix file after record with a headphone
-//    [self mixWithFileBeat];
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     _alert = [[UIAlertView alloc] init];
     [_alert setTitle:@"Chờ chút xíu.."];
@@ -241,13 +234,13 @@
     
     if ([Lib isHeadsetPluggedIn])
     {
+        NSLog(@"Mix file");
         [NSThread detachNewThreadSelector:@selector(mixWithFileBeat) toTarget:self withObject:nil];
     }
     else
     {
         [NSThread detachNewThreadSelector:@selector(convertM4aToMp3) toTarget:self withObject:nil];
     }
-//    [self mixWithFileBeat];
 }
 
 #pragma mark - AVAudioPlayerDelegate
@@ -257,22 +250,9 @@
     [self._buttonRecord setEnabled:YES];
     [self setIsPlay:NO];
     
-    // stop recording
-    if ([recorder isRecording]) {
-        [recorder stop];
-        AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-        [audioSession setActive:NO error:nil];
-    }
-    
-    [self._buttonRecord setImage:[UIImage imageNamed:@"ghi-am.png"] forState:UIControlStateNormal];
-    self._recordStatusLabel.text = @"Ghi âm";
-    [self._buttonPlay setEnabled:YES];
-    if (_timer) {
-        [_timer invalidate];
-        _timer = nil;
-    }
     [[UIApplication sharedApplication]setIdleTimerDisabled:NO];
 }
+
 
 - (void)convertM4aToMp3
 {
@@ -350,6 +330,7 @@
     
     
 }
+
 - (void)playMix:(NSString*)mixURL withStatus:(OSStatus)status {
     if (status == OSSTATUS_MIX_WOULD_CLIP) {
 		
@@ -371,7 +352,6 @@
 		[avAudioObj play];
 	}
 }
-
 
 - (NSArray*)getMP3s {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -475,25 +455,21 @@
                             waitUntilDone:YES];
     }
 }
+
 - (void) convertMp3Finish
 {
     [[UIApplication sharedApplication] endIgnoringInteractionEvents];
     [_alert dismissWithClickedButtonIndex:0 animated:YES];
     
-    _alert = [[UIAlertView alloc] init];
-    [_alert setTitle:@"Finish"];
-    [_alert setMessage:[NSString stringWithFormat:@"Lưu thành công! Phát lại!"]];
-
-    [_alert addButtonWithTitle:@"OK"];
-    [_alert setCancelButtonIndex: 0];
-    [_alert setTag:123];
+    _alert = [[UIAlertView alloc] initWithTitle: @"Chú ý"
+                                        message: @"Bạn có muốn lưu lại bản thu âm không?"
+                                       delegate: nil
+                              cancelButtonTitle:@"Có"
+                              otherButtonTitles:@"Không",nil];
+    
+    [_alert setTag:1];
     [_alert setDelegate:self];
     [_alert show];
-    
-//    _hasMp3File = YES;
-//    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
-//    NSInteger fileSize =  [self getFileSize:[NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@", @"Mp3File.mp3"]];
-//    _mp3FileSize.text = [NSString stringWithFormat:@"%d kb", fileSize/1024];
 }
 
 #pragma mark - UIAlertView delegate
@@ -516,6 +492,15 @@
         
 		[avAudioObj prepareToPlay];
 		[avAudioObj play];
+    }
+    
+    if(alertView.tag == 1){
+        if(buttonIndex == 0){
+            NSLog(@"Luu file");
+        }
+        else if(buttonIndex == 1){
+            
+        }
     }
 }
 
