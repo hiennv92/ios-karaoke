@@ -149,6 +149,7 @@
 
 - (IBAction)playController:(id)sender {
     if(!player.isPlaying){
+        [self setIsPlay:YES];
         [self._buttonPlay setImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
         
 		AVAudioPlayer *avAudioObj = [[AVAudioPlayer alloc] initWithContentsOfURL:outputFileCafURL error:nil];
@@ -159,6 +160,7 @@
 		[avAudioObj play];
     }
     else{
+        [player stop];
         [self._buttonPlay setImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
         [self setIsPlay:NO];
     }
