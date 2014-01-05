@@ -21,4 +21,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *_numberLikes;
 @property (strong, nonatomic) IBOutlet UILabel *_numberPlay;
 
+//Use for cell of record
+@property (strong, nonatomic) IBOutlet UILabel *_nameRecord;
+@property (strong, nonatomic) IBOutlet UILabel *_idRecord;
+@property (strong, nonatomic) IBOutlet UILabel *_infoRecord;
+@property (strong, nonatomic) IBOutlet UILabel *_lyricRecord;
+
 @end

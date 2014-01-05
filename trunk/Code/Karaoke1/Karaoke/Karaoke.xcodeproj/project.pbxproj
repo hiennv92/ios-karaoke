@@ -214,6 +214,9 @@
 		51580E4F1869F42B00C837F9 /* CellOfKind.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51580E4E1869F42B00C837F9 /* CellOfKind.xib */; };
 		51580E5A186A00C800C837F9 /* ListSongsOfKindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51580E58186A00C800C837F9 /* ListSongsOfKindViewController.m */; };
 		51580E5B186A00C800C837F9 /* ListSongsOfKindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51580E59186A00C800C837F9 /* ListSongsOfKindViewController.xib */; };
+		5176EC371879403E00483692 /* RecordManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5176EC351879403E00483692 /* RecordManagerViewController.m */; };
+		5176EC381879403E00483692 /* RecordManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5176EC361879403E00483692 /* RecordManagerViewController.xib */; };
+		5176EC3B1879458800483692 /* CellRecord.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5176EC3A1879458800483692 /* CellRecord.xib */; };
 		51A52B50186AC31B00A7990A /* search1.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A52B4E186AC31B00A7990A /* search1.png */; };
 		51A52B51186AC31B00A7990A /* search2.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A52B4F186AC31B00A7990A /* search2.png */; };
 		51A688791866D886000BEBD3 /* BaseNameSingers.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A688771866D886000BEBD3 /* BaseNameSingers.png */; };
@@ -494,6 +497,10 @@
 		51580E57186A00C800C837F9 /* ListSongsOfKindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListSongsOfKindViewController.h; sourceTree = "<group>"; };
 		51580E58186A00C800C837F9 /* ListSongsOfKindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListSongsOfKindViewController.m; sourceTree = "<group>"; };
 		51580E59186A00C800C837F9 /* ListSongsOfKindViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListSongsOfKindViewController.xib; sourceTree = "<group>"; };
+		5176EC341879403E00483692 /* RecordManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordManagerViewController.h; sourceTree = "<group>"; };
+		5176EC351879403E00483692 /* RecordManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordManagerViewController.m; sourceTree = "<group>"; };
+		5176EC361879403E00483692 /* RecordManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordManagerViewController.xib; sourceTree = "<group>"; };
+		5176EC3A1879458800483692 /* CellRecord.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellRecord.xib; sourceTree = "<group>"; };
 		51A52B4E186AC31B00A7990A /* search1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search1.png; sourceTree = "<group>"; };
 		51A52B4F186AC31B00A7990A /* search2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search2.png; sourceTree = "<group>"; };
 		51A688771866D886000BEBD3 /* BaseNameSingers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BaseNameSingers.png; sourceTree = "<group>"; };
@@ -565,6 +572,7 @@
 		34061F0A18645895009FD9B2 /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				5176EC331879401B00483692 /* Record manager */,
 				511EB736186DAE8500AB20D0 /* RecordViewController */,
 				34264094186C7E90001C47C1 /* PlayMusicViewController */,
 				34264086186C6698001C47C1 /* Singer Tab */,
@@ -901,7 +909,7 @@
 				34BC543C1864B5BA00CFFE9B /* 2 */,
 				34BC54401864B5BA00CFFE9B /* 4 */,
 				34BC544A1864B5BA00CFFE9B /* 4.1 */,
-				34BC54501864B5BA00CFFE9B /* 5 */,
+				34BC54501864B5BA00CFFE9B /* 6 - quan li ghi am */,
 				34BC54581864B5BA00CFFE9B /* 8.1 */,
 				34BC545E1864B5BA00CFFE9B /* Kind Song */,
 				34BC54601864B5BA00CFFE9B /* 11.1 */,
@@ -1013,7 +1021,7 @@
 			path = 4.1;
 			sourceTree = "<group>";
 		};
-		34BC54501864B5BA00CFFE9B /* 5 */ = {
+		34BC54501864B5BA00CFFE9B /* 6 - quan li ghi am */ = {
 			isa = PBXGroup;
 			children = (
 				34BC54511864B5BA00CFFE9B /* bg-share.png */,
@@ -1024,6 +1032,7 @@
 				34BC54561864B5BA00CFFE9B /* share-mkara.png */,
 				34BC54571864B5BA00CFFE9B /* share-sms.png */,
 			);
+			name = "6 - quan li ghi am";
 			path = 5;
 			sourceTree = "<group>";
 		};
@@ -1206,12 +1215,13 @@
 		51580E551869FE9500C837F9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				51178261186885E700F73C17 /* Cell.h */,
 				51580E4B1869F40900C837F9 /* CellOfKind.h */,
 				51580E4C1869F40900C837F9 /* CellOfKind.m */,
 				51580E4E1869F42B00C837F9 /* CellOfKind.xib */,
+				51178261186885E700F73C17 /* Cell.h */,
 				51178262186885E700F73C17 /* Cell.m */,
 				51178263186885E700F73C17 /* Cell.xib */,
+				5176EC3A1879458800483692 /* CellRecord.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1227,6 +1237,16 @@
 				51580E59186A00C800C837F9 /* ListSongsOfKindViewController.xib */,
 			);
 			name = "Kind music";
+			sourceTree = "<group>";
+		};
+		5176EC331879401B00483692 /* Record manager */ = {
+			isa = PBXGroup;
+			children = (
+				5176EC341879403E00483692 /* RecordManagerViewController.h */,
+				5176EC351879403E00483692 /* RecordManagerViewController.m */,
+				5176EC361879403E00483692 /* RecordManagerViewController.xib */,
+			);
+			name = "Record manager";
 			sourceTree = "<group>";
 		};
 		51ADC7F71869E5BC00CDB62B /* Tabs */ = {
@@ -1319,6 +1339,7 @@
 				34BC54191864B46F00CFFE9B /* cai-dat.png in Resources */,
 				34BC54B41864B5BA00CFFE9B /* top-bg.png in Resources */,
 				34BC541F1864B46F00CFFE9B /* icon-profile.png in Resources */,
+				5176EC381879403E00483692 /* RecordManagerViewController.xib in Resources */,
 				34BC54891864B5BA00CFFE9B /* text-filed-bg.png in Resources */,
 				51A688801866E4DD000BEBD3 /* imageKaraokeClipDemo.png in Resources */,
 				34BC54CA1864B5BA00CFFE9B /* search-btn.png in Resources */,
@@ -1369,6 +1390,7 @@
 				34BC54B51864B5BA00CFFE9B /* bg-anh-album.png in Resources */,
 				51A68885186714AF000BEBD3 /* imageBaseNameRecord.png in Resources */,
 				4BE7D7441868741F00F7438B /* karaokeListCell.xib in Resources */,
+				5176EC3B1879458800483692 /* CellRecord.xib in Resources */,
 				340DDAB7186AC6CF00204A05 /* 10_nam_tinh_cu.mp3 in Resources */,
 				340DDAB8186AC6CF00204A05 /* 10_nam_tinh_cu.xml in Resources */,
 				34BC54C81864B5BA00CFFE9B /* btn-search-top.png in Resources */,
@@ -1501,6 +1523,7 @@
 				4BEAEAB31867B226000E3CD1 /* dangkyViewController.m in Sources */,
 				51580E4D1869F40900C837F9 /* CellOfKind.m in Sources */,
 				34A25550186E96C0008B736E /* LyricView.m in Sources */,
+				5176EC371879403E00483692 /* RecordManagerViewController.m in Sources */,
 				34A140B71873238F00A7BFB2 /* PSTCollectionViewCell.m in Sources */,
 				34BC53ED1864A9C100CFFE9B /* MenuSlideControllerViewController.m in Sources */,
 				3423D9D31871D84B00BED047 /* PCMMixer.m in Sources */,

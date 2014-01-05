@@ -47,15 +47,14 @@
                                [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
                                @"MyAudioMemo.caf",
                                nil];
-    outputFileURL = [NSURL fileURLWithPathComponents:pathComponents];
-//    NSLog(@"url record: %@", outputFileURL);
+    outputFileCafURL = [NSURL fileURLWithPathComponents:pathComponents];
+//    NSLog(@"url record: %@", outputFileCafURL);
     
     // Setup audio session
     AVAudioSession *session = [AVAudioSession sharedInstance];
     [session setCategory:AVAudioSessionCategoryPlayAndRecord error:NULL];
     
 //    UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
-  
     UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_None;
     AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,sizeof (audioRouteOverride),&audioRouteOverride);
     
@@ -67,7 +66,7 @@
     [recordSetting setValue:[NSNumber numberWithInt: 2] forKey:AVNumberOfChannelsKey];
     
     // Initiate and prepare the recorder
-    recorder = [[AVAudioRecorder alloc] initWithURL:outputFileURL settings:recordSetting error:nil];
+    recorder = [[AVAudioRecorder alloc] initWithURL:outputFileCafURL settings:recordSetting error:nil];
     recorder.delegate = self;
     recorder.meteringEnabled = YES;
     [recorder prepareToRecord];
@@ -152,14 +151,7 @@
     if(!player.isPlaying){
         [self._buttonPlay setImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
         
-        NSString* mixURL = _mp3LastUrl;
-        NSURL *url = [NSURL fileURLWithPath:mixURL];
-        
-//		NSData *urlData = [NSData dataWithContentsOfURL:url];
-//		NSLog(@"wrote mix file of size %d : %@", [urlData length], mixURL);
-        
-		AVAudioPlayer *avAudioObj = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-        
+		AVAudioPlayer *avAudioObj = [[AVAudioPlayer alloc] initWithContentsOfURL:outputFileCafURL error:nil];
         player = avAudioObj;
         [player setDelegate:self];
         
@@ -220,7 +212,7 @@
 
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     _alert = [[UIAlertView alloc] init];
-    [_alert setTitle:@"Chờ chút xíu.."];
+    [_alert setTitle:@"Chờ chút xíu..."];
     
     UIActivityIndicatorView* activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     activity.frame = CGRectMake(140,
@@ -464,8 +456,8 @@
     _alert = [[UIAlertView alloc] initWithTitle: @"Chú ý"
                                         message: @"Bạn có muốn lưu lại bản thu âm không?"
                                        delegate: nil
-                              cancelButtonTitle:@"Có"
-                              otherButtonTitles:@"Không",nil];
+                              cancelButtonTitle:@"Không"
+                              otherButtonTitles:@"Có",nil];
     
     [_alert setTag:1];
     [_alert setDelegate:self];
@@ -494,15 +486,56 @@
 		[avAudioObj play];
     }
     
+    //Ask save file
     if(alertView.tag == 1){
-        if(buttonIndex == 0){
-            NSLog(@"Luu file");
+        if(buttonIndex == 1){
+            UIAlertView *saveAlert = [[UIAlertView alloc]initWithTitle:@"Lưu bản thu" message:@"Nhập tên file ghi âm bạn muốn lưu" delegate:self cancelButtonTitle:@"Huỷ" otherButtonTitles:@"Lưu", nil];
+            saveAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+            [saveAlert textFieldAtIndex:0].delegate = self;
+            [saveAlert setTag:2];
+            [saveAlert show];
         }
-        else if(buttonIndex == 1){
-            
+    }
+    
+    //Save file
+    if(alertView.tag == 2){
+        if(buttonIndex == 1){
+            _mp3LastUrl = [self saveFileMp3:[alertView textFieldAtIndex:0].text];
         }
     }
 }
 
 
+//Save file record after convert and rename to folder /RecordedFiles
+-(NSString*)saveFileMp3:(NSString *)fileName{
+    // For error information
+    NSError *error;
+    // Create file manager
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
+    NSString *saveDataPath = [documentsDirectory stringByAppendingPathComponent:@"/RecordedFiles"];
+    
+    //Create folder if it isn't appear
+    if (![[NSFileManager defaultManager] fileExistsAtPath:saveDataPath])
+        [[NSFileManager defaultManager] createDirectoryAtPath:saveDataPath withIntermediateDirectories:NO attributes:nil error:&error];
+    
+    // Rename the file, by moving the file
+    saveDataPath = [saveDataPath
+                           stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp3",fileName]];
+    
+    // Attempt the move
+    if ([fileMgr moveItemAtPath:_mp3LastUrl toPath:saveDataPath error:&error] != YES)
+        NSLog(@"Unable to move file: %@", [error localizedDescription]);
+    
+// Show contents of Documents directory
+//    NSLog(@"Documents directory: %@",
+//          [fileMgr contentsOfDirectoryAtPath:documentsDirectory error:&error]);
+ 
+    return  saveDataPath;
+}
+
 @end
+
+
