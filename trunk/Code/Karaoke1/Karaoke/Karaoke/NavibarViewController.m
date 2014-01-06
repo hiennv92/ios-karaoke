@@ -99,6 +99,8 @@
     
     [self.searchBarView setHidden: YES];
     [self.view addSubview:self.searchBarView];
+    
+    ((NavibarView*)self.searchBarView)._searchBar.delegate = self;
 }
 
 //
@@ -158,6 +160,7 @@
             self.navibarView.hidden = !hidden;
         }];
     }
+    
 }
 
 - (void)leftButtonBarPress:(id)button
@@ -198,5 +201,7 @@
 - (void)closeSearchBarPress:(id)button{
     NSLog(@"Close search bar");
 }
+
+
 
 @end
