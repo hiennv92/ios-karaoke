@@ -22,9 +22,6 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 @property (weak, nonatomic) IBOutlet UITableView *tableList;
 
--(IBAction)rightButtonBarPress:(id)sender;
--(IBAction)closeSearch:(id)sender;
--(IBAction)leftButtonBarPress:(id)sender;
 - (IBAction)changeSegment1:(id)sender;
 - (IBAction)changeSegment2:(id)sender;
 - (IBAction)changeSegment3:(id)sender;

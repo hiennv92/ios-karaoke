@@ -31,7 +31,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"back-btn.png" leftButtonPress:Nil rightButton:@"btn-search-top.png" rightButtonPress:Nil];
+    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"back-btn.png" leftButtonPress:Nil rightButton:@"btn-search-top.png" rightButtonPress:Nil andType:1];
     [self setBottomBarViewHidden:YES];
     [self addTitleNavibar:self.title andSize:22];
     
@@ -40,7 +40,6 @@
     frame.origin.y += 44;
     [self._tableViewSongs setFrame:frame];
 }
-
 
 
 - (void)didReceiveMemoryWarning
@@ -106,5 +105,6 @@
 -(void)closeSearchBarPress:(id)button{
     [self showSearchBar:YES];
 }
+
 
 @end

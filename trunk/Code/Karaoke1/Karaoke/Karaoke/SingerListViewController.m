@@ -30,7 +30,7 @@ NSString *CollectionViewCellIdentifier = @"SingerCell";
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"menu.png" leftButtonPress:Nil rightButton:@"setting.png" rightButtonPress:Nil];
+    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"menu.png" leftButtonPress:Nil rightButton:@"setting.png" rightButtonPress:Nil andType:1];
     
     // create collection view
     PSTCollectionViewFlowLayout* layout = [[PSTCollectionViewFlowLayout alloc] init];

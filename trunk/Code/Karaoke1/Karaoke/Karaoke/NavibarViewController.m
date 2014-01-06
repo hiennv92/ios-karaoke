@@ -34,16 +34,6 @@
     [self.bottomBarView setFrame:CGRectMake(0, self.view.frame.size.height - self.bottomBarView.frame.size.height, self.bottomBarView.frame.size.width, self.bottomBarView.frame.size.height)];
     [self.bottomBarView setHidden:YES];
     [self.view addSubview:_bottomBarView];
-   
-    //Create search bar
-    self.searchBarView = [NavibarView searchBarWithTarget:self closeBarAction:@selector(closeSearchBarPress:)];
-    [self.searchBarView setFrame:CGRectMake(320,0,320,44)];
-    [self.searchBarView setHidden: YES];
-    [self.view addSubview:self.searchBarView];
-    
-    [[UISearchBar appearance] setSearchFieldBackgroundImage:[UIImage imageNamed:@"text_box"] forState:UIControlStateNormal];
-    
-    [[UISearchBar appearance] setImage:[UIImage imageNamed:@"MagnifyingGlassDark.png"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,12 +46,59 @@
 
 // create navigation bar
 
-- (void)createNavigationBarWithTitle:(NSString *)title backgroundImage:(NSString *)bgImage leftButton:(NSString *)leftButton leftButtonPress:(NSString *)leftPress rightButton:(NSString *)rightButton rightButtonPress:(NSString *)rightPress
+- (void)createNavigationBarWithTitle:(NSString *)title backgroundImage:(NSString *)bgImage leftButton:(NSString *)leftButton leftButtonPress:(NSString *)leftPress rightButton:(NSString *)rightButton rightButtonPress:(NSString *)rightPress andType:(int)type
 {
     self.navibarView = [NavibarView createWithTitle:title backgroundImage:bgImage leftNormal:leftButton leftHightlight:leftPress rightNormal:rightButton rightHightlight:rightPress target:self leftSelector:@selector(leftButtonBarPress:) rightSelector:@selector(rightButtonBarPress:)];
-    self.navibarView.frame = CGRectMake(0, 0, 320, 44);
+    if(type == 1){
+        self.navibarView.frame = CGRectMake(0, 0, 320, 44);
+
+        CGRect frame = self.navibarView.leftButton.frame;
+        frame.origin.y = 6;
+        self.navibarView.leftButton.frame = frame;
+        
+        frame = self.navibarView.rightButton.frame;
+        frame.origin.y = 6;
+        self.navibarView.rightButton.frame = frame;
+        
+        frame = self.navibarView.titleLabel.frame;
+        frame.origin.y = 0;
+        self.navibarView.titleLabel.frame = frame;
+    }    
+    else{
+        self.navibarView.frame = CGRectMake(0, 0, 320, 88);
+        CGRect frame = self.navibarView.leftButton.frame;
+        frame.origin.y = 6;
+        self.navibarView.leftButton.frame = frame;
+        
+        frame = self.navibarView.rightButton.frame;
+        frame.origin.y = 6;
+        self.navibarView.rightButton.frame = frame;
+
+        frame = self.navibarView.titleLabel.frame;
+        frame.origin.y = 0;
+        self.navibarView.titleLabel.frame = frame;
+
+        frame = self.navibarView.backgroundImage.frame;
+        frame.size.height = 88;
+        self.navibarView.backgroundImage.frame = frame;
+    }
+    
     [self.view addSubview:_navibarView];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
+    [self createSearchBar:type];
+}
+
+- (void)createSearchBar:(int)type{
+    //Create search bar
+    self.searchBarView = [NavibarView searchBarWithTarget:self closeBarAction:@selector(closeSearchBarPress:)];
+    if(type == 1)
+        [self.searchBarView setFrame:CGRectMake(320,0,320,44)];
+    else
+        [self.searchBarView setFrame:CGRectMake(320,0,320,88)];
+    
+    [self.searchBarView setHidden: YES];
+    [self.view addSubview:self.searchBarView];
 }
 
 //
@@ -121,7 +158,6 @@
             self.navibarView.hidden = !hidden;
         }];
     }
-   
 }
 
 - (void)leftButtonBarPress:(id)button
@@ -162,4 +198,5 @@
 - (void)closeSearchBarPress:(id)button{
     NSLog(@"Close search bar");
 }
+
 @end

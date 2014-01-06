@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"menu.png" leftButtonPress:Nil rightButton:Nil rightButtonPress:Nil];
+    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"menu.png" leftButtonPress:Nil rightButton:Nil rightButtonPress:Nil andType:1];
     [self addTitleNavibar:@"Thể loại" andSize:22];
     [self setBottomBarViewHidden:YES];
     
@@ -102,7 +102,7 @@
     listSongs.title = (NSString*)[(NSArray*)[_dataKinds objectAtIndex:[indexPath item]] objectAtIndex:0];
 }
 
--(void)leftButtonBarPress:(id)button{
+- (void)leftButtonBarPress:(id)button{
     [self.navigationController popToRootViewControllerAnimated:YES];
     [((AppDelegate*)[[UIApplication sharedApplication]delegate]).viewController showCenterPanelAnimated:NO];
 }

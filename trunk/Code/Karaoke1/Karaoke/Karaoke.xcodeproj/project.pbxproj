@@ -173,6 +173,8 @@
 		34BC54CD1864B5BA00CFFE9B /* star-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54841864B5BA00CFFE9B /* star-yellow.png */; };
 		34BC54CE1864B5BA00CFFE9B /* top-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54851864B5BA00CFFE9B /* top-banner.png */; };
 		34BC54CF1864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54861864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png */; };
+		3C993C6A187AA6E20073B45C /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C993C69187AA6E20073B45C /* libmp3lame.a */; };
+		3C993C6C187AA6F30073B45C /* btnTraiTim.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C993C6B187AA6F30073B45C /* btnTraiTim.png */; };
 		4B743431186B9B5200BE95BF /* FLSearchBarBorder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B74341F186B9B5200BE95BF /* FLSearchBarBorder@2x.png */; };
 		4B743432186B9B5200BE95BF /* GraySearchBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B743420186B9B5200BE95BF /* GraySearchBar.png */; };
 		4B743433186B9B5200BE95BF /* KTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B743422186B9B5200BE95BF /* KTSearchBar.m */; };
@@ -230,7 +232,6 @@
 		51ADC8011869E73700CDB62B /* KindOfMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51ADC7FF1869E73700CDB62B /* KindOfMusicViewController.xib */; };
 		51B145A9186B4D5A00063FB9 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B145A7186B4D5A00063FB9 /* ForgetPasswordViewController.m */; };
 		51B145AA186B4D5A00063FB9 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B145A8186B4D5A00063FB9 /* ForgetPasswordViewController.xib */; };
-		51B2FFDE1875B5A2007D4F4F /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B2FFDD1875B5A2007D4F4F /* libmp3lame.a */; };
 		51C824AF1868895600A65A2B /* imageBaseIntroduction.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C824AD1868895600A65A2B /* imageBaseIntroduction.png */; };
 		51C824B01868895600A65A2B /* imageDemoIntroduction.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C824AE1868895600A65A2B /* imageDemoIntroduction.png */; };
 /* End PBXBuildFile section */
@@ -445,6 +446,8 @@
 		34BC54841864B5BA00CFFE9B /* star-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-yellow.png"; sourceTree = "<group>"; };
 		34BC54851864B5BA00CFFE9B /* top-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-banner.png"; sourceTree = "<group>"; };
 		34BC54861864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tro-lai-bai-hat-dang-phat.png"; sourceTree = "<group>"; };
+		3C993C69187AA6E20073B45C /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmp3lame.a; path = Karaoke/libmp3lame.a; sourceTree = "<group>"; };
+		3C993C6B187AA6F30073B45C /* btnTraiTim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnTraiTim.png; sourceTree = "<group>"; };
 		4B74341F186B9B5200BE95BF /* FLSearchBarBorder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FLSearchBarBorder@2x.png"; sourceTree = "<group>"; };
 		4B743420186B9B5200BE95BF /* GraySearchBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GraySearchBar.png; sourceTree = "<group>"; };
 		4B743421186B9B5200BE95BF /* KTSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSearchBar.h; sourceTree = "<group>"; };
@@ -516,7 +519,6 @@
 		51B145A6186B4D5A00063FB9 /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
 		51B145A7186B4D5A00063FB9 /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
 		51B145A8186B4D5A00063FB9 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
-		51B2FFDD1875B5A2007D4F4F /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmp3lame.a; path = Karaoke/libmp3lame.a; sourceTree = "<group>"; };
 		51C824AD1868895600A65A2B /* imageBaseIntroduction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBaseIntroduction.png; sourceTree = "<group>"; };
 		51C824AE1868895600A65A2B /* imageDemoIntroduction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageDemoIntroduction.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -531,7 +533,7 @@
 				511EB737186DE88A00AB20D0 /* MediaPlayer.framework in Frameworks */,
 				342640AD186C9CFA001C47C1 /* AVFoundation.framework in Frameworks */,
 				340091F3186B577900C6C655 /* libxml2.2.dylib in Frameworks */,
-				51B2FFDE1875B5A2007D4F4F /* libmp3lame.a in Frameworks */,
+				3C993C6A187AA6E20073B45C /* libmp3lame.a in Frameworks */,
 				34BC53F01864AB8E00CFFE9B /* QuartzCore.framework in Frameworks */,
 				3442C7BB18642F1300BD13F3 /* UIKit.framework in Frameworks */,
 				3442C7BD18642F1300BD13F3 /* Foundation.framework in Frameworks */,
@@ -748,7 +750,7 @@
 		3442C7B918642F1300BD13F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				51B2FFDD1875B5A2007D4F4F /* libmp3lame.a */,
+				3C993C69187AA6E20073B45C /* libmp3lame.a */,
 				34A1408718730FEC00A7BFB2 /* CoreMedia.framework */,
 				511EB738186DEBBC00AB20D0 /* AudioToolbox.framework */,
 				342640AC186C9CFA001C47C1 /* AVFoundation.framework */,
@@ -923,6 +925,7 @@
 		34BC53F91864B40800CFFE9B /* menu-chinh */ = {
 			isa = PBXGroup;
 			children = (
+				3C993C6B187AA6F30073B45C /* btnTraiTim.png */,
 				34BC53FA1864B46F00CFFE9B /* ca-khuc-da-ghi-am.png */,
 				34BC53FB1864B46F00CFFE9B /* ca-khuc-noi-bat.png */,
 				34BC53FC1864B46F00CFFE9B /* ca-si.png */,
@@ -1426,6 +1429,7 @@
 				34BC54CE1864B5BA00CFFE9B /* top-banner.png in Resources */,
 				34BC54AD1864B5BA00CFFE9B /* disc.png in Resources */,
 				34BC54B21864B5BA00CFFE9B /* noi-bat-select.png in Resources */,
+				3C993C6C187AA6F30073B45C /* btnTraiTim.png in Resources */,
 				51C824B01868895600A65A2B /* imageDemoIntroduction.png in Resources */,
 				34BC54281864B46F00CFFE9B /* secsion-them.png in Resources */,
 				34BC54901864B5BA00CFFE9B /* goi-tuan.png in Resources */,
@@ -1637,6 +1641,7 @@
 					"$(inherited)",
 					/Users/papo/Documents/Projects/IOS_Projects/KaraokeProject/trunk/trunk/Code/Karaoke1/Karaoke/Karaoke,
 					/Users/lampsea12/Desktop/Duong/Karaoke/trunk/Code/Karaoke1/Karaoke/Karaoke,
+					"/Users/duongtv/Desktop/Karaoke\\ project/svn/Code/Karaoke1/Karaoke/Karaoke",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "DD185136-8D12-484A-BBED-B7D9CAEA9643";
@@ -1658,6 +1663,7 @@
 					"$(inherited)",
 					/Users/papo/Documents/Projects/IOS_Projects/KaraokeProject/trunk/trunk/Code/Karaoke1/Karaoke/Karaoke,
 					/Users/lampsea12/Desktop/Duong/Karaoke/trunk/Code/Karaoke1/Karaoke/Karaoke,
+					"/Users/duongtv/Desktop/Karaoke\\ project/svn/Code/Karaoke1/Karaoke/Karaoke",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "DD185136-8D12-484A-BBED-B7D9CAEA9643";

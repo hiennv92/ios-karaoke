@@ -37,11 +37,20 @@
     
     
     // Do any additional setup after loading the view from its nib.
-//    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"back-btn.png" leftButtonPress:Nil rightButton:@"btn-search-top.png" rightButtonPress:Nil];
+    [self.kind1 removeFromSuperview];
+    [self.kind2 removeFromSuperview];
+    [self.kind3 removeFromSuperview];
+    [self.kind4 removeFromSuperview];
     
-//    [self addTitleNavibar:@"KARAOKE" andSize:22];
+    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"back-btn.png" leftButtonPress:Nil rightButton:@"btn-search-top.png" rightButtonPress:Nil andType:2];
+    [self addTitleNavibar:@"KARAOKE" andSize:22];
     [self setBottomBarViewHidden:NO];
     [self setSearchBarViewHidden:NO];
+    
+    [self.view addSubview:self.kind1];
+    [self.view addSubview:self.kind2];
+    [self.view addSubview:self.kind3];
+    [self.view addSubview:self.kind4];
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,9 +88,6 @@
         }
         
         
-        
-        
-        
         return cell;
     }
     else{
@@ -99,15 +105,7 @@
         return cell;
     }
     
-    
-    
-   
-    
-    
-    
     // Configure the cell...
-    
-    
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -115,10 +113,6 @@
         PlayKaraClipViewController *playView=[[PlayKaraClipViewController alloc] init];
         [self.navigationController pushViewController:playView animated:YES ];
     }
-}
-
--(IBAction)leftButtonBarPress:(id)sender{
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)changeSegment1:(id)sender {
@@ -157,13 +151,18 @@
     [_kind4 setImage:[UIImage imageNamed:@"4-karaoke-clip-select.png"] forState:UIControlStateNormal];
 }
 
-
--(IBAction)closeSearch:(id)sender{
-    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionTransitionNone|UIViewAnimationOptionCurveEaseInOut animations:^(){
-        _searchView.center=CGPointMake(3*self.view.bounds.size.width/2, _searchView.center.y);
-    }completion:^(BOOL fn){
-        
-    }];
+-(void)leftButtonBarPress:(id)button{
+    [self.navigationController popViewControllerAnimated:YES];
 }
+
+-(void)rightButtonBarPress:(id)button{
+    [self showSearchBar:NO];
+}
+
+//Close search bar
+-(void)closeSearchBarPress:(id)button{
+    [self showSearchBar:YES];
+}
+
 
 @end

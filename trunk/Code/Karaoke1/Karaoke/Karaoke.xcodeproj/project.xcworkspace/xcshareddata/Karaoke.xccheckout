@@ -14,7 +14,7 @@
 		<string>https://ios-karaoke.googlecode.com/svn</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>trunk/Code/Karaoke1/Karaoke/Karaoke.xcodeproj/project.xcworkspace</string>
+	<string>Code/Karaoke1/Karaoke/Karaoke.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>80E9221C-2EBA-4ADA-AEEA-D5614B602079</key>

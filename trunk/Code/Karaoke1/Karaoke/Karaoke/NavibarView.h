@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
-@interface NavibarView : UIView{
+@interface NavibarView : UIView <UISearchDisplayDelegate,UISearchBarDelegate>{
     
 }
 
@@ -27,6 +27,7 @@
 @property (strong, nonatomic) IBOutlet UIButton*  favoriteButton;
 //Search bar
 @property (strong, nonatomic) IBOutlet UISearchBar *_searchBar;
+@property (strong, nonatomic) IBOutlet UIButton *_btnCloseSearchBar;
 
 
 + (NavibarView*)viewFromNib;
