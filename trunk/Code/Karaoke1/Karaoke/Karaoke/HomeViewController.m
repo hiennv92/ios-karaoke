@@ -114,40 +114,45 @@
 
 //Move views in Introduction view
 - (void) runViewIntroduction:(NSTimer*) t{
-//    NSLog(@"Change big view");
-    if(_changeBigView){
-        [UIView animateWithDuration:2.5f animations:^{
-            CGRect frame = self._bigViewIntroduction1.frame;
-            frame.origin.x = -220;
-            [self._bigViewIntroduction1 setFrame: frame];
-            frame = self._bigViewIntroduction2.frame;
-            frame.origin.x = 0;
-            [self._bigViewIntroduction2 setFrame:frame];
-        } completion:^(BOOL finished) {
-            CGRect frame = self._bigViewIntroduction1.frame;
-            frame.origin.x = 220;
-            [self._bigViewIntroduction1 setFrame:frame];
-            self._imageBigBanner1.image = [self setImageForBigViewIntro];
-            _changeBigView = NO;
-            [self runViewIntroductionSmall];
-        }];
-    }
-    else{
-        [UIView animateWithDuration:2.5f animations:^{
-            CGRect frame = self._bigViewIntroduction2.frame;
-            frame.origin.x = -220;
-            [self._bigViewIntroduction2 setFrame: frame];
-            frame = self._bigViewIntroduction1.frame;
-            frame.origin.x = 0;
-            [self._bigViewIntroduction1 setFrame:frame];
-        } completion:^(BOOL finished) {
-            CGRect frame = self._bigViewIntroduction2.frame;
-            frame.origin.x = 220;
-            [self._bigViewIntroduction2 setFrame:frame];
-            self._imageBigBanner2.image = [self setImageForBigViewIntro];
-            _changeBigView = YES;
-            [self runViewIntroductionSmall];
-        }];
+    NSArray* views = [self.navigationController viewControllers];
+
+    if([views count] == 1){
+//        NSLog(@"CHANGE");
+        if(_changeBigView){
+            [UIView animateWithDuration:2.5f animations:^{
+                CGRect frame = self._bigViewIntroduction1.frame;
+                frame.origin.x = -220;
+                [self._bigViewIntroduction1 setFrame: frame];
+                frame = self._bigViewIntroduction2.frame;
+                frame.origin.x = 0;
+                [self._bigViewIntroduction2 setFrame:frame];
+            } completion:^(BOOL finished) {
+                CGRect frame = self._bigViewIntroduction1.frame;
+                frame.origin.x = 220;
+                [self._bigViewIntroduction1 setFrame:frame];
+                self._imageBigBanner1.image = [self setImageForBigViewIntro];
+                _changeBigView = NO;
+                [self runViewIntroductionSmall];
+            }];
+        }
+        else{
+            [UIView animateWithDuration:2.5f animations:^{
+                CGRect frame = self._bigViewIntroduction2.frame;
+                frame.origin.x = -220;
+                [self._bigViewIntroduction2 setFrame: frame];
+                frame = self._bigViewIntroduction1.frame;
+                frame.origin.x = 0;
+                [self._bigViewIntroduction1 setFrame:frame];
+            } completion:^(BOOL finished) {
+                CGRect frame = self._bigViewIntroduction2.frame;
+                frame.origin.x = 220;
+                [self._bigViewIntroduction2 setFrame:frame];
+                self._imageBigBanner2.image = [self setImageForBigViewIntro];
+                _changeBigView = YES;
+                [self runViewIntroductionSmall];
+            }];
+        }
+
     }
 }
 
