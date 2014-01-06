@@ -14,8 +14,8 @@
     
 }
 @property (nonatomic, strong) NavibarView* navibarView;
-@property (nonatomic, strong) UIView*       bottomBarView;
-@property (nonatomic, strong) UIView*   searchBarView;
+@property (nonatomic, strong) UIView*   bottomBarView;
+@property (nonatomic, strong) NavibarView*   searchBarView;
 
 - (void)createNavigationBarWithTitle: (NSString*)title backgroundImage:(NSString*)bgImage leftButton:(NSString*)leftButton leftButtonPress:(NSString*)leftPress rightButton:(NSString*)rightButton rightButtonPress:(NSString*)rightPress andType:(int)type;
 

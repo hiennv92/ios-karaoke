@@ -89,17 +89,26 @@
 }
 
 + (NavibarView*)searchBarWithTarget:(id)target closeBarAction:(SEL)closeSelector{
+  
     NavibarView* search= (NavibarView*)[[[NSBundle mainBundle] loadNibNamed:@"NavibarView" owner:self options:Nil] objectAtIndex:2];
     [search._btnCloseSearchBar addTarget:target action:closeSelector forControlEvents:UIControlEventTouchUpInside];
-
+    
+    for (UIView * v in search._searchBar.subviews) {
+        if ([v isKindOfClass:NSClassFromString(@"UISearchBarTextField")]) {
+            v.superview.alpha = 0;
+            UIView *containerView = [[UIView alloc] initWithFrame:search._searchBar.frame];
+            [containerView addSubview:v];
+            [search addSubview:containerView];
+        }
+    }
+    
     UITextField *txfSearchField = [search._searchBar valueForKey:@"_searchField"];
     [txfSearchField setBackgroundColor:[UIColor clearColor]];
     [txfSearchField setBorderStyle:UITextBorderStyleNone];
-    txfSearchField.layer.borderWidth = 8.0f;
-    txfSearchField.layer.cornerRadius = 10.0f;
-    txfSearchField.layer.borderColor = [UIColor clearColor].CGColor;
     txfSearchField.leftViewMode = UITextFieldViewModeNever;
     [txfSearchField setPlaceholder:@"Tìm kiếm"];
+    [txfSearchField setBackground:[UIImage new]];
+   
     
     return  search;
 }

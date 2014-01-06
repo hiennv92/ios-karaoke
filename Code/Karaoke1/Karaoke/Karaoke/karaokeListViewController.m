@@ -161,8 +161,13 @@
 
 //Close search bar
 -(void)closeSearchBarPress:(id)button{
+    [self.searchBarView._searchBar resignFirstResponder];
     [self showSearchBar:YES];
 }
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    //    NSLog(@"%@",searchBar.text);
+    [searchBar resignFirstResponder];
+}
 
 @end

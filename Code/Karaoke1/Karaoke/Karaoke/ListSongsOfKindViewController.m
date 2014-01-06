@@ -7,6 +7,7 @@
 //
 
 #import "ListSongsOfKindViewController.h"
+#import "NavibarView.h"
 #import "Cell.h"
 
 @interface ListSongsOfKindViewController (){
@@ -90,21 +91,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self.searchBarView._searchBar resignFirstResponder];
 //    NSLog(@"type: %d",[indexPath item]);
 }
 
--(void)leftButtonBarPress:(id)button{
+- (void)leftButtonBarPress:(id)button{
     [self.navigationController popViewControllerAnimated:YES];
 }
 
--(void)rightButtonBarPress:(id)button{
+- (void)rightButtonBarPress:(id)button{
     [self showSearchBar:NO];
 }
 
 //Close search bar
--(void)closeSearchBarPress:(id)button{
+- (void)closeSearchBarPress:(id)button{
+    [self.searchBarView._searchBar resignFirstResponder];
     [self showSearchBar:YES];
 }
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+//    NSLog(@"%@",searchBar.text);
+    [searchBar resignFirstResponder];
+}
 
 @end
