@@ -77,6 +77,7 @@
 + (NavibarView*)bottomBarWithTarget:(id)target singerAction:(SEL)singerSelector recordAction:(SEL)recordSelector songAction:(SEL)songSelector kindMusicAction:(SEL)kindMusicSelector favoriteAction:(SEL)favoriteSelector
 {
     NavibarView* bottom = (NavibarView*)[[[NSBundle mainBundle] loadNibNamed:@"NavibarView" owner:self options:Nil] objectAtIndex:1];
+    
     [bottom.singerButton addTarget:target action:singerSelector forControlEvents:UIControlEventTouchUpInside];
     [bottom.recordButton addTarget:target action:recordSelector forControlEvents:UIControlEventTouchUpInside];
     [bottom.songButton addTarget:target action:songSelector forControlEvents:UIControlEventTouchUpInside];
@@ -89,14 +90,19 @@
 
 + (NavibarView*)searchBarWithTarget:(id)target closeBarAction:(SEL)closeSelector{
     NavibarView* search= (NavibarView*)[[[NSBundle mainBundle] loadNibNamed:@"NavibarView" owner:self options:Nil] objectAtIndex:2];
-//    [search.searchButton addTarget:target action:closeSelector forControlEvents:UIControlEventTouchUpInside];
+    [search._btnCloseSearchBar addTarget:target action:closeSelector forControlEvents:UIControlEventTouchUpInside];
+
+    UITextField *txfSearchField = [search._searchBar valueForKey:@"_searchField"];
+    [txfSearchField setBackgroundColor:[UIColor clearColor]];
+    [txfSearchField setBorderStyle:UITextBorderStyleNone];
+    txfSearchField.layer.borderWidth = 8.0f;
+    txfSearchField.layer.cornerRadius = 10.0f;
+    txfSearchField.layer.borderColor = [UIColor clearColor].CGColor;
+    txfSearchField.leftViewMode = UITextFieldViewModeNever;
+    [txfSearchField setPlaceholder:@"Tìm kiếm"];
     
-    [search._searchBar setBackgroundColor:[UIColor blackColor]];
-    [search._searchBar setText:@"Blablalba"];
-    [search._searchBar setShowsCancelButton:NO];
-    search._searchBar.barTintColor = [UIColor redColor];
-    search._searchBar.hidden = YES;
     return  search;
 }
+
 
 @end

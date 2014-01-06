@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -8,12 +8,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clipsSubviews="YES" contentMode="scaleToFill" id="1" customClass="NavibarView">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-top-home.png" id="hoO-jq-wCY">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-top-home.png" id="hoO-jq-wCY">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+                    <autoresizingMask key="autoresizingMask"/>
                 </imageView>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2hC-Or-k5M">
                     <rect key="frame" x="20" y="6" width="33" height="33"/>
@@ -43,7 +43,6 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="_searchBar" destination="lNq-df-7rE" id="zH8-1p-3Qb"/>
                 <outlet property="backgroundImage" destination="hoO-jq-wCY" id="n9k-wV-vWz"/>
                 <outlet property="leftButton" destination="2hC-Or-k5M" id="ld0-XI-b4e"/>
                 <outlet property="rightButton" destination="9bj-rQ-tDS" id="Mnv-BT-Aiq"/>
@@ -108,13 +107,23 @@
                 <outlet property="songButton" destination="Qcw-UZ-ruD" id="Gky-nl-SbH"/>
             </connections>
         </view>
-        <view clipsSubviews="YES" contentMode="scaleToFill" id="u3o-Xa-SW7" customClass="NavibarView">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="u3o-Xa-SW7" userLabel="Search bar" customClass="NavibarView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <searchBar clipsSubviews="YES" contentMode="redraw" barStyle="blackTranslucent" searchBarStyle="prominent" showsCancelButton="YES" id="lNq-df-7rE">
-                    <rect key="frame" x="-3" y="0.0" width="323" height="44"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-top-home.png" id="qfZ-5g-HAM">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search2.png" id="P0e-Vv-nqZ">
+                    <rect key="frame" x="3" y="13" width="284" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <searchBar clipsSubviews="YES" contentMode="scaleToFill" searchBarStyle="minimal" id="lNq-df-7rE">
+                    <rect key="frame" x="20" y="1" width="272" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <textInputTraits key="textInputTraits"/>
                     <scopeButtonTitles>
@@ -122,15 +131,28 @@
                         <string>Title</string>
                     </scopeButtonTitles>
                     <connections>
-                        <outlet property="delegate" destination="-1" id="dMB-lL-r6X"/>
+                        <outlet property="delegate" destination="-1" id="DZD-5H-OoD"/>
                     </connections>
                 </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xOO-c8-dK3">
+                    <rect key="frame" x="291" y="13" width="25" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="btn-close-search.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="_btnCloseSearchBar" destination="xOO-c8-dK3" id="7I1-xQ-5BT"/>
+                <outlet property="_searchBar" destination="lNq-df-7rE" id="zez-vc-kVo"/>
+            </connections>
         </view>
     </objects>
     <resources>
+        <image name="bg-top-home.png" width="1068" height="149"/>
         <image name="bg-top-home.png" width="1068" height="149"/>
         <image name="bottom-bai-hat.png" width="98" height="112"/>
         <image name="bottom-bg.png" width="1068" height="149"/>
@@ -138,5 +160,7 @@
         <image name="bottom-the-loai.png" width="103" height="97"/>
         <image name="bottom-thu-am.png" width="58" height="97"/>
         <image name="bottom-yeu-thich.png" width="100" height="100"/>
+        <image name="btn-close-search.png" width="83" height="63"/>
+        <image name="search2.png" width="967" height="66"/>
     </resources>
 </document>

@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"menu.png" leftButtonPress:Nil rightButton:Nil rightButtonPress:Nil];
+    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"menu.png" leftButtonPress:Nil rightButton:Nil rightButtonPress:Nil andType:1];
     [self addTitleNavibar:@"Ghi âm" andSize:22];
     [self setBottomBarViewHidden:YES];
     

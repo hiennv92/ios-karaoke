@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "NavibarViewController.h"
 
-@interface PlayKaraClipViewController : NavibarViewController
+@interface PlayKaraClipViewController : NavibarViewController{
+    
+}
 
 @end
