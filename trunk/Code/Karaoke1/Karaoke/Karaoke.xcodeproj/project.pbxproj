@@ -232,6 +232,42 @@
 		51ADC8011869E73700CDB62B /* KindOfMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51ADC7FF1869E73700CDB62B /* KindOfMusicViewController.xib */; };
 		51B145A9186B4D5A00063FB9 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B145A7186B4D5A00063FB9 /* ForgetPasswordViewController.m */; };
 		51B145AA186B4D5A00063FB9 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B145A8186B4D5A00063FB9 /* ForgetPasswordViewController.xib */; };
+		51BB41F6187B0A9F00D7019F /* NhacDJ-TinTucViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB41EE187B0A9F00D7019F /* NhacDJ-TinTucViewController.m */; };
+		51BB41F7187B0A9F00D7019F /* NhacDJ-TinTucViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BB41EF187B0A9F00D7019F /* NhacDJ-TinTucViewController.xib */; };
+		51BB41F8187B0A9F00D7019F /* NhacDJCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB41F1187B0A9F00D7019F /* NhacDJCell.m */; };
+		51BB41F9187B0A9F00D7019F /* NhacDJCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BB41F2187B0A9F00D7019F /* NhacDJCell.xib */; };
+		51BB41FA187B0A9F00D7019F /* NhacDJTinTucViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB41F4187B0A9F00D7019F /* NhacDJTinTucViewController.m */; };
+		51BB41FB187B0A9F00D7019F /* NhacDJTinTucViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BB41F5187B0A9F00D7019F /* NhacDJTinTucViewController.xib */; };
+		51BB4202187B0AB200D7019F /* 11-hot-nhat-select.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB41FC187B0AB200D7019F /* 11-hot-nhat-select.png */; };
+		51BB4203187B0AB200D7019F /* 11-hot-nhat.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB41FD187B0AB200D7019F /* 11-hot-nhat.png */; };
+		51BB4204187B0AB200D7019F /* 11-moi-nhat-select.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB41FE187B0AB200D7019F /* 11-moi-nhat-select.png */; };
+		51BB4205187B0AB200D7019F /* 11-moi-nhat.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB41FF187B0AB200D7019F /* 11-moi-nhat.png */; };
+		51BB4206187B0AB200D7019F /* 11-noi-bat-select.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4200187B0AB200D7019F /* 11-noi-bat-select.png */; };
+		51BB4207187B0AB200D7019F /* 11-noi-bat.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4201187B0AB200D7019F /* 11-noi-bat.png */; };
+		51BB420B187B0ABF00D7019F /* AudioPlayerScrubberKnob.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4208187B0ABF00D7019F /* AudioPlayerScrubberKnob.png */; };
+		51BB420C187B0ABF00D7019F /* AudioPlayerScrubberLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4209187B0ABF00D7019F /* AudioPlayerScrubberLeft.png */; };
+		51BB420D187B0ABF00D7019F /* AudioPlayerScrubberRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB420A187B0ABF00D7019F /* AudioPlayerScrubberRight.png */; };
+		51BB4211187B0AE000D7019F /* PlayMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB420F187B0AE000D7019F /* PlayMusicViewController.m */; };
+		51BB4212187B0AE000D7019F /* PlayMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4210187B0AE000D7019F /* PlayMusicViewController.xib */; };
+		51BB4228187B0BAD00D7019F /* 11-bg-cd-demo.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4216187B0BAD00D7019F /* 11-bg-cd-demo.png */; };
+		51BB4229187B0BAD00D7019F /* 11-bg-panel-duoi.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4217187B0BAD00D7019F /* 11-bg-panel-duoi.png */; };
+		51BB422A187B0BAD00D7019F /* 11-bg-panel-tren.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4218187B0BAD00D7019F /* 11-bg-panel-tren.png */; };
+		51BB422B187B0BAD00D7019F /* 11-bg-phan-play.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4219187B0BAD00D7019F /* 11-bg-phan-play.png */; };
+		51BB422C187B0BAD00D7019F /* 11-bg-thanh-play.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB421A187B0BAD00D7019F /* 11-bg-thanh-play.png */; };
+		51BB422D187B0BAD00D7019F /* 11-bg-volume.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB421B187B0BAD00D7019F /* 11-bg-volume.png */; };
+		51BB422E187B0BAD00D7019F /* 11-img-cd-demo.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB421C187B0BAD00D7019F /* 11-img-cd-demo.png */; };
+		51BB422F187B0BAD00D7019F /* 11-knob-nho.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB421D187B0BAD00D7019F /* 11-knob-nho.png */; };
+		51BB4230187B0BAD00D7019F /* 11-knob-to.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB421E187B0BAD00D7019F /* 11-knob-to.png */; };
+		51BB4231187B0BAD00D7019F /* 11-next-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB421F187B0BAD00D7019F /* 11-next-btn.png */; };
+		51BB4232187B0BAD00D7019F /* 11-nut-like.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4220187B0BAD00D7019F /* 11-nut-like.png */; };
+		51BB4233187B0BAD00D7019F /* 11-nut-like2.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4221187B0BAD00D7019F /* 11-nut-like2.png */; };
+		51BB4234187B0BAD00D7019F /* 11-play-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4222187B0BAD00D7019F /* 11-play-btn.png */; };
+		51BB4235187B0BAD00D7019F /* 11-prev-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4223187B0BAD00D7019F /* 11-prev-btn.png */; };
+		51BB4236187B0BAD00D7019F /* 11-progress.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4224187B0BAD00D7019F /* 11-progress.png */; };
+		51BB4237187B0BAD00D7019F /* 11-repeat.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4225187B0BAD00D7019F /* 11-repeat.png */; };
+		51BB4238187B0BAD00D7019F /* 11-shuffle.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4226187B0BAD00D7019F /* 11-shuffle.png */; };
+		51BB4239187B0BAD00D7019F /* 11-volume-full.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB4227187B0BAD00D7019F /* 11-volume-full.png */; };
+		51BB423B187B0BBA00D7019F /* btnTraiTim.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BB423A187B0BBA00D7019F /* btnTraiTim.png */; };
 		51C824AF1868895600A65A2B /* imageBaseIntroduction.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C824AD1868895600A65A2B /* imageBaseIntroduction.png */; };
 		51C824B01868895600A65A2B /* imageDemoIntroduction.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C824AE1868895600A65A2B /* imageDemoIntroduction.png */; };
 /* End PBXBuildFile section */
@@ -519,6 +555,46 @@
 		51B145A6186B4D5A00063FB9 /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
 		51B145A7186B4D5A00063FB9 /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
 		51B145A8186B4D5A00063FB9 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
+		51BB41ED187B0A9F00D7019F /* NhacDJ-TinTucViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NhacDJ-TinTucViewController.h"; sourceTree = "<group>"; };
+		51BB41EE187B0A9F00D7019F /* NhacDJ-TinTucViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NhacDJ-TinTucViewController.m"; sourceTree = "<group>"; };
+		51BB41EF187B0A9F00D7019F /* NhacDJ-TinTucViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "NhacDJ-TinTucViewController.xib"; sourceTree = "<group>"; };
+		51BB41F0187B0A9F00D7019F /* NhacDJCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NhacDJCell.h; sourceTree = "<group>"; };
+		51BB41F1187B0A9F00D7019F /* NhacDJCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NhacDJCell.m; sourceTree = "<group>"; };
+		51BB41F2187B0A9F00D7019F /* NhacDJCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NhacDJCell.xib; sourceTree = "<group>"; };
+		51BB41F3187B0A9F00D7019F /* NhacDJTinTucViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NhacDJTinTucViewController.h; sourceTree = "<group>"; };
+		51BB41F4187B0A9F00D7019F /* NhacDJTinTucViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NhacDJTinTucViewController.m; sourceTree = "<group>"; };
+		51BB41F5187B0A9F00D7019F /* NhacDJTinTucViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NhacDJTinTucViewController.xib; sourceTree = "<group>"; };
+		51BB41FC187B0AB200D7019F /* 11-hot-nhat-select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-hot-nhat-select.png"; sourceTree = "<group>"; };
+		51BB41FD187B0AB200D7019F /* 11-hot-nhat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-hot-nhat.png"; sourceTree = "<group>"; };
+		51BB41FE187B0AB200D7019F /* 11-moi-nhat-select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-moi-nhat-select.png"; sourceTree = "<group>"; };
+		51BB41FF187B0AB200D7019F /* 11-moi-nhat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-moi-nhat.png"; sourceTree = "<group>"; };
+		51BB4200187B0AB200D7019F /* 11-noi-bat-select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-noi-bat-select.png"; sourceTree = "<group>"; };
+		51BB4201187B0AB200D7019F /* 11-noi-bat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-noi-bat.png"; sourceTree = "<group>"; };
+		51BB4208187B0ABF00D7019F /* AudioPlayerScrubberKnob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AudioPlayerScrubberKnob.png; path = Karaoke/AudioPlayerScrubberKnob.png; sourceTree = SOURCE_ROOT; };
+		51BB4209187B0ABF00D7019F /* AudioPlayerScrubberLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AudioPlayerScrubberLeft.png; path = Karaoke/AudioPlayerScrubberLeft.png; sourceTree = SOURCE_ROOT; };
+		51BB420A187B0ABF00D7019F /* AudioPlayerScrubberRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AudioPlayerScrubberRight.png; path = Karaoke/AudioPlayerScrubberRight.png; sourceTree = SOURCE_ROOT; };
+		51BB420E187B0AE000D7019F /* PlayMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayMusicViewController.h; sourceTree = "<group>"; };
+		51BB420F187B0AE000D7019F /* PlayMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayMusicViewController.m; sourceTree = "<group>"; };
+		51BB4210187B0AE000D7019F /* PlayMusicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayMusicViewController.xib; sourceTree = "<group>"; };
+		51BB4216187B0BAD00D7019F /* 11-bg-cd-demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-bg-cd-demo.png"; sourceTree = "<group>"; };
+		51BB4217187B0BAD00D7019F /* 11-bg-panel-duoi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-bg-panel-duoi.png"; sourceTree = "<group>"; };
+		51BB4218187B0BAD00D7019F /* 11-bg-panel-tren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-bg-panel-tren.png"; sourceTree = "<group>"; };
+		51BB4219187B0BAD00D7019F /* 11-bg-phan-play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-bg-phan-play.png"; sourceTree = "<group>"; };
+		51BB421A187B0BAD00D7019F /* 11-bg-thanh-play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-bg-thanh-play.png"; sourceTree = "<group>"; };
+		51BB421B187B0BAD00D7019F /* 11-bg-volume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-bg-volume.png"; sourceTree = "<group>"; };
+		51BB421C187B0BAD00D7019F /* 11-img-cd-demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-img-cd-demo.png"; sourceTree = "<group>"; };
+		51BB421D187B0BAD00D7019F /* 11-knob-nho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-knob-nho.png"; sourceTree = "<group>"; };
+		51BB421E187B0BAD00D7019F /* 11-knob-to.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-knob-to.png"; sourceTree = "<group>"; };
+		51BB421F187B0BAD00D7019F /* 11-next-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-next-btn.png"; sourceTree = "<group>"; };
+		51BB4220187B0BAD00D7019F /* 11-nut-like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-nut-like.png"; sourceTree = "<group>"; };
+		51BB4221187B0BAD00D7019F /* 11-nut-like2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-nut-like2.png"; sourceTree = "<group>"; };
+		51BB4222187B0BAD00D7019F /* 11-play-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-play-btn.png"; sourceTree = "<group>"; };
+		51BB4223187B0BAD00D7019F /* 11-prev-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-prev-btn.png"; sourceTree = "<group>"; };
+		51BB4224187B0BAD00D7019F /* 11-progress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-progress.png"; sourceTree = "<group>"; };
+		51BB4225187B0BAD00D7019F /* 11-repeat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-repeat.png"; sourceTree = "<group>"; };
+		51BB4226187B0BAD00D7019F /* 11-shuffle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-shuffle.png"; sourceTree = "<group>"; };
+		51BB4227187B0BAD00D7019F /* 11-volume-full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-volume-full.png"; sourceTree = "<group>"; };
+		51BB423A187B0BBA00D7019F /* btnTraiTim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnTraiTim.png; sourceTree = "<group>"; };
 		51C824AD1868895600A65A2B /* imageBaseIntroduction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBaseIntroduction.png; sourceTree = "<group>"; };
 		51C824AE1868895600A65A2B /* imageDemoIntroduction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageDemoIntroduction.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -574,6 +650,7 @@
 		34061F0A18645895009FD9B2 /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				51BB41EC187B0A7C00D7019F /* Nhac DJ */,
 				5176EC331879401B00483692 /* Record manager */,
 				511EB736186DAE8500AB20D0 /* RecordViewController */,
 				34264094186C7E90001C47C1 /* PlayMusicViewController */,
@@ -904,6 +981,7 @@
 		34BC53F81864B3F500CFFE9B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				51BB4215187B0BAD00D7019F /* 11.2 */,
 				3426409B186C9526001C47C1 /* 16 */,
 				34BC54321864B5BA00CFFE9B /* 1 */,
 				34BC54361864B5BA00CFFE9B /* 1.1 */,
@@ -1065,6 +1143,15 @@
 		34BC54601864B5BA00CFFE9B /* 11.1 */ = {
 			isa = PBXGroup;
 			children = (
+				51BB4208187B0ABF00D7019F /* AudioPlayerScrubberKnob.png */,
+				51BB4209187B0ABF00D7019F /* AudioPlayerScrubberLeft.png */,
+				51BB420A187B0ABF00D7019F /* AudioPlayerScrubberRight.png */,
+				51BB41FC187B0AB200D7019F /* 11-hot-nhat-select.png */,
+				51BB41FD187B0AB200D7019F /* 11-hot-nhat.png */,
+				51BB41FE187B0AB200D7019F /* 11-moi-nhat-select.png */,
+				51BB41FF187B0AB200D7019F /* 11-moi-nhat.png */,
+				51BB4200187B0AB200D7019F /* 11-noi-bat-select.png */,
+				51BB4201187B0AB200D7019F /* 11-noi-bat.png */,
 				34BC54611864B5BA00CFFE9B /* bg-cell.png */,
 				34BC54621864B5BA00CFFE9B /* disc.png */,
 				34BC54631864B5BA00CFFE9B /* hot-nhat-select.png */,
@@ -1114,6 +1201,7 @@
 		34BC547C1864B5BA00CFFE9B /* icon chung */ = {
 			isa = PBXGroup;
 			children = (
+				51BB423A187B0BBA00D7019F /* btnTraiTim.png */,
 				34BC547D1864B5BA00CFFE9B /* back-btn.png */,
 				34BC547E1864B5BA00CFFE9B /* btn-close-search.png */,
 				34BC547F1864B5BA00CFFE9B /* btn-search-top.png */,
@@ -1260,6 +1348,50 @@
 			name = Tabs;
 			sourceTree = "<group>";
 		};
+		51BB41EC187B0A7C00D7019F /* Nhac DJ */ = {
+			isa = PBXGroup;
+			children = (
+				51BB420E187B0AE000D7019F /* PlayMusicViewController.h */,
+				51BB420F187B0AE000D7019F /* PlayMusicViewController.m */,
+				51BB4210187B0AE000D7019F /* PlayMusicViewController.xib */,
+				51BB41ED187B0A9F00D7019F /* NhacDJ-TinTucViewController.h */,
+				51BB41EE187B0A9F00D7019F /* NhacDJ-TinTucViewController.m */,
+				51BB41EF187B0A9F00D7019F /* NhacDJ-TinTucViewController.xib */,
+				51BB41F0187B0A9F00D7019F /* NhacDJCell.h */,
+				51BB41F1187B0A9F00D7019F /* NhacDJCell.m */,
+				51BB41F2187B0A9F00D7019F /* NhacDJCell.xib */,
+				51BB41F3187B0A9F00D7019F /* NhacDJTinTucViewController.h */,
+				51BB41F4187B0A9F00D7019F /* NhacDJTinTucViewController.m */,
+				51BB41F5187B0A9F00D7019F /* NhacDJTinTucViewController.xib */,
+			);
+			name = "Nhac DJ";
+			sourceTree = "<group>";
+		};
+		51BB4215187B0BAD00D7019F /* 11.2 */ = {
+			isa = PBXGroup;
+			children = (
+				51BB4216187B0BAD00D7019F /* 11-bg-cd-demo.png */,
+				51BB4217187B0BAD00D7019F /* 11-bg-panel-duoi.png */,
+				51BB4218187B0BAD00D7019F /* 11-bg-panel-tren.png */,
+				51BB4219187B0BAD00D7019F /* 11-bg-phan-play.png */,
+				51BB421A187B0BAD00D7019F /* 11-bg-thanh-play.png */,
+				51BB421B187B0BAD00D7019F /* 11-bg-volume.png */,
+				51BB421C187B0BAD00D7019F /* 11-img-cd-demo.png */,
+				51BB421D187B0BAD00D7019F /* 11-knob-nho.png */,
+				51BB421E187B0BAD00D7019F /* 11-knob-to.png */,
+				51BB421F187B0BAD00D7019F /* 11-next-btn.png */,
+				51BB4220187B0BAD00D7019F /* 11-nut-like.png */,
+				51BB4221187B0BAD00D7019F /* 11-nut-like2.png */,
+				51BB4222187B0BAD00D7019F /* 11-play-btn.png */,
+				51BB4223187B0BAD00D7019F /* 11-prev-btn.png */,
+				51BB4224187B0BAD00D7019F /* 11-progress.png */,
+				51BB4225187B0BAD00D7019F /* 11-repeat.png */,
+				51BB4226187B0BAD00D7019F /* 11-shuffle.png */,
+				51BB4227187B0BAD00D7019F /* 11-volume-full.png */,
+			);
+			path = 11.2;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1311,14 +1443,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51BB422D187B0BAD00D7019F /* 11-bg-volume.png in Resources */,
 				34BC54C01864B5BA00CFFE9B /* logo-album.png in Resources */,
 				3442C7C518642F1300BD13F3 /* InfoPlist.strings in Resources */,
 				4BEAEAB41867B226000E3CD1 /* dangkyViewController.xib in Resources */,
 				34BC54961864B5BA00CFFE9B /* 3-tat-ca.png in Resources */,
+				51BB420D187B0ABF00D7019F /* AudioPlayerScrubberRight.png in Resources */,
 				34BC54231864B46F00CFFE9B /* karaoke-yeuthich.png in Resources */,
 				3442C7CD18642F1300BD13F3 /* Default.png in Resources */,
+				51BB4205187B0AB200D7019F /* 11-moi-nhat.png in Resources */,
 				34BC54211864B46F00CFFE9B /* karaoke-hit.png in Resources */,
+				51BB422B187B0BAD00D7019F /* 11-bg-phan-play.png in Resources */,
 				34BC541D1864B46F00CFFE9B /* hot-nhat-icon.png in Resources */,
+				51BB41F9187B0A9F00D7019F /* NhacDJCell.xib in Resources */,
 				34BC54881864B5BA00CFFE9B /* round-check.png in Resources */,
 				4BEAEAB91867B6E5000E3CD1 /* dangnhapViewController.xib in Resources */,
 				34BC54201864B46F00CFFE9B /* karaoke-clip.png in Resources */,
@@ -1326,6 +1463,7 @@
 				3442C7CF18642F1300BD13F3 /* Default@2x.png in Resources */,
 				34BC54AE1864B5BA00CFFE9B /* hot-nhat-select.png in Resources */,
 				4B743437186B9B5200BE95BF /* MagnifyingGlassDark@2x.png in Resources */,
+				51BB4229187B0BAD00D7019F /* 11-bg-panel-duoi.png in Resources */,
 				34BC54A21864B5BA00CFFE9B /* share-email.png in Resources */,
 				3426408C186C66B5001C47C1 /* SingerListViewController.xib in Resources */,
 				34BC54BB1864B5BA00CFFE9B /* bottom-ca-si.png in Resources */,
@@ -1333,6 +1471,7 @@
 				34BC54CD1864B5BA00CFFE9B /* star-yellow.png in Resources */,
 				34BC54951864B5BA00CFFE9B /* 3-tat-ca-select.png in Resources */,
 				4B743439186B9B5200BE95BF /* navSearchbarFieldBackground@2x.png in Resources */,
+				51BB422E187B0BAD00D7019F /* 11-img-cd-demo.png in Resources */,
 				4B74343E186B9B5200BE95BF /* search1.png in Resources */,
 				51ADC8011869E73700CDB62B /* KindOfMusicViewController.xib in Resources */,
 				34BC542B1864B46F00CFFE9B /* tai-khoan.png in Resources */,
@@ -1344,8 +1483,14 @@
 				34BC541F1864B46F00CFFE9B /* icon-profile.png in Resources */,
 				5176EC381879403E00483692 /* RecordManagerViewController.xib in Resources */,
 				34BC54891864B5BA00CFFE9B /* text-filed-bg.png in Resources */,
+				51BB4239187B0BAD00D7019F /* 11-volume-full.png in Resources */,
 				51A688801866E4DD000BEBD3 /* imageKaraokeClipDemo.png in Resources */,
 				34BC54CA1864B5BA00CFFE9B /* search-btn.png in Resources */,
+				51BB4228187B0BAD00D7019F /* 11-bg-cd-demo.png in Resources */,
+				51BB422A187B0BAD00D7019F /* 11-bg-panel-tren.png in Resources */,
+				51BB4204187B0AB200D7019F /* 11-moi-nhat-select.png in Resources */,
+				51BB4230187B0BAD00D7019F /* 11-knob-to.png in Resources */,
+				51BB422C187B0BAD00D7019F /* 11-bg-thanh-play.png in Resources */,
 				51580E5B186A00C800C837F9 /* ListSongsOfKindViewController.xib in Resources */,
 				34BC54A71864B5BA00CFFE9B /* bg-text-field-comment.png in Resources */,
 				34BC54AF1864B5BA00CFFE9B /* hot-nhat.png in Resources */,
@@ -1368,6 +1513,8 @@
 				34BC54A31864B5BA00CFFE9B /* share-fb.png in Resources */,
 				34BC54CB1864B5BA00CFFE9B /* setting.png in Resources */,
 				34BC54A91864B5BA00CFFE9B /* play-btn.png in Resources */,
+				51BB4207187B0AB200D7019F /* 11-noi-bat.png in Resources */,
+				51BB4237187B0BAD00D7019F /* 11-repeat.png in Resources */,
 				342640A3186C9526001C47C1 /* bai-mau.png in Resources */,
 				34BC542F1864B46F00CFFE9B /* top-bar.png in Resources */,
 				34BC53DE18648D0900CFFE9B /* NavibarView.xib in Resources */,
@@ -1378,19 +1525,24 @@
 				34BC54911864B5BA00CFFE9B /* 1-bai-moi-select.png in Resources */,
 				34BC541B1864B46F00CFFE9B /* clip-gay-bao.png in Resources */,
 				34BC54B91864B5BA00CFFE9B /* bottom-bai-hat.png in Resources */,
+				51BB420B187B0ABF00D7019F /* AudioPlayerScrubberKnob.png in Resources */,
 				4B743451186BA05600BE95BF /* PlayKaraClipViewController.xib in Resources */,
+				51BB41FB187B0A9F00D7019F /* NhacDJTinTucViewController.xib in Resources */,
 				34BC54C21864B5BA00CFFE9B /* logo-ca-si.png in Resources */,
+				51BB422F187B0BAD00D7019F /* 11-knob-nho.png in Resources */,
 				34BC549C1864B5BA00CFFE9B /* phong-to-btn.png in Resources */,
 				34BC541C1864B46F00CFFE9B /* dich-vu.png in Resources */,
 				4BE7D73E186872AA00F7438B /* karaokeListViewController.xib in Resources */,
 				34BC54291864B46F00CFFE9B /* secsion-tin-tuc-video.png in Resources */,
 				34BC54181864B46F00CFFE9B /* ca-si.png in Resources */,
+				51BB420C187B0ABF00D7019F /* AudioPlayerScrubberLeft.png in Resources */,
 				34BC54B31864B5BA00CFFE9B /* noi-bat.png in Resources */,
 				34BC54871864B5BA00CFFE9B /* btn-dangky.png in Resources */,
 				4B74343F186B9B5200BE95BF /* search2.png in Resources */,
 				51C824AF1868895600A65A2B /* imageBaseIntroduction.png in Resources */,
 				51A52B51186AC31B00A7990A /* search2.png in Resources */,
 				34BC54B51864B5BA00CFFE9B /* bg-anh-album.png in Resources */,
+				51BB4231187B0BAD00D7019F /* 11-next-btn.png in Resources */,
 				51A68885186714AF000BEBD3 /* imageBaseNameRecord.png in Resources */,
 				4BE7D7441868741F00F7438B /* karaokeListCell.xib in Resources */,
 				5176EC3B1879458800483692 /* CellRecord.xib in Resources */,
@@ -1398,17 +1550,21 @@
 				340DDAB8186AC6CF00204A05 /* 10_nam_tinh_cu.xml in Resources */,
 				34BC54C81864B5BA00CFFE9B /* btn-search-top.png in Resources */,
 				51A6887E1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png in Resources */,
+				51BB41F7187B0A9F00D7019F /* NhacDJ-TinTucViewController.xib in Resources */,
+				51BB423B187B0BBA00D7019F /* btnTraiTim.png in Resources */,
 				34BC542A1864B46F00CFFE9B /* su-kien-noi-bat.png in Resources */,
 				34BC53EE1864A9C100CFFE9B /* MenuSlideControllerViewController.xib in Resources */,
 				4B743431186B9B5200BE95BF /* FLSearchBarBorder@2x.png in Resources */,
 				4B743432186B9B5200BE95BF /* GraySearchBar.png in Resources */,
 				34BC54311864B46F00CFFE9B /* wap-kara.png in Resources */,
 				34BC54221864B46F00CFFE9B /* karaoke-moi-nhat.png in Resources */,
+				51BB4203187B0AB200D7019F /* 11-hot-nhat.png in Resources */,
 				34BC54931864B5BA00CFFE9B /* 2-bai-hits-select.png in Resources */,
 				34BC54BD1864B5BA00CFFE9B /* bottom-thu-am.png in Resources */,
 				34BC54AC1864B5BA00CFFE9B /* bg-cell.png in Resources */,
 				34BC54251864B46F00CFFE9B /* search.png in Resources */,
 				34BC548E1864B5BA00CFFE9B /* goi-ngay.png in Resources */,
+				51BB4238187B0BAD00D7019F /* 11-shuffle.png in Resources */,
 				34BC54BF1864B5BA00CFFE9B /* khung-tron-ca-si.png in Resources */,
 				34BC54B81864B5BA00CFFE9B /* bg-top-home.png in Resources */,
 				342640A7186C9526001C47C1 /* play.png in Resources */,
@@ -1418,9 +1574,12 @@
 				34BC542D1864B46F00CFFE9B /* thong-tin.png in Resources */,
 				34BC54A61864B5BA00CFFE9B /* bg-comment.png in Resources */,
 				51B145AA186B4D5A00063FB9 /* ForgetPasswordViewController.xib in Resources */,
+				51BB4235187B0BAD00D7019F /* 11-prev-btn.png in Resources */,
 				34BC548C1864B5BA00CFFE9B /* btn-dang-nhap.png in Resources */,
 				34BC549F1864B5BA00CFFE9B /* bg-share.png in Resources */,
 				34BC549D1864B5BA00CFFE9B /* thu-am1.png in Resources */,
+				51BB4212187B0AE000D7019F /* PlayMusicViewController.xib in Resources */,
+				51BB4202187B0AB200D7019F /* 11-hot-nhat-select.png in Resources */,
 				342640A8186C9526001C47C1 /* thich.png in Resources */,
 				34BC54B01864B5BA00CFFE9B /* moi-nhat-select.png in Resources */,
 				34BC54B71864B5BA00CFFE9B /* bg-cell-bai-hat.png in Resources */,
@@ -1431,6 +1590,7 @@
 				34BC54B21864B5BA00CFFE9B /* noi-bat-select.png in Resources */,
 				3C993C6C187AA6F30073B45C /* btnTraiTim.png in Resources */,
 				51C824B01868895600A65A2B /* imageDemoIntroduction.png in Resources */,
+				51BB4232187B0BAD00D7019F /* 11-nut-like.png in Resources */,
 				34BC54281864B46F00CFFE9B /* secsion-them.png in Resources */,
 				34BC54901864B5BA00CFFE9B /* goi-tuan.png in Resources */,
 				34BC54CF1864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png in Resources */,
@@ -1440,12 +1600,15 @@
 				342640A5186C9526001C47C1 /* ghi-am.png in Resources */,
 				34061F11186458CC009FD9B2 /* RootViewController.xib in Resources */,
 				34BC54941864B5BA00CFFE9B /* 2-bai-hits.png in Resources */,
+				51BB4234187B0BAD00D7019F /* 11-play-btn.png in Resources */,
 				3426409A186C7EB9001C47C1 /* PlayMP3ViewController.xib in Resources */,
 				34BC54A11864B5BA00CFFE9B /* phat-lai-btn.png in Resources */,
 				34BC53F71864AD8A00CFFE9B /* HomeViewController.xib in Resources */,
 				4B743435186B9B5200BE95BF /* MagnifyingGlass@2x.png in Resources */,
 				51A688791866D886000BEBD3 /* BaseNameSingers.png in Resources */,
+				51BB4206187B0AB200D7019F /* 11-noi-bat-select.png in Resources */,
 				4B74343D186B9B5200BE95BF /* search-bg-all@2x.png in Resources */,
+				51BB4233187B0BAD00D7019F /* 11-nut-like2.png in Resources */,
 				34BC542C1864B46F00CFFE9B /* the-loai.png in Resources */,
 				34BC54C71864B5BA00CFFE9B /* btn-close-search.png in Resources */,
 				34BC54BA1864B5BA00CFFE9B /* bottom-bg.png in Resources */,
@@ -1471,6 +1634,7 @@
 				34BC54981864B5BA00CFFE9B /* 4-karaoke-clip.png in Resources */,
 				34BC54261864B46F00CFFE9B /* secsion-danh-muc.png in Resources */,
 				34BC542E1864B46F00CFFE9B /* thu-am-binh-chon-nhieu-nhat.png in Resources */,
+				51BB4236187B0BAD00D7019F /* 11-progress.png in Resources */,
 				34BC54A41864B5BA00CFFE9B /* share-mkara.png in Resources */,
 				4B74343C186B9B5200BE95BF /* search-bg-all.png in Resources */,
 				34BC54A01864B5BA00CFFE9B /* huy-btn.png in Resources */,
@@ -1496,11 +1660,13 @@
 				34A140BF1873238F00A7BFB2 /* PSTGridLayoutItem.m in Sources */,
 				4B743433186B9B5200BE95BF /* KTSearchBar.m in Sources */,
 				34BC53E81864A8F500CFFE9B /* UIViewController+JASidePanel.m in Sources */,
+				51BB4211187B0AE000D7019F /* PlayMusicViewController.m in Sources */,
 				34A140B91873238F00A7BFB2 /* PSTCollectionViewData.m in Sources */,
 				342640B5186CAFD7001C47C1 /* SentenceView.m in Sources */,
 				3442C7CB18642F1300BD13F3 /* AppDelegate.m in Sources */,
 				34BC53F61864AD8A00CFFE9B /* HomeViewController.m in Sources */,
 				34BC53E118648D6A00CFFE9B /* NavibarView.m in Sources */,
+				51BB41FA187B0A9F00D7019F /* NhacDJTinTucViewController.m in Sources */,
 				4B74345B186BA3B400BE95BF /* FavouriteViewController.m in Sources */,
 				51ADC8001869E73700CDB62B /* KindOfMusicViewController.m in Sources */,
 				34061F10186458CC009FD9B2 /* RootViewController.m in Sources */,
@@ -1517,7 +1683,9 @@
 				3423D9DD1871DE0900BED047 /* SoundMix.m in Sources */,
 				4BEAEAB81867B6E5000E3CD1 /* dangnhapViewController.m in Sources */,
 				347E9DF818680DD500E7A342 /* MenuCell.m in Sources */,
+				51BB41F8187B0A9F00D7019F /* NhacDJCell.m in Sources */,
 				34BC53E71864A8F500CFFE9B /* JASidePanelController.m in Sources */,
+				51BB41F6187B0A9F00D7019F /* NhacDJ-TinTucViewController.m in Sources */,
 				51580E5A186A00C800C837F9 /* ListSongsOfKindViewController.m in Sources */,
 				4B743450186BA05600BE95BF /* PlayKaraClipViewController.m in Sources */,
 				34A140BA1873238F00A7BFB2 /* PSTCollectionViewFlowLayout.m in Sources */,
