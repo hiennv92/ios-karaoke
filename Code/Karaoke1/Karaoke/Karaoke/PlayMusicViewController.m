@@ -7,7 +7,6 @@
 //
 
 #import "PlayMusicViewController.h"
-#import "NhacDJ-TinTucViewController.h"
 @interface PlayMusicViewController ()
 
 @end
@@ -27,7 +26,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"back-btn.png" leftButtonPress:Nil rightButton:nil rightButtonPress:Nil];
+//    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"back-btn.png" leftButtonPress:Nil rightButton:nil rightButtonPress:Nil];
+    [self createNavigationBarWithTitle:@"VN DJ NONSTOP" backgroundImage:@"bg-top-home.png" leftButton:@"back-btn.png" leftButtonPress:nil rightButton:nil rightButtonPress:nil andType:1];
     
     [self addTitleNavibar:@"VN DJ NONSTOP" andSize:22];
     [self setBottomBarViewHidden:YES];
@@ -113,8 +113,6 @@
 }
 
 - (IBAction)prev:(id)sender {
-    NhacDJ_TinTucViewController *nhacDJ=[[NhacDJ_TinTucViewController alloc]initWithNibName:nil bundle:nil];
-    [self.navigationController pushViewController:nhacDJ animated:YES];
 }
 
 - (IBAction)repeat:(id)sender {

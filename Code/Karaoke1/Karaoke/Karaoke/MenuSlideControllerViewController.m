@@ -10,7 +10,7 @@
 #import "KindOfMusicViewController.h"
 #import "RecordManagerViewController.h"
 #import "MenuCell.h"
-
+#import "NhacDJTinTucViewController.h"
 @interface MenuSlideControllerViewController ()
 {
     NSArray* _headerArray;
@@ -185,7 +185,10 @@
     
     //Section 03 DJ music
     if(indexPath.row == 0 && indexPath.section == 2){
-        
+        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+        [app.viewController showCenterPanelAnimated:YES];
+        NhacDJTinTucViewController *recordManagerView =[[NhacDJTinTucViewController alloc] initWithNibName:nil bundle:nil];
+        [self.navigationController pushViewController:recordManagerView animated:YES];
     }
     else if(indexPath.row == 1 && indexPath.section == 2){
     }
