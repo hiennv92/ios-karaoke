@@ -54,10 +54,32 @@
 }
 
 
+- (IBAction)closeSearch:(id)sender {
+    [UIView animateWithDuration:0.5f delay:0.0f options:UIViewAnimationCurveLinear|UIViewAnimationOptionCurveEaseInOut animations:^(){
+        if (_topView.center.x==320) {
+            _topView.center=CGPointMake(0, 22);
+        }
+        else
+            _topView.center=CGPointMake(320, 22);
+    }completion:^(BOOL fn){
+        
+    }];
+}
+
 - (IBAction)menu:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)search:(id)sender {
+    [UIView animateWithDuration:0.5f delay:0.0f options:UIViewAnimationCurveLinear|UIViewAnimationOptionCurveEaseInOut animations:^(){
+        if (_topView.center.x==320) {
+            _topView.center=CGPointMake(0, 22);
+        }
+        else
+            _topView.center=CGPointMake(320, 22);
+    }completion:^(BOOL fn){
+        
+    }];
 }
 #pragma mark - Table view data source
 
@@ -126,5 +148,14 @@
     [_kind2 setImage:[UIImage imageNamed:@"11-hot-nhat.png"] forState:UIControlStateNormal];
     [_kind3 setImage:[UIImage imageNamed:@"11-noi-bat-select.png"] forState:UIControlStateNormal];
 }
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
 
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    
+}
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    
+}
 @end
