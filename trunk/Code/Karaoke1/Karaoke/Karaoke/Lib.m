@@ -81,5 +81,10 @@
     }
 }
 
+
++ (NSString*)getServiceUrl:(NSString *)url
+{
+    return [NSString stringWithFormat:@"%@%@", kServerUrl, url];
+}
 @end
 

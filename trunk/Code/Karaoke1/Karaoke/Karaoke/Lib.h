@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
+#define kServerUrl  @"http://mkara.vn/mapi/"
+
+
 @interface Lib : NSObject
 
 + (BOOL)isIpad;
@@ -17,5 +20,6 @@
 + (float)getIosVersion;
 + (NSString*)getIosVersionString;
 + (CGFloat)widthForLabel:(UILabel*)label;
-+(BOOL)isHeadsetPluggedIn;
++ (BOOL)isHeadsetPluggedIn;
++ (NSString*)getServiceUrl:(NSString*)url;
 @end
