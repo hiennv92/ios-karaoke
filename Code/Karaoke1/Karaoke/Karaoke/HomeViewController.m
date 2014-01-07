@@ -326,4 +326,22 @@
     [self.navigationController pushViewController:rc animated:YES];
 }
 
+- (IBAction)showAllSingersController:(id)sender {
+    SingerListViewController* vc = [[SingerListViewController alloc] initWithNibName:@"SingerListViewController" bundle:Nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)showAllKaraokeClipsController:(id)sender {
+}
+
+- (IBAction)showAllSongsController:(id)sender {
+}
+
+- (IBAction)showAllTopRecordsController:(id)sender {
+}
+
+
+///LOAD DATA
+
+
 @end

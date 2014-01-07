@@ -9,6 +9,9 @@
 #import "karaokeListViewController.h"
 #import "Cell.h"
 #import "PlayKaraClipViewController.h"
+#import "SingerListViewController.h"
+#import "RecordViewController.h"
+#import "KindOfMusicViewController.h"
 
 @interface karaokeListViewController ()
 
@@ -168,6 +171,23 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     //    NSLog(@"%@",searchBar.text);
     [searchBar resignFirstResponder];
+}
+
+- (void)kindMusicButtonPress:(id)button{
+    //    [_timerChangeIntroView invalidate];
+    KindOfMusicViewController *kindMusic = [[KindOfMusicViewController alloc] initWithNibName:@"KindOfMusicViewController" bundle:Nil];
+    [self.navigationController pushViewController:kindMusic animated:YES];
+}
+
+- (void)singerButtonPress:(id)button
+{
+    SingerListViewController* vc = [[SingerListViewController alloc] initWithNibName:@"SingerListViewController" bundle:Nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)recordButtonPress:(id)button{
+    RecordViewController *rc = [[RecordViewController alloc] initWithNibName:@"RecordViewController" bundle:Nil];
+    [self.navigationController pushViewController:rc animated:YES];
 }
 
 @end
