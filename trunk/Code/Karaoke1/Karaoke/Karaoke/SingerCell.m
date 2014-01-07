@@ -24,7 +24,7 @@
 {
 //    self.icon.layer.masksToBounds = YES;
 //    self.icon.layer.cornerRadius = self.icon.image.size.height / 2;
-//    self.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = [UIColor clearColor];
 }
 /*
 // Only override drawRect: if you perform custom drawing.
