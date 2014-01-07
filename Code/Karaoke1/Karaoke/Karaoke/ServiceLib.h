@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SBJson.h"
 
 @interface ServiceLib : NSObject {
     

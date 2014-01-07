@@ -8,10 +8,17 @@
 
 #import "SingerListViewController.h"
 #import "SingerCell.h"
+#import "Lib.h"
+#import "ServiceLib.h"
+#import "Singer.h"
+#import "UIImageView+AFNetworking.h"
 
 NSString *CollectionViewCellIdentifier = @"SingerCell";
 
 @interface SingerListViewController ()
+{
+    NSMutableArray*     _data;
+}
 
 @end
 
@@ -41,6 +48,11 @@ NSString *CollectionViewCellIdentifier = @"SingerCell";
     [_collectionView registerNib:[UINib nibWithNibName:CollectionViewCellIdentifier bundle:Nil] forCellWithReuseIdentifier:CollectionViewCellIdentifier];
     
     [self.view addSubview:_collectionView];
+    
+    _data = [[NSMutableArray alloc] init];
+    
+    // load data
+    [self loadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,7 +79,10 @@ NSString *CollectionViewCellIdentifier = @"SingerCell";
 
 - (PSUICollectionViewCell *)collectionView:(PSUICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     SingerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CollectionViewCellIdentifier forIndexPath:indexPath];
-
+    Singer* singer = _data[indexPath.row];
+    cell.name.text = singer.name;
+    [cell.icon setImageWithURL:[NSURL URLWithString:[singer getLargeImageUrl]] placeholderImage:[UIImage imageNamed:@"ca-si.png"]];
+     
     return cell;
 }
 
@@ -76,7 +91,7 @@ NSString *CollectionViewCellIdentifier = @"SingerCell";
 }
 
 - (NSInteger)collectionView:(PSUICollectionView *)view numberOfItemsInSection:(NSInteger)section {
-    return 32;
+    return _data.count;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(PSTCollectionView *)collectionView
@@ -122,6 +137,48 @@ NSString *CollectionViewCellIdentifier = @"SingerCell";
 {
     NSLog(@"Check delegate: should cell %@ be deselected?", [self formatIndexPath:indexPath]);
     return YES;
+}
+
+
+#pragma mark - Load data
+- (void)loadData
+{
+    [Lib showLoadingOnView:self.view withText:@"Đang tải..."];
+    [NSThread detachNewThreadSelector:@selector(getSingerListFromService) toTarget:self withObject:nil];
+}
+
+- (void)getSingerListFromService
+{
+    NSString* retVal = [ServiceLib sendGetRequest:[Lib getServiceUrl:kServiceSingerUrl]];
+    SBJsonParser* parser = [[SBJsonParser alloc] init];
+    id data = [parser objectWithString:retVal];
+    if (data && [data isKindOfClass:[NSDictionary class]]) {
+        NSString* message = [data objectForKey:@"message"];
+        NSString* error = [data objectForKey:@"error"];
+        id result = [data objectForKey:@"result"];
+        if (error.integerValue == 0) { // success!
+            int total = [[result objectForKey:@"total"] integerValue];
+            NSArray* items = [result objectForKey:@"items"];
+            if (items) {
+                for (id singer in items) {
+                    if (singer && [singer isKindOfClass:[NSDictionary class]]) {
+                        Singer* s = [Singer singerFromDictionary:singer];
+                        [_data addObject:s];
+                    }
+                }
+            }
+        }
+        else{
+            NSLog(@"error: %@ message: %@", error, message);
+        }
+    }
+    [self performSelectorOnMainThread:@selector(getDataFinish) withObject:nil waitUntilDone:YES];
+}
+
+- (void)getDataFinish
+{
+    [Lib removeLoadingOnView:self.view];
+    [_collectionView reloadData];
 }
 
 @end
