@@ -39,4 +39,10 @@
 @property (strong, nonatomic) IBOutlet UIImageView *_imageSmallBanner2;
 @property (strong, nonatomic) IBOutlet UIImageView *_imageSmallBanner3;
 @property (strong, nonatomic) IBOutlet UIImageView *_imageSmallBanner4;
+
+- (IBAction)showAllSingersController:(id)sender;
+- (IBAction)showAllKaraokeClipsController:(id)sender;
+- (IBAction)showAllSongsController:(id)sender;
+- (IBAction)showAllTopRecordsController:(id)sender;
+
 @end
