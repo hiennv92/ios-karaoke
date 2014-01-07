@@ -17,6 +17,7 @@
     NSTimer *updateTimer;
     BOOL isPause;
 }
+@property (weak, nonatomic) IBOutlet UIView *anhView;
 @property (weak, nonatomic) IBOutlet UIImageView *imgIntro;
 @property (weak, nonatomic) IBOutlet UILabel *albumNameLb;
 @property (weak, nonatomic) IBOutlet UILabel *authorLb;

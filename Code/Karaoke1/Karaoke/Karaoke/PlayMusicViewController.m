@@ -25,6 +25,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    CGPoint p= _anhView.center;
+    _anhView.frame=CGRectMake(0, 0, _anhView.bounds.size.height, _anhView.bounds.size.height);
+    _anhView.center=p;
     // Do any additional setup after loading the view from its nib.
 //    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"back-btn.png" leftButtonPress:Nil rightButton:nil rightButtonPress:Nil];
     [self createNavigationBarWithTitle:@"VN DJ NONSTOP" backgroundImage:@"bg-top-home.png" leftButton:@"back-btn.png" leftButtonPress:nil rightButton:nil rightButtonPress:nil andType:1];

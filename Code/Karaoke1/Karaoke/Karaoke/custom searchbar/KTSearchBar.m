@@ -19,6 +19,21 @@
 
 - (void)awakeFromNib
 {
+    
+    float ver = [[[UIDevice currentDevice] systemVersion] floatValue];
+    if (ver < 7.0) {
+        
+        [[self.subviews objectAtIndex:0] removeFromSuperview];
+        UIImageView *backgroundImageView = nil;
+        
+        self.layer.borderColor = [[self colorWithHex:0x32363c] CGColor];
+        
+        backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"search2.png"]];
+        backgroundImageView.frame = CGRectMake(0, 7, 270, 27);
+        
+        [self addSubview:backgroundImageView];
+    }
+    else{
     NSArray *searchBarSubViews = [[self.subviews objectAtIndex:0] subviews];
 
     for(int i =0; i<[searchBarSubViews count]; i++) {
@@ -39,17 +54,42 @@
     
     self.layer.borderColor = [[self colorWithHex:0x32363c] CGColor];
     backgroundImageView  = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"search2.png"]];
-    backgroundImageView.frame = CGRectMake(0.0f, 0.0f, self.bounds.size.width, self.bounds.size.height);
+    backgroundImageView.frame = CGRectMake(0, 7, 270, 27);
     
     [self addSubview:backgroundImageView];
     
     [self reloadInputViews];
-  
+    }
 }
 
 
 - (void)layoutSubviews {
-  
+    float ver = [[[UIDevice currentDevice] systemVersion] floatValue];
+    if (ver < 7.0) {
+        [self setShowsCancelButton:NO animated:NO];
+        UITextField *searchField;
+        NSUInteger numViews = [self.subviews count];
+        for(int i = 0; i < numViews; i++) {
+            if([[self.subviews objectAtIndex:i] isKindOfClass:[UITextField class]]) { //conform?
+                searchField = [self.subviews objectAtIndex:i];
+            }
+        }
+        [self bringSubviewToFront:searchField];
+        if(!(searchField == nil)) {
+            searchField.textColor = [self colorWithHex:0x8b909c];
+            searchField.font = [UIFont fontWithName:@"MyriadPro-It" size:20];
+            searchField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+            [searchField setBorderStyle:UITextBorderStyleNone];
+            [searchField setBackgroundColor:[UIColor clearColor]];
+            [searchField setRightView:nil];
+            [searchField setBackground:nil];
+            [searchField setFrame:CGRectMake(10, 0, 265, 44)];
+            searchField.leftView  = nil;
+            
+        }
+        [super layoutSubviews];
+    }
+    else{
   [self setShowsCancelButton:NO animated:NO];
 
 //  NSUInteger numViews = [self.subviews count];
@@ -81,7 +121,7 @@
         [search setBackgroundColor:[UIColor clearColor]];
         [search setRightView:nil];
         [search setBackground:nil];
-        [search setFrame:CGRectMake(0, 0, 280, 44)];
+        [search setFrame:CGRectMake(10, 0, 265, 44)];
         
         search.leftView  = nil;
         
@@ -89,6 +129,7 @@
 
   [self bringSubviewToFront:search];
   [super layoutSubviews];
+    }
 }
 
 // http://stackoverflow.com/questions/1560081/how-can-i-create-a-uicolor-from-a-hex-string
