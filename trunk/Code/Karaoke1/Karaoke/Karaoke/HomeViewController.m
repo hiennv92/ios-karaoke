@@ -210,6 +210,7 @@
             [self._imageSmallBanner4 setFrame:frame];
         } completion:^(BOOL finished) {
             _changeSmallView = 1;
+            [self setImageForSmallViewIntro:_changeSmallView];
         }];
     }
     else if(_changeSmallView == 1) {
@@ -228,6 +229,7 @@
             [self._imageSmallBanner4 setFrame:frame];
         } completion:^(BOOL finished) {
             _changeSmallView = 2;
+            [self setImageForSmallViewIntro:_changeSmallView];
         }];
     }
     else if(_changeSmallView == 2) {
@@ -246,6 +248,7 @@
             [self._imageSmallBanner4 setFrame:frame];
         } completion:^(BOOL finished) {
             _changeSmallView = 3;
+            [self setImageForSmallViewIntro:_changeSmallView];
         }];
     }
     else if(_changeSmallView == 3) {
@@ -264,6 +267,7 @@
             [self._imageSmallBanner4 setFrame:frame];
         } completion:^(BOOL finished) {
             _changeSmallView = 0;
+            [self setImageForSmallViewIntro:_changeSmallView];
         }];
     }
 }
@@ -283,6 +287,42 @@
         imageView = self._imageSmallBanner4.image;
     }
     return imageView;
+}
+
+- (void)setImageForSmallViewIntro:(int)choose{
+    int n1 = rand()%[_arrayIntroduce count];
+    Song *song1 = [_arrayIntroduce objectAtIndex:n1];
+    NSData *imageData1 = [NSData dataWithContentsOfURL:[NSURL URLWithString:[song1 getLargeImageUrl]]];
+    
+    int n2 = rand()%[_arrayIntroduce count];
+    Song *song2 = [_arrayIntroduce objectAtIndex:n2];
+    NSData *imageData2 = [NSData dataWithContentsOfURL:[NSURL URLWithString:[song2 getLargeImageUrl]]];
+    
+    switch (choose) {
+        case 0:
+            self._imageSmallBanner1.image = [UIImage imageWithData:imageData1];
+            self._imageSmallBanner2.image = [UIImage imageWithData:imageData2];
+            self._labelBigBanner2.text = song2.name;
+            break;
+        case 1:
+            self._imageSmallBanner1.image = [UIImage imageWithData:imageData1];
+            self._imageSmallBanner4.image = [UIImage imageWithData:imageData2];
+            self._labelBigBanner2.text = song1.name;
+            break;
+        case 2:
+            self._imageSmallBanner3.image = [UIImage imageWithData:imageData1];
+            self._imageSmallBanner4.image = [UIImage imageWithData:imageData2];
+            self._labelBigBanner2.text = song1.name;
+            break;
+        case 3:
+            self._imageSmallBanner4.image = [UIImage imageWithData:imageData1];
+            self._imageSmallBanner1.image = [UIImage imageWithData:imageData2];
+            self._labelBigBanner2.text = song1.name;
+            break;
+        default:
+            break;
+    }
+
 }
 
 ////////////////////////////
@@ -471,7 +511,7 @@
     _arrayIntroduce = [[NSMutableArray alloc]init];
     for(int i = 0;i<[_arrayListSong count];i ++){
         Song *tmp = [_arrayListSong objectAtIndex:i];
-        if(tmp.largeImage != NULL)
+        if(![tmp.largeImage isEqualToString:@"notImage"])
             [_arrayIntroduce addObject:tmp];
     }
 }

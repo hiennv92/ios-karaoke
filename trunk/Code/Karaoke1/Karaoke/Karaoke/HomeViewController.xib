@@ -26,6 +26,8 @@
                 <outlet property="_imageSmallBanner2" destination="c65-uV-6oD" id="PG4-77-3hs"/>
                 <outlet property="_imageSmallBanner3" destination="gbt-ej-Lmy" id="0on-QR-qL7"/>
                 <outlet property="_imageSmallBanner4" destination="B49-Er-yOK" id="2yr-6z-rvn"/>
+                <outlet property="_labelBigBanner1" destination="7qG-rS-lUV" id="PeK-Pt-mFg"/>
+                <outlet property="_labelBigBanner2" destination="IDQ-vc-pbN" id="Gr8-vW-UNL"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
