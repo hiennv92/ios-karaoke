@@ -44,8 +44,11 @@
         self.is5Digits = [dict objectForKey:@"is5Digits"];
         self.keyWords = [dict objectForKey:@"keyWords"];
         self.largeImage = [dict objectForKey:@"largeImage"];
-//        if(self.largeImage)
+//        if([self.largeImage isEqualToString:@"<null>"]){
 //            self.largeImage = [self.largeImage stringByReplacingOccurrencesOfString:@"~" withString:@""];
+            NSLog(@"%@",self.largeImage);
+
+        }
         self.price = [dict objectForKey:@"price"];
         self.metadataFile = [dict objectForKey:@"metadataFile"];
         self.isFree = [dict objectForKey:@"isFree"];
@@ -54,9 +57,11 @@
         self.duration = [dict objectForKey:@"duration"];
         self.scope = [dict objectForKey:@"scope"];
         self.mp4VocalFile = [dict objectForKey:@"mp4VocalFile"];
-//        self.mp4VocalFile = [self.mp4VocalFile stringByReplacingOccurrencesOfString:@"~" withString:@""];
+        if(self.mp4VocalFile != NULL)
+            self.mp4VocalFile = [self.mp4VocalFile stringByReplacingOccurrencesOfString:@"~" withString:@""];
         self.mp4NoVocalFile = [dict objectForKey:@"mp4NoVocalFile"];
-//        self.mp4NoVocalFile = [self.mp4NoVocalFile stringByReplacingOccurrencesOfString:@"~" withString:@""];
+        if(self.mp4NoVocalFile != NULL)
+            self.mp4NoVocalFile = [self.mp4NoVocalFile stringByReplacingOccurrencesOfString:@"~" withString:@""];
         self.mediaType = [dict objectForKey:@"mediaType"];
         self.modifiedDate = [dict objectForKey:@"modifiedDate"];
     }

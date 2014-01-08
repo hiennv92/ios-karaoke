@@ -21,7 +21,9 @@
     
     NSMutableArray *_arrayListSinger;
     NSMutableArray *_arrayListSong;
-    
+    NSMutableArray *_arrayRecord;
+    NSMutableArray *_arrayKaraoke;
+    NSMutableArray *_arrayIntroduce;
 }
 @property (strong, nonatomic) IBOutlet UIView *__bannerView;
 @property (strong, nonatomic) IBOutlet UIView *__introductionVIew;

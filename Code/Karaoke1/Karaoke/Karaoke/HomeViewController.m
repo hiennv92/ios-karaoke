@@ -462,6 +462,18 @@
 
 - (void)setDataScollSongs{
     [self.__tableSongView reloadData];
+    [self getDataIntroduce];
+}
+
+
+//Get data image for view introduce
+- (void)getDataIntroduce{
+    _arrayIntroduce = [[NSMutableArray alloc]init];
+    for(int i = 0;i<[_arrayListSong count];i ++){
+        Song *tmp = [_arrayListSong objectAtIndex:i];
+        if(tmp.largeImage != NULL)
+            [_arrayIntroduce addObject:tmp];
+    }
 }
 
 @end
