@@ -11,6 +11,8 @@
 #import "RecordManagerViewController.h"
 #import "MenuCell.h"
 #import "NhacDJTinTucViewController.h"
+#import "AppDelegate.h"
+
 @interface MenuSlideControllerViewController ()
 {
     NSArray* _headerArray;
@@ -134,82 +136,164 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    //Section 01 account
-    if(indexPath.row == 0 && indexPath.section == 0){
-        NSLog(@"Dang nhap");
-        dangnhapViewController *loginView = [[dangnhapViewController alloc] initWithNibName:@"dangnhapViewController" bundle:Nil];
-        [self.navigationController pushViewController:loginView animated:YES];
-    }
-    else if(indexPath.row == 1 && indexPath.section == 0){
-        NSLog(@"Dich vu");
+    switch (indexPath.section) {
+                                                    // Section 0
+        case 0:
+            if (indexPath.row == 0) {
+                dangnhapViewController *loginView = [[dangnhapViewController alloc] initWithNibName:@"dangnhapViewController" bundle:Nil];
+                [[AppDelegate shareApplication] showViewController:loginView];
+            }
+            else if (indexPath.row == 1 ) {         // dich vu
+                
+            }
+            break;
+                                                        // DANH MUC
+        case 1:
+        {
+            switch (indexPath.row) {
+                case 0:                                 // trang chu
+                {
+                    NSLog(@"Trang chu");
+                    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+                    [app.viewController showCenterPanelAnimated:YES];
+                }
+                    break;
+                case 1:                                 // tim kiem karaoke 5 so
+                {
+                    
+                }
+                    break;
+                case 2:                                 // karaoke clip
+                {
+                    
+                }
+                    break;
+                case 3:                                 // karaoke moi nhat
+                {
+                    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+                    [app.viewController showCenterPanelAnimated:YES];
+                    karaokeListViewController *listKaraView =[[karaokeListViewController alloc] initWithNibName:@"karaokeListViewController" bundle:nil];
+                    [self.navigationController pushViewController:listKaraView animated:YES];
+                }
+                    break;
+                case 4:                                 // karaoke hit
+                {
+                    
+                }
+                    break;
+                case 5:                                 // ca khuc da ghi am
+                {
+                    NSLog(@"Record manager");
+                    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+                    [app.viewController showCenterPanelAnimated:YES];
+                    RecordManagerViewController *recordManagerView =[[RecordManagerViewController alloc] initWithNibName:@"RecordManagerViewController" bundle:nil];
+                    [self.navigationController pushViewController:recordManagerView animated:YES];
+                }
+                    break;
+                case 6:                                 // karaoke yeu thich
+                {
+                    
+                }
+                    break;
+                case 7:                                 // thu am binh chon nhieu nhat
+                {
+                    
+                }
+                    break;
+                case 8:                                 // ca khuc noi bat
+                {
+                    
+                }
+                    break;
+                case 9:                                 // ca sy
+                {
+                    
+                }
+                    break;
+                case 10:                                // the loai
+                {
+                    NSLog(@"The loai");
+                    KindOfMusicViewController *kindMusic = [[KindOfMusicViewController alloc] initWithNibName:@"KindOfMusicViewController" bundle:Nil];
+                    [self.navigationController pushViewController:kindMusic animated:YES];
+                }
+                    break;
+                default:
+                    break;
+            }
+        }
+            break;
+        case 2:                                     // NHAC DJ
+            switch (indexPath.row) {
+                case 0:                             // moi nhat
+                {
+                    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+                    [app.viewController showCenterPanelAnimated:YES];
+                    NhacDJTinTucViewController *recordManagerView =[[NhacDJTinTucViewController alloc] initWithNibName:nil bundle:nil];
+                    [self.navigationController pushViewController:recordManagerView animated:YES];
+                }
+                    break;
+                case 1:                             // hot nhat
+                {
+                    
+                }
+                    break;
+                case 2:                             // su kien noi bat
+                {
+                    
+                }
+                    break;
+                default:
+                    break;
+            }
+            break;
+        case 3:                                     // TIN TUC VIDEO
+            switch (indexPath.row) {
+                case 0:                             // camera 360
+                {
+                    
+                }
+                    break;
+                case 1:                             // clip gay bao
+                {
+                    
+                }
+                    break;
+                default:
+                    break;
+            }
+            break;
+        case 4:                                         // THEM
+        {
+            switch (indexPath.row) {
+                case 0:                                 // cai dat
+                {
+                    
+                }
+                    break;
+                case 1:                                 // huong dan
+                {
+                    
+                }
+                    break;
+                case 2:                                 // thong tin
+                {
+                    
+                }
+                    break;
+                case 3:                                 // wap karaoke
+                {
+                    
+                }
+                    break;
+                default:
+                    break;
+            }
+        }
+            break;
+        default:
+            break;
     }
     
-    //Section 02 category
-    if(indexPath.row == 0 && indexPath.section == 1){
-        NSLog(@"Trang chu");
-        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
-        [app.viewController showCenterPanelAnimated:YES];
-    }
-    else if(indexPath.row == 1 && indexPath.section == 1){
-    }
-    else if(indexPath.row == 2 && indexPath.section == 1){
-    }
-    else if(indexPath.row == 3 && indexPath.section == 1){
-        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
-        [app.viewController showCenterPanelAnimated:YES];
-        karaokeListViewController *listKaraView =[[karaokeListViewController alloc] initWithNibName:@"karaokeListViewController" bundle:nil];
-        [self.navigationController pushViewController:listKaraView animated:YES];
-    }
-    else if(indexPath.row == 4 && indexPath.section == 1){
-    }
-    else if(indexPath.row == 5 && indexPath.section == 1){
-        NSLog(@"Record manager");
-        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
-        [app.viewController showCenterPanelAnimated:YES];
-        RecordManagerViewController *recordManagerView =[[RecordManagerViewController alloc] initWithNibName:@"RecordManagerViewController" bundle:nil];
-        [self.navigationController pushViewController:recordManagerView animated:YES];
-    }
-    else if(indexPath.row == 6 && indexPath.section == 1){
-    }
-    else if(indexPath.row == 7 && indexPath.section == 1){
-    }
-    else if(indexPath.row == 8 && indexPath.section == 1){
-    }
-    else if(indexPath.row == 9 && indexPath.section == 1){
-    }
-    else if(indexPath.row == 10 && indexPath.section == 1){
-        NSLog(@"The loai");
-        KindOfMusicViewController *kindMusic = [[KindOfMusicViewController alloc] initWithNibName:@"KindOfMusicViewController" bundle:Nil];
-        [self.navigationController pushViewController:kindMusic animated:YES];
-    }
-    
-    //Section 03 DJ music
-    if(indexPath.row == 0 && indexPath.section == 2){
-        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
-        [app.viewController showCenterPanelAnimated:YES];
-        NhacDJTinTucViewController *recordManagerView =[[NhacDJTinTucViewController alloc] initWithNibName:nil bundle:nil];
-        [self.navigationController pushViewController:recordManagerView animated:YES];
-    }
-    else if(indexPath.row == 1 && indexPath.section == 2){
-    }
-    else if(indexPath.row == 2 && indexPath.section == 2){
-    }
-    //Section 04 Videos
-    if(indexPath.row == 0 && indexPath.section == 3){
-        
-    }
-    else if(indexPath.row == 1 && indexPath.section == 3){
-    }
-    //Section 05 extension
-    if(indexPath.row == 0 && indexPath.section == 4){
-        
-    }
-    else if(indexPath.row == 1 && indexPath.section == 4){
-    }
-    else if(indexPath.row == 2 && indexPath.section == 4){
-    }
-    else if(indexPath.row == 3 && indexPath.section == 4){
-    }
 }
 
 

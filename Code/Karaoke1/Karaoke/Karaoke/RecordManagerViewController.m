@@ -95,7 +95,8 @@
 -(void)leftButtonBarPress:(id)button{
     [_player stop];
     [self.navigationController popToRootViewControllerAnimated:YES];
-    [((AppDelegate*)[[UIApplication sharedApplication]delegate]).viewController showCenterPanelAnimated:NO];
+//    [((AppDelegate*)[[UIApplication sharedApplication]delegate]).viewController showCenterPanelAnimated:NO];
+    [[AppDelegate shareApplication] showLeftPanelWithAnimated:YES];
 }
 
 //Get list of files were saved

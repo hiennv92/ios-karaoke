@@ -18,5 +18,6 @@
 + (AppDelegate*)shareApplication;
 - (void)showLeftPanelWithAnimated:(BOOL)animated;
 - (void)showRightPanelWithAnimated:(BOOL)animated;
-
+-(void)showViewController:(UIViewController*)vc;
+-(void)replaceViewController:(UIViewController*)vc;
 @end

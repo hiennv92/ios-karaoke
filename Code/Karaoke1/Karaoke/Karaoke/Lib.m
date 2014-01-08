@@ -149,5 +149,16 @@
 		}
 	}
 }
+
++ (void)setValue:(NSString *)value forKey:(NSString *)key
+{
+    NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
+    [user setValue:value forKey:key];
+    [user synchronize];
+}
+
++ (NSString*)getValueForKey:(NSString *)key {
+    return [[NSUserDefaults standardUserDefaults] stringForKey:key];
+}
 @end
 
