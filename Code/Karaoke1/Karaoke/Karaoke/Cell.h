@@ -27,4 +27,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *_infoRecord;
 @property (strong, nonatomic) IBOutlet UILabel *_lyricRecord;
 
+- (void)reloadLikeButton;
+
 @end

@@ -12,8 +12,14 @@
 #import "SingerListViewController.h"
 #import "PlayMP3ViewController.h"
 #import "RecordViewController.h"
+#import "Lib.h"
+#import "ServiceLib.h"
+#import "Singer.h"
+#import "Song.h"
 
-@interface HomeViewController ()
+@interface HomeViewController (){
+    
+}
 
 @end
 
@@ -45,6 +51,7 @@
     
     [self setBottomBarViewHidden:NO];    
     [self loadViewContent];
+    [self loadData];
 }
 
 -(void)loadViewContent{
@@ -95,10 +102,35 @@
     [self.__karaokeClipsView setBackgroundColor:[UIColor clearColor]];
     
     //Singers View
+
     [self.__scrollViewSingers setFrame:CGRectMake(0,30, 320, 120)];
-    [self.__scrollViewSingers setContentSize:CGSizeMake(640, 120)];
+    [self.__scrollViewSingers setContentSize:CGSizeMake(890, 120)];
     [self.__singersView addSubview:self.__scrollViewSingers];
     [self.__singersView setBackgroundColor:[UIColor clearColor]];
+    
+    for(int i = 0;i<8;i++){
+        _arrayImageSingers[i] = [[UIImageView alloc]initWithFrame:CGRectMake(10 + 110*i, 10, 100, 100)];
+        [_arrayImageSingers[i] setImage:[UIImage imageNamed:@"ca-si.png"]];
+        [self.__scrollViewSingers addSubview:_arrayImageSingers[i]];
+        
+        
+        UIImageView *baseNameSinger = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BaseNameSingers.png"]];
+        [baseNameSinger setFrame:CGRectMake(10 + 110*i, 80, 100,15)];
+        [self.__scrollViewSingers addSubview:baseNameSinger];
+        
+        _arrayLabelSingerName[i] = [[UILabel alloc] initWithFrame:CGRectMake(10 + 110*i, 80, 100, 15)];
+        _arrayLabelSingerName[i].textColor = [UIColor blueColor];
+        _arrayLabelSingerName[i].font = [_arrayLabelSingerName[i].font fontWithSize:11];
+        _arrayLabelSingerName[i].textAlignment = NSTextAlignmentCenter;
+
+        [self.__scrollViewSingers addSubview:_arrayLabelSingerName[i]];
+        
+        _arrayBtnSelectSinger[i] = [[UIButton alloc]initWithFrame:CGRectMake(10 + 110*i, 10, 100, 100)];
+        [_arrayBtnSelectSinger[i] addTarget:self action:@selector(chooseSingerController:) forControlEvents:UIControlEventTouchUpInside];
+        [_arrayBtnSelectSinger[i] setImage:[UIImage imageNamed:@"khung-tron.png"] forState:UIControlStateNormal];
+        [self.__scrollViewSingers addSubview:_arrayBtnSelectSinger[i]];
+        [_arrayBtnSelectSinger[i] setTag:i];
+    }
     
     //Songs View
     [self.__tableSongView registerNib:[UINib nibWithNibName:@"Cell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"Cell"];
@@ -110,6 +142,10 @@
     [self.__recordsView addSubview:self.__scrollViewTopRecords];
     [self.__recordsView setBackgroundColor:[UIColor clearColor]];
     
+}
+
+-(void)chooseSingerController:(id)sender{
+    NSLog(@"Singer: %d",((UIButton*)sender).tag);
 }
 
 //Move views in Introduction view
@@ -268,7 +304,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return [_arrayListSong count];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -285,6 +321,16 @@
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     
+    Song* song =  [_arrayListSong objectAtIndex:[indexPath row]];
+    cell._nameSong.text = song.name;
+    cell._numberLikes.text = [NSString stringWithFormat:@"%@ lượt thích",song.voteCount];
+    cell._numberPlay.text = [NSString stringWithFormat:@"%@ lượt hát",song.voteScore];
+    cell._lyricExample.text = song.lyric;
+    if(song.isFavorite)
+        cell.__liked = YES;
+    else
+        cell.__liked = NO;
+    [cell reloadLikeButton];
     
     return cell;
 }
@@ -341,7 +387,81 @@
 }
 
 
-///LOAD DATA
+#pragma mark - Load data
+- (void)loadData
+{
+    _arrayListSinger = [[NSMutableArray alloc]initWithCapacity:8];
+    _arrayListSong = [[NSMutableArray alloc] initWithCapacity:10];
 
+    [Lib showLoadingOnView:self.view withText:@"Đang tải..."];
+    [NSThread detachNewThreadSelector:@selector(getDataFromService) toTarget:self withObject:nil];
+}
+
+- (void)getDataFromService
+{
+    NSString* retVal = [ServiceLib sendGetRequest:[Lib getServiceUrl:kServiceSingerUrl]];
+    SBJsonParser* parser = [[SBJsonParser alloc] init];
+    id data = [parser objectWithString:retVal];
+    if (data && [data isKindOfClass:[NSDictionary class]]) {
+        NSString* message = [data objectForKey:@"message"];
+        NSString* error = [data objectForKey:@"error"];
+        id result = [data objectForKey:@"result"];
+        if (error.integerValue == 0) { // success!
+            NSArray* items = [result objectForKey:@"items"];
+            if (items) {
+                for (id singer in items) {
+                    Singer *s = [Singer singerFromDictionary:singer];
+                    [_arrayListSinger addObject:s];
+                }
+            }
+        }
+        else{
+            NSLog(@"error: %@ message: %@", error, message);
+        }
+    }
+    
+    NSString *retValSong= [ServiceLib sendGetRequest:[Lib getServiceUrl:kServiceSongUrl]];
+    SBJsonParser* parserSong = [[SBJsonParser alloc] init];
+    id dataSong = [parserSong objectWithString:retValSong];
+    if (dataSong && [dataSong isKindOfClass:[NSDictionary class]]) {
+        NSString* message = [dataSong objectForKey:@"message"];
+        NSString* error = [dataSong objectForKey:@"error"];
+        id result = [dataSong objectForKey:@"result"];
+        if (error.integerValue == 0) { // success!
+            NSArray* items = [result objectForKey:@"items"];
+            if (items) {
+                for (id song in items) {
+                    Song *s = [Song songFromDictionary:song];
+                    [_arrayListSong addObject:s];
+                }
+            }
+        }
+        else{
+            NSLog(@"error: %@ message: %@", error, message);
+        }
+    }
+    
+    [self performSelectorOnMainThread:@selector(getDataFinish) withObject:nil waitUntilDone:YES];
+}
+
+- (void)getDataFinish
+{
+    [Lib removeLoadingOnView:self.view];
+    [self setDataScrollSingers];
+    [self setDataScollSongs];
+}
+
+- (void)setDataScrollSingers{
+    for(int i = 0;i<8;i++){
+        Singer *singer = [_arrayListSinger objectAtIndex:i];
+        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[singer getLargeImageUrl]]];
+        _arrayLabelSingerName[i].text = singer.name;
+        _arrayImageSingers[i].image = [UIImage imageWithData:imageData];
+    }
+}
+
+- (void)setDataScollSongs{
+    [self.__tableSongView reloadData];
+}
 
 @end

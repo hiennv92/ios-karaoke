@@ -274,6 +274,7 @@
 		5176EC371879403E00483692 /* RecordManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5176EC351879403E00483692 /* RecordManagerViewController.m */; };
 		5176EC381879403E00483692 /* RecordManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5176EC361879403E00483692 /* RecordManagerViewController.xib */; };
 		5176EC3B1879458800483692 /* CellRecord.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5176EC3A1879458800483692 /* CellRecord.xib */; };
+		51A3F233187DD50100CAC77C /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A3F232187DD50100CAC77C /* Song.m */; };
 		51A52B50186AC31B00A7990A /* search1.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A52B4E186AC31B00A7990A /* search1.png */; };
 		51A52B51186AC31B00A7990A /* search2.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A52B4F186AC31B00A7990A /* search2.png */; };
 		51A688791866D886000BEBD3 /* BaseNameSingers.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A688771866D886000BEBD3 /* BaseNameSingers.png */; };
@@ -702,6 +703,8 @@
 		5176EC351879403E00483692 /* RecordManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordManagerViewController.m; sourceTree = "<group>"; };
 		5176EC361879403E00483692 /* RecordManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordManagerViewController.xib; sourceTree = "<group>"; };
 		5176EC3A1879458800483692 /* CellRecord.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellRecord.xib; sourceTree = "<group>"; };
+		51A3F231187DD50100CAC77C /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		51A3F232187DD50100CAC77C /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
 		51A52B4E186AC31B00A7990A /* search1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search1.png; sourceTree = "<group>"; };
 		51A52B4F186AC31B00A7990A /* search2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search2.png; sourceTree = "<group>"; };
 		51A688771866D886000BEBD3 /* BaseNameSingers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BaseNameSingers.png; sourceTree = "<group>"; };
@@ -879,6 +882,8 @@
 		340DDABD186B521A00204A05 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				51A3F231187DD50100CAC77C /* Song.h */,
+				51A3F232187DD50100CAC77C /* Song.m */,
 				340DDABE186B522B00204A05 /* Lyric.h */,
 				340DDABF186B522B00204A05 /* Lyric.m */,
 				340DDAC1186B523600204A05 /* Word.h */,
@@ -2022,6 +2027,7 @@
 				34BC53F61864AD8A00CFFE9B /* HomeViewController.m in Sources */,
 				3486A733187C64AF001A6B89 /* UIImage+GIF.m in Sources */,
 				34BC53E118648D6A00CFFE9B /* NavibarView.m in Sources */,
+				51A3F233187DD50100CAC77C /* Song.m in Sources */,
 				3486A634187C579D001A6B89 /* SBJsonUTF8Stream.m in Sources */,
 				51BB41FA187B0A9F00D7019F /* NhacDJTinTucViewController.m in Sources */,
 				3486A62D187C579D001A6B89 /* SBJsonStreamParserAccumulator.m in Sources */,

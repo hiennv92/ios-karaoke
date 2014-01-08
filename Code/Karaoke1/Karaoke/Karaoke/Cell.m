@@ -28,6 +28,10 @@
 }
 
 -(IBAction)likeButtonController:(id)sender{
+    [self reloadLikeButton];
+}
+
+- (void)reloadLikeButton{
     self.__liked = !self.__liked;
     if(self.__liked){
         [self.buttonLike setImage:[UIImage imageNamed:@"star-yellow.png"] forState:UIControlStateNormal];
