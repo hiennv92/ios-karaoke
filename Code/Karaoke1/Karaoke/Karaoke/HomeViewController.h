@@ -49,6 +49,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *_imageSmallBanner2;
 @property (strong, nonatomic) IBOutlet UIImageView *_imageSmallBanner3;
 @property (strong, nonatomic) IBOutlet UIImageView *_imageSmallBanner4;
+@property (strong, nonatomic) IBOutlet UILabel *_labelBigBanner2;
+@property (strong, nonatomic) IBOutlet UILabel *_labelBigBanner1;
 
 
 - (IBAction)showAllSingersController:(id)sender;

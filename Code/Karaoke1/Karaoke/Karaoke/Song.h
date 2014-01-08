@@ -46,5 +46,5 @@
 
 + (Song*)songFromDictionary:(NSDictionary *)dict;
 - (id)initFromDictionary:(NSDictionary *)dict;
-
+- (NSString*)getLargeImageUrl;
 @end
