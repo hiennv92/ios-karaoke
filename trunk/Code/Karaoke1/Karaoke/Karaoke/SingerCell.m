@@ -22,8 +22,8 @@
 
 - (void)awakeFromNib
 {
-//    self.icon.layer.masksToBounds = YES;
-//    self.icon.layer.cornerRadius = self.icon.image.size.height / 2;
+    self.icon.layer.masksToBounds = YES;
+    self.icon.layer.cornerRadius = self.frame.size.width / 2;
     self.backgroundColor = [UIColor clearColor];
 }
 /*

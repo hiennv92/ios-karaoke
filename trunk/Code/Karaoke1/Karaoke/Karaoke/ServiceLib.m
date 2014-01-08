@@ -8,6 +8,7 @@
 //
 
 #import "ServiceLib.h"
+#import "Lib.h"
 
 static ServiceLib* serviceLib;
 @implementation ServiceLib
@@ -59,7 +60,18 @@ static ServiceLib* serviceLib;
 	NSString *string = [[NSString alloc] initWithData:responeData encoding:NSUTF8StringEncoding];
 //	NSLog(@"%@",string);
 	return string;
-	
+}
+
++ (BOOL)sendVerifyRequest {
+    
+}
+
++ (NSString*)sendLoginRequest {
+    
+}
+
++ (NSString*)sendLogoutRequest {
+    
 }
 
 @end

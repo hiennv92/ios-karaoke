@@ -9,6 +9,7 @@
 #import "dangnhapViewController.h"
 #import "dangkyViewController.h"
 #import "ForgetPasswordViewController.h"
+#import "AppDelegate.h"
 
 @interface dangnhapViewController ()
 

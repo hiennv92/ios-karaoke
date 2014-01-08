@@ -64,7 +64,14 @@
 {
     if (index < self.subviews.count) {
         WordLabel* word = self.subviews[index];
-        [word setTextColor:[UIColor yellowColor]];
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+        
+        [UIView setAnimationDuration:1];
+//        [word setTextColor:[UIColor yellowColor]];
+        word.layer.backgroundColor = [UIColor yellowColor].CGColor;
+        //also call this before commit animations......
+        [UIView commitAnimations];
     }
 }
 

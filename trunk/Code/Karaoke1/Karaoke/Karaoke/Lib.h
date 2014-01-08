@@ -11,7 +11,12 @@
 
 #define kServerUrl  @"http://mkara.vn/"
 #define kMediaUrl   @"media"
+
+// API url
 #define kServiceSingerUrl @"searchsinger"
+
+// key
+#define kTokenKey   @"token"
 
 
 @interface Lib : NSObject
@@ -28,4 +33,7 @@
 + (void)showLoadingOnView:(UIView*)aView withText:(NSString*)text;
 + (void)removeLoadingOnView:(UIView*)superView;
 + (void)updateLoadingViewOn:(UIView *)superView withText:(NSString*)text;
+
++ (void)setValue:(NSString*)value forKey:(NSString *)key;
++ (NSString*)getValueForKey:(NSString*)key;
 @end

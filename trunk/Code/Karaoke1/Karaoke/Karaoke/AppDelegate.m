@@ -76,4 +76,20 @@
     [self.viewController showRightPanelAnimated:animated];
 }
 
+-(void)showViewController:(UIViewController*)vc
+{
+    UIViewController *center = self.viewController.centerPanel;
+    if ([center isKindOfClass:[UINavigationController class]]) {
+        [(UINavigationController*)center pushViewController:vc animated:YES];
+    }else{
+        [center.navigationController pushViewController:vc animated:YES];
+    }
+}
+-(void)replaceViewController:(UIViewController*)vc
+{
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    nav.navigationBarHidden = YES;
+    self.viewController.centerPanel = nav;
+}
+
 @end
