@@ -14,6 +14,7 @@
 
 // API url
 #define kServiceSingerUrl @"searchsinger"
+#define kServiceSongUrl @"searchsong"
 
 // key
 #define kTokenKey   @"token"

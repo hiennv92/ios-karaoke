@@ -14,6 +14,14 @@
     NSTimer* _timerChangeIntroSmallView, *_timerChangeIntroBigView;
     BOOL _changeBigView;
     int _changeSmallView;
+    
+    UIImageView *_arrayImageSingers[8];
+    UIButton *_arrayBtnSelectSinger[8];
+    UILabel *_arrayLabelSingerName[8];
+    
+    NSMutableArray *_arrayListSinger;
+    NSMutableArray *_arrayListSong;
+    
 }
 @property (strong, nonatomic) IBOutlet UIView *__bannerView;
 @property (strong, nonatomic) IBOutlet UIView *__introductionVIew;
@@ -39,6 +47,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *_imageSmallBanner2;
 @property (strong, nonatomic) IBOutlet UIImageView *_imageSmallBanner3;
 @property (strong, nonatomic) IBOutlet UIImageView *_imageSmallBanner4;
+
 
 - (IBAction)showAllSingersController:(id)sender;
 - (IBAction)showAllKaraokeClipsController:(id)sender;
