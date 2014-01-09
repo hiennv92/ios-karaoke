@@ -65,7 +65,6 @@
     /*Introdution view*/
     _timerChangeIntroBigView = [NSTimer scheduledTimerWithTimeInterval: 8.0f target: self
                                                       selector: @selector(runViewIntroduction:) userInfo: nil repeats: YES];
-//    _timerChangeIntroSmallView = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(runViewIntroductionSmall:) userInfo:nil repeats:YES];
     
     //Set bigView
     CGRect frame = self._bigViewIntroduction2.frame;
@@ -78,7 +77,6 @@
     _changeBigView = YES;
     _changeSmallView = 0;
     
-    [self performSelector:@selector(runViewIntroduction:) withObject:_timerChangeIntroBigView afterDelay:3.0f];
 //    [self performSelector:@selector(runViewIntroductionSmall:) withObject:_timerChangeIntroSmallView afterDelay:3.0f];
 
     //Set smallView
@@ -108,7 +106,7 @@
     [self.__singersView addSubview:self.__scrollViewSingers];
     [self.__singersView setBackgroundColor:[UIColor clearColor]];
     
-    for(int i = 0;i < _arrayListSinger.count;i++){
+    for(int i = 0;i < 8;i++){
         _arrayImageSingers[i] = [[UIImageView alloc]initWithFrame:CGRectMake(10 + 110*i, 10, 100, 100)];
         [_arrayImageSingers[i] setImage:[UIImage imageNamed:@"ca-si.png"]];
         [self.__scrollViewSingers addSubview:_arrayImageSingers[i]];
@@ -153,7 +151,6 @@
     NSArray* views = [self.navigationController viewControllers];
 
     if([views count] == 1){
-//        NSLog(@"CHANGE");
         if(_changeBigView){
             [UIView animateWithDuration:2.5f animations:^{
                 CGRect frame = self._bigViewIntroduction1.frame;
@@ -305,26 +302,47 @@
         case 0:
             self._imageSmallBanner1.image = [UIImage imageWithData:imageData1];
             self._imageSmallBanner2.image = [UIImage imageWithData:imageData2];
-            self._labelBigBanner2.text = song2.name;
+            if(_changeBigView){
+                self._labelBigBanner2.text = song2.name;
+            }
+            else{
+                self._labelBigBanner1.text = song2.name;
+            }
             break;
         case 1:
             self._imageSmallBanner1.image = [UIImage imageWithData:imageData1];
             self._imageSmallBanner4.image = [UIImage imageWithData:imageData2];
-            self._labelBigBanner2.text = song1.name;
+            if(_changeBigView){
+                self._labelBigBanner2.text = song1.name;
+            }
+            else{
+                self._labelBigBanner1.text = song1.name;
+            }
             break;
         case 2:
             self._imageSmallBanner3.image = [UIImage imageWithData:imageData1];
             self._imageSmallBanner4.image = [UIImage imageWithData:imageData2];
-            self._labelBigBanner2.text = song1.name;
+            if(_changeBigView){
+                self._labelBigBanner2.text = song1.name;
+            }
+            else{
+                self._labelBigBanner1.text = song1.name;
+            }
             break;
         case 3:
-            self._imageSmallBanner4.image = [UIImage imageWithData:imageData1];
-            self._imageSmallBanner1.image = [UIImage imageWithData:imageData2];
-            self._labelBigBanner2.text = song1.name;
+            self._imageSmallBanner1.image = [UIImage imageWithData:imageData1];
+            self._imageSmallBanner4.image = [UIImage imageWithData:imageData2];
+            if(_changeBigView){
+                self._labelBigBanner2.text = song2.name;
+            }
+            else{
+                self._labelBigBanner1.text = song2.name;
+            }
             break;
         default:
             break;
     }
+   
 
 }
 
@@ -495,11 +513,13 @@
 }
 
 - (void)setDataScrollSingers{
-    for(int i = 0;i < _arrayListSinger.count; i++){
-        Singer *singer = [_arrayListSinger objectAtIndex:i];
-        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[singer getLargeImageUrl]]];
-        _arrayLabelSingerName[i].text = singer.name;
-        _arrayImageSingers[i].image = [UIImage imageWithData:imageData];
+    for(int i = 0;i < [_arrayListSinger count]; i++){
+        if(i<8){
+            Singer *singer = [_arrayListSinger objectAtIndex:i];
+            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[singer getLargeImageUrl]]];
+            _arrayLabelSingerName[i].text = singer.name;
+            _arrayImageSingers[i].image = [UIImage imageWithData:imageData];
+        }
     }
 }
 
@@ -517,6 +537,8 @@
         if(![tmp.largeImage isEqualToString:@"notImage"])
             [_arrayIntroduce addObject:tmp];
     }
+    
+    [self performSelector:@selector(runViewIntroduction:) withObject:_timerChangeIntroBigView afterDelay:3.0f];
 }
 
 @end
