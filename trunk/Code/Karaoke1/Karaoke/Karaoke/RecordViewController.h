@@ -11,12 +11,14 @@
 #import <MediaPlayer/MediaPlayer.h>
 #include "lame.h"
 
-@interface RecordViewController : UIViewController<AVAudioPlayerDelegate,AVAudioRecorderDelegate,AVAudioSessionDelegate, UIAlertViewDelegate,UITextFieldDelegate>{
+@interface RecordViewController : UIViewController<AVAudioPlayerDelegate,AVAudioRecorderDelegate,AVAudioSessionDelegate, UIAlertViewDelegate,UITextFieldDelegate,MPMediaPlayback>{
     AVAudioRecorder *recorder;
     AVAudioPlayer *player;
     NSURL *outputFileCafURL;
     NSURL *mixFileURL;
+    MPMoviePlayerController *moviePlayer;
 }
+@property (weak, nonatomic) IBOutlet UIView *mp4PlayerView;
 @property (nonatomic, retain) UIAlertView *alert;
 @property (nonatomic, retain) NSDate *startDate;
 @property (nonatomic, assign) BOOL isPlay;
