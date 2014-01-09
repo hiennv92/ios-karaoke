@@ -30,4 +30,5 @@ enum CompareResult {
 - (BOOL)isTimeInSentence:(float)currTime;
 - (int)compareWithTime:(float)time;
 - (BOOL)isComing:(float)currentTime;
+- (float)getDurationForWordAtIndex:(int)index;
 @end

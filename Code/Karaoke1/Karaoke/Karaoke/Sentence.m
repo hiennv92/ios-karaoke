@@ -10,7 +10,8 @@
 #import "GDataXMLNode.h"
 #import "Word.h"
 
-#define kComingTime     3.0
+#define kComingTime     3.0f
+#define kDurationTime   1.0f
 
 @interface Sentence(){
 }
@@ -80,5 +81,14 @@
         return NO;
     }
     return (currentTime >= ([self firstTime] - kComingTime));
+}
+
+- (float)getDurationForWordAtIndex:(int)index {
+    if (index < self.wordsArray.count - 1) {
+        Word* w1 = self.wordsArray[index];
+        Word* w2 = self.wordsArray[index + 1];
+        return w2.time - w1.time;
+    }
+    return kDurationTime;
 }
 @end

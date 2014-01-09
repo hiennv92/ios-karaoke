@@ -11,6 +11,8 @@
 		340091F8186B5A2300C6C655 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 340091F7186B5A2300C6C655 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		34061F10186458CC009FD9B2 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34061F0E186458CC009FD9B2 /* RootViewController.m */; };
 		34061F11186458CC009FD9B2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34061F0F186458CC009FD9B2 /* RootViewController.xib */; };
+		34078B5C187F1A6100F5BCF1 /* MTAnimatedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34078B5B187F1A6100F5BCF1 /* MTAnimatedLabel.m */; };
+		34078B5F187F1C0F00F5BCF1 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34078B5E187F1C0F00F5BCF1 /* CoreText.framework */; };
 		340DDAB7186AC6CF00204A05 /* 10_nam_tinh_cu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 340DDAB5186AC6CF00204A05 /* 10_nam_tinh_cu.mp3 */; };
 		340DDAB8186AC6CF00204A05 /* 10_nam_tinh_cu.xml in Resources */ = {isa = PBXBuildFile; fileRef = 340DDAB6186AC6CF00204A05 /* 10_nam_tinh_cu.xml */; };
 		340DDAC0186B522B00204A05 /* Lyric.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DDABF186B522B00204A05 /* Lyric.m */; };
@@ -338,6 +340,9 @@
 		34061F0D186458CC009FD9B2 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		34061F0E186458CC009FD9B2 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		34061F0F186458CC009FD9B2 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		34078B5A187F1A6100F5BCF1 /* MTAnimatedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAnimatedLabel.h; sourceTree = "<group>"; };
+		34078B5B187F1A6100F5BCF1 /* MTAnimatedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAnimatedLabel.m; sourceTree = "<group>"; };
+		34078B5E187F1C0F00F5BCF1 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		340DDAB5186AC6CF00204A05 /* 10_nam_tinh_cu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 10_nam_tinh_cu.mp3; sourceTree = "<group>"; };
 		340DDAB6186AC6CF00204A05 /* 10_nam_tinh_cu.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 10_nam_tinh_cu.xml; sourceTree = "<group>"; };
 		340DDABE186B522B00204A05 /* Lyric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lyric.h; sourceTree = "<group>"; };
@@ -775,6 +780,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34078B5F187F1C0F00F5BCF1 /* CoreText.framework in Frameworks */,
 				3486A756187C6705001A6B89 /* libsqlite3.0.dylib in Frameworks */,
 				3486A754187C66F8001A6B89 /* MobileCoreServices.framework in Frameworks */,
 				3486A752187C66D4001A6B89 /* Security.framework in Frameworks */,
@@ -850,6 +856,7 @@
 		34061F0B186458A0009FD9B2 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				34078B5D187F1A6600F5BCF1 /* AnimatedLabel */,
 				3486A73B187C65B4001A6B89 /* Image */,
 				3486A737187C64CF001A6B89 /* JSON */,
 				3486A70B187C64AF001A6B89 /* SDWebImage */,
@@ -877,6 +884,15 @@
 				34061F0F186458CC009FD9B2 /* RootViewController.xib */,
 			);
 			name = RootViewcontroller;
+			sourceTree = "<group>";
+		};
+		34078B5D187F1A6600F5BCF1 /* AnimatedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				34078B5A187F1A6100F5BCF1 /* MTAnimatedLabel.h */,
+				34078B5B187F1A6100F5BCF1 /* MTAnimatedLabel.m */,
+			);
+			name = AnimatedLabel;
 			sourceTree = "<group>";
 		};
 		340DDAB4186AC69500204A05 /* Sound */ = {
@@ -1021,6 +1037,7 @@
 		3442C7B918642F1300BD13F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				34078B5E187F1C0F00F5BCF1 /* CoreText.framework */,
 				3486A755187C6705001A6B89 /* libsqlite3.0.dylib */,
 				3486A753187C66F8001A6B89 /* MobileCoreServices.framework */,
 				3486A751187C66D4001A6B89 /* Security.framework */,
@@ -2094,6 +2111,7 @@
 				3486A638187C59B4001A6B89 /* Singer.m in Sources */,
 				34A140BB1873238F00A7BFB2 /* PSTCollectionViewItemKey.m in Sources */,
 				3423D99C1871D84B00BED047 /* BJIConverter.m in Sources */,
+				34078B5C187F1A6100F5BCF1 /* MTAnimatedLabel.m in Sources */,
 				4BEAEAB31867B226000E3CD1 /* dangkyViewController.m in Sources */,
 				51580E4D1869F40900C837F9 /* CellOfKind.m in Sources */,
 				3486A706187C647E001A6B89 /* FMResultSet.m in Sources */,
@@ -2150,8 +2168,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tran Quoc Dung (QAM545579E)";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Tran Quoc Dung (QAM545579E)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: DUONG VAN DIEP (8UHYR35YJ5)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: DUONG VAN DIEP (8UHYR35YJ5)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2171,7 +2189,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-lxml2";
-				PROVISIONING_PROFILE = "DE90913D-018C-47BA-B8CF-B4D98ACB761E";
+				PROVISIONING_PROFILE = "DD185136-8D12-484A-BBED-B7D9CAEA9643";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2189,8 +2207,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tran Quoc Dung (QAM545579E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tran Quoc Dung (QAM545579E)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: DUONG VAN DIEP (8UHYR35YJ5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: DUONG VAN DIEP (8UHYR35YJ5)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -2203,8 +2221,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-lxml2";
-				PROVISIONING_PROFILE = "DE90913D-018C-47BA-B8CF-B4D98ACB761E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DE90913D-018C-47BA-B8CF-B4D98ACB761E";
+				PROVISIONING_PROFILE = "DD185136-8D12-484A-BBED-B7D9CAEA9643";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DD185136-8D12-484A-BBED-B7D9CAEA9643";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -2214,8 +2232,8 @@
 		3442C7D518642F1300BD13F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tran Quoc Dung (QAM545579E)";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Mai Trung (3PK39257VK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: DUONG VAN DIEP (8UHYR35YJ5)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: DUONG VAN DIEP (8UHYR35YJ5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Karaoke/Karaoke-Prefix.pch";
 				INFOPLIST_FILE = "Karaoke/Karaoke-Info.plist";
@@ -2228,7 +2246,7 @@
 					"/Users/datkq/Desktop/New\\ folder/Karaoke1/Karaoke/Karaoke",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "DE90913D-018C-47BA-B8CF-B4D98ACB761E";
+				PROVISIONING_PROFILE = "DD185136-8D12-484A-BBED-B7D9CAEA9643";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2237,8 +2255,8 @@
 		3442C7D618642F1300BD13F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mai Trung (3PK39257VK)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mai Trung (3PK39257VK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: DUONG VAN DIEP (8UHYR35YJ5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: DUONG VAN DIEP (8UHYR35YJ5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Karaoke/Karaoke-Prefix.pch";
 				INFOPLIST_FILE = "Karaoke/Karaoke-Info.plist";
@@ -2251,8 +2269,8 @@
 					"/Users/datkq/Desktop/New\\ folder/Karaoke1/Karaoke/Karaoke",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "DE90913D-018C-47BA-B8CF-B4D98ACB761E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DE90913D-018C-47BA-B8CF-B4D98ACB761E";
+				PROVISIONING_PROFILE = "DD185136-8D12-484A-BBED-B7D9CAEA9643";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DD185136-8D12-484A-BBED-B7D9CAEA9643";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

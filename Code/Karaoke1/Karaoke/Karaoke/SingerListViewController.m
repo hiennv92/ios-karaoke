@@ -50,7 +50,7 @@ NSString *CollectionViewCellIdentifier = @"SingerCell";
     [self.view addSubview:_collectionView];
     
     _data = [[NSMutableArray alloc] init];
-    
+
     // load data
     [self loadData];
 }
