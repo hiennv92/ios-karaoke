@@ -24,6 +24,7 @@
 
 @implementation RecordViewController
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -39,6 +40,8 @@
     // Do any additional setup after loading the view from its nib.
     [self setIsPlay:NO];
     [self setIsRecording:NO];
+    [self setIsMp4Play:YES];
+
     [self._buttonPlay setEnabled:FALSE];
     
     //Setup audio record
@@ -47,14 +50,23 @@
                                [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
                                @"MyAudioMemo.caf",
                                nil];
+    NSArray *pathConvertMp4 = [NSArray arrayWithObjects:
+                               [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
+                               @"converted.mp3",
+                               nil];
+    
     outputFileCafURL = [NSURL fileURLWithPathComponents:pathComponents];
+    outputFileMp3URL = [NSURL fileURLWithPathComponents:pathConvertMp4];
+    
 //    NSLog(@"url record: %@", outputFileCafURL);
+//    NSLog(@"url mp3: %@",outputFileMp3URL);
     
     // Setup audio session
     AVAudioSession *session = [AVAudioSession sharedInstance];
     [session setCategory:AVAudioSessionCategoryPlayAndRecord error:NULL];
     
 //    UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
+    
     UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_None;
     AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,sizeof (audioRouteOverride),&audioRouteOverride);
     
@@ -72,31 +84,26 @@
     [recorder prepareToRecord];
     [self setIsPlay:NO];
     
-    //
+    
     _lyricView = [[LyricView alloc] initWithFrame:CGRectMake(10, 150, 300, 300)];
     [self.view addSubview:_lyricView];
+    [_lyricView setHidden:YES];
     
     
+    //mp4 file
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *mp4Path = [bundle pathForResource:@"anh_khong_doi_qua" ofType:@"mp4"];
+    NSURL *mp4URL = [NSURL fileURLWithPath:mp4Path];
     
-    // thêm video nền
-//    NSString *destinationString = [[NSBundle mainBundle] pathForResource:@"10_nam_tinh_cu" ofType:@"mp3"];
-//
-//    NSURL*theurl = [NSURL fileURLWithPath:destinationString];
-//    NSString*thePath=[[NSBundle mainBundle] URLForResource:@"anh_khong_doi_qua" withExtension:@"mp4"];
-//    NSLog(@" des= %@ \n theurl= %@",destinationString,thePath);
-    NSURL*theurl=[[NSBundle mainBundle] URLForResource:@"anh_khong_doi_qua" withExtension:@"mp4"];
-    moviePlayer=[[MPMoviePlayerController alloc] initWithContentURL:theurl];
-    [moviePlayer.view setFrame:CGRectMake(0, 0, 320,240)];
-    [moviePlayer prepareToPlay];
-    [moviePlayer setShouldAutoplay:YES]; // And other options you can look through the documentation.
-    [self.mp4PlayerView addSubview:moviePlayer.view];
+    moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:mp4URL];
+    moviePlayer.controlStyle = MPMovieControlStyleFullscreen;
+//    moviePlayer.view.transform = CGAffineTransformConcat(moviePlayer.view.transform, CGAffineTransformMakeRotation(M_PI_2));
+    [self.view addSubview:moviePlayer.view];
+    [moviePlayer.view setFrame:CGRectMake(0, 160, 320,240)];
+    [moviePlayer.view setHidden:YES];
     
-    NSArray *pathComponents1 = [NSArray arrayWithObjects:
-                               [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
-                               @"converted.mp3",
-                               nil];
-  
-    [self convertMp4:theurl toM4a: pathComponents1];
+ 
+//    [self convertMp4:mp4URL toM4a: pathConvertMp4];
 }
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationLandscapeRight);
@@ -109,7 +116,6 @@
 }
 
 - (IBAction)recordController:(id)sender {
-    [moviePlayer play];
     if (!recorder.recording){
         if([self isPlay]){
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Chú ý"
@@ -134,36 +140,36 @@
             self._recordStatusLabel.text = @"Đang ghi âm";
             [self._buttonPlay setEnabled:NO];
             
-            
-            
-            
-            
-            
-            ///play video
 //            [self setIsPlay:YES];
             
-            /////////////////////////////////////
-            
-//            NSString *destinationString = [[NSBundle mainBundle] pathForResource:@"10_nam_tinh_cu" ofType:@"mp3"];
-//            
-//            mixFileURL = [NSURL fileURLWithPath:destinationString];
-//            
-//            player = [[AVAudioPlayer alloc] initWithContentsOfURL:mixFileURL error:nil];
-//            [player setDelegate:self];
-//            [player prepareToPlay];
-//            [self setIsPlay:YES];
-//            [player play];
-
-            [self._buttonRecord setImage:[UIImage imageNamed:@"dang-ghi-am.png"] forState:UIControlStateNormal];
-            self._recordStatusLabel.text = @"Đang ghi âm";
-            
-            [_lyricView setLyricFile:@"10_nam_tinh_cu"];
+            if(self.isMp4Play){
+                [moviePlayer.view setHidden:NO];
+                [_lyricView setHidden:YES];
+                [moviePlayer play];
+            }
+            else{
+                [moviePlayer.view setHidden:YES];
+                [_lyricView setHidden:NO];
+                
+                NSString *destinationString = [[NSBundle mainBundle] pathForResource:@"10_nam_tinh_cu" ofType:@"mp3"];
+                
+                mixFileURL = [NSURL fileURLWithPath:destinationString];
+                
+                player = [[AVAudioPlayer alloc] initWithContentsOfURL:mixFileURL error:nil];
+                [player setDelegate:self];
+                [player prepareToPlay];
+                [self setIsPlay:YES];
+                [player play];
+                
+                [_lyricView setLyricFile:@"10_nam_tinh_cu"];
+            }
             
             _timer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(step) userInfo:nil repeats:YES];
         }
     } else {
         [_lyricView clearAllText];
         [player stop];
+        [moviePlayer stop];
       
         //Stop record
         [recorder stop];
@@ -180,22 +186,25 @@
         }
     }
 }
+
 -(void)playbackFinished{
     [self._buttonPlay setImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
     [self setIsPlay:NO];
 }
+
 - (IBAction)playController:(id)sender {
     //play mp3
     
     if(!player.isPlaying){
+        [moviePlayer.view setHidden:YES];
+        [_lyricView setHidden:YES];
+        
         [self setIsPlay:YES];
         [self._buttonPlay setImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
         
 		AVAudioPlayer *avAudioObj = [[AVAudioPlayer alloc] initWithContentsOfURL:outputFileCafURL error:nil];
         player = avAudioObj;
         [player setDelegate:self];
-        
-        
         
 		[avAudioObj prepareToPlay];
 		[avAudioObj play];
@@ -206,18 +215,10 @@
         [self setIsPlay:NO];
     }
     
-    
-    
     // play movie
-    
-    
-   
-    
 }
 
-
-- (NSString*) documentsPath
-{
+- (NSString*) documentsPath{
 	NSArray *searchPaths =
 	NSSearchPathForDirectoriesInDomains
 	(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -235,6 +236,10 @@
 
 - (IBAction)backController:(id)sender {
     [player stop];
+    [moviePlayer stop];
+    [_lyricView setHidden: YES];
+    [moviePlayer.view setHidden:YES];
+    
     if (_timer) {
         [_timer invalidate];
         _timer = nil;
@@ -246,7 +251,6 @@
     [[UIApplication sharedApplication]setIdleTimerDisabled:NO];
     [self.navigationController popViewControllerAnimated:YES];
 }
-
 
 // timer
 - (void)step
@@ -295,7 +299,6 @@
     
     [[UIApplication sharedApplication]setIdleTimerDisabled:NO];
 }
-
 
 - (void)convertM4aToMp3
 {
@@ -595,7 +598,10 @@
 #pragma mark - conver mp4 to m4a in 2s
 -(void)convertMp4:(NSURL*)srcURL toM4a :(NSArray*)dstPath
 {
-    NSURL*      dstURL = [NSURL fileURLWithPathComponents:dstPath];
+    NSURL* dstURL = [NSURL fileURLWithPathComponents:dstPath];
+    
+    NSLog(@"URL: %@",dstURL);
+    
     [[NSFileManager defaultManager] removeItemAtURL:dstURL error:nil];
     
     AVMutableComposition*   newAudioAsset = [AVMutableComposition composition];
@@ -604,13 +610,13 @@
     dstCompositionTrack = [newAudioAsset addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:kCMPersistentTrackID_Invalid];
     
     
-    AVAsset*    srcAsset = [AVURLAsset URLAssetWithURL:srcURL options:nil];
+    AVAsset* srcAsset = [AVURLAsset URLAssetWithURL:srcURL options:nil];
     AVAssetTrack*   srcTrack = [[srcAsset tracksWithMediaType:AVMediaTypeAudio] objectAtIndex:0];
     
     
     CMTimeRange timeRange = srcTrack.timeRange;
     
-    NSError*    error;
+    NSError* error;
     
     if(NO == [dstCompositionTrack insertTimeRange:timeRange ofTrack:srcTrack atTime:kCMTimeZero error:&error]) {
         NSLog(@"track insert failed: %@\n", error);
@@ -618,7 +624,7 @@
     }
     
     
-    AVAssetExportSession*   exportSesh = [[AVAssetExportSession alloc] initWithAsset:newAudioAsset presetName:AVAssetExportPresetPassthrough];
+    AVAssetExportSession* exportSesh = [[AVAssetExportSession alloc] initWithAsset:newAudioAsset presetName:AVAssetExportPresetPassthrough];
     
     exportSesh.outputFileType = AVFileTypeMPEGLayer3;
     exportSesh.outputURL = dstURL;

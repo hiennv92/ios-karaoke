@@ -290,6 +290,7 @@
     if (_arrayIntroduce.count <= 0) {
         return;
     }
+    
     int n1 = rand()%[_arrayIntroduce count];
     Song *song1 = [_arrayIntroduce objectAtIndex:n1];
     NSData *imageData1 = [NSData dataWithContentsOfURL:[NSURL URLWithString:[song1 getLargeImageUrl]]];
