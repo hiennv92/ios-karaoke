@@ -12,6 +12,7 @@
 #import "ServiceLib.h"
 #import "Singer.h"
 #import "UIImageView+AFNetworking.h"
+#import "SingerDetailViewController.h"
 
 NSString *CollectionViewCellIdentifier = @"SingerCell";
 
@@ -114,6 +115,9 @@ NSString *CollectionViewCellIdentifier = @"SingerCell";
 - (void)collectionView:(PSTCollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"Delegate cell %@ : SELECTED", [self formatIndexPath:indexPath]);
+    SingerDetailViewController* vc = [[SingerDetailViewController alloc] initWithNibName:@"SingerDetailViewController" bundle:nil];
+    [vc setSinger:_data[indexPath.row]];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)collectionView:(PSTCollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath

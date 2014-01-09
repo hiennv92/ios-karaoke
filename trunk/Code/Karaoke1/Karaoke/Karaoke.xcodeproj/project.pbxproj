@@ -13,6 +13,8 @@
 		34061F11186458CC009FD9B2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34061F0F186458CC009FD9B2 /* RootViewController.xib */; };
 		34078B5C187F1A6100F5BCF1 /* MTAnimatedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34078B5B187F1A6100F5BCF1 /* MTAnimatedLabel.m */; };
 		34078B5F187F1C0F00F5BCF1 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34078B5E187F1C0F00F5BCF1 /* CoreText.framework */; };
+		34078B64187F2B0500F5BCF1 /* SingerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34078B62187F2B0500F5BCF1 /* SingerDetailViewController.m */; };
+		34078B65187F2B0500F5BCF1 /* SingerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34078B63187F2B0500F5BCF1 /* SingerDetailViewController.xib */; };
 		340DDAB7186AC6CF00204A05 /* 10_nam_tinh_cu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 340DDAB5186AC6CF00204A05 /* 10_nam_tinh_cu.mp3 */; };
 		340DDAB8186AC6CF00204A05 /* 10_nam_tinh_cu.xml in Resources */ = {isa = PBXBuildFile; fileRef = 340DDAB6186AC6CF00204A05 /* 10_nam_tinh_cu.xml */; };
 		340DDAC0186B522B00204A05 /* Lyric.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DDABF186B522B00204A05 /* Lyric.m */; };
@@ -343,6 +345,9 @@
 		34078B5A187F1A6100F5BCF1 /* MTAnimatedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAnimatedLabel.h; sourceTree = "<group>"; };
 		34078B5B187F1A6100F5BCF1 /* MTAnimatedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAnimatedLabel.m; sourceTree = "<group>"; };
 		34078B5E187F1C0F00F5BCF1 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		34078B61187F2B0500F5BCF1 /* SingerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingerDetailViewController.h; sourceTree = "<group>"; };
+		34078B62187F2B0500F5BCF1 /* SingerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingerDetailViewController.m; sourceTree = "<group>"; };
+		34078B63187F2B0500F5BCF1 /* SingerDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingerDetailViewController.xib; sourceTree = "<group>"; };
 		340DDAB5186AC6CF00204A05 /* 10_nam_tinh_cu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 10_nam_tinh_cu.mp3; sourceTree = "<group>"; };
 		340DDAB6186AC6CF00204A05 /* 10_nam_tinh_cu.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 10_nam_tinh_cu.xml; sourceTree = "<group>"; };
 		340DDABE186B522B00204A05 /* Lyric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lyric.h; sourceTree = "<group>"; };
@@ -835,6 +840,7 @@
 		34061F0A18645895009FD9B2 /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				34078B60187F2AE300F5BCF1 /* SingerDetail */,
 				4BE04479187EED150064F99E /* libmp3lame.a */,
 				51BB41EC187B0A7C00D7019F /* Nhac DJ */,
 				5176EC331879401B00483692 /* Record manager */,
@@ -893,6 +899,16 @@
 				34078B5B187F1A6100F5BCF1 /* MTAnimatedLabel.m */,
 			);
 			name = AnimatedLabel;
+			sourceTree = "<group>";
+		};
+		34078B60187F2AE300F5BCF1 /* SingerDetail */ = {
+			isa = PBXGroup;
+			children = (
+				34078B61187F2B0500F5BCF1 /* SingerDetailViewController.h */,
+				34078B62187F2B0500F5BCF1 /* SingerDetailViewController.m */,
+				34078B63187F2B0500F5BCF1 /* SingerDetailViewController.xib */,
+			);
+			name = SingerDetail;
 			sourceTree = "<group>";
 		};
 		340DDAB4186AC69500204A05 /* Sound */ = {
@@ -1968,6 +1984,7 @@
 				34BC54241864B46F00CFFE9B /* newest.png in Resources */,
 				34BC54AA1864B5BA00CFFE9B /* post-comment-btn.png in Resources */,
 				34BC54CE1864B5BA00CFFE9B /* top-banner.png in Resources */,
+				34078B65187F2B0500F5BCF1 /* SingerDetailViewController.xib in Resources */,
 				34BC54AD1864B5BA00CFFE9B /* disc.png in Resources */,
 				34BC54B21864B5BA00CFFE9B /* noi-bat-select.png in Resources */,
 				3C993C6C187AA6F30073B45C /* btnTraiTim.png in Resources */,
@@ -2037,6 +2054,7 @@
 				3486A67F187C6100001A6B89 /* AFURLConnectionOperation.m in Sources */,
 				3442C7C718642F1300BD13F3 /* main.m in Sources */,
 				3486A635187C579D001A6B89 /* SBJsonWriter.m in Sources */,
+				34078B64187F2B0500F5BCF1 /* SingerDetailViewController.m in Sources */,
 				34264091186C6A26001C47C1 /* SingerCell.m in Sources */,
 				342640B1186CAF02001C47C1 /* WordLabel.m in Sources */,
 				340091F8186B5A2300C6C655 /* GDataXMLNode.m in Sources */,

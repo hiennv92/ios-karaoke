@@ -12,6 +12,7 @@
 #import "MenuCell.h"
 #import "NhacDJTinTucViewController.h"
 #import "AppDelegate.h"
+#import "SingerListViewController.h"
 
 @interface MenuSlideControllerViewController ()
 {
@@ -207,7 +208,8 @@
                     break;
                 case 9:                                 // ca sy
                 {
-                    
+                    SingerListViewController* vc = [[SingerListViewController alloc] initWithNibName:@"SingerListViewController" bundle:nil];
+                    [self.navigationController pushViewController:vc animated:YES];
                 }
                     break;
                 case 10:                                // the loai

@@ -37,4 +37,7 @@
 
 + (void)setValue:(NSString*)value forKey:(NSString *)key;
 + (NSString*)getValueForKey:(NSString*)key;
++ (NSDate*)dateFromString:(NSString*)date withFormat:(NSString*)format;
++ (NSString*)stringFromDate:(NSDate*)date withFormat:(NSString*)format;
++ (NSString*)convertDateString:(NSString*)date old:(NSString*)oldFormat withNewFormat:(NSString*)newFormat;
 @end

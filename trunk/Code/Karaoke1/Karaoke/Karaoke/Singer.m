@@ -26,6 +26,9 @@
         self.details = [dict objectForKey:@"details"];
         self.createDate = [dict objectForKey:@"createdDate"];
         self.birthDay = [dict objectForKey:@"birthDay"];
+        if (self.birthDay && ![self.birthDay isKindOfClass:[NSNull class]]) {
+            self.birthDay = [Lib convertDateString:self.birthDay old:@"yyyy-MM-dd HH:mm" withNewFormat:@"dd-MM-yyyy"];
+        }
         self.largerImage = [dict objectForKey:@"largeImage"];
         self.largerImage = [self.largerImage stringByReplacingOccurrencesOfString:@"~" withString:@""];
         self.country = [dict objectForKey:@"country"];
