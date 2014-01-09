@@ -156,5 +156,23 @@
 + (NSString*)getValueForKey:(NSString *)key {
     return [[NSUserDefaults standardUserDefaults] stringForKey:key];
 }
+
++ (NSDate*)dateFromString:(NSString *)date withFormat:(NSString *)format {
+    NSDateFormatter* formater = [[NSDateFormatter alloc] init];
+    [formater setDateFormat:format];
+    NSLog(@"date: %@ format: %@ date: %@", [formater dateFromString:date], format, date);
+    return [formater dateFromString:date];
+}
+
++ (NSString*)stringFromDate:(NSDate *)date withFormat:(NSString *)format {
+    NSDateFormatter* formater = [[NSDateFormatter alloc] init];
+    [formater setDateFormat:format];
+    NSLog(@"datestrinG: %@", [formater stringFromDate:date]);
+    return [formater stringFromDate:date];
+}
+
++ (NSString*)convertDateString:(NSString *)date old:(NSString *)oldFormat withNewFormat:(NSString *)newFormat {
+    return [Lib stringFromDate:[Lib dateFromString:date withFormat:oldFormat] withFormat:newFormat];
+}
 @end
 
