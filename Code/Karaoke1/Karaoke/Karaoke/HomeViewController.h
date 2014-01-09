@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "NavibarViewController.h"
+#import "Song.h"
+
 #define TIME_CHANGE_SMALL_VIEW 1.5
 @interface HomeViewController : NavibarViewController{
     NSString *_stringImageBigBanner;
@@ -24,6 +26,8 @@
     NSMutableArray *_arrayRecord;
     NSMutableArray *_arrayKaraoke;
     NSMutableArray *_arrayIntroduce;
+    
+    Song *oldSong1,*oldSong2;//Save data introduce;
 }
 @property (strong, nonatomic) IBOutlet UIView *__bannerView;
 @property (strong, nonatomic) IBOutlet UIView *__introductionVIew;

@@ -40,7 +40,7 @@
     // Do any additional setup after loading the view from its nib.
     [self setIsPlay:NO];
     [self setIsRecording:NO];
-    [self setIsMp4Play:YES];
+    [self setIsMp4Play:NO];
 
     [self._buttonPlay setEnabled:FALSE];
     
@@ -50,13 +50,13 @@
                                [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
                                @"MyAudioMemo.caf",
                                nil];
-    NSArray *pathConvertMp4 = [NSArray arrayWithObjects:
+    NSArray *pathConvertM4a = [NSArray arrayWithObjects:
                                [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
-                               @"converted.mp3",
+                               @"converted.m4a",
                                nil];
     
     outputFileCafURL = [NSURL fileURLWithPathComponents:pathComponents];
-    outputFileMp3URL = [NSURL fileURLWithPathComponents:pathConvertMp4];
+    outputFileMp3URL = [NSURL fileURLWithPathComponents:pathConvertM4a];
     
 //    NSLog(@"url record: %@", outputFileCafURL);
 //    NSLog(@"url mp3: %@",outputFileMp3URL);
@@ -64,8 +64,6 @@
     // Setup audio session
     AVAudioSession *session = [AVAudioSession sharedInstance];
     [session setCategory:AVAudioSessionCategoryPlayAndRecord error:NULL];
-    
-//    UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
     
     UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_None;
     AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,sizeof (audioRouteOverride),&audioRouteOverride);
@@ -102,8 +100,7 @@
     [moviePlayer.view setFrame:CGRectMake(0, 160, 320,240)];
     [moviePlayer.view setHidden:YES];
     
- 
-//    [self convertMp4:mp4URL toM4a: pathConvertMp4];
+//    [self convertMp4:mp4URL toM4a: pathConvertM4a];
 }
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationLandscapeRight);
@@ -460,8 +457,7 @@
     return [[paths objectAtIndex:0] stringByAppendingPathComponent:@"Mix.caf"];
 }
 
-- (void) toMp3 :(NSString*)cafFilePath
-{
+- (void) toMp3 :(NSString*)cafFilePath{
 //    NSString *cafFilePath =[NSTemporaryDirectory() stringByAppendingString:@"RecordedFile"];
 //    
     NSString *mp3FilePath = Nil;
@@ -568,7 +564,6 @@
     }
 }
 
-
 //Save file record after convert and rename to folder /RecordedFiles
 -(NSString*)saveFileMp3:(NSString *)fileName{
     // For error information
@@ -596,8 +591,7 @@
 }
 
 #pragma mark - conver mp4 to m4a in 2s
--(void)convertMp4:(NSURL*)srcURL toM4a :(NSArray*)dstPath
-{
+-(void)convertMp4:(NSURL*)srcURL toM4a :(NSArray*)dstPath{
     NSURL* dstURL = [NSURL fileURLWithPathComponents:dstPath];
     
     NSLog(@"URL: %@",dstURL);
@@ -609,20 +603,16 @@
     AVMutableCompositionTrack*  dstCompositionTrack;
     dstCompositionTrack = [newAudioAsset addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:kCMPersistentTrackID_Invalid];
     
-    
     AVAsset* srcAsset = [AVURLAsset URLAssetWithURL:srcURL options:nil];
     AVAssetTrack*   srcTrack = [[srcAsset tracksWithMediaType:AVMediaTypeAudio] objectAtIndex:0];
     
-    
     CMTimeRange timeRange = srcTrack.timeRange;
-    
     NSError* error;
     
     if(NO == [dstCompositionTrack insertTimeRange:timeRange ofTrack:srcTrack atTime:kCMTimeZero error:&error]) {
         NSLog(@"track insert failed: %@\n", error);
         return;
     }
-    
     
     AVAssetExportSession* exportSesh = [[AVAssetExportSession alloc] initWithAsset:newAudioAsset presetName:AVAssetExportPresetPassthrough];
     

@@ -15,7 +15,6 @@
 #import "Lib.h"
 #import "ServiceLib.h"
 #import "Singer.h"
-#import "Song.h"
 
 @interface HomeViewController (){
     
@@ -299,52 +298,55 @@
     Song *song2 = [_arrayIntroduce objectAtIndex:n2];
     NSData *imageData2 = [NSData dataWithContentsOfURL:[NSURL URLWithString:[song2 getLargeImageUrl]]];
     
+    
+    
     switch (choose) {
         case 0:
             self._imageSmallBanner1.image = [UIImage imageWithData:imageData1];
             self._imageSmallBanner2.image = [UIImage imageWithData:imageData2];
             if(_changeBigView){
-                self._labelBigBanner2.text = song2.name;
+                self._labelBigBanner2.text = oldSong2.name;
             }
             else{
-                self._labelBigBanner1.text = song2.name;
+                self._labelBigBanner1.text = oldSong2.name;
             }
             break;
         case 1:
             self._imageSmallBanner1.image = [UIImage imageWithData:imageData1];
             self._imageSmallBanner4.image = [UIImage imageWithData:imageData2];
             if(_changeBigView){
-                self._labelBigBanner2.text = song1.name;
+                self._labelBigBanner2.text = oldSong1.name;
             }
             else{
-                self._labelBigBanner1.text = song1.name;
+                self._labelBigBanner1.text = oldSong1.name;
             }
             break;
         case 2:
             self._imageSmallBanner3.image = [UIImage imageWithData:imageData1];
             self._imageSmallBanner4.image = [UIImage imageWithData:imageData2];
             if(_changeBigView){
-                self._labelBigBanner2.text = song1.name;
+                self._labelBigBanner2.text = oldSong1.name;
             }
             else{
-                self._labelBigBanner1.text = song1.name;
+                self._labelBigBanner1.text = oldSong1.name;
             }
             break;
         case 3:
             self._imageSmallBanner1.image = [UIImage imageWithData:imageData1];
             self._imageSmallBanner4.image = [UIImage imageWithData:imageData2];
             if(_changeBigView){
-                self._labelBigBanner2.text = song2.name;
+                self._labelBigBanner2.text = oldSong2.name;
             }
             else{
-                self._labelBigBanner1.text = song2.name;
+                self._labelBigBanner1.text = oldSong2.name;
             }
             break;
         default:
             break;
     }
-   
-
+    
+    oldSong1 = song1;
+    oldSong2 = song2;
 }
 
 ////////////////////////////
@@ -539,7 +541,37 @@
             [_arrayIntroduce addObject:tmp];
     }
     
-    [self performSelector:@selector(runViewIntroduction:) withObject:_timerChangeIntroBigView afterDelay:3.0f];
+    if(_arrayIntroduce.count > 0){
+        int n1 = rand()%[_arrayIntroduce count];
+        Song *song1 = [_arrayIntroduce objectAtIndex:n1];
+        NSData *imageData1 = [NSData dataWithContentsOfURL:[NSURL URLWithString:[song1 getLargeImageUrl]]];
+        self._imageSmallBanner1.image = [UIImage imageWithData:imageData1];
+        
+        int n2 = rand()%[_arrayIntroduce count];
+        Song *song2 = [_arrayIntroduce objectAtIndex:n2];
+        NSData *imageData2 = [NSData dataWithContentsOfURL:[NSURL URLWithString:[song2 getLargeImageUrl]]];
+        self._imageSmallBanner2.image = [UIImage imageWithData:imageData2];
+        
+        int n3 = rand()%[_arrayIntroduce count];
+        Song *song3 = [_arrayIntroduce objectAtIndex:n3];
+        NSData *imageData3 = [NSData dataWithContentsOfURL:[NSURL URLWithString:[song3 getLargeImageUrl]]];
+        self._imageSmallBanner3.image = [UIImage imageWithData:imageData3];
+        
+        int n4 = rand()%[_arrayIntroduce count];
+        Song *song4 = [_arrayIntroduce objectAtIndex:n4];
+        NSData *imageData4 = [NSData dataWithContentsOfURL:[NSURL URLWithString:[song4 getLargeImageUrl]]];
+        self._imageSmallBanner4.image = [UIImage imageWithData:imageData4];
+        
+        self._imageBigBanner1.image = self._imageSmallBanner3.image;
+        self._imageBigBanner2.image = self._imageSmallBanner4.image;
+        self._labelBigBanner1.text  = song3.name;
+        self._labelBigBanner2.text  = song4.name;
+        
+        oldSong1 = song3;
+        oldSong2 = song4;
+    }
+    
+    [self performSelector:@selector(runViewIntroduction:) withObject:_timerChangeIntroBigView afterDelay:8.0f];
 }
 
 @end
