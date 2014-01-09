@@ -7,6 +7,7 @@
 //
 
 #import "Lib.h"
+#import "Song.h"
 
 @implementation Lib
 
@@ -174,5 +175,36 @@
 + (NSString*)convertDateString:(NSString *)date old:(NSString *)oldFormat withNewFormat:(NSString *)newFormat {
     return [Lib stringFromDate:[Lib dateFromString:date withFormat:oldFormat] withFormat:newFormat];
 }
+
+
+//Get all song
++ (NSMutableArray *)getAllSongs{
+    NSMutableArray *arraySongs;
+    arraySongs = [[NSMutableArray alloc] init];
+    
+    NSString *retValSong= [ServiceLib sendGetRequest:[Lib getServiceUrl:kServiceSongUrl]];
+    SBJsonParser* parserSong = [[SBJsonParser alloc] init];
+    id dataSong = [parserSong objectWithString:retValSong];
+    if (dataSong && [dataSong isKindOfClass:[NSDictionary class]]) {
+        NSString* message = [dataSong objectForKey:@"message"];
+        NSString* error = [dataSong objectForKey:@"error"];
+        id result = [dataSong objectForKey:@"result"];
+        if (error.integerValue == 0) { // success!
+            NSArray* items = [result objectForKey:@"items"];
+            if (items) {
+                for (id song in items) {
+                    Song *s = [Song songFromDictionary:song];
+                    [arraySongs addObject:s];
+                }
+            }
+        }
+        else{
+            NSLog(@"error: %@ message: %@", error, message);
+        }
+    }
+    
+    return arraySongs;
+}
+
 @end
 

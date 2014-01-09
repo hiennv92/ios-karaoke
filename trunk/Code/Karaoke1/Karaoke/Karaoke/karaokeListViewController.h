@@ -13,6 +13,9 @@
 @interface karaokeListViewController : NavibarViewController <UITableViewDelegate,UITableViewDataSource>
 {
     int kindSegment;
+    NSMutableArray *_arraySongs;
+    NSMutableArray *_arraySongsHit;
+    NSMutableArray *_arraySongsNew;
 }
 @property (weak, nonatomic) IBOutlet UIButton *kind4;
 @property (weak, nonatomic) IBOutlet UIButton *kind3;

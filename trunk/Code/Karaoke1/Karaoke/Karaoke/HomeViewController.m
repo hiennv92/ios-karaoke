@@ -483,27 +483,7 @@
             NSLog(@"error: %@ message: %@", error, message);
         }
     }
-    
-    NSString *retValSong= [ServiceLib sendGetRequest:[Lib getServiceUrl:kServiceSongUrl]];
-    SBJsonParser* parserSong = [[SBJsonParser alloc] init];
-    id dataSong = [parserSong objectWithString:retValSong];
-    if (dataSong && [dataSong isKindOfClass:[NSDictionary class]]) {
-        NSString* message = [dataSong objectForKey:@"message"];
-        NSString* error = [dataSong objectForKey:@"error"];
-        id result = [dataSong objectForKey:@"result"];
-        if (error.integerValue == 0) { // success!
-            NSArray* items = [result objectForKey:@"items"];
-            if (items) {
-                for (id song in items) {
-                    Song *s = [Song songFromDictionary:song];
-                    [_arrayListSong addObject:s];
-                }
-            }
-        }
-        else{
-            NSLog(@"error: %@ message: %@", error, message);
-        }
-    }
+    _arrayListSong = [Lib getAllSongs];
     
     [self performSelectorOnMainThread:@selector(getDataFinish) withObject:nil waitUntilDone:YES];
 }
