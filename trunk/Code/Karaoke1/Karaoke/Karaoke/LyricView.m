@@ -30,10 +30,10 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        _senView1 = [[SentenceView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 30)];
+        _senView1 = [[SentenceView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 40)];
         [self addSubview:_senView1];
         
-        _senView2 = [[SentenceView alloc] initWithFrame:CGRectMake(50, 50, self.frame.size.width - 50, 30)];
+        _senView2 = [[SentenceView alloc] initWithFrame:CGRectMake(50, 50, self.frame.size.width - 50, 40)];
         [self addSubview:_senView2];
         
         [self setBackgroundColor:[UIColor colorWithRed:255 green:255 blue:255 alpha:0.5]];

@@ -35,21 +35,17 @@
     return [[UIDevice currentDevice] systemVersion];
 }
 
-+ (float)widthForLabel:(UILabel *)label
++ (CGSize)sizeForLabel:(UILabel *)label
 {
-    CGFloat strikeWidth;
+    CGSize textSize;
     if ([Lib isIos7]) {
-        CGSize textSize = [[label text] sizeWithAttributes:@{NSFontAttributeName:[label font]}];
-        
-        strikeWidth  = textSize.width;
+         textSize = [[label text] sizeWithAttributes:@{NSFontAttributeName:[label font]}];
     }
     else
     {
-        CGSize textSize = [[label text] sizeWithFont:[label font]];
-        
-        strikeWidth = textSize.width;
+        textSize = [[label text] sizeWithFont:[label font]];
     }
-    return strikeWidth;
+    return textSize;
 }
 
 +(BOOL)isHeadsetPluggedIn {

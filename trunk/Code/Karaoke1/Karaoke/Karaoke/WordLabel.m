@@ -22,14 +22,15 @@
     return self;
 }
 
-- (id)initWithText:(NSString *)text
+- (id)initWithText:(NSString *)text font:(UIFont *)font
 {
     self = [super init];
     if (self) {
         self.text = text;
         self.backgroundColor = [UIColor clearColor];
-        CGFloat width = [Lib widthForLabel:self];
-        [self setFrame:CGRectMake(0, 0, width, kWordDefaultHeight)];
+        self.font = font;
+        CGSize size = [Lib sizeForLabel:self];
+        [self setFrame:CGRectMake(0, 0, size.width, size.height)];
     }
     return self;
 }

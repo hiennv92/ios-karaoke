@@ -64,14 +64,9 @@
 {
     if (index < self.subviews.count) {
         WordLabel* word = self.subviews[index];
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-        
-        [UIView setAnimationDuration:1];
-//        [word setTextColor:[UIColor yellowColor]];
-        word.layer.backgroundColor = [UIColor yellowColor].CGColor;
-        //also call this before commit animations......
-        [UIView commitAnimations];
+        [word setAnimationDuration:[_sentence getDurationForWordAtIndex:index]];
+//        [word setTint:[UIColor yellowColor]];
+        [word startAnimating];
     }
 }
 
@@ -100,12 +95,12 @@
     
     // add new words
     for (Word* word in sentence.wordsArray) {
-        WordLabel* wb = [[WordLabel alloc] initWithText:word.value];
+        WordLabel* wb = [[WordLabel alloc] initWithText:word.value font:[UIFont boldSystemFontOfSize:20]];
         [wb setTextColor:_isBoy?[UIColor blueColor]:[UIColor redColor]];
         [wb setFrame:CGRectMake([self lastWidth], 0, wb.frame.size.width, wb.frame.size.height)];
         [self addSubview:wb];
     }
-    [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, [self lastWidth], 20)];
+    [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, [self lastWidth], 40)];
 }
 
 

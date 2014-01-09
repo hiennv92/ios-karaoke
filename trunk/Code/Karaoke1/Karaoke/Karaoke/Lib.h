@@ -27,7 +27,7 @@
 + (BOOL)isIos7;
 + (float)getIosVersion;
 + (NSString*)getIosVersionString;
-+ (CGFloat)widthForLabel:(UILabel*)label;
++ (CGSize)sizeForLabel:(UILabel*)label;
 + (BOOL)isHeadsetPluggedIn;
 + (NSString*)getServiceUrl:(NSString*)url;
 + (NSString*)getMediaUrl:(NSString*)url;

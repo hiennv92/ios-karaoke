@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MTAnimatedLabel.h"
 
-@interface WordLabel : UILabel
-- (id)initWithText:(NSString*)text;
+
+@interface WordLabel : MTAnimatedLabel
+- (id)initWithText:(NSString*)text font:(UIFont*)font;
 @end
