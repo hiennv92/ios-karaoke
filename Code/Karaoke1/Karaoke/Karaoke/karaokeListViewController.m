@@ -8,6 +8,8 @@
 
 #import "karaokeListViewController.h"
 #import "Cell.h"
+#import "Lib.h"
+#import "Song.h"
 #import "PlayKaraClipViewController.h"
 #import "SingerListViewController.h"
 #import "RecordViewController.h"
@@ -54,6 +56,8 @@
     [self.view addSubview:self.kind2];
     [self.view addSubview:self.kind3];
     [self.view addSubview:self.kind4];
+    
+    [self loadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,11 +77,14 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 100;
+    return [_arraySongs count];
 }
 
 -(float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 90;
+    if(kindSegment == 3)
+        return 90;
+    else
+        return 70;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -90,6 +97,26 @@
             cell=[nib objectAtIndex:0];
         }
         
+        Song* song;
+        if(kindSegment == 0){
+            song =  [_arraySongsNew objectAtIndex:[indexPath row]];
+        }
+        else if(kindSegment == 1){
+            song =  [_arraySongsHit objectAtIndex:[indexPath row]];
+        }
+        else if(kindSegment == 2){
+            song = [_arraySongs objectAtIndex:[indexPath row]];
+        }
+        
+        cell._nameSong.text = song.name;
+        cell._numberLikes.text = [NSString stringWithFormat:@"%@ lượt thích",song.voteCount];
+        cell._numberPlay.text = [NSString stringWithFormat:@"%@ lượt hát",song.voteScore];
+        cell._lyricExample.text = song.lyric;
+        if(song.isFavorite)
+            cell.__liked = YES;
+        else
+            cell.__liked = NO;
+        [cell reloadLikeButton];
         
         return cell;
     }
@@ -101,14 +128,8 @@
             cell=[nib objectAtIndex:0];
         }
         
-        
-        
-        
-        
         return cell;
     }
-    
-    // Configure the cell...
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -125,6 +146,7 @@
     [_kind2 setImage:[UIImage imageNamed:@"2-bai-hits.png"] forState:UIControlStateNormal];
     [_kind3 setImage:[UIImage imageNamed:@"3-tat-ca.png"] forState:UIControlStateNormal];
     [_kind4 setImage:[UIImage imageNamed:@"4-karaoke-clip.png"] forState:UIControlStateNormal];
+    [self.tableList reloadData];
 }
 
 - (IBAction)changeSegment2:(id)sender {
@@ -134,6 +156,7 @@
     [_kind2 setImage:[UIImage imageNamed:@"2-bai-hits-select.png"] forState:UIControlStateNormal];
     [_kind3 setImage:[UIImage imageNamed:@"3-tat-ca.png"] forState:UIControlStateNormal];
     [_kind4 setImage:[UIImage imageNamed:@"4-karaoke-clip.png"] forState:UIControlStateNormal];
+    [self.tableList reloadData];
 }
 
 - (IBAction)changeSegment3:(id)sender {
@@ -143,6 +166,7 @@
     [_kind2 setImage:[UIImage imageNamed:@"2-bai-hits.png"] forState:UIControlStateNormal];
     [_kind3 setImage:[UIImage imageNamed:@"3-tat-ca-select.png"] forState:UIControlStateNormal];
     [_kind4 setImage:[UIImage imageNamed:@"4-karaoke-clip.png"] forState:UIControlStateNormal];
+    [self.tableList reloadData];
 }
 
 - (IBAction)changeSegment4:(id)sender {
@@ -188,6 +212,45 @@
 - (void)recordButtonPress:(id)button{
     RecordViewController *rc = [[RecordViewController alloc] initWithNibName:@"RecordViewController" bundle:Nil];
     [self.navigationController pushViewController:rc animated:YES];
+}
+
+
+#pragma mark - Load data
+- (void)loadData
+{
+    _arraySongs = [[NSMutableArray alloc] init];
+    _arraySongsHit = [[NSMutableArray alloc] init];
+    _arraySongsNew = [[NSMutableArray alloc] init];
+    
+    [Lib showLoadingOnView:self.view withText:@"Đang tải..."];
+    [NSThread detachNewThreadSelector:@selector(getDataFromService) toTarget:self withObject:nil];
+}
+
+- (void)getDataFromService
+{
+    _arraySongs = [Lib getAllSongs];
+    
+//    for(int i = 0;i<[_arraySongs count];i++){
+//        Song *song = [_arraySongs objectAtIndex:i];
+//        if([song.isHit isEqualToString:@"true"])
+//            [_arraySongsHit addObject:song];
+//        if([song.isNewSong isEqualToString:@"true"])
+//            [_arraySongsNew addObject:song];
+//    }
+    
+    NSLog(@"Count: %d-%d-%d",_arraySongs.count, _arraySongsHit.count, _arraySongsNew.count);
+    
+    [self performSelectorOnMainThread:@selector(getDataFinish) withObject:nil waitUntilDone:YES];
+}
+
+- (void)getDataFinish
+{
+    [Lib removeLoadingOnView:self.view];
+    [self setDataScollSongs];
+}
+
+- (void)setDataScollSongs{
+    [self.tableList reloadData];
 }
 
 @end
