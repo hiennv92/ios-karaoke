@@ -108,7 +108,7 @@
     [self.__singersView addSubview:self.__scrollViewSingers];
     [self.__singersView setBackgroundColor:[UIColor clearColor]];
     
-    for(int i = 0;i<8;i++){
+    for(int i = 0;i < _arrayListSinger.count;i++){
         _arrayImageSingers[i] = [[UIImageView alloc]initWithFrame:CGRectMake(10 + 110*i, 10, 100, 100)];
         [_arrayImageSingers[i] setImage:[UIImage imageNamed:@"ca-si.png"]];
         [self.__scrollViewSingers addSubview:_arrayImageSingers[i]];
@@ -290,6 +290,9 @@
 }
 
 - (void)setImageForSmallViewIntro:(int)choose{
+    if (_arrayIntroduce.count <= 0) {
+        return;
+    }
     int n1 = rand()%[_arrayIntroduce count];
     Song *song1 = [_arrayIntroduce objectAtIndex:n1];
     NSData *imageData1 = [NSData dataWithContentsOfURL:[NSURL URLWithString:[song1 getLargeImageUrl]]];
@@ -492,7 +495,7 @@
 }
 
 - (void)setDataScrollSingers{
-    for(int i = 0;i<8;i++){
+    for(int i = 0;i < _arrayListSinger.count; i++){
         Singer *singer = [_arrayListSinger objectAtIndex:i];
         NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[singer getLargeImageUrl]]];
         _arrayLabelSingerName[i].text = singer.name;
