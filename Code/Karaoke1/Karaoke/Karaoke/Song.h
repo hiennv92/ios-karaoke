@@ -33,9 +33,9 @@
 @property (nonatomic, retain) NSString *largeImage;
 @property (nonatomic, retain) NSString *price;
 @property (nonatomic, retain) NSString *metadataFile;
-@property (nonatomic, retain) NSString *isFree;
-@property (nonatomic, retain) NSString *isHit;
-@property (nonatomic, retain) NSString *isNewSong;
+@property (assign, nonatomic) BOOL isFree;
+@property (assign, nonatomic) BOOL isHit;
+@property (assign, nonatomic) BOOL *isNewSong;
 @property (nonatomic, retain) NSString *duration;
 @property (nonatomic, retain) NSString *scope;
 @property (nonatomic, retain) NSString *mp4VocalFile;
