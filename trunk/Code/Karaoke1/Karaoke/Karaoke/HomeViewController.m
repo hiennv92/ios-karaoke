@@ -206,7 +206,7 @@
             [self._imageSmallBanner4 setFrame:frame];
         } completion:^(BOOL finished) {
             _changeSmallView = 1;
-            [self setImageForSmallViewIntro:_changeSmallView];
+//            [self setImageForSmallViewIntro:_changeSmallView];
         }];
     }
     else if(_changeSmallView == 1) {
@@ -225,7 +225,7 @@
             [self._imageSmallBanner4 setFrame:frame];
         } completion:^(BOOL finished) {
             _changeSmallView = 2;
-            [self setImageForSmallViewIntro:_changeSmallView];
+//            [self setImageForSmallViewIntro:_changeSmallView];
         }];
     }
     else if(_changeSmallView == 2) {
@@ -244,7 +244,7 @@
             [self._imageSmallBanner4 setFrame:frame];
         } completion:^(BOOL finished) {
             _changeSmallView = 3;
-            [self setImageForSmallViewIntro:_changeSmallView];
+//            [self setImageForSmallViewIntro:_changeSmallView];
         }];
     }
     else if(_changeSmallView == 3) {
@@ -263,7 +263,7 @@
             [self._imageSmallBanner4 setFrame:frame];
         } completion:^(BOOL finished) {
             _changeSmallView = 0;
-            [self setImageForSmallViewIntro:_changeSmallView];
+//            [self setImageForSmallViewIntro:_changeSmallView];
         }];
     }
 }

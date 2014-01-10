@@ -53,9 +53,9 @@
         
         self.price = [dict objectForKey:@"price"];
         self.metadataFile = [dict objectForKey:@"metadataFile"];
-        self.isFree = [dict objectForKey:@"isFree"];
-        self.isHit = [dict objectForKey:@"isHit"];
-        self.isNewSong = [dict objectForKey:@"isNewSong"];
+        self.isFree = [[dict objectForKey:@"isFree"] boolValue];
+        self.isHit = [[dict objectForKey:@"isHit"] boolValue];
+        self.isNewSong = [[dict objectForKey:@"isNewSong"] boolValue];
         self.duration = [dict objectForKey:@"duration"];
         self.scope = [dict objectForKey:@"scope"];
         self.mp4VocalFile = [dict objectForKey:@"mp4VocalFile"];

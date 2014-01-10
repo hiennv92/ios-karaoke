@@ -77,7 +77,14 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [_arraySongs count];
+    if(kindSegment == 0)
+        return [_arraySongsNew count];
+    else if(kindSegment == 1)
+        return [_arraySongsHit count];
+    else if(kindSegment == 2)
+        return [_arraySongs count];
+    else
+        return 10;
 }
 
 -(float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -230,13 +237,13 @@
 {
     _arraySongs = [Lib getAllSongs];
     
-//    for(int i = 0;i<[_arraySongs count];i++){
-//        Song *song = [_arraySongs objectAtIndex:i];
-//        if([song.isHit isEqualToString:@"true"])
-//            [_arraySongsHit addObject:song];
-//        if([song.isNewSong isEqualToString:@"true"])
-//            [_arraySongsNew addObject:song];
-//    }
+    for(int i = 0;i<[_arraySongs count];i++){
+        Song *song = [_arraySongs objectAtIndex:i];
+        if(song.isHit)
+            [_arraySongsHit addObject:song];
+        if(song.isNewSong)
+            [_arraySongsNew addObject:song];
+    }
     
     NSLog(@"Count: %d-%d-%d",_arraySongs.count, _arraySongsHit.count, _arraySongsNew.count);
     

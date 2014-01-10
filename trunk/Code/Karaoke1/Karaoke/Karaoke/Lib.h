@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
+#import "ServiceLib.h"
 
 #define kServerUrl  @"http://mkara.vn/"
 #define kMediaUrl   @"media"
@@ -40,4 +41,7 @@
 + (NSDate*)dateFromString:(NSString*)date withFormat:(NSString*)format;
 + (NSString*)stringFromDate:(NSDate*)date withFormat:(NSString*)format;
 + (NSString*)convertDateString:(NSString*)date old:(NSString*)oldFormat withNewFormat:(NSString*)newFormat;
+
++ (NSMutableArray *)getAllSongs;
+
 @end
