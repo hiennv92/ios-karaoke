@@ -266,6 +266,32 @@
 		4BEAEAB41867B226000E3CD1 /* dangkyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEAEAB21867B226000E3CD1 /* dangkyViewController.xib */; };
 		4BEAEAB81867B6E5000E3CD1 /* dangnhapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEAEAB61867B6E5000E3CD1 /* dangnhapViewController.m */; };
 		4BEAEAB91867B6E5000E3CD1 /* dangnhapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEAEAB71867B6E5000E3CD1 /* dangnhapViewController.xib */; };
+		4BED656D18817F7C00FC9636 /* 4_1_bai_mau_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED655F18817F7C00FC9636 /* 4_1_bai_mau_selected.png */; };
+		4BED656E18817F7C00FC9636 /* 4_1_bai_mau.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED656018817F7C00FC9636 /* 4_1_bai_mau.png */; };
+		4BED656F18817F7C00FC9636 /* 4_1_bg_control_player.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED656118817F7C00FC9636 /* 4_1_bg_control_player.png */; };
+		4BED657018817F7C00FC9636 /* 4_1_bg_danhmuc.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED656218817F7C00FC9636 /* 4_1_bg_danhmuc.png */; };
+		4BED657118817F7C00FC9636 /* 4_1_chia_se_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED656318817F7C00FC9636 /* 4_1_chia_se_selected.png */; };
+		4BED657218817F7C00FC9636 /* 4_1_chia_se.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED656418817F7C00FC9636 /* 4_1_chia_se.png */; };
+		4BED657318817F7C00FC9636 /* 4_1_knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED656518817F7C00FC9636 /* 4_1_knob.png */; };
+		4BED657418817F7C00FC9636 /* 4_1_lien_quan_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED656618817F7C00FC9636 /* 4_1_lien_quan_selected.png */; };
+		4BED657518817F7C00FC9636 /* 4_1_lien_quan.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED656718817F7C00FC9636 /* 4_1_lien_quan.png */; };
+		4BED657618817F7C00FC9636 /* 4_1_pause_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED656818817F7C00FC9636 /* 4_1_pause_btn.png */; };
+		4BED657718817F7C00FC9636 /* 4_1_play_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED656918817F7C00FC9636 /* 4_1_play_btn.png */; };
+		4BED657818817F7C00FC9636 /* 4_1_progress_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED656A18817F7C00FC9636 /* 4_1_progress_left.png */; };
+		4BED657918817F7C00FC9636 /* 4_1_progress_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED656B18817F7C00FC9636 /* 4_1_progress_right.png */; };
+		4BED657A18817F7C00FC9636 /* 4_1_share_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED656C18817F7C00FC9636 /* 4_1_share_btn.png */; };
+		4BED657F18818BA700FC9636 /* TinTucVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BED657D18818BA700FC9636 /* TinTucVideoViewController.m */; };
+		4BED658018818BA700FC9636 /* TinTucVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BED657E18818BA700FC9636 /* TinTucVideoViewController.xib */; };
+		4BED658318818C4F00FC9636 /* TinTucVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BED658218818C4F00FC9636 /* TinTucVideoCell.m */; };
+		4BED658518818C6200FC9636 /* TinTucVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BED658418818C6200FC9636 /* TinTucVideoCell.xib */; };
+		4BED658D1881915B00FC9636 /* 13_bg_segment.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED65871881915B00FC9636 /* 13_bg_segment.png */; };
+		4BED658E1881915B00FC9636 /* 13_camera360.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED65881881915B00FC9636 /* 13_camera360.png */; };
+		4BED658F1881915B00FC9636 /* 13_camera360_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED65891881915B00FC9636 /* 13_camera360_selected.png */; };
+		4BED65901881915B00FC9636 /* 13_clip_gay_bao.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED658A1881915B00FC9636 /* 13_clip_gay_bao.png */; };
+		4BED65911881915B00FC9636 /* 13_clip_gay_bao_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED658B1881915B00FC9636 /* 13_clip_gay_bao_selected.png */; };
+		4BED65921881915B00FC9636 /* 13_play_img.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BED658C1881915B00FC9636 /* 13_play_img.png */; };
+		4BED65961881952500FC9636 /* PlayTinTucVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BED65941881952500FC9636 /* PlayTinTucVideoViewController.m */; };
+		4BED65971881952500FC9636 /* PlayTinTucVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BED65951881952500FC9636 /* PlayTinTucVideoViewController.xib */; };
 		51178264186885E700F73C17 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51178262186885E700F73C17 /* Cell.m */; };
 		51178265186885E700F73C17 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51178263186885E700F73C17 /* Cell.xib */; };
 		511EB734186DAE6C00AB20D0 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511EB732186DAE6C00AB20D0 /* RecordViewController.m */; };
@@ -701,6 +727,35 @@
 		4BEAEAB51867B6E5000E3CD1 /* dangnhapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dangnhapViewController.h; sourceTree = "<group>"; };
 		4BEAEAB61867B6E5000E3CD1 /* dangnhapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dangnhapViewController.m; sourceTree = "<group>"; };
 		4BEAEAB71867B6E5000E3CD1 /* dangnhapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dangnhapViewController.xib; sourceTree = "<group>"; };
+		4BED655F18817F7C00FC9636 /* 4_1_bai_mau_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_1_bai_mau_selected.png; sourceTree = "<group>"; };
+		4BED656018817F7C00FC9636 /* 4_1_bai_mau.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_1_bai_mau.png; sourceTree = "<group>"; };
+		4BED656118817F7C00FC9636 /* 4_1_bg_control_player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_1_bg_control_player.png; sourceTree = "<group>"; };
+		4BED656218817F7C00FC9636 /* 4_1_bg_danhmuc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_1_bg_danhmuc.png; sourceTree = "<group>"; };
+		4BED656318817F7C00FC9636 /* 4_1_chia_se_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_1_chia_se_selected.png; sourceTree = "<group>"; };
+		4BED656418817F7C00FC9636 /* 4_1_chia_se.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_1_chia_se.png; sourceTree = "<group>"; };
+		4BED656518817F7C00FC9636 /* 4_1_knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_1_knob.png; sourceTree = "<group>"; };
+		4BED656618817F7C00FC9636 /* 4_1_lien_quan_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_1_lien_quan_selected.png; sourceTree = "<group>"; };
+		4BED656718817F7C00FC9636 /* 4_1_lien_quan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_1_lien_quan.png; sourceTree = "<group>"; };
+		4BED656818817F7C00FC9636 /* 4_1_pause_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_1_pause_btn.png; sourceTree = "<group>"; };
+		4BED656918817F7C00FC9636 /* 4_1_play_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_1_play_btn.png; sourceTree = "<group>"; };
+		4BED656A18817F7C00FC9636 /* 4_1_progress_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_1_progress_left.png; sourceTree = "<group>"; };
+		4BED656B18817F7C00FC9636 /* 4_1_progress_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_1_progress_right.png; sourceTree = "<group>"; };
+		4BED656C18817F7C00FC9636 /* 4_1_share_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_1_share_btn.png; sourceTree = "<group>"; };
+		4BED657C18818BA700FC9636 /* TinTucVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TinTucVideoViewController.h; sourceTree = "<group>"; };
+		4BED657D18818BA700FC9636 /* TinTucVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TinTucVideoViewController.m; sourceTree = "<group>"; };
+		4BED657E18818BA700FC9636 /* TinTucVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TinTucVideoViewController.xib; sourceTree = "<group>"; };
+		4BED658118818C4F00FC9636 /* TinTucVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TinTucVideoCell.h; sourceTree = "<group>"; };
+		4BED658218818C4F00FC9636 /* TinTucVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TinTucVideoCell.m; sourceTree = "<group>"; };
+		4BED658418818C6200FC9636 /* TinTucVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TinTucVideoCell.xib; sourceTree = "<group>"; };
+		4BED65871881915B00FC9636 /* 13_bg_segment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13_bg_segment.png; sourceTree = "<group>"; };
+		4BED65881881915B00FC9636 /* 13_camera360.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13_camera360.png; sourceTree = "<group>"; };
+		4BED65891881915B00FC9636 /* 13_camera360_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13_camera360_selected.png; sourceTree = "<group>"; };
+		4BED658A1881915B00FC9636 /* 13_clip_gay_bao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13_clip_gay_bao.png; sourceTree = "<group>"; };
+		4BED658B1881915B00FC9636 /* 13_clip_gay_bao_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13_clip_gay_bao_selected.png; sourceTree = "<group>"; };
+		4BED658C1881915B00FC9636 /* 13_play_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13_play_img.png; sourceTree = "<group>"; };
+		4BED65931881952500FC9636 /* PlayTinTucVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayTinTucVideoViewController.h; sourceTree = "<group>"; };
+		4BED65941881952500FC9636 /* PlayTinTucVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayTinTucVideoViewController.m; sourceTree = "<group>"; };
+		4BED65951881952500FC9636 /* PlayTinTucVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayTinTucVideoViewController.xib; sourceTree = "<group>"; };
 		51178261186885E700F73C17 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
 		51178262186885E700F73C17 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
 		51178263186885E700F73C17 /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
@@ -853,6 +908,7 @@
 				34061F0C186458B5009FD9B2 /* RootViewcontroller */,
 				4BEAEAAF1867B16D000E3CD1 /* Dangky- dang nhap- quen mk */,
 				4BE7D73F186873D300F7438B /* Karaokes new */,
+				4BED657B18818B8300FC9636 /* tin tuc video */,
 				4B743452186BA09500BE95BF /* kara yeuthich */,
 				4B743442186B9DD800BE95BF /* search kara 5 */,
 			);
@@ -1367,6 +1423,7 @@
 		34BC53F81864B3F500CFFE9B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				4BED65861881915B00FC9636 /* 13 */,
 				51BB4215187B0BAD00D7019F /* 11.2 */,
 				3426409B186C9526001C47C1 /* 16 */,
 				34BC54321864B5BA00CFFE9B /* 1 */,
@@ -1479,6 +1536,20 @@
 		34BC544A1864B5BA00CFFE9B /* 4.1 */ = {
 			isa = PBXGroup;
 			children = (
+				4BED655F18817F7C00FC9636 /* 4_1_bai_mau_selected.png */,
+				4BED656018817F7C00FC9636 /* 4_1_bai_mau.png */,
+				4BED656118817F7C00FC9636 /* 4_1_bg_control_player.png */,
+				4BED656218817F7C00FC9636 /* 4_1_bg_danhmuc.png */,
+				4BED656318817F7C00FC9636 /* 4_1_chia_se_selected.png */,
+				4BED656418817F7C00FC9636 /* 4_1_chia_se.png */,
+				4BED656518817F7C00FC9636 /* 4_1_knob.png */,
+				4BED656618817F7C00FC9636 /* 4_1_lien_quan_selected.png */,
+				4BED656718817F7C00FC9636 /* 4_1_lien_quan.png */,
+				4BED656818817F7C00FC9636 /* 4_1_pause_btn.png */,
+				4BED656918817F7C00FC9636 /* 4_1_play_btn.png */,
+				4BED656A18817F7C00FC9636 /* 4_1_progress_left.png */,
+				4BED656B18817F7C00FC9636 /* 4_1_progress_right.png */,
+				4BED656C18817F7C00FC9636 /* 4_1_share_btn.png */,
 				34BC544B1864B5BA00CFFE9B /* bg-banner-player.png */,
 				34BC544C1864B5BA00CFFE9B /* btn-trai-tim.png */,
 				34BC544D1864B5BA00CFFE9B /* phong-to-btn.png */,
@@ -1688,6 +1759,35 @@
 			name = "Dangky- dang nhap- quen mk";
 			sourceTree = "<group>";
 		};
+		4BED657B18818B8300FC9636 /* tin tuc video */ = {
+			isa = PBXGroup;
+			children = (
+				4BED657C18818BA700FC9636 /* TinTucVideoViewController.h */,
+				4BED657D18818BA700FC9636 /* TinTucVideoViewController.m */,
+				4BED657E18818BA700FC9636 /* TinTucVideoViewController.xib */,
+				4BED658118818C4F00FC9636 /* TinTucVideoCell.h */,
+				4BED658218818C4F00FC9636 /* TinTucVideoCell.m */,
+				4BED658418818C6200FC9636 /* TinTucVideoCell.xib */,
+				4BED65931881952500FC9636 /* PlayTinTucVideoViewController.h */,
+				4BED65941881952500FC9636 /* PlayTinTucVideoViewController.m */,
+				4BED65951881952500FC9636 /* PlayTinTucVideoViewController.xib */,
+			);
+			name = "tin tuc video";
+			sourceTree = "<group>";
+		};
+		4BED65861881915B00FC9636 /* 13 */ = {
+			isa = PBXGroup;
+			children = (
+				4BED65871881915B00FC9636 /* 13_bg_segment.png */,
+				4BED65881881915B00FC9636 /* 13_camera360.png */,
+				4BED65891881915B00FC9636 /* 13_camera360_selected.png */,
+				4BED658A1881915B00FC9636 /* 13_clip_gay_bao.png */,
+				4BED658B1881915B00FC9636 /* 13_clip_gay_bao_selected.png */,
+				4BED658C1881915B00FC9636 /* 13_play_img.png */,
+			);
+			path = 13;
+			sourceTree = "<group>";
+		};
 		511EB736186DAE8500AB20D0 /* RecordViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1850,6 +1950,7 @@
 				3442C7CD18642F1300BD13F3 /* Default.png in Resources */,
 				51BB4205187B0AB200D7019F /* 11-moi-nhat.png in Resources */,
 				34BC54211864B46F00CFFE9B /* karaoke-hit.png in Resources */,
+				4BED656D18817F7C00FC9636 /* 4_1_bai_mau_selected.png in Resources */,
 				51BB422B187B0BAD00D7019F /* 11-bg-phan-play.png in Resources */,
 				34BC541D1864B46F00CFFE9B /* hot-nhat-icon.png in Resources */,
 				51BB41F9187B0A9F00D7019F /* NhacDJCell.xib in Resources */,
@@ -1858,11 +1959,13 @@
 				34BC54201864B46F00CFFE9B /* karaoke-clip.png in Resources */,
 				34BC54161864B46F00CFFE9B /* ca-khuc-da-ghi-am.png in Resources */,
 				3442C7CF18642F1300BD13F3 /* Default@2x.png in Resources */,
+				4BED657418817F7C00FC9636 /* 4_1_lien_quan_selected.png in Resources */,
 				51A6D7C6187F044500EEB28D /* khung-tron.png in Resources */,
 				34BC54AE1864B5BA00CFFE9B /* hot-nhat-select.png in Resources */,
 				4B743437186B9B5200BE95BF /* MagnifyingGlassDark@2x.png in Resources */,
 				51BB4229187B0BAD00D7019F /* 11-bg-panel-duoi.png in Resources */,
 				34BC54A21864B5BA00CFFE9B /* share-email.png in Resources */,
+				4BED658518818C6200FC9636 /* TinTucVideoCell.xib in Resources */,
 				3426408C186C66B5001C47C1 /* SingerListViewController.xib in Resources */,
 				34BC54BB1864B5BA00CFFE9B /* bottom-ca-si.png in Resources */,
 				34BC54BC1864B5BA00CFFE9B /* bottom-the-loai.png in Resources */,
@@ -1885,6 +1988,7 @@
 				51A688801866E4DD000BEBD3 /* imageKaraokeClipDemo.png in Resources */,
 				34BC54CA1864B5BA00CFFE9B /* search-btn.png in Resources */,
 				51BB4228187B0BAD00D7019F /* 11-bg-cd-demo.png in Resources */,
+				4BED657518817F7C00FC9636 /* 4_1_lien_quan.png in Resources */,
 				51BB422A187B0BAD00D7019F /* 11-bg-panel-tren.png in Resources */,
 				51BB4204187B0AB200D7019F /* 11-moi-nhat-select.png in Resources */,
 				51BB4230187B0BAD00D7019F /* 11-knob-to.png in Resources */,
@@ -1895,6 +1999,9 @@
 				34BC54971864B5BA00CFFE9B /* 4-karaoke-clip-select.png in Resources */,
 				34BC54C11864B5BA00CFFE9B /* logo-banner.png in Resources */,
 				34264093186C6A35001C47C1 /* SingerCell.xib in Resources */,
+				4BED657A18817F7C00FC9636 /* 4_1_share_btn.png in Resources */,
+				4BED65921881915B00FC9636 /* 13_play_img.png in Resources */,
+				4BED657218817F7C00FC9636 /* 4_1_chia_se.png in Resources */,
 				34BC54271864B46F00CFFE9B /* secsion-nhacDJ.png in Resources */,
 				34BC548A1864B5BA00CFFE9B /* bg-text-field.png in Resources */,
 				51A52B50186AC31B00A7990A /* search1.png in Resources */,
@@ -1932,10 +2039,12 @@
 				34BC541C1864B46F00CFFE9B /* dich-vu.png in Resources */,
 				4BE7D73E186872AA00F7438B /* karaokeListViewController.xib in Resources */,
 				34BC54291864B46F00CFFE9B /* secsion-tin-tuc-video.png in Resources */,
+				4BED658018818BA700FC9636 /* TinTucVideoViewController.xib in Resources */,
 				34BC54181864B46F00CFFE9B /* ca-si.png in Resources */,
 				51BB420C187B0ABF00D7019F /* AudioPlayerScrubberLeft.png in Resources */,
 				34BC54B31864B5BA00CFFE9B /* noi-bat.png in Resources */,
 				34BC54871864B5BA00CFFE9B /* btn-dangky.png in Resources */,
+				4BED658D1881915B00FC9636 /* 13_bg_segment.png in Resources */,
 				4B74343F186B9B5200BE95BF /* search2.png in Resources */,
 				51C824AF1868895600A65A2B /* imageBaseIntroduction.png in Resources */,
 				51A52B51186AC31B00A7990A /* search2.png in Resources */,
@@ -1948,6 +2057,7 @@
 				340DDAB8186AC6CF00204A05 /* 10_nam_tinh_cu.xml in Resources */,
 				34BC54C81864B5BA00CFFE9B /* btn-search-top.png in Resources */,
 				51A6887E1866E4DD000BEBD3 /* imageBaseNameKaraokeClips.png in Resources */,
+				4BED657118817F7C00FC9636 /* 4_1_chia_se_selected.png in Resources */,
 				51BB41F7187B0A9F00D7019F /* NhacDJ-TinTucViewController.xib in Resources */,
 				51BB423B187B0BBA00D7019F /* btnTraiTim.png in Resources */,
 				34BC542A1864B46F00CFFE9B /* su-kien-noi-bat.png in Resources */,
@@ -1956,6 +2066,7 @@
 				4B743432186B9B5200BE95BF /* GraySearchBar.png in Resources */,
 				34BC54311864B46F00CFFE9B /* wap-kara.png in Resources */,
 				34BC54221864B46F00CFFE9B /* karaoke-moi-nhat.png in Resources */,
+				4BED657318817F7C00FC9636 /* 4_1_knob.png in Resources */,
 				51BB4203187B0AB200D7019F /* 11-hot-nhat.png in Resources */,
 				34BC54931864B5BA00CFFE9B /* 2-bai-hits-select.png in Resources */,
 				34BC54BD1864B5BA00CFFE9B /* bottom-thu-am.png in Resources */,
@@ -1971,6 +2082,7 @@
 				34BC54C31864B5BA00CFFE9B /* logo-note-nhac.png in Resources */,
 				34BC542D1864B46F00CFFE9B /* thong-tin.png in Resources */,
 				34BC54A61864B5BA00CFFE9B /* bg-comment.png in Resources */,
+				4BED658E1881915B00FC9636 /* 13_camera360.png in Resources */,
 				51B145AA186B4D5A00063FB9 /* ForgetPasswordViewController.xib in Resources */,
 				51BB4235187B0BAD00D7019F /* 11-prev-btn.png in Resources */,
 				34BC548C1864B5BA00CFFE9B /* btn-dang-nhap.png in Resources */,
@@ -1985,15 +2097,19 @@
 				34BC54AA1864B5BA00CFFE9B /* post-comment-btn.png in Resources */,
 				34BC54CE1864B5BA00CFFE9B /* top-banner.png in Resources */,
 				34078B65187F2B0500F5BCF1 /* SingerDetailViewController.xib in Resources */,
+				4BED657718817F7C00FC9636 /* 4_1_play_btn.png in Resources */,
 				34BC54AD1864B5BA00CFFE9B /* disc.png in Resources */,
 				34BC54B21864B5BA00CFFE9B /* noi-bat-select.png in Resources */,
 				3C993C6C187AA6F30073B45C /* btnTraiTim.png in Resources */,
 				51C824B01868895600A65A2B /* imageDemoIntroduction.png in Resources */,
+				4BED65901881915B00FC9636 /* 13_clip_gay_bao.png in Resources */,
+				4BED656F18817F7C00FC9636 /* 4_1_bg_control_player.png in Resources */,
 				51BB4232187B0BAD00D7019F /* 11-nut-like.png in Resources */,
 				34BC54281864B46F00CFFE9B /* secsion-them.png in Resources */,
 				34BC54901864B5BA00CFFE9B /* goi-tuan.png in Resources */,
 				34BC54CF1864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png in Resources */,
 				4B74345C186BA3B400BE95BF /* FavouriteViewController.xib in Resources */,
+				4BED658F1881915B00FC9636 /* 13_camera360_selected.png in Resources */,
 				4B743441186B9B5200BE95BF /* searchBarBackground@2x.png in Resources */,
 				342640A6186C9526001C47C1 /* pause.png in Resources */,
 				342640A5186C9526001C47C1 /* ghi-am.png in Resources */,
@@ -2006,10 +2122,14 @@
 				4B743435186B9B5200BE95BF /* MagnifyingGlass@2x.png in Resources */,
 				51A688791866D886000BEBD3 /* BaseNameSingers.png in Resources */,
 				51BB4206187B0AB200D7019F /* 11-noi-bat-select.png in Resources */,
+				4BED657618817F7C00FC9636 /* 4_1_pause_btn.png in Resources */,
 				4B74343D186B9B5200BE95BF /* search-bg-all@2x.png in Resources */,
 				51BB4233187B0BAD00D7019F /* 11-nut-like2.png in Resources */,
+				4BED657818817F7C00FC9636 /* 4_1_progress_left.png in Resources */,
 				34BC542C1864B46F00CFFE9B /* the-loai.png in Resources */,
+				4BED656E18817F7C00FC9636 /* 4_1_bai_mau.png in Resources */,
 				34BC54C71864B5BA00CFFE9B /* btn-close-search.png in Resources */,
+				4BED65971881952500FC9636 /* PlayTinTucVideoViewController.xib in Resources */,
 				34BC54BA1864B5BA00CFFE9B /* bottom-bg.png in Resources */,
 				34BC54CC1864B5BA00CFFE9B /* star-blue.png in Resources */,
 				34BC54C91864B5BA00CFFE9B /* menu.png in Resources */,
@@ -2024,10 +2144,13 @@
 				34BC548B1864B5BA00CFFE9B /* btn-dang-nhap-tro-lai.png in Resources */,
 				342640A4186C9526001C47C1 /* dang-ghi-am.png in Resources */,
 				34BC54B11864B5BA00CFFE9B /* moi-nhat.png in Resources */,
+				4BED657018817F7C00FC9636 /* 4_1_bg_danhmuc.png in Resources */,
 				34BC54C51864B5BA00CFFE9B /* secsion-bg.png in Resources */,
 				34BC54AB1864B5BA00CFFE9B /* bg-cell-the-loai.png in Resources */,
+				4BED65911881915B00FC9636 /* 13_clip_gay_bao_selected.png in Resources */,
 				34BC54301864B46F00CFFE9B /* trang-chu.png in Resources */,
 				34BC54991864B5BA00CFFE9B /* bg-filter.png in Resources */,
+				4BED657918817F7C00FC9636 /* 4_1_progress_right.png in Resources */,
 				34BC54921864B5BA00CFFE9B /* 1-bai-moi.png in Resources */,
 				34BC54171864B46F00CFFE9B /* ca-khuc-noi-bat.png in Resources */,
 				34BC54981864B5BA00CFFE9B /* 4-karaoke-clip.png in Resources */,
@@ -2053,6 +2176,7 @@
 				3486A72D187C64AF001A6B89 /* SDWebImageDecoder.m in Sources */,
 				3486A67F187C6100001A6B89 /* AFURLConnectionOperation.m in Sources */,
 				3442C7C718642F1300BD13F3 /* main.m in Sources */,
+				4BED658318818C4F00FC9636 /* TinTucVideoCell.m in Sources */,
 				3486A635187C579D001A6B89 /* SBJsonWriter.m in Sources */,
 				34078B64187F2B0500F5BCF1 /* SingerDetailViewController.m in Sources */,
 				34264091186C6A26001C47C1 /* SingerCell.m in Sources */,
@@ -2108,6 +2232,7 @@
 				3486A72F187C64AF001A6B89 /* SDWebImageDownloaderOperation.m in Sources */,
 				34A140BC1873238F00A7BFB2 /* PSTCollectionViewLayout.m in Sources */,
 				34A140C01873238F00A7BFB2 /* PSTGridLayoutRow.m in Sources */,
+				4BED65961881952500FC9636 /* PlayTinTucVideoViewController.m in Sources */,
 				340DDAC3186B523600204A05 /* Word.m in Sources */,
 				3486A67A187C6100001A6B89 /* AFHTTPRequestOperation.m in Sources */,
 				511EB734186DAE6C00AB20D0 /* RecordViewController.m in Sources */,
@@ -2120,6 +2245,7 @@
 				51BB41F6187B0A9F00D7019F /* NhacDJ-TinTucViewController.m in Sources */,
 				51580E5A186A00C800C837F9 /* ListSongsOfKindViewController.m in Sources */,
 				4B743450186BA05600BE95BF /* PlayKaraClipViewController.m in Sources */,
+				4BED657F18818BA700FC9636 /* TinTucVideoViewController.m in Sources */,
 				3486A73A187C64CF001A6B89 /* JSONKit.m in Sources */,
 				3486A62B187C579D001A6B89 /* SBJsonParser.m in Sources */,
 				3486A62C187C579D001A6B89 /* SBJsonStreamParser.m in Sources */,
@@ -2250,8 +2376,8 @@
 		3442C7D518642F1300BD13F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tran Quoc Dung (QAM545579E)";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Tran Quoc Dung (QAM545579E)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mai Trung (3PK39257VK)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Mai Trung (3PK39257VK)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Karaoke/Karaoke-Prefix.pch";
 				INFOPLIST_FILE = "Karaoke/Karaoke-Info.plist";
@@ -2264,7 +2390,7 @@
 					"/Users/datkq/Desktop/New\\ folder/Karaoke1/Karaoke/Karaoke",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "DE90913D-018C-47BA-B8CF-B4D98ACB761E";
+				PROVISIONING_PROFILE = "F861198C-B4AC-42B4-915C-0D80ED0A33CF";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2273,8 +2399,8 @@
 		3442C7D618642F1300BD13F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tran Quoc Dung (QAM545579E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tran Quoc Dung (QAM545579E)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mai Trung (3PK39257VK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mai Trung (3PK39257VK)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Karaoke/Karaoke-Prefix.pch";
 				INFOPLIST_FILE = "Karaoke/Karaoke-Info.plist";
@@ -2287,8 +2413,8 @@
 					"/Users/datkq/Desktop/New\\ folder/Karaoke1/Karaoke/Karaoke",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "DE90913D-018C-47BA-B8CF-B4D98ACB761E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DE90913D-018C-47BA-B8CF-B4D98ACB761E";
+				PROVISIONING_PROFILE = "F861198C-B4AC-42B4-915C-0D80ED0A33CF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F861198C-B4AC-42B4-915C-0D80ED0A33CF";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

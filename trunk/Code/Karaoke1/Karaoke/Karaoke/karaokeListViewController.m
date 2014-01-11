@@ -140,10 +140,10 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (kindSegment==3) {
+//    if (kindSegment==3) {
         PlayKaraClipViewController *playView=[[PlayKaraClipViewController alloc] init];
         [self.navigationController pushViewController:playView animated:YES ];
-    }
+//    }
 }
 
 - (IBAction)changeSegment1:(id)sender {

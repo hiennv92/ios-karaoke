@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4469" systemVersion="13A476u" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3694"/>
+        <deployment defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayKaraClipViewController">
             <connections>
+                <outlet property="baiMauBtn" destination="Rc7-ow-RPQ" id="khZ-Ik-aGc"/>
+                <outlet property="chiaSeBtn" destination="Sdt-gH-roi" id="2Iy-Sw-nOW"/>
+                <outlet property="lienQuanBtn" destination="5s6-VY-40a" id="TGg-TQ-GIc"/>
+                <outlet property="playPauseBtn" destination="5eW-bt-6tw" id="hbi-ZF-Lwb"/>
+                <outlet property="playerView" destination="Sxl-58-OTF" id="f9I-s7-kib"/>
+                <outlet property="sliderProgress" destination="Lnv-nt-0SV" id="Qwq-ib-12D"/>
+                <outlet property="tableList" destination="FvB-KU-Tkd" id="D33-WY-tQG"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -13,9 +21,112 @@
         <view contentMode="scaleToFill" id="1">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="Sxl-58-OTF">
+                    <rect key="frame" x="0.0" y="44" width="320" height="210"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4_1_bg_danhmuc.png" id="Kta-RE-rJj">
+                    <rect key="frame" x="-23" y="254" width="368" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FvB-KU-Tkd">
+                    <rect key="frame" x="0.0" y="284" width="320" height="240"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="gnK-ks-8uR"/>
+                        <outlet property="delegate" destination="-1" id="QZv-jg-flI"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5s6-VY-40a">
+                    <rect key="frame" x="-11" y="254" width="120" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" backgroundImage="4_1_lien_quan.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="changeSegment1:" destination="-1" eventType="touchUpInside" id="Xck-D8-zJR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rc7-ow-RPQ">
+                    <rect key="frame" x="112" y="254" width="115" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" backgroundImage="4_1_bai_mau.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="changeSegment2:" destination="-1" eventType="touchUpInside" id="Di7-cb-Qeu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Sdt-gH-roi">
+                    <rect key="frame" x="226" y="254" width="106" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" backgroundImage="4_1_chia_se.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="changeSegment3:" destination="-1" eventType="touchUpInside" id="mgy-v5-izB"/>
+                    </connections>
+                </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4_1_bg_control_player.png" id="3cQ-au-gdP">
+                    <rect key="frame" x="0.0" y="226" width="320" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5eW-bt-6tw">
+                    <rect key="frame" x="5" y="231" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" backgroundImage="4_1_play_btn.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="playPause:" destination="-1" eventType="touchUpInside" id="sJU-3D-Sv6"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uOs-aZ-Eq2">
+                    <rect key="frame" x="268" y="231" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" backgroundImage="4_1_share_btn.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="share:" destination="-1" eventType="touchUpInside" id="Ppr-o9-iq2"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="O23-CV-JMW">
+                    <rect key="frame" x="296" y="231" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" backgroundImage="phong-to-btn.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="fullscreen:" destination="-1" eventType="touchUpInside" id="BmJ-Lk-99G"/>
+                    </connections>
+                </button>
+                <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="Lnv-nt-0SV">
+                    <rect key="frame" x="37" y="226" width="225" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </slider>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="4_1_bai_mau.png" width="118" height="28"/>
+        <image name="4_1_bg_control_player.png" width="320" height="22"/>
+        <image name="4_1_bg_danhmuc.png" width="320" height="28"/>
+        <image name="4_1_chia_se.png" width="118" height="28"/>
+        <image name="4_1_lien_quan.png" width="118" height="28"/>
+        <image name="4_1_play_btn.png" width="20" height="22"/>
+        <image name="4_1_share_btn.png" width="21" height="22"/>
+        <image name="phong-to-btn.png" width="15" height="15"/>
+    </resources>
 </document>

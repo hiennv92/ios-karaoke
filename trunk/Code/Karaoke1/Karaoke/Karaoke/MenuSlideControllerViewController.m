@@ -13,6 +13,7 @@
 #import "NhacDJTinTucViewController.h"
 #import "AppDelegate.h"
 #import "SingerListViewController.h"
+#import "TinTucVideoViewController.h"
 
 @interface MenuSlideControllerViewController ()
 {
@@ -252,12 +253,18 @@
             switch (indexPath.row) {
                 case 0:                             // camera 360
                 {
-                    
+                    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+                    [app.viewController showCenterPanelAnimated:YES];
+                    TinTucVideoViewController *TinTucVideo =[[TinTucVideoViewController alloc] initWithNibName:nil bundle:nil];
+                    [self.navigationController pushViewController:TinTucVideo animated:YES];
                 }
                     break;
                 case 1:                             // clip gay bao
                 {
-                    
+                    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+                    [app.viewController showCenterPanelAnimated:YES];
+                    TinTucVideoViewController *TinTucVideo =[[TinTucVideoViewController alloc] initWithNibName:nil bundle:nil];
+                    [self.navigationController pushViewController:TinTucVideo animated:YES];
                 }
                     break;
                 default:
