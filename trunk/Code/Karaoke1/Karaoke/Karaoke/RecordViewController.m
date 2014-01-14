@@ -40,7 +40,7 @@
     // Do any additional setup after loading the view from its nib.
     [self setIsPlay:NO];
     [self setIsRecording:NO];
-    [self setIsMp4Play:NO];
+    [self setIsMp4Play:YES];
 
     [self._buttonPlay setEnabled:FALSE];
     
