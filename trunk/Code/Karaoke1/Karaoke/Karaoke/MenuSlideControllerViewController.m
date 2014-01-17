@@ -14,6 +14,7 @@
 #import "AppDelegate.h"
 #import "SingerListViewController.h"
 #import "TinTucVideoViewController.h"
+#import "DankyGoiCuocViewController.h"
 
 @interface MenuSlideControllerViewController ()
 {
@@ -146,7 +147,8 @@
                 [[AppDelegate shareApplication] showViewController:loginView];
             }
             else if (indexPath.row == 1 ) {         // dich vu
-                
+                DankyGoiCuocViewController *dangky = [[DankyGoiCuocViewController alloc] initWithNibName:@"DankyGoiCuocViewController" bundle:nil];
+                [[AppDelegate shareApplication] showViewController:dangky];
             }
             break;
                                                         // DANH MUC

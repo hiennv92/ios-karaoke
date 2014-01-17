@@ -302,6 +302,8 @@
 		51580E4F1869F42B00C837F9 /* CellOfKind.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51580E4E1869F42B00C837F9 /* CellOfKind.xib */; };
 		51580E5A186A00C800C837F9 /* ListSongsOfKindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51580E58186A00C800C837F9 /* ListSongsOfKindViewController.m */; };
 		51580E5B186A00C800C837F9 /* ListSongsOfKindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51580E59186A00C800C837F9 /* ListSongsOfKindViewController.xib */; };
+		5161115C1889892F0065333D /* DankyGoiCuocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161115A1889892F0065333D /* DankyGoiCuocViewController.m */; };
+		5161115D1889892F0065333D /* DankyGoiCuocViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5161115B1889892F0065333D /* DankyGoiCuocViewController.xib */; };
 		5176EC371879403E00483692 /* RecordManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5176EC351879403E00483692 /* RecordManagerViewController.m */; };
 		5176EC381879403E00483692 /* RecordManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5176EC361879403E00483692 /* RecordManagerViewController.xib */; };
 		5176EC3B1879458800483692 /* CellRecord.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5176EC3A1879458800483692 /* CellRecord.xib */; };
@@ -713,7 +715,7 @@
 		4B743458186BA3B400BE95BF /* FavouriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouriteViewController.h; sourceTree = "<group>"; };
 		4B743459186BA3B400BE95BF /* FavouriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouriteViewController.m; sourceTree = "<group>"; };
 		4B74345A186BA3B400BE95BF /* FavouriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavouriteViewController.xib; sourceTree = "<group>"; };
-		4BE04479187EED150064F99E /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		4BE04479187EED150064F99E /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmp3lame.a; path = Karaoke/libmp3lame.a; sourceTree = "<group>"; };
 		4BE0447B187EF6A40064F99E /* anh_khong_doi_qua.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = anh_khong_doi_qua.mp4; sourceTree = "<group>"; };
 		4BE7D73A186872AA00F7438B /* karaokeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = karaokeListViewController.h; sourceTree = "<group>"; };
 		4BE7D73B186872AA00F7438B /* karaokeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = karaokeListViewController.m; sourceTree = "<group>"; };
@@ -769,6 +771,9 @@
 		51580E57186A00C800C837F9 /* ListSongsOfKindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListSongsOfKindViewController.h; sourceTree = "<group>"; };
 		51580E58186A00C800C837F9 /* ListSongsOfKindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListSongsOfKindViewController.m; sourceTree = "<group>"; };
 		51580E59186A00C800C837F9 /* ListSongsOfKindViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListSongsOfKindViewController.xib; sourceTree = "<group>"; };
+		516111591889892F0065333D /* DankyGoiCuocViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DankyGoiCuocViewController.h; sourceTree = "<group>"; };
+		5161115A1889892F0065333D /* DankyGoiCuocViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DankyGoiCuocViewController.m; sourceTree = "<group>"; };
+		5161115B1889892F0065333D /* DankyGoiCuocViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DankyGoiCuocViewController.xib; sourceTree = "<group>"; };
 		5176EC341879403E00483692 /* RecordManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordManagerViewController.h; sourceTree = "<group>"; };
 		5176EC351879403E00483692 /* RecordManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordManagerViewController.m; sourceTree = "<group>"; };
 		5176EC361879403E00483692 /* RecordManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordManagerViewController.xib; sourceTree = "<group>"; };
@@ -896,7 +901,6 @@
 			isa = PBXGroup;
 			children = (
 				34078B60187F2AE300F5BCF1 /* SingerDetail */,
-				4BE04479187EED150064F99E /* libmp3lame.a */,
 				51BB41EC187B0A7C00D7019F /* Nhac DJ */,
 				5176EC331879401B00483692 /* Record manager */,
 				511EB736186DAE8500AB20D0 /* RecordViewController */,
@@ -1109,6 +1113,7 @@
 		3442C7B918642F1300BD13F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4BE04479187EED150064F99E /* libmp3lame.a */,
 				34078B5E187F1C0F00F5BCF1 /* CoreText.framework */,
 				3486A755187C6705001A6B89 /* libsqlite3.0.dylib */,
 				3486A753187C66F8001A6B89 /* MobileCoreServices.framework */,
@@ -1755,6 +1760,9 @@
 				4BEAEAB51867B6E5000E3CD1 /* dangnhapViewController.h */,
 				4BEAEAB61867B6E5000E3CD1 /* dangnhapViewController.m */,
 				4BEAEAB71867B6E5000E3CD1 /* dangnhapViewController.xib */,
+				516111591889892F0065333D /* DankyGoiCuocViewController.h */,
+				5161115A1889892F0065333D /* DankyGoiCuocViewController.m */,
+				5161115B1889892F0065333D /* DankyGoiCuocViewController.xib */,
 			);
 			name = "Dangky- dang nhap- quen mk";
 			sourceTree = "<group>";
@@ -1985,6 +1993,7 @@
 				5176EC381879403E00483692 /* RecordManagerViewController.xib in Resources */,
 				34BC54891864B5BA00CFFE9B /* text-filed-bg.png in Resources */,
 				51BB4239187B0BAD00D7019F /* 11-volume-full.png in Resources */,
+				5161115D1889892F0065333D /* DankyGoiCuocViewController.xib in Resources */,
 				51A688801866E4DD000BEBD3 /* imageKaraokeClipDemo.png in Resources */,
 				34BC54CA1864B5BA00CFFE9B /* search-btn.png in Resources */,
 				51BB4228187B0BAD00D7019F /* 11-bg-cd-demo.png in Resources */,
@@ -2194,6 +2203,7 @@
 				34264099186C7EB9001C47C1 /* PlayMP3ViewController.m in Sources */,
 				3486A630187C579D001A6B89 /* SBJsonStreamWriter.m in Sources */,
 				34A140BF1873238F00A7BFB2 /* PSTGridLayoutItem.m in Sources */,
+				5161115C1889892F0065333D /* DankyGoiCuocViewController.m in Sources */,
 				4B743433186B9B5200BE95BF /* KTSearchBar.m in Sources */,
 				34BC53E81864A8F500CFFE9B /* UIViewController+JASidePanel.m in Sources */,
 				51BB4211187B0AE000D7019F /* PlayMusicViewController.m in Sources */,
