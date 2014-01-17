@@ -234,6 +234,14 @@
 		34BC54CF1864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png in Resources */ = {isa = PBXBuildFile; fileRef = 34BC54861864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png */; };
 		3C993C6A187AA6E20073B45C /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C993C69187AA6E20073B45C /* libmp3lame.a */; };
 		3C993C6C187AA6F30073B45C /* btnTraiTim.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C993C6B187AA6F30073B45C /* btnTraiTim.png */; };
+		4B0492421889F0EE0024875A /* MostVotedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0492401889F0EE0024875A /* MostVotedViewController.m */; };
+		4B0492431889F0EE0024875A /* MostVotedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B0492411889F0EE0024875A /* MostVotedViewController.xib */; };
+		4B0492461889F2700024875A /* MostVotedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0492451889F2700024875A /* MostVotedCell.m */; };
+		4B0492481889F2C60024875A /* MostVotedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B0492471889F2C60024875A /* MostVotedCell.xib */; };
+		4B04924C1889F5E40024875A /* PlayMostVotedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B04924A1889F5E40024875A /* PlayMostVotedViewController.m */; };
+		4B04924D1889F5E40024875A /* PlayMostVotedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B04924B1889F5E40024875A /* PlayMostVotedViewController.xib */; };
+		4B0492501889F6D10024875A /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B04924F1889F6D10024875A /* CommentCell.m */; };
+		4B0492521889F6EA0024875A /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B0492511889F6EA0024875A /* CommentCell.xib */; };
 		4B743431186B9B5200BE95BF /* FLSearchBarBorder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B74341F186B9B5200BE95BF /* FLSearchBarBorder@2x.png */; };
 		4B743432186B9B5200BE95BF /* GraySearchBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B743420186B9B5200BE95BF /* GraySearchBar.png */; };
 		4B743433186B9B5200BE95BF /* KTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B743422186B9B5200BE95BF /* KTSearchBar.m */; };
@@ -688,6 +696,18 @@
 		34BC54861864B5BA00CFFE9B /* tro-lai-bai-hat-dang-phat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tro-lai-bai-hat-dang-phat.png"; sourceTree = "<group>"; };
 		3C993C69187AA6E20073B45C /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmp3lame.a; path = Karaoke/libmp3lame.a; sourceTree = "<group>"; };
 		3C993C6B187AA6F30073B45C /* btnTraiTim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnTraiTim.png; sourceTree = "<group>"; };
+		4B04923F1889F0EE0024875A /* MostVotedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MostVotedViewController.h; sourceTree = "<group>"; };
+		4B0492401889F0EE0024875A /* MostVotedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MostVotedViewController.m; sourceTree = "<group>"; };
+		4B0492411889F0EE0024875A /* MostVotedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MostVotedViewController.xib; sourceTree = "<group>"; };
+		4B0492441889F2700024875A /* MostVotedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MostVotedCell.h; sourceTree = "<group>"; };
+		4B0492451889F2700024875A /* MostVotedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MostVotedCell.m; sourceTree = "<group>"; };
+		4B0492471889F2C60024875A /* MostVotedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MostVotedCell.xib; sourceTree = "<group>"; };
+		4B0492491889F5E40024875A /* PlayMostVotedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayMostVotedViewController.h; sourceTree = "<group>"; };
+		4B04924A1889F5E40024875A /* PlayMostVotedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayMostVotedViewController.m; sourceTree = "<group>"; };
+		4B04924B1889F5E40024875A /* PlayMostVotedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayMostVotedViewController.xib; sourceTree = "<group>"; };
+		4B04924E1889F6D10024875A /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
+		4B04924F1889F6D10024875A /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
+		4B0492511889F6EA0024875A /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		4B74341F186B9B5200BE95BF /* FLSearchBarBorder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FLSearchBarBorder@2x.png"; sourceTree = "<group>"; };
 		4B743420186B9B5200BE95BF /* GraySearchBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GraySearchBar.png; sourceTree = "<group>"; };
 		4B743421186B9B5200BE95BF /* KTSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSearchBar.h; sourceTree = "<group>"; };
@@ -913,6 +933,7 @@
 				4BEAEAAF1867B16D000E3CD1 /* Dangky- dang nhap- quen mk */,
 				4BE7D73F186873D300F7438B /* Karaokes new */,
 				4BED657B18818B8300FC9636 /* tin tuc video */,
+				4B04923E1889F0AD0024875A /* binhchon nhieu nhat */,
 				4B743452186BA09500BE95BF /* kara yeuthich */,
 				4B743442186B9DD800BE95BF /* search kara 5 */,
 			);
@@ -1679,6 +1700,25 @@
 			path = "icon chung";
 			sourceTree = "<group>";
 		};
+		4B04923E1889F0AD0024875A /* binhchon nhieu nhat */ = {
+			isa = PBXGroup;
+			children = (
+				4B04923F1889F0EE0024875A /* MostVotedViewController.h */,
+				4B0492401889F0EE0024875A /* MostVotedViewController.m */,
+				4B0492411889F0EE0024875A /* MostVotedViewController.xib */,
+				4B0492441889F2700024875A /* MostVotedCell.h */,
+				4B0492451889F2700024875A /* MostVotedCell.m */,
+				4B0492471889F2C60024875A /* MostVotedCell.xib */,
+				4B0492491889F5E40024875A /* PlayMostVotedViewController.h */,
+				4B04924A1889F5E40024875A /* PlayMostVotedViewController.m */,
+				4B04924B1889F5E40024875A /* PlayMostVotedViewController.xib */,
+				4B04924E1889F6D10024875A /* CommentCell.h */,
+				4B04924F1889F6D10024875A /* CommentCell.m */,
+				4B0492511889F6EA0024875A /* CommentCell.xib */,
+			);
+			name = "binhchon nhieu nhat";
+			sourceTree = "<group>";
+		};
 		4B74341E186B9B5200BE95BF /* custom searchbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -2002,6 +2042,7 @@
 				51BB4204187B0AB200D7019F /* 11-moi-nhat-select.png in Resources */,
 				51BB4230187B0BAD00D7019F /* 11-knob-to.png in Resources */,
 				51BB422C187B0BAD00D7019F /* 11-bg-thanh-play.png in Resources */,
+				4B04924D1889F5E40024875A /* PlayMostVotedViewController.xib in Resources */,
 				51580E5B186A00C800C837F9 /* ListSongsOfKindViewController.xib in Resources */,
 				34BC54A71864B5BA00CFFE9B /* bg-text-field-comment.png in Resources */,
 				34BC54AF1864B5BA00CFFE9B /* hot-nhat.png in Resources */,
@@ -2042,6 +2083,7 @@
 				51BB420B187B0ABF00D7019F /* AudioPlayerScrubberKnob.png in Resources */,
 				4B743451186BA05600BE95BF /* PlayKaraClipViewController.xib in Resources */,
 				51BB41FB187B0A9F00D7019F /* NhacDJTinTucViewController.xib in Resources */,
+				4B0492521889F6EA0024875A /* CommentCell.xib in Resources */,
 				34BC54C21864B5BA00CFFE9B /* logo-ca-si.png in Resources */,
 				51BB422F187B0BAD00D7019F /* 11-knob-nho.png in Resources */,
 				34BC549C1864B5BA00CFFE9B /* phong-to-btn.png in Resources */,
@@ -2124,6 +2166,7 @@
 				342640A5186C9526001C47C1 /* ghi-am.png in Resources */,
 				34061F11186458CC009FD9B2 /* RootViewController.xib in Resources */,
 				34BC54941864B5BA00CFFE9B /* 2-bai-hits.png in Resources */,
+				4B0492431889F0EE0024875A /* MostVotedViewController.xib in Resources */,
 				51BB4234187B0BAD00D7019F /* 11-play-btn.png in Resources */,
 				3426409A186C7EB9001C47C1 /* PlayMP3ViewController.xib in Resources */,
 				34BC54A11864B5BA00CFFE9B /* phat-lai-btn.png in Resources */,
@@ -2155,6 +2198,7 @@
 				34BC54B11864B5BA00CFFE9B /* moi-nhat.png in Resources */,
 				4BED657018817F7C00FC9636 /* 4_1_bg_danhmuc.png in Resources */,
 				34BC54C51864B5BA00CFFE9B /* secsion-bg.png in Resources */,
+				4B0492481889F2C60024875A /* MostVotedCell.xib in Resources */,
 				34BC54AB1864B5BA00CFFE9B /* bg-cell-the-loai.png in Resources */,
 				4BED65911881915B00FC9636 /* 13_clip_gay_bao_selected.png in Resources */,
 				34BC54301864B46F00CFFE9B /* trang-chu.png in Resources */,
@@ -2228,6 +2272,7 @@
 				3486A746187C65B4001A6B89 /* UIImage+Alpha.m in Sources */,
 				4B74344B186B9E1900BE95BF /* SearchKara5ViewController.m in Sources */,
 				3486A732187C64AF001A6B89 /* UIButton+WebCache.m in Sources */,
+				4B0492461889F2700024875A /* MostVotedCell.m in Sources */,
 				3486A681187C6100001A6B89 /* UIImageView+AFNetworking.m in Sources */,
 				34A140BD1873238F00A7BFB2 /* PSTCollectionViewUpdateItem.m in Sources */,
 				3486A67B187C6100001A6B89 /* AFImageRequestOperation.m in Sources */,
@@ -2239,10 +2284,12 @@
 				3486A748187C65B4001A6B89 /* UIImage+Resize.m in Sources */,
 				34A140BE1873238F00A7BFB2 /* PSTGridLayoutInfo.m in Sources */,
 				3486A704187C647E001A6B89 /* FMDatabasePool.m in Sources */,
+				4B04924C1889F5E40024875A /* PlayMostVotedViewController.m in Sources */,
 				3486A72F187C64AF001A6B89 /* SDWebImageDownloaderOperation.m in Sources */,
 				34A140BC1873238F00A7BFB2 /* PSTCollectionViewLayout.m in Sources */,
 				34A140C01873238F00A7BFB2 /* PSTGridLayoutRow.m in Sources */,
 				4BED65961881952500FC9636 /* PlayTinTucVideoViewController.m in Sources */,
+				4B0492501889F6D10024875A /* CommentCell.m in Sources */,
 				340DDAC3186B523600204A05 /* Word.m in Sources */,
 				3486A67A187C6100001A6B89 /* AFHTTPRequestOperation.m in Sources */,
 				511EB734186DAE6C00AB20D0 /* RecordViewController.m in Sources */,
@@ -2270,6 +2317,7 @@
 				51580E4D1869F40900C837F9 /* CellOfKind.m in Sources */,
 				3486A706187C647E001A6B89 /* FMResultSet.m in Sources */,
 				3486A72C187C64AF001A6B89 /* SDWebImageCompat.m in Sources */,
+				4B0492421889F0EE0024875A /* MostVotedViewController.m in Sources */,
 				34A25550186E96C0008B736E /* LyricView.m in Sources */,
 				5176EC371879403E00483692 /* RecordManagerViewController.m in Sources */,
 				3486A62E187C579D001A6B89 /* SBJsonStreamParserAdapter.m in Sources */,
