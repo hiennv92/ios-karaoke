@@ -15,6 +15,9 @@
 #import "SingerListViewController.h"
 #import "TinTucVideoViewController.h"
 #import "DankyGoiCuocViewController.h"
+#import "WapKaraViewController.h"
+#import "SettingViewController.h"
+#import "InfoViewController.h"
 
 @interface MenuSlideControllerViewController ()
 {
@@ -278,7 +281,8 @@
             switch (indexPath.row) {
                 case 0:                                 // cai dat
                 {
-                    
+                    SettingViewController* vc = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
+                    [[AppDelegate shareApplication] showViewController:vc];
                 }
                     break;
                 case 1:                                 // huong dan
@@ -288,12 +292,14 @@
                     break;
                 case 2:                                 // thong tin
                 {
-                    
+                    InfoViewController* vc = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
+                    [[AppDelegate shareApplication] showViewController:vc];
                 }
                     break;
                 case 3:                                 // wap karaoke
                 {
-                    
+                    WapKaraViewController* vc = [[WapKaraViewController alloc] initWithNibName:@"WapKaraViewController" bundle:nil];
+                    [[AppDelegate shareApplication] showViewController:vc];
                 }
                     break;
                 default:
