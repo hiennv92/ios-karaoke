@@ -1,18 +1,18 @@
 //
-//  DankyGoiCuocViewController.m
+//  WapKaraViewController.m
 //  Karaoke
 //
-//  Created by Trinh Van Duong on 1/17/14.
+//  Created by papo on 1/18/14.
 //  Copyright (c) 2014 banana. All rights reserved.
 //
 
-#import "DankyGoiCuocViewController.h"
+#import "WapKaraViewController.h"
 
-@interface DankyGoiCuocViewController ()
+@interface WapKaraViewController ()
 
 @end
 
-@implementation DankyGoiCuocViewController
+@implementation WapKaraViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,11 +27,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    // Do any additional setup after loading the view from its nib.
-    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"back-btn.png" leftButtonPress:Nil rightButton:nil rightButtonPress:Nil andType:1];
+    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"menu.png" leftButtonPress:Nil rightButton:@"setting.png" rightButtonPress:Nil andType:1];
     
-    [self addTitleNavibar:@"Đăng ký gói cước" andSize:22];
-    [self setBottomBarViewHidden:YES];
+    NSString* mkaraLink = @"http://mkara.vn";
+    NSURLRequest* request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:mkaraLink]];
+    [self.webView loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning

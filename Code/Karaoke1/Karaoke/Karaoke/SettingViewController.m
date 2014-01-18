@@ -1,18 +1,18 @@
 //
-//  DankyGoiCuocViewController.m
+//  SettingViewController.m
 //  Karaoke
 //
-//  Created by Trinh Van Duong on 1/17/14.
+//  Created by papo on 1/18/14.
 //  Copyright (c) 2014 banana. All rights reserved.
 //
 
-#import "DankyGoiCuocViewController.h"
+#import "SettingViewController.h"
 
-@interface DankyGoiCuocViewController ()
+@interface SettingViewController ()
 
 @end
 
-@implementation DankyGoiCuocViewController
+@implementation SettingViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,11 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    // Do any additional setup after loading the view from its nib.
-    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"back-btn.png" leftButtonPress:Nil rightButton:nil rightButtonPress:Nil andType:1];
-    
-    [self addTitleNavibar:@"Đăng ký gói cước" andSize:22];
-    [self setBottomBarViewHidden:YES];
+    [self createNavigationBarWithTitle:Nil backgroundImage:@"bg-top-home.png" leftButton:@"menu.png" leftButtonPress:Nil rightButton:nil rightButtonPress:Nil andType:1];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,5 +39,4 @@
 - (void)leftButtonBarPress:(id)button {
     [self.navigationController popViewControllerAnimated:YES];
 }
-
 @end
